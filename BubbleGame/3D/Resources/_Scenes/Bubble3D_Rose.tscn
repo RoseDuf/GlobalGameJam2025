@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://c358f7xu5nnju"]
+
+[ext_resource type="Script" path="res://BubbleGame/3D/_Source/SpawnManager.cs" id="1_fs1cg"]
+[ext_resource type="PackedScene" uid="uid://dwghalcje8h0q" path="res://BubbleGame/3D/Resources/Obstacles/DefaultObstacle.tscn" id="2_i5gjq"]
+
+[sub_resource type="Environment" id="Environment_xyxs8"]
+
+[node name="Bubble3D" type="Node"]
+
+[node name="Actors" type="Node" parent="."]
+
+[node name="Environment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xyxs8")
+
+[node name="Camera3D" type="Camera3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 0.879167, 0.476514, 0, -0.476514, 0.879167, 0, 2.915, 12.8994)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
+
+[node name="ObstacleSpawner" type="Node" parent="." node_paths=PackedStringArray("_obstacleSpawnTimer")]
+script = ExtResource("1_fs1cg")
+_obstacleScene = ExtResource("2_i5gjq")
+_obstacleSpawnTimer = NodePath("../ObstacleSpawnTimer")
+
+[node name="ObstacleSpawnTimer" type="Timer" parent="."]
+wait_time = 0.001
+
+[connection signal="timeout" from="ObstacleSpawnTimer" to="ObstacleSpawner" method="OnSpawnObstacle"]
