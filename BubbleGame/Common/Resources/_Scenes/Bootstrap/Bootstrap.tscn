@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjpynt7tjsw2p"]
+
+[ext_resource type="Script" path="res://BubbleGame/Common/_Source/CSharp/SceneManagement/SceneManager.cs" id="1_gceh8"]
+[ext_resource type="Script" path="res://BubbleGame/3D/_Source/GameManager.cs" id="2_sdpdv"]
+[ext_resource type="Resource" uid="uid://b67hbsqmc4sk5" path="res://BubbleGame/Common/Resources/_Scenes/SceneCollection.tres" id="2_yntk8"]
+
+[node name="Bootstrap" type="Node"]
+
+[node name="3D_CSharp" type="Node" parent="."]
+
+[node name="SceneManager" type="Node" parent="3D_CSharp"]
+script = ExtResource("1_gceh8")
+SceneCollection = ExtResource("2_yntk8")
+
+[node name="GameManager" type="Node" parent="3D_CSharp"]
+script = ExtResource("2_sdpdv")

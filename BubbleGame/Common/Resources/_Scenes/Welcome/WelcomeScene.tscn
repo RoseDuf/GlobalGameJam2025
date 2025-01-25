@@ -1,0 +1,110 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjejpnnacm3p6"]
+
+[ext_resource type="Script" path="res://BubbleGame/Common/_Source/CSharp/MainMenuView.cs" id="1_vmjco"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6ro77"]
+font_size = 80
+outline_size = 5
+outline_color = Color(0.0666667, 0.0666667, 0.0666667, 1)
+shadow_color = Color(0, 0, 0, 0.501961)
+shadow_offset = Vector2(3, 3)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1t61e"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+
+[sub_resource type="Environment" id="Environment_q3mx0"]
+background_mode = 1
+background_color = Color(0.0666667, 0.0666667, 0.0666667, 1)
+
+[node name="WelcomeScene" type="Node"]
+
+[node name="GUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainMenuView" type="Control" parent="GUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vmjco")
+
+[node name="Title" type="Label" parent="GUI/MainMenuView"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 100.0
+offset_bottom = 210.0
+grow_horizontal = 2
+text = "Main Menu"
+label_settings = SubResource("LabelSettings_6ro77")
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="GUI/MainMenuView"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_right = 0.7
+anchor_bottom = 1.0
+offset_top = 250.0
+offset_right = 6.10352e-05
+offset_bottom = -78.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1t61e")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GUI/MainMenuView/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+theme_override_constants/separation = 15
+
+[node name="PlayButton" type="Button" parent="GUI/MainMenuView/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+text = "Play"
+
+[node name="2DButton" type="Button" parent="GUI/MainMenuView/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+text = "2D"
+
+[node name="3DButton" type="Button" parent="GUI/MainMenuView/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+text = "3D"
+
+[node name="CreditsButton" type="Button" parent="GUI/MainMenuView/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+text = "Credits"
+
+[node name="QuitButton" type="Button" parent="GUI/MainMenuView/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+text = "Quit"
+
+[node name="Environment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_q3mx0")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[connection signal="pressed" from="GUI/MainMenuView/ScrollContainer/VBoxContainer/PlayButton" to="GUI/MainMenuView" method="PlayButton_Pressed"]
+[connection signal="pressed" from="GUI/MainMenuView/ScrollContainer/VBoxContainer/2DButton" to="GUI/MainMenuView" method="_2DButton_Pressed"]
+[connection signal="pressed" from="GUI/MainMenuView/ScrollContainer/VBoxContainer/3DButton" to="GUI/MainMenuView" method="_3DButton_Pressed"]
+[connection signal="pressed" from="GUI/MainMenuView/ScrollContainer/VBoxContainer/CreditsButton" to="GUI/MainMenuView" method="CreditsButton_Pressed"]
+[connection signal="pressed" from="GUI/MainMenuView/ScrollContainer/VBoxContainer/QuitButton" to="GUI/MainMenuView" method="QuitButton_Pressed"]
