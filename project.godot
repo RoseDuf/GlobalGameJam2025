@@ -35,14 +35,14 @@ project/assembly_name="GGJ2025"
 folder_colors={
 "res://BubbleGame/2D/Art/": "purple",
 "res://BubbleGame/2D/Resources/": "orange",
-"res://BubbleGame/2D/Sound/": "teal",
+"res://BubbleGame/2D/Sound/": "yellow",
 "res://BubbleGame/2D/_Source/": "green",
 "res://BubbleGame/3D/Art/": "purple",
 "res://BubbleGame/3D/Resources/": "orange",
-"res://BubbleGame/3D/Sound/": "teal",
+"res://BubbleGame/3D/Sound/": "yellow",
 "res://BubbleGame/3D/_Source/": "green",
 "res://BubbleGame/Common/Art/": "purple",
 "res://BubbleGame/Common/Resources/": "orange",
-"res://BubbleGame/Common/Sound/": "teal",
+"res://BubbleGame/Common/Sound/": "yellow",
 "res://BubbleGame/Common/_Source/": "green"
 }
