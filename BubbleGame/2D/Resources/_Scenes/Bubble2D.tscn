@@ -1,62 +1,20 @@
-[gd_scene load_steps=10 format=3 uid="uid://boepbwv7lujx1"]
+[gd_scene load_steps=8 format=3 uid="uid://boepbwv7lujx1"]
 
-[ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/PlayerMovement.gd" id="1_a5hyg"]
-[ext_resource type="Texture2D" uid="uid://bbpjqfvmoagvd" path="res://BubbleGame/2D/Resources/_DebugArt/Player.png" id="1_u0o3q"]
-[ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/BubbleTrail.gd" id="3_24bqs"]
-[ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/WandHitbox.gd" id="4_lenks"]
+[ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/GameManager2D.gd" id="1_3dlvb"]
+[ext_resource type="PackedScene" uid="uid://bqjdygfsmbxya" path="res://BubbleGame/2D/Resources/Prefabs/player.tscn" id="1_virmh"]
+[ext_resource type="Texture2D" uid="uid://cr5xry6fsqq7c" path="res://BubbleGame/2D/Resources/_DebugArt/SoapBarBack.png" id="5_gbns2"]
 [ext_resource type="PackedScene" uid="uid://dbntmby25h61t" path="res://BubbleGame/2D/Resources/Prefabs/obstacle.tscn" id="5_ybu7b"]
+[ext_resource type="Texture2D" uid="uid://bolm5fact546j" path="res://BubbleGame/2D/Resources/_DebugArt/SoapBarFill.png" id="6_t62to"]
+[ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/SoapBarMeter.gd" id="7_5wy5c"]
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/2DCamera.gd" id="8_ud1mw"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dte2h"]
-radius = 49.0
-height = 218.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_4i0xn"]
-
-[sub_resource type="Gradient" id="Gradient_owgmy"]
-colors = PackedColorArray(1, 1, 1, 0.784314, 0, 1, 1, 0.784314)
-
 [node name="Bubble2D" type="Node"]
+script = ExtResource("1_3dlvb")
 
-[node name="Player" type="Node" parent="."]
+[node name="Player" parent="." instance=ExtResource("1_virmh")]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Player"]
-position = Vector2(-7, 4)
-motion_mode = 1
-platform_on_leave = 2
-script = ExtResource("1_a5hyg")
-CharacterSpeed = 500.0
-
-[node name="Sprite2D" type="Sprite2D" parent="Player/CharacterBody2D"]
-texture = ExtResource("1_u0o3q")
-
-[node name="CharacterHitbox" type="CollisionShape2D" parent="Player/CharacterBody2D"]
-position = Vector2(2, 0)
-shape = SubResource("CapsuleShape2D_dte2h")
-
-[node name="Area2D" type="Area2D" parent="Player/CharacterBody2D"]
-collision_layer = 0
-collision_mask = 0
-script = ExtResource("4_lenks")
-
-[node name="WandHitbox" type="CollisionShape2D" parent="Player/CharacterBody2D/Area2D"]
-position = Vector2(30, -180)
-shape = SubResource("CircleShape2D_4i0xn")
-
-[node name="BubbleTrail" type="Line2D" parent="Player" node_paths=PackedStringArray("WandPosition", "TrailHitbox", "CharacterMovement")]
-width = 40.0
-gradient = SubResource("Gradient_owgmy")
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 1
-script = ExtResource("3_24bqs")
-WandPosition = NodePath("../CharacterBody2D/Area2D/WandHitbox")
-TrailHitbox = NodePath("BubbleTrailHitbox")
-CharacterMovement = NodePath("../CharacterBody2D")
-
-[node name="BubbleTrailHitbox" type="StaticBody2D" parent="Player/BubbleTrail"]
-collision_layer = 2
-collision_mask = 2
+[node name="CharacterBody2D" parent="Player" index="0" node_paths=PackedStringArray("GameManager")]
+GameManager = NodePath("../..")
 
 [node name="Obstacle" parent="." instance=ExtResource("5_ybu7b")]
 
@@ -69,6 +27,24 @@ position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 script = ExtResource("8_ud1mw")
 Trail = NodePath("../Player/BubbleTrail")
-DezoomSpeed = 0.99
+DezoomSpeed = 0.9
 
-[connection signal="body_entered" from="Player/CharacterBody2D/Area2D" to="Player/CharacterBody2D/Area2D" method="_on_body_entered"]
+[node name="GUI Layer" type="CanvasLayer" parent="."]
+
+[node name="Soap Progress Bar" type="TextureProgressBar" parent="GUI Layer" node_paths=PackedStringArray("GameManager")]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 20.0
+offset_right = 300.0
+offset_bottom = 80.0
+grow_horizontal = 2
+max_value = 11.0
+step = 0.01
+texture_under = ExtResource("5_gbns2")
+texture_progress = ExtResource("6_t62to")
+script = ExtResource("7_5wy5c")
+GameManager = NodePath("../..")
+
+[editable path="Player"]

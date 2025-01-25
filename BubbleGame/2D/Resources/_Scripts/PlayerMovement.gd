@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name PlayerMovement
 
+@export var GameManager: GameManager2D
 @export var CharacterSpeed: float = 300.0
 var PreviousDirection: Vector2 = Vector2(0,0)
 var CurrentAcceleration: float = 0
@@ -19,4 +20,4 @@ func get_input(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	get_input(delta)	
 	if (move_and_slide()):
-		assert(false, "OH NOEZ GAME IS OVER")
+		GameManager.PrepareNextPhase()
