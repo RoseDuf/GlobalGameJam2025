@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bddasn5pebfva"]
+[gd_scene load_steps=10 format=3 uid="uid://bddasn5pebfva"]
 
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/Player.cs" id="1_8n07s"]
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/PlayerMovement.cs" id="2_02mne"]
@@ -14,10 +14,13 @@ albedo_color = Color(0.171687, 0.40397, 1, 1)
 
 [sub_resource type="Environment" id="Environment_xyxs8"]
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_e5wub"]
+
 [node name="Bubble3D" type="Node"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1, -1.51808e-08, 8.60946e-08, 0, 0.984808, 0.173648, -8.74228e-08, 0.173648, -0.984808, 0, 2, -6)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2, -13.615)
+fov = 25.0
 
 [node name="Actors" type="Node" parent="."]
 
@@ -59,3 +62,15 @@ surface_material_override/0 = SubResource("StandardMaterial3D_jlnir")
 environment = SubResource("Environment_xyxs8")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
+mesh = SubResource("CapsuleMesh_e5wub")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.44794, 0, 10)
+mesh = SubResource("CapsuleMesh_e5wub")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3808, 0, -3)
+mesh = SubResource("CapsuleMesh_e5wub")
