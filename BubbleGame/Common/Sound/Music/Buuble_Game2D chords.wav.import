@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ck0y1ou8hfi5r"
+path="res://.godot/imported/Buuble_Game2D chords.wav-a85f469300858cc492ddcb5655c3b42c.sample"
+
+[deps]
+
+source_file="res://BubbleGame/Common/Sound/Music/Buuble_Game2D chords.wav"
+dest_files=["res://.godot/imported/Buuble_Game2D chords.wav-a85f469300858cc492ddcb5655c3b42c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
