@@ -1,8 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdp2v7nv8pjuj"]
+[gd_scene load_steps=5 format=3 uid="uid://bdp2v7nv8pjuj"]
 
 [ext_resource type="Script" path="res://BubbleGame/Common/Resources/_Scenes/Bootstrap/MainScene.cs" id="1_10jxu"]
 [ext_resource type="PackedScene" uid="uid://bjejpnnacm3p6" path="res://BubbleGame/Common/Resources/_Scenes/Welcome/WelcomeScene.tscn" id="2_i1ytw"]
+[ext_resource type="Material" uid="uid://dmveibvym3cnp" path="res://BubbleGame/2D/Art/BubbleShader/Bubble.tres" id="3_5vj8m"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_w44ux"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_10jxu")
 _nextScene = ExtResource("2_i1ytw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = ExtResource("3_5vj8m")
+mesh = SubResource("SphereMesh_w44ux")
