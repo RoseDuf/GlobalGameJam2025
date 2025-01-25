@@ -1,19 +1,20 @@
 @tool
 extends CharacterBody2D
+class_name PlayerMovement
 
 @export var CharacterSpeed: float = 300.0
 var PreviousDirection: Vector2 = Vector2(0,0)
-var currentAcceleration: float = 0
+var CurrentAcceleration: float = 0
 
 func get_input(delta: float) -> void:
 	var inputDir = Input.get_vector("move_left","move_right","move_up","move_down")
 	if (inputDir.is_zero_approx()):
-		currentAcceleration = maxf(0, currentAcceleration - delta)
+		CurrentAcceleration = maxf(0, CurrentAcceleration - delta)
 	else:
-		currentAcceleration = minf(1, currentAcceleration + delta)
+		CurrentAcceleration = minf(1, CurrentAcceleration + delta)
 	
-	PreviousDirection = PreviousDirection.lerp(inputDir, .33	);
-	velocity = PreviousDirection * (CharacterSpeed * currentAcceleration);	
+	PreviousDirection = PreviousDirection.lerp(inputDir, .33);
+	velocity = PreviousDirection * (CharacterSpeed * CurrentAcceleration);
 	
 
 func _physics_process(delta: float) -> void:
