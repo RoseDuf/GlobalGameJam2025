@@ -1,15 +1,20 @@
 using Godot;
-using System;
 
-public partial class PlayerShooting : Node
+namespace BubbleGame._3D
 {
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
+	/// <summary>
+	/// This class controls player shooting.
+	/// </summary>
+	public partial class PlayerShooting : Node
 	{
-	}
+		// Called when the node enters the scene tree for the first time.
+		public override void _Ready()
+		{
+		}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
+		// Called every frame. 'delta' is the elapsed time since the previous frame.
+		public override void _Process(double delta)
+		{
+		}
 	}
 }

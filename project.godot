@@ -8,6 +8,24 @@
 
 config_version=5
 
+[Fmod]
+
+General/auto_initialize=true
+General/channel_count=1024
+General/is_live_update_enabled=true
+General/is_memory_tracking_enabled=false
+"Software Format/sample_rate"=48000
+"Software Format/speaker_mode"=3
+"Software Format/raw_speaker_count"=0
+General/default_listener_count=1
+General/banks_path="res://BubbleGame/Common/Sound/FMODProject/BubbleGame/Build/Desktop"
+General/should_load_by_name=false
+DSP/dsp_buffer_size=512
+DSP/dsp_buffer_count=4
+"3D Settings/doppler_scale"=1.0
+"3D Settings/distance_factor"=1.0
+"3D Settings/rolloff_scale"=1.0
+
 [application]
 
 config/name="GGJ2025"
@@ -20,16 +38,20 @@ config/icon="res://BubbleGame/Common/Resources/icon.svg"
 [autoload]
 
 Bootstrap="*res://BubbleGame/Common/Resources/_Scenes/Bootstrap/Bootstrap.tscn"
+FmodManager="*res://addons/fmod/FmodManager.gd"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-window/size/mode=2
+window/size/viewport_width=960
+window/size/viewport_height=540
 
 [dotnet]
 
 project/assembly_name="GGJ2025"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/fmod/plugin.cfg")
 
 [file_customization]
 
@@ -84,4 +106,8 @@ shoot={
 , Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(165, 20),"global_position":Vector2(174, 66),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
 ]
+}
+move_mouse={
+"deadzone": 0.5,
+"events": []
 }
