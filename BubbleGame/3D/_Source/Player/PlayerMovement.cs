@@ -1,15 +1,49 @@
 using Godot;
-using System;
 
-public partial class PlayerMovement : Node
+namespace BubbleGame._3D
 {
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
+	/// <summary>
+	/// This class controls player movement.
+	/// </summary>
+	public partial class PlayerMovement : Node
 	{
-	}
+		[Export]
+		public Player player;
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
+		[Export]
+		public float moveSpeed;
+
+		private Vector3 _movement;
+
+		public override void _Input(InputEvent @event)
+		{
+			base._Input(@event);
+
+			_movement = Vector3.Zero;
+
+			if (@event.IsAction("move_left"))
+			{
+				_movement += new Vector3(-moveSpeed, 0, 0);
+			}
+			if (@event.IsAction("move_right"))
+			{
+				_movement += new Vector3(moveSpeed, 0, 0);
+			}
+			if (@event.IsAction("move_down"))
+			{
+				_movement += new Vector3(0, -moveSpeed, 0);
+			}
+			if (@event.IsAction("move_up"))
+			{
+				_movement += new Vector3(0, moveSpeed, 0);
+			}
+		}
+
+		public override void _Process(double delta)
+		{
+			base._Process(delta);
+
+			player.Position += _movement;
+		}
 	}
 }
