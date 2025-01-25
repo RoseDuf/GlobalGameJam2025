@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cjpynt7tjsw2p"]
+[gd_scene load_steps=5 format=3 uid="uid://cjpynt7tjsw2p"]
 
 [ext_resource type="Script" path="res://BubbleGame/Common/_Source/CSharp/SceneManagement/SceneManager.cs" id="1_gceh8"]
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/GameManager.cs" id="2_sdpdv"]
 [ext_resource type="Resource" uid="uid://b67hbsqmc4sk5" path="res://BubbleGame/Common/Resources/_Scenes/SceneCollection.tres" id="2_yntk8"]
-[ext_resource type="PackedScene" uid="uid://brsq6bofl6i7f" path="res://BubbleGame/Common/Sound/audio.tscn" id="4_01owx"]
-[ext_resource type="Script" path="res://BubbleGame/Common/_Source/CSharp/Audio/AudioManager.cs" id="5_ba5ia"]
+[ext_resource type="PackedScene" uid="uid://cyl6nqgyr65uy" path="res://BubbleGame/Common/Sound/audio.tscn" id="4_01owx"]
 
 [node name="Bootstrap" type="Node"]
 
@@ -18,4 +17,3 @@ SceneCollection = ExtResource("2_yntk8")
 script = ExtResource("2_sdpdv")
 
 [node name="Audio" parent="." instance=ExtResource("4_01owx")]
-script = ExtResource("5_ba5ia")

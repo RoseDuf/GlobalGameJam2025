@@ -1,13 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://boepbwv7lujx1"]
+[gd_scene load_steps=10 format=3 uid="uid://boepbwv7lujx1"]
 
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/PlayerMovement.gd" id="1_a5hyg"]
 [ext_resource type="Texture2D" uid="uid://bbpjqfvmoagvd" path="res://BubbleGame/2D/Resources/_DebugArt/Player.png" id="1_u0o3q"]
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/BubbleTrail.gd" id="3_24bqs"]
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/WandHitbox.gd" id="4_lenks"]
 [ext_resource type="PackedScene" uid="uid://dbntmby25h61t" path="res://BubbleGame/2D/Resources/Prefabs/obstacle.tscn" id="5_ybu7b"]
-
-[sub_resource type="Gradient" id="Gradient_owgmy"]
-colors = PackedColorArray(1, 1, 1, 1, 0, 1, 1, 1)
+[ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/2DCamera.gd" id="8_ud1mw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dte2h"]
 radius = 49.0
@@ -15,27 +13,12 @@ height = 218.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4i0xn"]
 
+[sub_resource type="Gradient" id="Gradient_owgmy"]
+colors = PackedColorArray(1, 1, 1, 0.784314, 0, 1, 1, 0.784314)
+
 [node name="Bubble2D" type="Node"]
 
-[node name="Camera" type="Camera2D" parent="."]
-position = Vector2(156.592, 119.944)
-
 [node name="Player" type="Node" parent="."]
-
-[node name="BubbleTrail" type="Line2D" parent="Player" node_paths=PackedStringArray("WandPosition", "TrailHitbox", "CharacterMovement")]
-width = 40.0
-gradient = SubResource("Gradient_owgmy")
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 1
-script = ExtResource("3_24bqs")
-WandPosition = NodePath("../CharacterBody2D/Area2D/WandHitbox")
-TrailHitbox = NodePath("BubbleTrailHitbox")
-CharacterMovement = NodePath("../CharacterBody2D")
-
-[node name="BubbleTrailHitbox" type="StaticBody2D" parent="Player/BubbleTrail"]
-collision_layer = 2
-collision_mask = 2
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Player"]
 position = Vector2(-7, 4)
@@ -52,17 +35,40 @@ position = Vector2(2, 0)
 shape = SubResource("CapsuleShape2D_dte2h")
 
 [node name="Area2D" type="Area2D" parent="Player/CharacterBody2D"]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 0
+collision_mask = 0
 script = ExtResource("4_lenks")
 
 [node name="WandHitbox" type="CollisionShape2D" parent="Player/CharacterBody2D/Area2D"]
 position = Vector2(30, -180)
 shape = SubResource("CircleShape2D_4i0xn")
 
+[node name="BubbleTrail" type="Line2D" parent="Player" node_paths=PackedStringArray("WandPosition", "TrailHitbox", "CharacterMovement")]
+width = 40.0
+gradient = SubResource("Gradient_owgmy")
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 1
+script = ExtResource("3_24bqs")
+WandPosition = NodePath("../CharacterBody2D/Area2D/WandHitbox")
+TrailHitbox = NodePath("BubbleTrailHitbox")
+CharacterMovement = NodePath("../CharacterBody2D")
+
+[node name="BubbleTrailHitbox" type="StaticBody2D" parent="Player/BubbleTrail"]
+collision_layer = 2
+collision_mask = 2
+
 [node name="Obstacle" parent="." instance=ExtResource("5_ybu7b")]
 
 [node name="Obstacle2" parent="." instance=ExtResource("5_ybu7b")]
 position = Vector2(-471, 369)
+
+[node name="Camera" type="Camera2D" parent="." node_paths=PackedStringArray("Trail")]
+position = Vector2(325, 184)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+script = ExtResource("8_ud1mw")
+Trail = NodePath("../Player/BubbleTrail")
+DezoomSpeed = 0.99
 
 [connection signal="body_entered" from="Player/CharacterBody2D/Area2D" to="Player/CharacterBody2D/Area2D" method="_on_body_entered"]
