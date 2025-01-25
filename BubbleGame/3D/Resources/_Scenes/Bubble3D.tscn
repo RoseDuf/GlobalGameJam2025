@@ -34,6 +34,10 @@ script = ExtResource("2_02mne")
 player = NodePath("..")
 playerCursor = NodePath("../../Cursor3D")
 moveSpeed = 5.0
+topScreenClampThreshold = 54.0
+bottomScreenClampThreshold = -3.0
+leftScreenClampThreshold = 54.0
+rightScreenClampThreshold = -54.0
 
 [node name="PlayerShooting" type="Node" parent="Actors/Player/Player3D"]
 script = ExtResource("3_06fj2")
