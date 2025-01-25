@@ -1,4 +1,4 @@
 [gd_scene format=3 uid="uid://vxmmbunwprk8"]
 
 [node name="FmodBankLoader" type="FmodBankLoader"]
-bank_paths = ["res://BubbleGame/Common/Sound/FMODProject/BubbleGame/Build/Desktop/Master.bank"]
+bank_paths = ["res://BubbleGame/Common/Sound/FMODProject/BubbleGame/Build/Desktop/Master.bank", "res://BubbleGame/Common/Sound/FMODProject/BubbleGame/Build/Desktop/Master.strings.bank"]
