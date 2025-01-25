@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c358f7xu5nnju"]
+[gd_scene load_steps=5 format=3 uid="uid://c358f7xu5nnju"]
 
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/SpawnManager.cs" id="1_fs1cg"]
 [ext_resource type="PackedScene" uid="uid://dwghalcje8h0q" path="res://BubbleGame/3D/Resources/Obstacles/DefaultObstacle.tscn" id="2_i5gjq"]
+[ext_resource type="PackedScene" uid="uid://cpwar8fyqpc55" path="res://BubbleGame/3D/Resources/Obstacles/Despawner.tscn" id="3_y6g5q"]
 
 [sub_resource type="Environment" id="Environment_xyxs8"]
 
@@ -13,7 +14,7 @@
 environment = SubResource("Environment_xyxs8")
 
 [node name="Camera3D" type="Camera3D" parent="Environment"]
-transform = Transform3D(1, 0, 0, 0, 0.879167, 0.476514, 0, -0.476514, 0.879167, 0, 2.915, 12.8994)
+transform = Transform3D(-1, 4.17145e-08, -7.68286e-08, 0, 0.878817, 0.477159, 8.74228e-08, 0.477159, -0.878817, 0, 2.915, -8.5248)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
 
@@ -22,7 +23,10 @@ script = ExtResource("1_fs1cg")
 _obstacleScene = ExtResource("2_i5gjq")
 _obstacleSpawnTimer = NodePath("../ObstacleSpawnTimer")
 
-[node name="ObstacleSpawnTimer" type="Timer" parent="."]
+[node name="ObstacleSpawnTimer" type="Timer" parent="." groups=["despawner"]]
 wait_time = 0.001
 
-[connection signal="timeout" from="ObstacleSpawnTimer" to="ObstacleSpawner" method="OnSpawnObstacle"]
+[node name="Despawner" parent="." groups=["despawners"] instance=ExtResource("3_y6g5q")]
+transform = Transform3D(12.5397, 0, 0, 0, 8.87503, 0, 0, 0, 1, 0.119589, 0, 8.58433)
+
+[connection signal="timeout" from="ObstacleSpawnTimer" to="ObstacleSpawner" method="OnSpawnObstacles"]
