@@ -18,6 +18,9 @@ namespace BubbleGame._3D
 		public float moveSpeed = 3;
 
 		[Export]
+		public float lerpSpeed = 3;
+
+		[Export]
 		public float topScreenClampThreshold = 1;
 		[Export]
 		public float bottomScreenClampThreshold = 1;
@@ -93,7 +96,9 @@ namespace BubbleGame._3D
 			Vector3 playerMovement = projectedPoint - player.Position;
 			playerMovement.Z = 0;
 
-			player.Position += playerMovement * (float)delta;
+			Vector3 desiredPosition = player.Position + playerMovement;
+
+			player.Position = player.Position.Lerp(desiredPosition, lerpSpeed * (float)delta);
 
 			player.LookAt(playerCursor.Position);
 
