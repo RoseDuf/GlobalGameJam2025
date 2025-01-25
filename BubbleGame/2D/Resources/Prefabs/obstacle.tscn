@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbntmby25h61t"]
+
+[ext_resource type="Texture2D" uid="uid://c2loyhtelwve5" path="res://BubbleGame/2D/Resources/_DebugArt/Obstacle.png" id="1_iytlu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57urs"]
+size = Vector2(77, 118)
+
+[node name="Obstacle" type="Sprite2D"]
+position = Vector2(747, -157)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_iytlu")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1.49994, 25)
+shape = SubResource("RectangleShape2D_57urs")

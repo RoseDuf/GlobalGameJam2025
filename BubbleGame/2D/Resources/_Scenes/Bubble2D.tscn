@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bbpjqfvmoagvd" path="res://BubbleGame/2D/Resources/_DebugArt/Player.png" id="1_u0o3q"]
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/BubbleTrail.gd" id="3_24bqs"]
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/WandHitbox.gd" id="4_lenks"]
+[ext_resource type="PackedScene" uid="uid://dbntmby25h61t" path="res://BubbleGame/2D/Resources/Prefabs/obstacle.tscn" id="5_ybu7b"]
 
 [sub_resource type="Gradient" id="Gradient_owgmy"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 1, 1, 1)
@@ -13,10 +14,6 @@ radius = 49.0
 height = 218.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4i0xn"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n65we"]
-radius = 49.7033
-height = 211.527
 
 [node name="Bubble2D" type="Node"]
 
@@ -63,16 +60,9 @@ script = ExtResource("4_lenks")
 position = Vector2(30, -180)
 shape = SubResource("CircleShape2D_4i0xn")
 
-[node name="ObstacleTest" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(747, -157)
-rotation = -1.61943
-texture = ExtResource("1_u0o3q")
+[node name="Obstacle" parent="." instance=ExtResource("5_ybu7b")]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleTest"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleTest/StaticBody2D"]
-shape = SubResource("CapsuleShape2D_n65we")
-disabled = true
+[node name="Obstacle2" parent="." instance=ExtResource("5_ybu7b")]
+position = Vector2(-471, 369)
 
 [connection signal="body_entered" from="Player/CharacterBody2D/Area2D" to="Player/CharacterBody2D/Area2D" method="_on_body_entered"]
