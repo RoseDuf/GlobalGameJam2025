@@ -58,7 +58,6 @@ enabled=PackedStringArray("res://addons/fmod/plugin.cfg")
 folder_colors={
 "res://BubbleGame/2D/Art/": "purple",
 "res://BubbleGame/2D/Resources/": "orange",
-"res://BubbleGame/2D/Sound/": "yellow",
 "res://BubbleGame/2D/_Source/": "green",
 "res://BubbleGame/3D/Art/": "purple",
 "res://BubbleGame/3D/Resources/": "orange",
