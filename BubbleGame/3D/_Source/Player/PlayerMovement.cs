@@ -1,4 +1,5 @@
 using Godot;
+using System.ComponentModel.DataAnnotations;
 
 namespace BubbleGame._3D
 {
@@ -16,7 +17,19 @@ namespace BubbleGame._3D
 		[Export]
 		public float moveSpeed = 3;
 
+		[Export]
+		public float topScreenClampThreshold = 1;
+		[Export]
+		public float bottomScreenClampThreshold = 1;
+		[Export]
+		public float leftScreenClampThreshold = 1;
+		[Export]
+		public float rightScreenClampThreshold = 1;
+
 		private Vector3 _cursorMovement;
+		private Vector3 _accumulatedCursorMovement;
+		private Vector3 _lastAccumulatedCursorMovement;
+		private Vector3 _lastAccumulatedCursorMovementDelta;
 
 		public override void _Input(InputEvent @event)
 		{
@@ -33,43 +46,58 @@ namespace BubbleGame._3D
 			{
 				if (Input.IsActionPressed("move_left"))
 				{
-					GD.Print("Left");
-					_cursorMovement += new Vector3(moveSpeed, 0, 0);
+					_cursorMovement += new Vector3(1, 0, 0);
 				}
 				if (Input.IsActionPressed("move_right"))
 				{
-					_cursorMovement += new Vector3(-moveSpeed, 0, 0);
+					_cursorMovement += new Vector3(-1, 0, 0);
 				}
 				if (Input.IsActionPressed("move_down"))
 				{
-					_cursorMovement += new Vector3(0, -moveSpeed, 0);
+					_cursorMovement += new Vector3(0, -1, 0);
 				}
 				if (Input.IsActionPressed("move_up"))
 				{
-					_cursorMovement += new Vector3(0, moveSpeed, 0);
+					_cursorMovement += new Vector3(0, 1, 0);
 				}
 			}
 
+			Camera3D camera = GetTree().Root.GetCamera3D();
+			Vector2 viewPortMousePos = GetViewport().GetMousePosition();
+			Vector3 positionOnViewPort = camera.ProjectRayOrigin(viewPortMousePos);
+
 			// trying to get mouse movement working
 			//Vector2 viewPortMousePos = GetViewport().GetMousePosition();
-			//Camera3D camera = GetTree().Root.GetCamera3D();
 			//Vector3 rayOrigin = camera.ProjectRayOrigin(viewPortMousePos);
 			//Vector3 rayEnd = camera.ProjectRayOrigin(viewPortMousePos);
 			//Vector3 aimingRay = rayEnd - rayOrigin;
 			//GD.Print($"ray: {aimingRay}");
 
-			playerCursor.Position += _cursorMovement * (float)delta;
+			if ((_accumulatedCursorMovement.Y >= topScreenClampThreshold && _cursorMovement.Y > 0) ||
+				(_accumulatedCursorMovement.Y <= bottomScreenClampThreshold && _cursorMovement.Y < 0))
+			{
+				_cursorMovement.Y = 0;
+			}
 
-			Vector3 playerMovement = Vector3.Zero;
+			if ((_accumulatedCursorMovement.X > leftScreenClampThreshold && _cursorMovement.X > 0) ||
+				(_accumulatedCursorMovement.X < rightScreenClampThreshold && _cursorMovement.X < 0))
+			{
+				_cursorMovement.X = 0;
+			}
+
+			Vector3 adjustment = _cursorMovement * moveSpeed * (float)delta;
+			playerCursor.Position += adjustment;
 
 			Plane playerPlane = new Plane(Vector3.Forward, player.Position);
 			Vector3 projectedPoint = playerPlane.Project(playerCursor.Position);
-			playerMovement += projectedPoint - player.Position;
+			Vector3 playerMovement = projectedPoint - player.Position;
 			playerMovement.Z = 0;
 
 			player.Position += playerMovement * (float)delta;
 
 			player.LookAt(playerCursor.Position);
+
+			_accumulatedCursorMovement += _cursorMovement;
 		}
 	}
 }
