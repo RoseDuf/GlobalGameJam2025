@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cyl6nqgyr65uy"]
 
-[ext_resource type="PackedScene" path="res://BubbleGame/Common/Sound/fmod_bank_loader.tscn" id="1_e3d73"]
+[ext_resource type="PackedScene" uid="uid://vxmmbunwprk8" path="res://BubbleGame/Common/Sound/fmod_bank_loader.tscn" id="1_e3d73"]
 
 [node name="Audio" type="Node"]
 
