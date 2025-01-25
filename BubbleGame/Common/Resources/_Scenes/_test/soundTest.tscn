@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://btrqx65snavla"]
+
+[node name="SoundTest" type="Node2D"]
+
+[node name="FmodBankLoader" type="FmodBankLoader" parent="."]
+bank_paths = ["res://BubbleGame/Common/Sound/FMODProject/BubbleGame/Build/Desktop/Master.bank"]
+
+[node name="FmodEventEmitter2D" type="FmodEventEmitter2D" parent="FmodBankLoader"]
+event_name = "event:/TestSound"
+event_guid = "{14f727a2-e333-4dbb-a64a-7616d9acf901}"
+autoplay = true
+
+[node name="FmodListener2D" type="FmodListener2D" parent="FmodBankLoader"]

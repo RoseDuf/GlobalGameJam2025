@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://brsq6bofl6i7f"]
+
+[ext_resource type="PackedScene" uid="uid://vxmmbunwprk8" path="res://BubbleGame/Common/Sound/fmod_bank_loader.tscn" id="1_e3d73"]
+
+[node name="Audio" type="Node"]
+
+[node name="FmodBankLoader" parent="." instance=ExtResource("1_e3d73")]
