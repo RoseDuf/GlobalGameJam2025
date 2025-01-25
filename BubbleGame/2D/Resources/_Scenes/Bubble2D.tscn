@@ -1,3 +1,43 @@
-[gd_scene format=3 uid="uid://boepbwv7lujx1"]
+[gd_scene load_steps=5 format=3 uid="uid://boepbwv7lujx1"]
+
+[ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/PlayerMovement.gd" id="1_a5hyg"]
+[ext_resource type="Texture2D" uid="uid://bbpjqfvmoagvd" path="res://BubbleGame/2D/Resources/_DebugArt/Player.png" id="1_u0o3q"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dte2h"]
+radius = 49.0
+height = 218.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n65we"]
+radius = 49.7033
+height = 211.527
 
 [node name="Bubble2D" type="Node"]
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(156.592, 119.944)
+
+[node name="Player" type="Node" parent="."]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Player"]
+position = Vector2(-7, 4)
+motion_mode = 1
+platform_on_leave = 2
+script = ExtResource("1_a5hyg")
+CharacterSpeed = 500.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/CharacterBody2D"]
+texture = ExtResource("1_u0o3q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/CharacterBody2D"]
+position = Vector2(2, 0)
+shape = SubResource("CapsuleShape2D_dte2h")
+
+[node name="ObstacleTest" type="Sprite2D" parent="."]
+position = Vector2(747, -157)
+rotation = -1.61943
+texture = ExtResource("1_u0o3q")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleTest"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleTest/StaticBody2D"]
+shape = SubResource("CapsuleShape2D_n65we")
