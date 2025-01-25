@@ -14,6 +14,7 @@ albedo_color = Color(0.117647, 1, 1, 0.176471)
 script = ExtResource("1_88du3")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." groups=["despawner"]]
+visible = false
 material_override = SubResource("StandardMaterial3D_o312w")
 mesh = SubResource("BoxMesh_kvhg8")
 

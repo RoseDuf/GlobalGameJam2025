@@ -54,7 +54,7 @@ namespace BubbleGame._3D
 
         private void OnAreaEntered(Area3D area)
         {
-            if (area.IsInGroup("despawners"))
+            if (area.IsInGroup("despawner"))
             {
                 ObstacleDestroyedEventHandler?.Invoke(this);
             }
