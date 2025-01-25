@@ -1,14 +1,76 @@
-[gd_scene load_steps=2 format=3 uid="uid://bddasn5pebfva"]
+[gd_scene load_steps=10 format=3 uid="uid://bddasn5pebfva"]
+
+[ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/Player.cs" id="1_8n07s"]
+[ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/PlayerMovement.cs" id="2_02mne"]
+[ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/PlayerShooting.cs" id="3_06fj2"]
+[ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/Cursor.cs" id="4_1xwlw"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_7hgvn"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_mby3m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jlnir"]
+albedo_color = Color(0.171687, 0.40397, 1, 1)
 
 [sub_resource type="Environment" id="Environment_xyxs8"]
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_e5wub"]
+
 [node name="Bubble3D" type="Node"]
 
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2, -13.615)
+fov = 25.0
+
 [node name="Actors" type="Node" parent="."]
+
+[node name="Player" type="Node" parent="Actors"]
+
+[node name="Player3D" type="Node3D" parent="Actors/Player"]
+script = ExtResource("1_8n07s")
+
+[node name="PlayerMovement" type="Node" parent="Actors/Player/Player3D" node_paths=PackedStringArray("player", "playerCursor")]
+script = ExtResource("2_02mne")
+player = NodePath("..")
+playerCursor = NodePath("../../Cursor3D")
+moveSpeed = 5.0
+
+[node name="PlayerShooting" type="Node" parent="Actors/Player/Player3D"]
+script = ExtResource("3_06fj2")
+
+[node name="Visuals" type="Node3D" parent="Actors/Player/Player3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Cube" type="MeshInstance3D" parent="Actors/Player/Player3D/Visuals"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -0.25, 0, 1, -1.09278e-08, 0, 0, 0)
+mesh = SubResource("PrismMesh_7hgvn")
+skeleton = NodePath("../..")
+
+[node name="Cursor3D" type="Node3D" parent="Actors/Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+script = ExtResource("4_1xwlw")
+
+[node name="Visuals" type="Node3D" parent="Actors/Player/Cursor3D"]
+
+[node name="Cursor" type="MeshInstance3D" parent="Actors/Player/Cursor3D/Visuals"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("SphereMesh_mby3m")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_jlnir")
 
 [node name="Environment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_xyxs8")
 
-[node name="Camera3D" type="Camera3D" parent="Environment"]
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
+mesh = SubResource("CapsuleMesh_e5wub")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.44794, 0, 10)
+mesh = SubResource("CapsuleMesh_e5wub")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3808, 0, -3)
+mesh = SubResource("CapsuleMesh_e5wub")
