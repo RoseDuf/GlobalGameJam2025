@@ -1,3 +1,14 @@
-[gd_scene format=3 uid="uid://bddasn5pebfva"]
+[gd_scene load_steps=2 format=3 uid="uid://bddasn5pebfva"]
+
+[sub_resource type="Environment" id="Environment_xyxs8"]
 
 [node name="Bubble3D" type="Node"]
+
+[node name="Actors" type="Node" parent="."]
+
+[node name="Environment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xyxs8")
+
+[node name="Camera3D" type="Camera3D" parent="Environment"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
