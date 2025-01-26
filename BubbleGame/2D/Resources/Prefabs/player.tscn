@@ -34,7 +34,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"RunningFront",
-"speed": 6.0
+"speed": 12.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dte2h"]
@@ -64,7 +64,7 @@ scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_nxp7r")
 animation = &"RunningFront"
 autoplay = "RunningFront"
-frame_progress = 0.50118
+frame_progress = 0.470114
 
 [node name="WandFront" type="Sprite2D" parent="CharacterBody2D"]
 z_index = 2
@@ -101,5 +101,10 @@ CharacterMovement = NodePath("../CharacterBody2D")
 [node name="BubbleTrailHitbox" type="StaticBody2D" parent="BubbleTrail"]
 collision_layer = 2
 collision_mask = 2
+
+[node name="FmodEventEmitter2D" type="FmodEventEmitter2D" parent="."]
+event_name = "event:/2D/Footsteps"
+event_guid = "{f2bc2792-1a3c-4545-a31f-b56956186766}"
+autoplay = true
 
 [connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D/Area2D" method="_on_body_entered"]
