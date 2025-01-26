@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://cww8xpy7y6xet"]
+
+[ext_resource type="Texture2D" uid="uid://du3nujs12lxtr" path="res://BubbleGame/2D/Art/Enemies/Butterfly/Butterfly 001.png" id="1_yh5de"]
+[ext_resource type="Texture2D" uid="uid://bp84ymcsrm2rb" path="res://BubbleGame/2D/Art/Enemies/Butterfly/Butterfly 002.png" id="2_5q732"]
+[ext_resource type="Texture2D" uid="uid://cmluu6rgsspyf" path="res://BubbleGame/2D/Art/Enemies/Butterfly/Butterfly 003.png" id="3_bbeak"]
+[ext_resource type="Texture2D" uid="uid://c7ykuwlxjlxll" path="res://BubbleGame/2D/Art/Enemies/Butterfly/Butterfly 004.png" id="4_fl30w"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_a5cy8"]
+frames = 4
+speed_scale = 10.0
+frame_0/texture = ExtResource("1_yh5de")
+frame_1/texture = ExtResource("2_5q732")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("3_bbeak")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("4_fl30w")
+frame_3/duration = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2syh"]
+size = Vector2(840, 820)
+
+[node name="Enemy" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = SubResource("AnimatedTexture_a5cy8")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_d2syh")
+disabled = true
