@@ -14,7 +14,7 @@ namespace BubbleGame._3D
 
 		public void Area3D_AreaEntered(Area3D area)
 		{
-			if (area.IsInGroup("Obstacle"))
+			if (area.Name == "ObstacleArea3D")
 			{
 				health--;
 
