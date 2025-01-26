@@ -6,7 +6,7 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_87b83"]
 
-[node name="DefaultObstacle" type="Node3D" node_paths=PackedStringArray("_colliderArea")]
+[node name="DefaultObstacle" type="Node3D" node_paths=PackedStringArray("_colliderArea") groups=["obstacle"]]
 script = ExtResource("1_eqpn5")
 _colliderArea = NodePath("Area3D")
 
