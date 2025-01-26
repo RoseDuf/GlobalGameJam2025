@@ -54,7 +54,7 @@ position = Vector2(-7, 4)
 motion_mode = 1
 platform_on_leave = 2
 script = ExtResource("1_glry7")
-CharacterSpeed = 500.0
+CharacterSpeed = 750.0
 CharacterAnimations = NodePath("AnimatedSprite2D")
 CharacterWand = NodePath("WandFront")
 
@@ -64,7 +64,7 @@ scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_nxp7r")
 animation = &"RunningFront"
 autoplay = "RunningFront"
-frame_progress = 0.337518
+frame_progress = 0.50118
 
 [node name="WandFront" type="Sprite2D" parent="CharacterBody2D"]
 z_index = 2
