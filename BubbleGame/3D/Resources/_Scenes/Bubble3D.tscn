@@ -1,14 +1,16 @@
-[gd_scene load_steps=15 format=3 uid="uid://bddasn5pebfva"]
+[gd_scene load_steps=16 format=3 uid="uid://bddasn5pebfva"]
 
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/Player.cs" id="1_8n07s"]
+[ext_resource type="Script" path="res://BubbleGame/3D/Resources/_Scenes/Bubble3D.cs" id="1_ngrq7"]
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/PlayerMovement.cs" id="2_02mne"]
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/PlayerShooting.cs" id="3_06fj2"]
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/Cursor.cs" id="4_1xwlw"]
 [ext_resource type="PackedScene" uid="uid://cs6mpkq4pvwtw" path="res://BubbleGame/3D/Resources/Bullet.tscn" id="4_vu1xa"]
+[ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/MovementAudio.gd" id="5_dcat6"]
 [ext_resource type="PackedScene" uid="uid://cpwar8fyqpc55" path="res://BubbleGame/3D/Resources/Obstacles/Despawner.tscn" id="5_gvexs"]
 [ext_resource type="PackedScene" uid="uid://b035j4rxrryei" path="res://BubbleGame/3D/Resources/Obstacles/ObstacleSpawner.tscn" id="6_xfw0p"]
 [ext_resource type="PackedScene" uid="uid://dwghalcje8h0q" path="res://BubbleGame/3D/Resources/Obstacles/DefaultObstacle.tscn" id="6_ynck0"]
-[ext_resource type="PackedScene" uid="uid://b61b1b065mmhk" path="res://BubbleGame/3D/Art/Scenes/BubbleTunnel.tscn" id="7_hkl0d"]
+[ext_resource type="PackedScene" path="res://BubbleGame/3D/Art/Scenes/BubbleTunnel.tscn" id="7_hkl0d"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jfk08"]
 size = Vector3(1, 0.25, 1)
@@ -23,10 +25,13 @@ albedo_color = Color(0.171687, 0.40397, 1, 1)
 [sub_resource type="Environment" id="Environment_xyxs8"]
 
 [node name="Bubble3D" type="Node"]
+script = ExtResource("1_ngrq7")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2, -13.615)
 fov = 25.0
+
+[node name="FmodListener3D" type="FmodListener3D" parent="Camera3D"]
 
 [node name="Actors" type="Node" parent="."]
 
@@ -65,6 +70,15 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -0.25, 0, 1, -1.09278e-08, 0, 0, 0)
 mesh = SubResource("PrismMesh_7hgvn")
 skeleton = NodePath("../..")
+
+[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="Actors/Player/Player3D"]
+event_name = "event:/3D/Movement"
+event_guid = "{63eb7be6-4738-464e-81c0-59cbb6627eaa}"
+volume = 20.0
+fmod_parameters/Speed/id = -5554117826464266780
+fmod_parameters/Speed = 0.0
+fmod_parameters/Speed/variant_type = 3
+script = ExtResource("5_dcat6")
 
 [node name="Cursor3D" type="Node3D" parent="Actors/Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
