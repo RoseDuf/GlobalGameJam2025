@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dd8qqug60e8fj"]
+[gd_scene load_steps=17 format=3 uid="uid://dd8qqug60e8fj"]
 
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/GameManager2D.gd" id="1_rkm85"]
 [ext_resource type="Texture2D" uid="uid://cr5xry6fsqq7c" path="res://BubbleGame/2D/Resources/_DebugArt/SoapBarBack.png" id="2_fgk37"]
@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://egv3vjfw0mrs" path="res://BubbleGame/2D/Resources/Prefabs/rock-3.tscn" id="12_ercq4"]
 [ext_resource type="PackedScene" uid="uid://bx2jow18jl55q" path="res://BubbleGame/2D/Resources/Prefabs/rock-4.tscn" id="13_5bshv"]
 [ext_resource type="PackedScene" uid="uid://cww8xpy7y6xet" path="res://BubbleGame/2D/Resources/Prefabs/enemy.tscn" id="14_2depf"]
+[ext_resource type="PackedScene" uid="uid://btpfnmhc6apmb" path="res://BubbleGame/2D/Resources/Prefabs/enemy-Wasp.tscn" id="15_yvqr2"]
+[ext_resource type="PackedScene" uid="uid://mrmgv3bmgfq1" path="res://BubbleGame/2D/Resources/Prefabs/enemy-mosquito.tscn" id="16_edj8u"]
 
 [node name="Bubble2D" type="Node"]
 script = ExtResource("1_rkm85")
@@ -225,5 +227,11 @@ position = Vector2(-342, 304)
 
 [node name="Enemy4" parent="." instance=ExtResource("14_2depf")]
 position = Vector2(447, -253)
+
+[node name="Enemy5" parent="." instance=ExtResource("15_yvqr2")]
+position = Vector2(460, 49)
+
+[node name="Enemy6" parent="." instance=ExtResource("16_edj8u")]
+position = Vector2(169, 203)
 
 [editable path="Player"]

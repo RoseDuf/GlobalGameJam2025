@@ -42,21 +42,21 @@ script = ExtResource("1_8n07s")
 
 [node name="PlayerMovement" type="Node" parent="Actors/Player/Player3D" node_paths=PackedStringArray("player", "playerCursor")]
 script = ExtResource("2_02mne")
+player = NodePath("..")
+playerCursor = NodePath("../../Cursor3D")
 moveSpeed = 5.0
 lerpSpeed = 4.0
 topScreenClampThreshold = 54.0
 bottomScreenClampThreshold = -3.0
 leftScreenClampThreshold = 54.0
 rightScreenClampThreshold = -54.0
-player = NodePath("..")
-playerCursor = NodePath("../../Cursor3D")
 
 [node name="PlayerShooting" type="Node3D" parent="Actors/Player/Player3D" node_paths=PackedStringArray("_playerCursor")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00229645, 9.53674e-07, -0.0309143)
 script = ExtResource("3_06fj2")
 speed = 32.0
-_bulletNode = ExtResource("4_vu1xa")
 _playerCursor = NodePath("../../Cursor3D")
+_bulletNode = ExtResource("4_vu1xa")
 
 [node name="Area3D" type="Area3D" parent="Actors/Player/Player3D"]
 
