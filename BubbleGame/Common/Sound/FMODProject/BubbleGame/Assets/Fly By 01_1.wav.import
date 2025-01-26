@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://darwn1tq3mpnc"
+path="res://.godot/imported/Fly By 01_1.wav-130fd2efd99d7e05c9f74027836a6c3d.sample"
+
+[deps]
+
+source_file="res://BubbleGame/Common/Sound/FMODProject/BubbleGame/Assets/Fly By 01_1.wav"
+dest_files=["res://.godot/imported/Fly By 01_1.wav-130fd2efd99d7e05c9f74027836a6c3d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
