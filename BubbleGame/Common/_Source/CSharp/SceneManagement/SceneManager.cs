@@ -2,6 +2,8 @@ using Godot;
 
 using System.IO;
 using System.Collections.Generic;
+using System;
+using Godot.Collections;
 
 namespace BubbleGame.Common.SceneManagement
 {
@@ -175,5 +177,43 @@ namespace BubbleGame.Common.SceneManagement
 			if (sceneNode == sceneTree.CurrentScene)
 				sceneTree.CurrentScene = null;
 		}
-	}
+
+		public Godot.Collections.Array GetTimeStampsCachedData()
+		{
+            var timeStamps = new Godot.Collections.Array();
+            var config = new ConfigFile();
+
+            // Load data from a file.
+            Error err = config.Load("user://levelcache.cfg");
+
+            // If the file didn't load, ignore it.
+            if (err != Error.Ok)
+            {
+                return null;
+            }
+
+            timeStamps = (Godot.Collections.Array)config.GetValue("CachedData", "TimeStamps");
+
+			return timeStamps;
+        }
+
+        public float GetTimeElapsedCachedData()
+        {
+			float timeElapsed = 0;
+            var config = new ConfigFile();
+
+            // Load data from a file.
+            Error err = config.Load("user://levelcache.cfg");
+
+            // If the file didn't load, ignore it.
+            if (err != Error.Ok)
+            {
+                return 0;
+            }
+
+            timeElapsed = (float)config.GetValue("CachedData", "TimeElapsed");
+
+			return timeElapsed;	
+        }
+    }
 }

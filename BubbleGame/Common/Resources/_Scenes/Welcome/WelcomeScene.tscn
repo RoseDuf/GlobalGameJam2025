@@ -1,9 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://bjejpnnacm3p6"]
+[gd_scene load_steps=16 format=3 uid="uid://bjejpnnacm3p6"]
 
-[ext_resource type="Texture2D" uid="uid://byx4t3xq4jp1i" path="res://BubbleGame/Common/Art/MainMenu/background_menu.png" id="1_8m3os"]
 [ext_resource type="Script" path="res://BubbleGame/Common/_Source/CSharp/MainMenuView.cs" id="1_vmjco"]
 [ext_resource type="Script" path="res://BubbleGame/Common/_Source/GScript/MainMenu.gd" id="1_xjk0w"]
 [ext_resource type="Texture2D" uid="uid://ehhnhh2gw6ge" path="res://BubbleGame/Common/Art/MainMenu/bouton_jouer_defaut.png" id="3_11n0w"]
+[ext_resource type="Texture2D" uid="uid://btj7eceelyoio" path="res://BubbleGame/Common/Art/MainMenu/background_menu_v2.png" id="3_38h48"]
 [ext_resource type="Script" path="res://BubbleGame/Common/_Source/GScript/Debug3DButton.gd" id="4_hb5yk"]
 [ext_resource type="Texture2D" uid="uid://bijd6caiogu2a" path="res://BubbleGame/Common/Art/MainMenu/bouton_jouer_pressed.png" id="4_ppu6h"]
 [ext_resource type="Texture2D" uid="uid://cj77nt1xonfyx" path="res://BubbleGame/Common/Art/MainMenu/bouton_jouer_hover.png" id="5_ivlqn"]
@@ -16,20 +16,11 @@
 [ext_resource type="Texture2D" uid="uid://csmnm6luja2xu" path="res://BubbleGame/Common/Art/MainMenu/bouton_quitter_hover.png" id="11_1prnb"]
 [ext_resource type="FontFile" uid="uid://b510lfg5fi4uf" path="res://BubbleGame/Common/Resources/Chewy-Regular.ttf" id="12_lg4pt"]
 
-[sub_resource type="Theme" id="Theme_o55tg"]
-default_font = ExtResource("12_lg4pt")
-default_font_size = 18
-
 [node name="WelcomeScene" type="Node"]
 script = ExtResource("1_xjk0w")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("1_vmjco")
-
-[node name="Background" type="Sprite2D" parent="CanvasLayer"]
-visible = false
-position = Vector2(960, 540)
-texture = ExtResource("1_8m3os")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 anchors_preset = 15
@@ -37,7 +28,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_8m3os")
+texture = ExtResource("3_38h48")
 stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
@@ -46,10 +37,10 @@ custom_minimum_size = Vector2(200, 40)
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 251.0
-offset_top = -121.0
-offset_right = 508.0
-offset_bottom = -81.0
+offset_left = 239.0
+offset_top = -101.0
+offset_right = 496.0
+offset_bottom = -61.0
 grow_vertical = 0
 size_flags_horizontal = 0
 size_flags_vertical = 8
@@ -57,17 +48,14 @@ text = "3D (visible only on debug builds)"
 script = ExtResource("4_hb5yk")
 
 [node name="GridContainer" type="GridContainer" parent="CanvasLayer"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -155.0
-offset_top = 51.0
-offset_right = 155.0
-offset_bottom = 415.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 220.0
+offset_top = -493.0
+offset_right = 530.0
+offset_bottom = -109.0
+grow_vertical = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
@@ -93,10 +81,12 @@ texture_hover = ExtResource("11_1prnb")
 script = ExtResource("7_askyp")
 
 [node name="CreditsButton" type="Button" parent="CanvasLayer/GridContainer"]
-custom_minimum_size = Vector2(200, 40)
+custom_minimum_size = Vector2(200, 60)
 layout_mode = 2
-theme = SubResource("Theme_o55tg")
 theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("12_lg4pt")
+theme_override_font_sizes/font_size = 32
 text = "Credits"
 script = ExtResource("7_askyp")
 
