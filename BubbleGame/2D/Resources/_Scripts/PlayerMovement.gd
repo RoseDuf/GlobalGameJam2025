@@ -4,6 +4,7 @@ class_name PlayerMovement
 @export var GameManager: GameManager2D
 @export var CharacterSpeed: float = 300.0
 @export var CharacterAnimations: AnimatedSprite2D;
+@export var CharacterWand: Sprite2D;
 var PreviousDirection: Vector2 = Vector2(0,0)
 var CurrentAcceleration: float = 0
 
@@ -25,3 +26,4 @@ func _physics_process(delta: float) -> void:
 
 func _process(_delta: float) -> void:
 	CharacterAnimations.flip_h = velocity.x < -0.01
+	CharacterWand.flip_h = CharacterAnimations.flip_h
