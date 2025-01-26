@@ -5,7 +5,7 @@ var RemainingSoapTime: float = SoapBarManager.INITIAL_MAX_VALUE
 var CollectedBugsList: Array;
 
 const SectionName = "CachedData"
-
+signal playerDeath
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	RemainingSoapTime = SoapBarManager.MaximumBarValue;
@@ -38,7 +38,7 @@ func PrepareNextPhase() -> void:
 	progressFile.set_value(SectionName, "TimeStamps", CollectedBugsList)
 	
 	progressFile.save("user://levelcache.cfg")
-	
+	playerDeath.emit()
 	call_deferred("LoadNextLevel")
 	
 func LoadNextLevel() -> void:
