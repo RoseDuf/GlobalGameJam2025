@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6vtx0hhpkdv2"]
+[gd_scene load_steps=3 format=3 uid="uid://dymx20s8ic2of"]
 
 [ext_resource type="PackedScene" uid="uid://7o678pljwyvm" path="res://BubbleGame/3D/Art/Models/Export/ST_Obstacle_01_DoNotUse.fbx" id="1_po640"]
-[ext_resource type="Material" uid="uid://bdxsa1m56ni5m" path="res://BubbleGame/3D/Art/Shader/M_Spaceship_Obstacles_01.tres" id="2_cy7ru"]
+[ext_resource type="Material" path="res://BubbleGame/3D/Art/Shader/M_Spaceship_Obstacles_01.tres" id="2_cy7ru"]
 
 [node name="ST_Obstacle_01" instance=ExtResource("1_po640")]
 
