@@ -17,5 +17,5 @@ func _process(delta: float) -> void:
 		PrepareNextPhase()
 
 func PrepareNextPhase() -> void:
-	assert(false, "NOT TEH GAEM OVERZ")
+	assert(false, "NOT TEH GAEM 	OVERZ")
 	

@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://b5gucax43h73"]
+
+[ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/Player.cs" id="1_tumo2"]
+[ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/PlayerMovement.cs" id="2_pyfm7"]
+[ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/PlayerShooting.cs" id="3_nvyho"]
+[ext_resource type="PackedScene" uid="uid://cs6mpkq4pvwtw" path="res://BubbleGame/3D/Resources/Bullet.tscn" id="4_nkgbg"]
+[ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/Cursor.cs" id="5_jxdjk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jfk08"]
+size = Vector3(1, 0.25, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_7hgvn"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_mby3m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jlnir"]
+albedo_color = Color(0.171687, 0.40397, 1, 1)
+
+[node name="Player" type="Node"]
+
+[node name="Player3D" type="Node3D" parent="."]
+script = ExtResource("1_tumo2")
+
+[node name="PlayerMovement" type="Node" parent="Player3D" node_paths=PackedStringArray("player", "playerCursor")]
+script = ExtResource("2_pyfm7")
+player = NodePath("..")
+playerCursor = NodePath("../../Cursor3D")
+moveSpeed = 5.0
+lerpSpeed = 4.0
+topScreenClampThreshold = 54.0
+bottomScreenClampThreshold = -3.0
+leftScreenClampThreshold = 54.0
+rightScreenClampThreshold = -54.0
+
+[node name="PlayerShooting" type="Node3D" parent="Player3D" node_paths=PackedStringArray("_playerCursor")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00229645, 9.53674e-07, -0.0309143)
+script = ExtResource("3_nvyho")
+speed = 32.0
+_playerCursor = NodePath("../../Cursor3D")
+_bulletNode = ExtResource("4_nkgbg")
+
+[node name="Area3D" type="Area3D" parent="Player3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player3D/Area3D"]
+shape = SubResource("BoxShape3D_jfk08")
+
+[node name="Visuals" type="Node3D" parent="Player3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Cube" type="MeshInstance3D" parent="Player3D/Visuals"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -0.25, 0, 1, -1.09278e-08, 0, 0, 0)
+mesh = SubResource("PrismMesh_7hgvn")
+skeleton = NodePath("../..")
+
+[node name="Cursor3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+script = ExtResource("5_jxdjk")
+
+[node name="Visuals" type="Node3D" parent="Cursor3D"]
+
+[node name="Cursor" type="MeshInstance3D" parent="Cursor3D/Visuals"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("SphereMesh_mby3m")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_jlnir")
+
+[connection signal="area_entered" from="Player3D/Area3D" to="Player3D" method="Area3D_AreaEntered"]
