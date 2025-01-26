@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://42lb31xtstgk"]
+[gd_scene load_steps=16 format=3 uid="uid://42lb31xtstgk"]
 
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/GameManager2D.gd" id="1_rkm85"]
 [ext_resource type="PackedScene" uid="uid://bqjdygfsmbxya" path="res://BubbleGame/2D/Resources/Prefabs/player.tscn" id="5_vjnj5"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cy2ii3b76aj4g" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/rock-2.tscn" id="11_34m0w"]
 [ext_resource type="PackedScene" uid="uid://egv3vjfw0mrs" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/rock-3.tscn" id="12_ercq4"]
 [ext_resource type="PackedScene" uid="uid://bx2jow18jl55q" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/rock-4.tscn" id="13_5bshv"]
+[ext_resource type="Script" path="res://BubbleGame/2D/_Source/AudioScripts/EventStopper.gd" id="13_uhapv"]
 [ext_resource type="PackedScene" uid="uid://cww8xpy7y6xet" path="res://BubbleGame/2D/Resources/Prefabs/enemies/enemy.tscn" id="14_2depf"]
 [ext_resource type="PackedScene" uid="uid://ciexpftus1pqo" path="res://BubbleGame/2D/Resources/Prefabs/gui_layer.tscn" id="14_moaot"]
 [ext_resource type="PackedScene" uid="uid://btpfnmhc6apmb" path="res://BubbleGame/2D/Resources/Prefabs/enemies/enemy-Wasp.tscn" id="15_wbc4g"]
@@ -448,10 +449,12 @@ position = Vector2(-3599, 66)
 
 [node name="Audio" type="Node2D" parent="."]
 
-[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="Audio"]
+[node name="AMB" type="FmodEventEmitter3D" parent="Audio" node_paths=PackedStringArray("GameManager")]
 event_name = "event:/2D/AMB"
 event_guid = "{ecb95390-f078-4b0a-8007-7722bd635b56}"
 autoplay = true
+script = ExtResource("13_uhapv")
+GameManager = NodePath("../..")
 
 [node name="Background" parent="." instance=ExtResource("16_6k0ec")]
 

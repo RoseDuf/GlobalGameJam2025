@@ -43,4 +43,9 @@ func PrepareNextPhase() -> void:
 	
 func LoadNextLevel() -> void:
 	playerDeath.emit()
-	get_tree().change_scene_to_file("res://BubbleGame/3D/Resources/_Scenes/Bubble3D.tscn")
+	var timer:SceneTreeTimer = get_tree().create_timer(3)  
+	timer.timeout.connect(_on_timer_timeout)  
+
+	
+func _on_timer_timeout():
+		get_tree().change_scene_to_file("res://BubbleGame/3D/Resources/_Scenes/Bubble3D.tscn")

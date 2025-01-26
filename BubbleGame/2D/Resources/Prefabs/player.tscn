@@ -102,9 +102,4 @@ CharacterMovement = NodePath("../CharacterBody2D")
 collision_layer = 2
 collision_mask = 2
 
-[node name="FmodEventEmitter2D" type="FmodEventEmitter2D" parent="."]
-event_name = "event:/2D/Footsteps"
-event_guid = "{f2bc2792-1a3c-4545-a31f-b56956186766}"
-autoplay = true
-
 [connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D/Area2D" method="_on_body_entered"]
