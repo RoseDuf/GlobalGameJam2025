@@ -6,11 +6,11 @@
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/SoapBarMeter.gd" id="4_y65hh"]
 [ext_resource type="PackedScene" uid="uid://bqjdygfsmbxya" path="res://BubbleGame/2D/Resources/Prefabs/player.tscn" id="5_o8icn"]
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/2DCamera.gd" id="6_x1r7v"]
-[ext_resource type="PackedScene" uid="uid://dv5twmmnf0d62" path="res://BubbleGame/2D/Resources/Prefabs/Tree-2.tscn" id="8_ppcax"]
-[ext_resource type="PackedScene" uid="uid://b0ffhomm52x3y" path="res://BubbleGame/2D/Resources/Prefabs/Tree-3.tscn" id="9_tuwtw"]
-[ext_resource type="PackedScene" uid="uid://cy2ii3b76aj4g" path="res://BubbleGame/2D/Resources/Prefabs/rock-2.tscn" id="11_ranxt"]
-[ext_resource type="PackedScene" uid="uid://egv3vjfw0mrs" path="res://BubbleGame/2D/Resources/Prefabs/rock-3.tscn" id="12_h8r2l"]
-[ext_resource type="PackedScene" uid="uid://bx2jow18jl55q" path="res://BubbleGame/2D/Resources/Prefabs/rock-4.tscn" id="13_egi1n"]
+[ext_resource type="PackedScene" uid="uid://dv5twmmnf0d62" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/Tree-2.tscn" id="8_ppcax"]
+[ext_resource type="PackedScene" uid="uid://b0ffhomm52x3y" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/Tree-3.tscn" id="9_tuwtw"]
+[ext_resource type="PackedScene" uid="uid://cy2ii3b76aj4g" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/rock-2.tscn" id="11_ranxt"]
+[ext_resource type="PackedScene" uid="uid://egv3vjfw0mrs" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/rock-3.tscn" id="12_h8r2l"]
+[ext_resource type="PackedScene" uid="uid://bx2jow18jl55q" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/rock-4.tscn" id="13_egi1n"]
 
 [node name="Bubble2D" type="Node"]
 script = ExtResource("1_hecgn")
