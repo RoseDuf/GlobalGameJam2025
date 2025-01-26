@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://bx2jow18jl55q"]
+[gd_scene load_steps=6 format=3 uid="uid://bx2jow18jl55q"]
 
 [ext_resource type="Texture2D" uid="uid://dgcqpfjdnqvn4" path="res://BubbleGame/2D/Art/Obstacles/Rock 004.png" id="1_ae4a6"]
+[ext_resource type="PackedScene" uid="uid://datt0b3gao0lm" path="res://BubbleGame/2D/Resources/Prefabs/Environment/Flower Bundles/flower-pack.tscn" id="2_y2j51"]
+[ext_resource type="PackedScene" uid="uid://dgwusa5uauj4k" path="res://BubbleGame/2D/Resources/Prefabs/Environment/Flower Bundles/flower-pack-2.tscn" id="3_yypc0"]
+[ext_resource type="PackedScene" uid="uid://c8kkiluebg5jw" path="res://BubbleGame/2D/Resources/Prefabs/Environment/Flower Bundles/flower-pack-1.tscn" id="4_q6kvv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_57urs"]
-size = Vector2(1455, 715)
+size = Vector2(1455, 455)
 
 [node name="Obstacle" type="Sprite2D"]
 position = Vector2(747, -157)
@@ -13,6 +16,23 @@ texture = ExtResource("1_ae4a6")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-5, 187.5)
+position = Vector2(-5, 317.5)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_57urs")
+
+[node name="EnvironmentArt" parent="." instance=ExtResource("2_y2j51")]
+show_behind_parent = true
+position = Vector2(690, 525)
+scale = Vector2(6, 6)
+
+[node name="EnvironmentArt2" parent="." instance=ExtResource("3_yypc0")]
+position = Vector2(-970, 710)
+scale = Vector2(6, 6)
+
+[node name="EnvironmentArt3" parent="." instance=ExtResource("4_q6kvv")]
+position = Vector2(-2975, -345)
+scale = Vector2(6, 6)
+
+[node name="EnvironmentArt4" parent="." instance=ExtResource("4_q6kvv")]
+position = Vector2(3740, 1430)
+scale = Vector2(6, 6)

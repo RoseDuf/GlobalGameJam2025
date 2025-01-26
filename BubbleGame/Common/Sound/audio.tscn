@@ -1,8 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://cyl6nqgyr65uy"]
+[gd_scene load_steps=3 format=3 uid="uid://cyl6nqgyr65uy"]
 
 [ext_resource type="PackedScene" uid="uid://vxmmbunwprk8" path="res://BubbleGame/Common/Sound/fmod_bank_loader.tscn" id="1_e3d73"]
+[ext_resource type="Script" path="res://BubbleGame/Common/_Source/GScript/Audio/music_manager.gd" id="2_kq4uq"]
 
 [node name="Audio" type="Node"]
 
 [node name="FmodBankLoader" parent="." instance=ExtResource("1_e3d73")]
 bank_paths = ["res://BubbleGame/Common/Sound/FMODProject/BubbleGame/Build/Desktop/Master.strings.bank", "res://BubbleGame/Common/Sound/FMODProject/BubbleGame/Build/Desktop/Master.bank"]
+
+[node name="MusicManager" type="FmodEventEmitter2D" parent="."]
+event_name = "event:/Music"
+event_guid = "{ab159ac0-ead2-444c-8e76-97449f06e6b8}"
+autoplay = true
+fmod_parameters/HasToBecome2D/id = 1676466361915477640
+fmod_parameters/HasToBecome2D = "False"
+fmod_parameters/HasToBecome2D/labels = PackedStringArray("False", "True")
+fmod_parameters/HasToBecome2D/variant_type = 4
+fmod_parameters/HasToBecome3D/id = 1946753370922196859
+fmod_parameters/HasToBecome3D = "False"
+fmod_parameters/HasToBecome3D/labels = PackedStringArray("False", "True")
+fmod_parameters/HasToBecome3D/variant_type = 4
+script = ExtResource("2_kq4uq")
