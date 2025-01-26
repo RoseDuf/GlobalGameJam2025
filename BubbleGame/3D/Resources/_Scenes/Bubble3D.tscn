@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://bddasn5pebfva"]
+[gd_scene load_steps=9 format=3 uid="uid://bddasn5pebfva"]
 
-[ext_resource type="PackedScene" path="res://BubbleGame/3D/Resources/gui_3d.tscn" id="1_0kqq2"]
-[ext_resource type="PackedScene" path="res://BubbleGame/3D/Resources/player.tscn" id="2_shqa5"]
+[ext_resource type="PackedScene" uid="uid://nxwvmt24pe5h" path="res://BubbleGame/3D/Resources/gui_3d.tscn" id="1_0kqq2"]
+[ext_resource type="PackedScene" uid="uid://b5gucax43h73" path="res://BubbleGame/3D/Resources/player.tscn" id="2_shqa5"]
 [ext_resource type="PackedScene" uid="uid://cpwar8fyqpc55" path="res://BubbleGame/3D/Resources/Obstacles/Despawner.tscn" id="5_gvexs"]
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/ThreeDeeManager.cs" id="6_sc0wm"]
 [ext_resource type="PackedScene" uid="uid://b035j4rxrryei" path="res://BubbleGame/3D/Resources/Obstacles/ObstacleSpawner.tscn" id="6_xfw0p"]
-[ext_resource type="PackedScene" uid="uid://b61b1b065mmhk" path="res://BubbleGame/3D/Art/Scenes/BubbleTunnel.tscn" id="7_hkl0d"]
+[ext_resource type="PackedScene" uid="uid://ixq6o5xwgmrc" path="res://BubbleGame/3D/Art/Models/sm_sky_01.tscn" id="7_8s8fb"]
+[ext_resource type="PackedScene" path="res://BubbleGame/3D/Art/Scenes/BubbleTunnel.tscn" id="7_hkl0d"]
 
 [sub_resource type="Environment" id="Environment_xyxs8"]
 
@@ -44,6 +45,8 @@ transform = Transform3D(31.9719, 0, 0, 0, 25.0914, 0, 0, 0, 1, 0, 0, -3.52629)
 [node name="Node" type="Node" parent="." node_paths=PackedStringArray("_spawnManager")]
 script = ExtResource("6_sc0wm")
 _spawnManager = NodePath("../ObstacleSpawner")
+
+[node name="ST_Sky" parent="." instance=ExtResource("7_8s8fb")]
 
 [editable path="GUI-3D"]
 [editable path="Actors/Player"]

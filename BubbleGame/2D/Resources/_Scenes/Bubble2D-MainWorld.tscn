@@ -45,7 +45,6 @@ position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 script = ExtResource("7_bgt82")
 Trail = NodePath("../WorldHolder/Player2/BubbleTrail")
-DezoomSpeed = 0.9
 
 [node name="Audio" type="Node2D" parent="."]
 
