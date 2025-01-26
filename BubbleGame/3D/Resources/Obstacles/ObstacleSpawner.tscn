@@ -1,11 +1,43 @@
-[gd_scene load_steps=2 format=3 uid="uid://b035j4rxrryei"]
+[gd_scene load_steps=10 format=3 uid="uid://b035j4rxrryei"]
 
-[ext_resource type="Script" path="res://BubbleGame/3D/_Source/SpawnManager.cs" id="1_jwqii"]
+[ext_resource type="Script" path="res://BubbleGame/3D/_Source/Obstacles/SpawnManager.cs" id="1_1jix7"]
+[ext_resource type="Script" path="res://BubbleGame/3D/_Source/Obstacles/BugSpawnManager.cs" id="2_e73tq"]
+[ext_resource type="Resource" uid="uid://cbdgpbbfac5u4" path="res://BubbleGame/3D/Resources/Obstacles/Bugs/AllBugData.tres" id="3_eklxj"]
+[ext_resource type="Script" path="res://BubbleGame/3D/_Source/Obstacles/DebrisSpawnManager.cs" id="3_f6yhe"]
+[ext_resource type="Resource" uid="uid://ctjuqpk467yqx" path="res://BubbleGame/3D/Resources/Obstacles/Bugs/SwarmTypes/Swarm1.tres" id="4_0rv3c"]
+[ext_resource type="Resource" uid="uid://cv4eqy7hjt0st" path="res://BubbleGame/3D/Resources/Obstacles/Bugs/SwarmTypes/Swarm2.tres" id="5_3g2qn"]
+[ext_resource type="Resource" uid="uid://d8p1ii0xrapa" path="res://BubbleGame/3D/Resources/Obstacles/Debris/AllDebrisData.tres" id="5_58pj6"]
 
-[node name="ObstacleSpawner" type="Node3D" node_paths=PackedStringArray("_obstacleSpawnTimer")]
-script = ExtResource("1_jwqii")
-_obstacleSpawnTimer = NodePath("Timer")
+[sub_resource type="QuadMesh" id="QuadMesh_c5bjd"]
 
-[node name="Timer" type="Timer" parent="."]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l30xl"]
+transparency = 1
+albedo_color = Color(1, 1, 0, 0.203922)
 
-[connection signal="timeout" from="Timer" to="." method="OnSpawnObstacles"]
+[node name="ObstacleSpawner" type="Node3D" node_paths=PackedStringArray("bugSpawnManager", "debrisSpawnManager")]
+script = ExtResource("1_1jix7")
+bugSpawnManager = NodePath("BugSpawner")
+debrisSpawnManager = NodePath("DebrisSpawner")
+
+[node name="BugSwarmTimer" type="Timer" parent="."]
+
+[node name="BugSpawner" type="Node" parent="." node_paths=PackedStringArray("planeMesh", "_obstacleSpawnTimer")]
+script = ExtResource("2_e73tq")
+planeMesh = NodePath("../MeshInstance3D")
+_bugData = ExtResource("3_eklxj")
+swarms = Array[Object]([ExtResource("4_0rv3c"), ExtResource("5_3g2qn")])
+_obstacleSpawnTimer = NodePath("../BugSwarmTimer")
+
+[node name="DebrisSpawner" type="Node" parent="." node_paths=PackedStringArray("planeMesh")]
+script = ExtResource("3_f6yhe")
+planeMesh = NodePath("../MeshInstance3D")
+debrisData = ExtResource("5_58pj6")
+_spawnDelayRangeMax = 2.378
+_spawnAmountRangeMax = 4
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.860444, 0, 0, 0)
+mesh = SubResource("QuadMesh_c5bjd")
+surface_material_override/0 = SubResource("StandardMaterial3D_l30xl")
+
+[connection signal="timeout" from="BugSwarmTimer" to="BugSpawner" method="OnSpawnObstacles"]
