@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://btpfnmhc6apmb"]
+[gd_scene load_steps=7 format=3 uid="uid://btpfnmhc6apmb"]
 
+[ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/BugCollectible.gd" id="1_fd7hc"]
 [ext_resource type="Texture2D" uid="uid://bdueb3s2ib5gs" path="res://BubbleGame/2D/Art/Enemies/Wasp/Wasp 001.png" id="1_tpbc0"]
 [ext_resource type="Texture2D" uid="uid://bfgeivxb0bs25" path="res://BubbleGame/2D/Art/Enemies/Wasp/Wasp 002.png" id="2_5ayy2"]
 [ext_resource type="Texture2D" uid="uid://c7ixl04ijdj0c" path="res://BubbleGame/2D/Art/Enemies/Wasp/Wasp 003.png" id="3_1ur0y"]
@@ -17,6 +18,7 @@ frame_2/duration = 1.0
 size = Vector2(840, 820)
 
 [node name="Enemy" type="Node2D"]
+script = ExtResource("1_fd7hc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.15, 0.15)

@@ -37,8 +37,8 @@ func PrepareNextPhase() -> void:
 	if (error == OK):
 		progressFile.clear()
 		
-	for key in CollectedBugsList:
-		progressFile.set_value(SectionName, str(key), CollectedBugsList[key])
+	progressFile.set_value(SectionName, "TimeElapsed", SoapBarManager.MaximumBarValue - RemainingSoapTime)
+	progressFile.set_value(SectionName, "TimeStamps", CollectedBugsList)
 	
 	progressFile.save("user://levelcache.cfg")
 	
