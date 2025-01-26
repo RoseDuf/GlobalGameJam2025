@@ -113,7 +113,7 @@
 			<value>0.027433256253941551</value>
 		</property>
 		<property name="volume">
-			<value>-32</value>
+			<value>-22</value>
 		</property>
 		<relationship name="fadeOutCurve">
 			<destination>{5ff812af-25cf-4d53-b3f2-36c260dd9875}</destination>
@@ -187,7 +187,7 @@
 			<value>0.26999789225873499</value>
 		</property>
 		<property name="volume">
-			<value>-32</value>
+			<value>-30</value>
 		</property>
 		<property name="pitch">
 			<value>8.5</value>
@@ -206,6 +206,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{75cee8a8-f56f-4e3f-8623-48e27558905b}">
+		<property name="volume">
+			<value>3.5</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -337,6 +340,7 @@
 	<object class="MixerBusEffectChain" id="{0f76f036-8305-4409-99b8-a894913ed677}">
 		<relationship name="effects">
 			<destination>{066fcffc-f44f-4734-8f68-a486755b270b}</destination>
+			<destination>{49d5961d-8b84-4707-a3cc-fd4265a61677}</destination>
 			<destination>{c1b8e20c-8873-4370-822c-346d3c54c542}</destination>
 			<destination>{f5b917a2-878f-4a02-9790-4ca53589220d}</destination>
 		</relationship>
@@ -453,6 +457,14 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{066fcffc-f44f-4734-8f68-a486755b270b}" />
+	<object class="CompressorEffect" id="{49d5961d-8b84-4707-a3cc-fd4265a61677}">
+		<property name="threshold">
+			<value>-13</value>
+		</property>
+		<property name="gain">
+			<value>23.5</value>
+		</property>
+	</object>
 	<object class="MultibandEqEffect" id="{c1b8e20c-8873-4370-822c-346d3c54c542}">
 		<property name="filterTypeB">
 			<value>9</value>
