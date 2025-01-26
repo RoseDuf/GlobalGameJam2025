@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ckk5qfilmw2i5"
-path="res://.godot/imported/SM_Tube_01.fbx-7a5fc872d62b163124dec4846fef41cd.scn"
+uid="uid://7o678pljwyvm"
+path="res://.godot/imported/ST_Obstacle_01_DoNotUse.fbx-6adb4c0a6b2999bec76221854c51af99.scn"
 
 [deps]
 
-source_file="res://BubbleGame/3D/Art/Models/Export/SM_Tube_01.fbx"
-dest_files=["res://.godot/imported/SM_Tube_01.fbx-7a5fc872d62b163124dec4846fef41cd.scn"]
+source_file="res://BubbleGame/3D/Art/Models/Export/ST_Obstacle_01_DoNotUse.fbx"
+dest_files=["res://.godot/imported/ST_Obstacle_01_DoNotUse.fbx-6adb4c0a6b2999bec76221854c51af99.scn"]
 
 [params]
 

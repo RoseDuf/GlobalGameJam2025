@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://3wrn1p5ii3ov"]
+
+[ext_resource type="PackedScene" uid="uid://bokr315qugoik" path="res://BubbleGame/3D/Art/Models/Export/ST_Obstacle_03_DoNotUse.fbx" id="1_g3j7x"]
+[ext_resource type="Material" uid="uid://bdxsa1m56ni5m" path="res://BubbleGame/3D/Art/Shader/M_Spaceship_Obstacles_01.tres" id="2_aje1g"]
+
+[node name="ST_Obstacle_03" instance=ExtResource("1_g3j7x")]
+
+[node name="GeoSphere001" parent="." index="0"]
+instance_shader_parameters/Metallic = 0.0
+instance_shader_parameters/Roughness = 0.9
+instance_shader_parameters/Use_Rough_FromColor = false
+surface_material_override/0 = ExtResource("2_aje1g")

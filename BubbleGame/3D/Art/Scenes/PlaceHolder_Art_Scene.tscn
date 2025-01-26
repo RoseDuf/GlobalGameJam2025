@@ -1,10 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://ypnx44eo0ryd"]
+[gd_scene load_steps=6 format=3 uid="uid://ypnx44eo0ryd"]
 
-[ext_resource type="PackedScene" uid="uid://c2je4f36vj1qm" path="res://BubbleGame/3D/Art/Models/sm_spaceship_01.tscn" id="2_3cqmu"]
+[ext_resource type="PackedScene" uid="uid://ddd0o0ywdqlb3" path="res://BubbleGame/3D/Art/Models/sm_spaceship_01.tscn" id="2_3cqmu"]
 [ext_resource type="PackedScene" uid="uid://jns0jadq0euk" path="res://BubbleGame/3D/Art/Models/Export/SM_TestCube_1x1x1_Houdini_01.fbx" id="2_gdls3"]
+[ext_resource type="PackedScene" uid="uid://c6vtx0hhpkdv2" path="res://BubbleGame/3D/Art/Models/sm_obstacle_01.tscn" id="3_bcajh"]
+[ext_resource type="PackedScene" uid="uid://pflyesbmfo6f" path="res://BubbleGame/3D/Art/Models/sm_obstacle_02.tscn" id="4_xioat"]
+[ext_resource type="PackedScene" uid="uid://3wrn1p5ii3ov" path="res://BubbleGame/3D/Art/Models/sm_obstacle_03.tscn" id="5_wyc4a"]
 
 [node name="PlaceHolderArtScene" type="Node3D"]
 
 [node name="SM_TestCube_1x1x1_Houdini_01" parent="." instance=ExtResource("2_gdls3")]
+visible = false
 
 [node name="ST_Spaceship_01" parent="." instance=ExtResource("2_3cqmu")]
+visible = false
+
+[node name="ST_Obstacle_01" parent="." instance=ExtResource("3_bcajh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.77248)
+
+[node name="ST_Obstacle_02" parent="." instance=ExtResource("4_xioat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.507)
+
+[node name="ST_Obstacle_03" parent="." instance=ExtResource("5_wyc4a")]

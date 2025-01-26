@@ -11,6 +11,8 @@ namespace BubbleGame._3D
 
 		private float _despawnTimer;
 
+		private bool _isDespawned;
+
 		public override void _Process(double delta)
 		{
 			base._Process(delta);
@@ -21,14 +23,18 @@ namespace BubbleGame._3D
 
 			if (_despawnTimer >= timeToDespawn)
 			{
-				GetTree().CurrentScene.CallDeferred(MethodName.RemoveChild, this);
-				this.QueueFree();
+				if (!_isDespawned)
+				{
+					GetTree().CurrentScene.CallDeferred(MethodName.RemoveChild, this);
+					this.QueueFree();
+					_isDespawned = true;
+				}
 			}
 		}
 
 		public void Area3D_AreaEntered(Area3D area)
 		{
-			if (area.Name != "PlayerArea3D")
+			if (area.Name != "PlayerArea3D" && area.Name != "Despawner")
 			{
 				if (area.IsInGroup("Obstacle"))
 				{
@@ -47,9 +53,13 @@ namespace BubbleGame._3D
 					}
 				}
 
-				Node parent = GetParent();
-				GetTree().CurrentScene.CallDeferred(MethodName.RemoveChild, parent);
-				parent.QueueFree();
+				if (!_isDespawned)
+				{
+					Node parent = GetParent();
+					GetTree().CurrentScene.CallDeferred(MethodName.RemoveChild, parent);
+					parent.QueueFree();
+					_isDespawned = true;
+				}
 			}
 		}
 	}

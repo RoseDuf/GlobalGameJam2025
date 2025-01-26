@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://d4c43s7gbjtt7"]
 
-[ext_resource type="Shader" uid="uid://6ky4ev3fgcty" path="res://BubbleGame/3D/Art/Shader/S_Spaceship_Metal_01.tres" id="1_st4qe"]
+[ext_resource type="Shader" uid="uid://6ky4ev3fgcty" path="res://BubbleGame/3D/Art/Shader/S_Objects_01.tres" id="1_st4qe"]
 
 [resource]
 render_priority = 0
