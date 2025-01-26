@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8kkiluebg5jw"]
+
+[ext_resource type="Texture2D" uid="uid://ct72aoqcdd3sm" path="res://BubbleGame/2D/Art/Environment/Flowers 001.png" id="1_t4i0w"]
+[ext_resource type="PackedScene" uid="uid://chschod04p11n" path="res://BubbleGame/2D/Resources/Prefabs/Environment/env-flower-patch.tscn" id="2_818cs"]
+[ext_resource type="PackedScene" uid="uid://cuwgb53vam2t6" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/Obstacle-art-prefabs/obs-flowers-5.tscn" id="3_wbjvh"]
+
+[node name="EnvironmentArt" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_t4i0w")
+
+[node name="EnvironmentArt" parent="." instance=ExtResource("2_818cs")]
+position = Vector2(-49, -51)
+
+[node name="EnvironmentArt2" parent="." instance=ExtResource("3_wbjvh")]
+position = Vector2(64, -56)

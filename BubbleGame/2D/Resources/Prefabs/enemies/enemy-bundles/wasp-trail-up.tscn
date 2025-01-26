@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://fvbsjr6oair8"]
+
+[ext_resource type="PackedScene" uid="uid://btpfnmhc6apmb" path="res://BubbleGame/2D/Resources/Prefabs/enemies/enemy-Wasp.tscn" id="1_h8geo"]
+
+[node name="Wasp-trail" type="Node2D"]
+
+[node name="Enemy" parent="." instance=ExtResource("1_h8geo")]
+position = Vector2(-1, -358)
+
+[node name="Enemy2" parent="." instance=ExtResource("1_h8geo")]
+position = Vector2(-384, -106)
+
+[node name="Enemy3" parent="." instance=ExtResource("1_h8geo")]
+position = Vector2(396, -108)

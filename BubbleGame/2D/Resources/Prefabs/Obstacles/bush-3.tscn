@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvnwls1djcaag"]
+
+[ext_resource type="Texture2D" uid="uid://dsf7qtstk4fnq" path="res://BubbleGame/2D/Art/Environment/Bush 003.png" id="1_nswf3"]
+[ext_resource type="PackedScene" uid="uid://dgwusa5uauj4k" path="res://BubbleGame/2D/Resources/Prefabs/Environment/Flower Bundles/flower-pack-2.tscn" id="2_dsvjj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57urs"]
+size = Vector2(1065, 670)
+
+[node name="Obstacle" type="Sprite2D"]
+position = Vector2(747, -157)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_nswf3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-15, 225)
+shape = SubResource("RectangleShape2D_57urs")
+
+[node name="EnvironmentArt" parent="StaticBody2D" instance=ExtResource("2_dsvjj")]
+position = Vector2(-980, 725)
+scale = Vector2(6, 6)
