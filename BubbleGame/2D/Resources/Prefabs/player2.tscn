@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://3rnckv0e0dm7"]
+[gd_scene load_steps=16 format=3 uid="uid://dvn4l35vstqj0"]
 
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/PlayerMovement.gd" id="1_5j78x"]
 [ext_resource type="Texture2D" uid="uid://c6ynir2hhqi8e" path="res://BubbleGame/2D/Art/Character/RunningFront/001.png" id="2_3cw23"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dr7lvcua2l1ve" path="res://BubbleGame/2D/Art/WandFront.png" id="8_atug7"]
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/WandHitbox.gd" id="9_0phpe"]
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/BubbleTrail.gd" id="10_76roa"]
+[ext_resource type="Material" uid="uid://dqcphfypa1nae" path="res://BubbleGame/2D/Art/BubbleShader/Buble_2d.tres" id="10_rng4n"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nxp7r"]
 animations = [{
@@ -89,9 +90,11 @@ scale = Vector2(5.8, 5.8)
 shape = SubResource("CircleShape2D_4i0xn")
 
 [node name="BubbleTrail" type="Line2D" parent="." node_paths=PackedStringArray("WandPosition", "TrailHitbox", "CharacterMovement")]
+material = ExtResource("10_rng4n")
 scale = Vector2(0.99654, 0.988506)
 width = 60.0
 gradient = SubResource("Gradient_owgmy")
+texture_mode = 1
 joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 1
