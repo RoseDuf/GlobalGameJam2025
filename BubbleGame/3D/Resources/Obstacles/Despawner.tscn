@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpwar8fyqpc55"]
+
+[ext_resource type="Script" path="res://BubbleGame/3D/_Source/Despawner.cs" id="1_88du3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o312w"]
+transparency = 1
+albedo_color = Color(0.117647, 1, 1, 0.176471)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kvhg8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vbqbj"]
+
+[node name="Despawner" type="Area3D" groups=["despawner"]]
+script = ExtResource("1_88du3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." groups=["despawner"]]
+visible = false
+material_override = SubResource("StandardMaterial3D_o312w")
+mesh = SubResource("BoxMesh_kvhg8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_vbqbj")
+
+[connection signal="area_entered" from="." to="." method="OnAreaEntered"]

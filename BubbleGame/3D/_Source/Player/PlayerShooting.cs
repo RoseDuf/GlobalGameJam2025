@@ -5,16 +5,32 @@ namespace BubbleGame._3D
 	/// <summary>
 	/// This class controls player shooting.
 	/// </summary>
-	public partial class PlayerShooting : Node
+	public partial class PlayerShooting : Node3D
 	{
-		// Called when the node enters the scene tree for the first time.
-		public override void _Ready()
-		{
-		}
+		[Export]
+		public float speed = 8;
 
-		// Called every frame. 'delta' is the elapsed time since the previous frame.
+		[Export]
+		private Node3D _playerCursor;
+
+		[Export]
+		private PackedScene _bulletNode;
+
 		public override void _Process(double delta)
 		{
+			base._Process(delta);
+
+			Vector3 shootVector = _playerCursor.GlobalPosition - GlobalPosition;
+
+			if (Input.IsActionJustPressed("shoot"))
+			{
+				Node3D bulletInstance = _bulletNode.Instantiate<Node3D>();
+				Bullet bullet = bulletInstance as Bullet;
+				bullet.GlobalPosition = GlobalPosition;
+				GetTree().CurrentScene.AddChild(bulletInstance);
+
+				bullet.velocity = shootVector.Normalized() * speed;
+			}
 		}
 	}
 }
