@@ -19,5 +19,5 @@ position = Vector2(72.4993, 280)
 shape = SubResource("RectangleShape2D_57urs")
 
 [node name="EnvironmentArt" parent="." instance=ExtResource("2_rpgre")]
-position = Vector2(490, 1530)
+position = Vector2(-1480, 560)
 scale = Vector2(4, 4)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://42lb31xtstgk"]
+[gd_scene load_steps=32 format=3 uid="uid://42lb31xtstgk"]
 
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/GameManager2D.gd" id="1_rkm85"]
 [ext_resource type="PackedScene" uid="uid://3rnckv0e0dm7" path="res://BubbleGame/2D/Resources/Prefabs/player2.tscn" id="4_2nxv3"]
@@ -27,7 +27,6 @@
 [ext_resource type="PackedScene" uid="uid://cph3oes64kld8" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/Tree-4.tscn" id="30_tndvq"]
 [ext_resource type="PackedScene" uid="uid://wmpduf04o6t8" path="res://BubbleGame/2D/Resources/Prefabs/Environment/Flower Bundles/flower-pack-3.tscn" id="31_4hfku"]
 [ext_resource type="PackedScene" uid="uid://c8kkiluebg5jw" path="res://BubbleGame/2D/Resources/Prefabs/Environment/Flower Bundles/flower-pack-1.tscn" id="31_15t3f"]
-[ext_resource type="PackedScene" uid="uid://bn0qsyx13mw57" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/Obstacle-art-prefabs/obs-flowers-4.tscn" id="31_dofbj"]
 [ext_resource type="PackedScene" uid="uid://dgwusa5uauj4k" path="res://BubbleGame/2D/Resources/Prefabs/Environment/Flower Bundles/flower-pack-2.tscn" id="32_52hr8"]
 [ext_resource type="PackedScene" uid="uid://b20bkgslgo7sv" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/Tree-5.tscn" id="32_oi11m"]
 [ext_resource type="PackedScene" uid="uid://by0f3qwfad8nk" path="res://BubbleGame/2D/Resources/Prefabs/Environment/Flower Bundles/flower-pack-6.tscn" id="33_37qn5"]
@@ -96,13 +95,31 @@ position = Vector2(3193, -4369)
 position = Vector2(3343, -4900)
 
 [node name="EnvironmentArt22" parent="WorldHolder/Environment2" instance=ExtResource("30_glab8")]
-position = Vector2(4152, -2677.8)
+position = Vector2(3754, -2433.8)
 
 [node name="EnvironmentArt23" parent="WorldHolder/Environment2" instance=ExtResource("31_4hfku")]
-position = Vector2(4567, -2451.8)
+position = Vector2(4169, -2207.8)
+
+[node name="EnvironmentArt31" parent="WorldHolder/Environment2" instance=ExtResource("30_glab8")]
+position = Vector2(4943, -2000.8)
+
+[node name="EnvironmentArt32" parent="WorldHolder/Environment2" instance=ExtResource("31_4hfku")]
+position = Vector2(5358, -1774.8)
 
 [node name="EnvironmentArt24" parent="WorldHolder/Environment2" instance=ExtResource("32_52hr8")]
-position = Vector2(4717, -2982.8)
+position = Vector2(4278, -2614.8)
+
+[node name="EnvironmentArt33" parent="WorldHolder/Environment2" instance=ExtResource("32_52hr8")]
+position = Vector2(4873, -1641.8)
+
+[node name="EnvironmentArt28" parent="WorldHolder/Environment2" instance=ExtResource("30_glab8")]
+position = Vector2(3679, -3509.8)
+
+[node name="EnvironmentArt29" parent="WorldHolder/Environment2" instance=ExtResource("31_4hfku")]
+position = Vector2(4094, -3283.8)
+
+[node name="EnvironmentArt30" parent="WorldHolder/Environment2" instance=ExtResource("32_52hr8")]
+position = Vector2(3608, -3176.8)
 
 [node name="EnvironmentArt25" parent="WorldHolder/Environment2" instance=ExtResource("30_glab8")]
 position = Vector2(4674, -3980.8)
@@ -115,12 +132,6 @@ position = Vector2(5239, -4285.8)
 
 [node name="EnvironmentArt2" parent="WorldHolder/Environment2" instance=ExtResource("26_7qga1")]
 position = Vector2(397, -794.3)
-
-[node name="EnvironmentArt4" parent="WorldHolder/Environment2" instance=ExtResource("31_dofbj")]
-position = Vector2(203, 1152)
-
-[node name="EnvironmentArt3" parent="WorldHolder/Environment2" instance=ExtResource("24_c517q")]
-position = Vector2(-5813, -2793)
 
 [node name="EnvironmentArt6" parent="WorldHolder/Environment2" instance=ExtResource("26_7qga1")]
 position = Vector2(-7373, -2702)
@@ -149,7 +160,7 @@ position = Vector2(7749, -2131)
 position = Vector2(347, -542.3)
 
 [node name="Enemy68" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-979, 282)
+position = Vector2(-1279, 408)
 
 [node name="Enemy11" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
 position = Vector2(14, -798)
@@ -158,40 +169,31 @@ position = Vector2(14, -798)
 position = Vector2(-410, -877)
 
 [node name="Enemy92" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-836, -2739)
+position = Vector2(-2347, -4439)
 
 [node name="Enemy93" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-85, -2951)
+position = Vector2(-1596, -4651)
 
 [node name="Enemy94" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-713, -3214)
+position = Vector2(-2181, -4998)
 
 [node name="Enemy174" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(1638, -2613)
+position = Vector2(2524, -1907)
 
 [node name="Enemy179" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(2389, -2825)
+position = Vector2(3275, -2119)
 
 [node name="Enemy340" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(1761, -3088)
+position = Vector2(2647, -2382)
 
 [node name="Enemy307" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-3683, -1524)
+position = Vector2(-3884, -1502)
 
 [node name="Enemy308" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-2932, -1736)
+position = Vector2(-2903, -1883)
 
 [node name="Enemy309" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-3560, -1999)
-
-[node name="Enemy369" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-6059, -449)
-
-[node name="Enemy370" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-5308, -661)
-
-[node name="Enemy371" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-5936, -924)
+position = Vector2(-3564, -2155)
 
 [node name="Enemy310" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
 position = Vector2(-8752, -3552)
@@ -209,19 +211,19 @@ position = Vector2(-716, -556)
 position = Vector2(-598, -175)
 
 [node name="Enemy2" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(3731, -950)
+position = Vector2(3262, -605)
 
 [node name="Enemy73" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(3841, -1193)
+position = Vector2(3449, -919)
 
 [node name="Enemy21" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(3646, -693)
+position = Vector2(3111, -337)
 
 [node name="Enemy22" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(3981, -921)
+position = Vector2(3686, -622)
 
 [node name="Enemy23" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(4180, -671)
+position = Vector2(3850, -306)
 
 [node name="Enemy40" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
 position = Vector2(5006, 3070)
@@ -245,16 +247,16 @@ position = Vector2(5695, 3322)
 position = Vector2(5465, 2885)
 
 [node name="Enemy47" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(2639, 3610)
+position = Vector2(2597, 3035.9)
 
 [node name="Enemy48" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(2881, 3604)
+position = Vector2(2839, 3029.9)
 
 [node name="Enemy82" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(2557, 4293)
+position = Vector2(2515, 3718.9)
 
 [node name="Enemy83" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(3064, 4206)
+position = Vector2(3022, 3631.9)
 
 [node name="Enemy3" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
 position = Vector2(-165, 843)
@@ -266,19 +268,22 @@ position = Vector2(-187, 1251)
 position = Vector2(-706, 1752)
 
 [node name="Enemy321" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-782, 2386)
+position = Vector2(-961, 2446)
 
 [node name="Enemy320" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
 position = Vector2(-149, 1904)
 
 [node name="Enemy36" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-2501, 128)
+position = Vector2(-2015, 1109)
 
 [node name="Enemy37" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-4690, 976)
+position = Vector2(-3907, 1251)
+
+[node name="Enemy106" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
+position = Vector2(-5241, 1399)
 
 [node name="Enemy52" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-1449, 2962)
+position = Vector2(-1370, 3036)
 
 [node name="Enemy53" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
 position = Vector2(-2407, 3826)
@@ -296,13 +301,13 @@ position = Vector2(-3041, 4155)
 position = Vector2(-3755, 4978)
 
 [node name="Enemy65" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-6270, 3337)
+position = Vector2(-5275.2, 3066)
 
 [node name="Enemy66" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
 position = Vector2(-5531, 4000)
 
 [node name="Enemy67" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-6796, 2875)
+position = Vector2(-5801.2, 2604)
 
 [node name="Enemy57" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
 position = Vector2(-3598, 3878)
@@ -311,28 +316,40 @@ position = Vector2(-3598, 3878)
 position = Vector2(-2816, 2338)
 
 [node name="Enemy38" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-2902, -994)
+position = Vector2(-3150, -1310)
 
-[node name="Enemy12" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(1814, -847)
+[node name="Enemy511" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
+position = Vector2(-1026, -1663)
+
+[node name="Enemy512" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
+position = Vector2(-260, -1967)
+
+[node name="Enemy513" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
+position = Vector2(-845, -2213)
+
+[node name="Enemy180" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
+position = Vector2(-513, -1484)
 
 [node name="Enemy13" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
 position = Vector2(1047, -2160)
 
 [node name="Enemy27" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-3357, 1149)
+position = Vector2(-3614, 835.3)
+
+[node name="Enemy35" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
+position = Vector2(-2456, 925)
 
 [node name="Enemy28" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-3815, 1453)
+position = Vector2(-4508, 962)
 
 [node name="Enemy404" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-2903.2, 877.7)
-
-[node name="Enemy405" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-1570.2, 1050.7)
+position = Vector2(-3032, 627)
 
 [node name="Enemy406" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-2028.2, 1354.7)
+position = Vector2(-1638, 681)
+
+[node name="Enemy534" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
+position = Vector2(-881, 152)
 
 [node name="Enemy29" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
 position = Vector2(-4341, 3003)
@@ -359,61 +376,61 @@ position = Vector2(3066, -4605)
 position = Vector2(3044, -4897)
 
 [node name="Enemy172" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(4858, -2704.8)
+position = Vector2(4397, -2764)
+
+[node name="Enemy519" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
+position = Vector2(4992, -1791)
 
 [node name="Enemy173" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(4440, -2687.8)
+position = Vector2(4086, -2384)
 
 [node name="Enemy339" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(4418, -2979.8)
+position = Vector2(3806, -2549)
+
+[node name="Enemy517" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
+position = Vector2(5275, -1951)
+
+[node name="Enemy518" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
+position = Vector2(4995, -2116)
+
+[node name="Enemy514" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
+position = Vector2(3727, -3326)
+
+[node name="Enemy515" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
+position = Vector2(4011, -3460)
+
+[node name="Enemy516" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
+position = Vector2(3731, -3625)
 
 [node name="Enemy412" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(5380, -4007.8)
+position = Vector2(5126, -3974)
 
 [node name="Enemy413" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(4962, -3990.8)
+position = Vector2(4700, -4146)
 
 [node name="Enemy414" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(4940, -4282.8)
+position = Vector2(5187, -4462)
 
 [node name="Enemy10" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(3081, -2243)
+position = Vector2(2143, -3052)
+
+[node name="Enemy12" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
+position = Vector2(1557, -2942)
+
+[node name="Enemy17" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
+position = Vector2(2087, -2542)
 
 [node name="Enemy16" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
 position = Vector2(-1709, -2463)
 
-[node name="Enemy87" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-2582, -2981)
-
-[node name="Enemy88" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-2707, -3906)
-
 [node name="Enemy89" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-1937, -4424)
-
-[node name="Enemy90" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-1095, -4699)
-
-[node name="Enemy182" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-5645, -2179)
-
-[node name="Enemy183" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-6518, -2700)
-
-[node name="Enemy184" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-6511, -3356)
-
-[node name="Enemy185" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-5663, -3752)
+position = Vector2(-638, -3131)
 
 [node name="Enemy186" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
 position = Vector2(-4866, -3277)
 
 [node name="Enemy187" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
 position = Vector2(-4904, -2561)
-
-[node name="Enemy188" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(263, -5162)
 
 [node name="Enemy189" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
 position = Vector2(-820, -6157)
@@ -445,17 +462,32 @@ position = Vector2(-454, -8300)
 [node name="Enemy345" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
 position = Vector2(-719, -7529)
 
-[node name="Enemy17" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-426, -1895)
-
 [node name="Enemy18" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(828, 2494)
+position = Vector2(828, 1199.7)
 
 [node name="Enemy72" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(914, 1311)
+position = Vector2(781, 894)
+
+[node name="Enemy87" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
+position = Vector2(372, 630)
 
 [node name="Enemy19" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(1990, 3389)
+position = Vector2(1948, 2814.9)
+
+[node name="Enemy487" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
+position = Vector2(1359, 6291.9)
+
+[node name="Enemy488" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
+position = Vector2(1601, 6285.9)
+
+[node name="Enemy489" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
+position = Vector2(1277, 6974.9)
+
+[node name="Enemy490" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
+position = Vector2(1784, 6887.9)
+
+[node name="Enemy491" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
+position = Vector2(710, 6070.9)
 
 [node name="Enemy71" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
 position = Vector2(1751, 252)
@@ -473,52 +505,49 @@ position = Vector2(1483, 290)
 position = Vector2(1525, 378)
 
 [node name="Enemy44" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(3435, 1940)
+position = Vector2(2646, 1522)
 
 [node name="Enemy45" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(3375, 2180)
+position = Vector2(2586, 1762)
 
 [node name="Enemy58" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(3929, 2411)
+position = Vector2(3140, 1993)
 
 [node name="Enemy49" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(670, 2742)
+position = Vector2(670, 1447.7)
 
 [node name="Enemy50" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(321, 3228)
+position = Vector2(321, 1933.7)
 
 [node name="Enemy60" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(459, 3029)
+position = Vector2(459, 1734.7)
 
 [node name="Enemy59" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(441, 3521)
+position = Vector2(441, 2226.7)
 
 [node name="Enemy51" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(591, 3781)
+position = Vector2(591, 2486.7)
 
 [node name="Enemy313" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(634, 4145)
+position = Vector2(634, 2850.7)
 
 [node name="Enemy314" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(713, 4483)
+position = Vector2(713, 3188.7)
 
 [node name="Enemy46" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(3247, 2434)
+position = Vector2(2458, 2016)
 
 [node name="Enemy33" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(3110, -203)
+position = Vector2(3008, 407)
 
 [node name="Enemy34" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(2395, 1809)
-
-[node name="Enemy35" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(4276, 885)
+position = Vector2(1497, 2136)
 
 [node name="Enemy74" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
 position = Vector2(5068, 76)
 
 [node name="Enemy75" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(5218, 415)
+position = Vector2(5298, 347)
 
 [node name="Enemy77" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
 position = Vector2(6110, 1316)
@@ -528,9 +557,6 @@ position = Vector2(6026, 1835)
 
 [node name="Enemy79" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
 position = Vector2(6979, 1638)
-
-[node name="Enemy24" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-1657, 1171)
 
 [node name="Enemy25" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
 position = Vector2(-2370, 1743)
@@ -599,52 +625,52 @@ position = Vector2(-4190, 5009)
 position = Vector2(-6683, 5279)
 
 [node name="Enemy460" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(3834.8, 6827.3)
+position = Vector2(3686.8, 4824.7)
 
 [node name="Enemy461" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(1320.8, 7400.3)
+position = Vector2(1172.8, 5397.7)
 
 [node name="Enemy462" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(1743.8, 7125.3)
+position = Vector2(1595.8, 5122.7)
 
 [node name="Enemy463" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(2095.8, 6673.3)
+position = Vector2(1947.8, 4670.7)
 
 [node name="Enemy464" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(2521.8, 7027.3)
+position = Vector2(2373.8, 5024.7)
 
 [node name="Enemy465" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(2973.8, 7257.3)
+position = Vector2(2825.8, 5254.7)
 
 [node name="Enemy466" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(3399.8, 6858.3)
+position = Vector2(3251.8, 4855.7)
 
 [node name="Enemy467" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(906.8, 7128.3)
+position = Vector2(758.801, 5125.7)
 
 [node name="Enemy468" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(3834.8, 6827.3)
+position = Vector2(3686.8, 4824.7)
 
 [node name="Enemy469" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(1320.8, 7400.3)
+position = Vector2(1172.8, 5397.7)
 
 [node name="Enemy470" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(1743.8, 7125.3)
+position = Vector2(1595.8, 5122.7)
 
 [node name="Enemy471" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(2095.8, 6673.3)
+position = Vector2(1947.8, 4670.7)
 
 [node name="Enemy472" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(2521.8, 7027.3)
+position = Vector2(2373.8, 5024.7)
 
 [node name="Enemy473" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(2973.8, 7257.3)
+position = Vector2(2825.8, 5254.7)
 
 [node name="Enemy474" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(3399.8, 6858.3)
+position = Vector2(3251.8, 4855.7)
 
 [node name="Enemy475" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(906.8, 7128.3)
+position = Vector2(758.801, 5125.7)
 
 [node name="Enemy250" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
 position = Vector2(-3553, 6867)
@@ -653,46 +679,46 @@ position = Vector2(-3553, 6867)
 position = Vector2(-1725, 4806)
 
 [node name="Enemy415" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-9501, 543)
+position = Vector2(-7213.3, -269)
 
 [node name="Enemy416" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-10168, 1119)
+position = Vector2(-7880.3, 307)
 
 [node name="Enemy417" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-11126, 1983)
+position = Vector2(-8838.3, 1171)
 
 [node name="Enemy418" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-10820, 1495)
+position = Vector2(-8532.3, 683)
 
 [node name="Enemy419" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-9919, 2263)
+position = Vector2(-7631.3, 1451)
 
 [node name="Enemy420" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-11760, 2312)
+position = Vector2(-9472.3, 1500)
 
 [node name="Enemy422" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-12317, 2035)
+position = Vector2(-10029.3, 1223)
 
 [node name="Enemy423" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-11535, 495)
+position = Vector2(-9247.3, -317)
 
 [node name="Enemy424" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-13060, 1160)
+position = Vector2(-10772.3, 348)
 
 [node name="Enemy425" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-13060, 1777)
+position = Vector2(-10772.3, 965)
 
 [node name="Enemy426" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-13060, 1777)
+position = Vector2(-10772.3, 965)
 
 [node name="Enemy427" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-12712, 1442)
+position = Vector2(-10424.3, 630)
 
 [node name="Enemy428" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-10053, 3640)
+position = Vector2(-7765.3, 2828)
 
 [node name="Enemy436" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-10444, 2963)
+position = Vector2(-8156.3, 2151)
 
 [node name="Enemy392" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
 position = Vector2(-8506.3, 4457.7)
@@ -713,7 +739,7 @@ position = Vector2(-10098.3, 5650.7)
 position = Vector2(-10655.3, 5373.7)
 
 [node name="Enemy398" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(-9873.3, 3833.7)
+position = Vector2(-7585.6, 3021.7)
 
 [node name="Enemy399" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
 position = Vector2(-11398.3, 4498.7)
@@ -746,76 +772,76 @@ position = Vector2(-5249.3, 6770)
 position = Vector2(-4901.3, 6435)
 
 [node name="Enemy257" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(659.8, 4854.7)
+position = Vector2(659.8, 3560.4)
 
 [node name="Enemy258" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(310.8, 5340.7)
+position = Vector2(310.8, 4046.4)
 
 [node name="Enemy259" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(448.8, 5141.7)
+position = Vector2(448.8, 3847.4)
 
 [node name="Enemy260" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(430.8, 5633.7)
+position = Vector2(430.8, 4339.4)
 
 [node name="Enemy261" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(580.8, 5893.7)
+position = Vector2(580.8, 4599.4)
 
 [node name="Enemy346" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-7599, -579.3)
+position = Vector2(-5723.1, -3207.3)
 
 [node name="Enemy372" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-7274, -1158)
+position = Vector2(-5398.1, -3786)
 
 [node name="Enemy347" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-7757, -331.3)
+position = Vector2(-5881.1, -2959.3)
 
 [node name="Enemy348" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-8106, 154.7)
+position = Vector2(-6230.1, -2473.3)
 
 [node name="Enemy349" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-7968, -44.3002)
+position = Vector2(-6092.1, -2672.3)
 
 [node name="Enemy350" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-7986, 447.7)
+position = Vector2(-6110.1, -2180.3)
 
 [node name="Enemy351" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-7836, 707.7)
+position = Vector2(-5960.1, -1920.3)
 
 [node name="Enemy352" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-7793, 1071.7)
+position = Vector2(-5766, -1646)
 
 [node name="Enemy353" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-7714, 1409.7)
+position = Vector2(-5732, -1205)
 
 [node name="Enemy354" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-7767.2, 1781.4)
+position = Vector2(-5891.3, -846.6)
 
 [node name="Enemy355" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-8116.2, 2267.4)
+position = Vector2(-6240.3, -360.6)
 
 [node name="Enemy356" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-7978.2, 2068.4)
+position = Vector2(-6102.3, -559.6)
 
 [node name="Enemy357" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-7996.2, 2560.4)
+position = Vector2(-6120.3, -67.6001)
 
 [node name="Enemy358" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-7846.2, 2820.4)
+position = Vector2(-5970.3, 192.4)
 
 [node name="Enemy30" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-4735, -334)
+position = Vector2(-4050, -602)
 
 [node name="Enemy31" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-5205, 1610)
+position = Vector2(-3192, -701)
 
 [node name="Enemy367" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
 position = Vector2(-5988, 918)
 
 [node name="Enemy368" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-6795, 1476)
+position = Vector2(-6474, 1476)
 
 [node name="Enemy32" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-3724, 150)
+position = Vector2(-3635, -260)
 
 [node name="Enemy4" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
 position = Vector2(12064, -5489)
@@ -862,23 +888,35 @@ position = Vector2(8605.9, -6398.1)
 [node name="Enemy334" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
 position = Vector2(8375.9, -6835.1)
 
-[node name="Enemy106" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(7876, -1231)
-
 [node name="Enemy329" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(7423, -607)
+position = Vector2(7628, -510)
 
 [node name="Enemy330" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(6954, -239)
-
-[node name="Enemy107" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(8499.1, -1607)
+position = Vector2(7104, -179)
 
 [node name="Enemy108" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(8422, -706)
+position = Vector2(8150, -241)
+
+[node name="Enemy520" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
+position = Vector2(7747, 355)
+
+[node name="Enemy521" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
+position = Vector2(6939, 348)
+
+[node name="Enemy528" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
+position = Vector2(6284, -1820)
+
+[node name="Enemy531" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
+position = Vector2(5760, -1489)
 
 [node name="Enemy109" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(8713, -1218)
+position = Vector2(6806, -1551)
+
+[node name="Enemy532" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
+position = Vector2(6403, -955)
+
+[node name="Enemy533" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
+position = Vector2(5595, -962)
 
 [node name="Enemy385" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
 position = Vector2(14860.4, -3421.1)
@@ -899,22 +937,22 @@ position = Vector2(15406.4, -2896.1)
 position = Vector2(15697.4, -3408.1)
 
 [node name="Enemy434" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(2021.4, -10327.1)
+position = Vector2(1054.4, -9389.1)
 
 [node name="Enemy435" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(1568.4, -9703.1)
+position = Vector2(601.399, -8765.1)
 
 [node name="Enemy437" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(1099.4, -9335.1)
+position = Vector2(132.399, -8397.1)
 
 [node name="Enemy453" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(2644.5, -10703.1)
+position = Vector2(1677.5, -9765.1)
 
 [node name="Enemy454" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(2567.4, -9802.1)
+position = Vector2(1600.4, -8864.1)
 
 [node name="Enemy455" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
-position = Vector2(2858.4, -10314.1)
+position = Vector2(1891.4, -9376.1)
 
 [node name="Enemy14" parent="WorldHolder/Enemies" instance=ExtResource("14_2depf")]
 position = Vector2(7462.1, -5920)
@@ -950,16 +988,16 @@ position = Vector2(9577.1, -2662)
 position = Vector2(8895.1, -2639)
 
 [node name="Enemy456" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(5601.9, -8939)
+position = Vector2(5738.9, -7962)
 
 [node name="Enemy457" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(5541.9, -8699)
+position = Vector2(5678.9, -7722)
 
 [node name="Enemy458" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(6095.9, -8468)
+position = Vector2(6232.9, -7491)
 
 [node name="Enemy459" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(5413.9, -8445)
+position = Vector2(5550.9, -7468)
 
 [node name="Enemy120" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
 position = Vector2(8758.1, -5276)
@@ -1052,19 +1090,19 @@ position = Vector2(9218, 376)
 position = Vector2(9448, 324)
 
 [node name="Enemy407" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(3374, 5682.1)
+position = Vector2(4232, 6813.1)
 
 [node name="Enemy408" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(3579, 5765.1)
+position = Vector2(4437, 6896.1)
 
 [node name="Enemy409" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(3066, 5676.1)
+position = Vector2(3924, 6807.1)
 
 [node name="Enemy410" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(2529, 5721.1)
+position = Vector2(3387, 6852.1)
 
 [node name="Enemy411" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(2759, 5669.1)
+position = Vector2(3617, 6800.1)
 
 [node name="Enemy149" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
 position = Vector2(11476.1, 1966)
@@ -1143,9 +1181,6 @@ position = Vector2(5898, 5374)
 
 [node name="Enemy178" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
 position = Vector2(5216, 5397)
-
-[node name="Enemy180" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(4384, 4188)
 
 [node name="Enemy181" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
 position = Vector2(6245, 3848)
@@ -1278,6 +1313,27 @@ position = Vector2(219, -4493)
 
 [node name="Enemy204" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
 position = Vector2(-136, -4440)
+
+[node name="Enemy492" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(1177, -1362)
+
+[node name="Enemy493" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(1369, -1108)
+
+[node name="Enemy494" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(1706, -1051)
+
+[node name="Enemy495" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(2146, -1148)
+
+[node name="Enemy496" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(2186, -1508)
+
+[node name="Enemy497" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(1864, -1763)
+
+[node name="Enemy498" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(1439, -1655)
 
 [node name="Enemy263" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
 position = Vector2(-8877.1, -4828)
@@ -1412,7 +1468,7 @@ position = Vector2(-3100, -7937)
 position = Vector2(-3455, -7884)
 
 [node name="Enemy421" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
-position = Vector2(-8638.9, -677)
+position = Vector2(-6763, -3305)
 
 [node name="Enemy429" parent="WorldHolder/Enemies" instance=ExtResource("15_wbc4g")]
 position = Vector2(-10535.9, -858)
@@ -1510,6 +1566,42 @@ position = Vector2(8933, 1995)
 [node name="Enemy241" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
 position = Vector2(8959, 1826)
 
+[node name="Enemy499" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(3915, 887)
+
+[node name="Enemy500" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(4096, 778)
+
+[node name="Enemy501" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(4331, 771)
+
+[node name="Enemy502" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(4554, 803)
+
+[node name="Enemy503" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(4755, 940)
+
+[node name="Enemy504" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(4746, 1153)
+
+[node name="Enemy505" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(4561, 1336)
+
+[node name="Enemy506" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(4331, 1365)
+
+[node name="Enemy507" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(4129, 1411)
+
+[node name="Enemy508" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(3934, 1397)
+
+[node name="Enemy509" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(3738, 1294)
+
+[node name="Enemy510" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(3793, 1065)
+
 [node name="Enemy373" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
 position = Vector2(12574, -1967)
 
@@ -1547,34 +1639,58 @@ position = Vector2(12394, -1645)
 position = Vector2(12420, -1814)
 
 [node name="Enemy322" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
-position = Vector2(5921, -2274)
+position = Vector2(5557, -2526.1)
 
 [node name="Enemy323" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
-position = Vector2(6205, -2355)
+position = Vector2(5843, -2705.1)
 
 [node name="Enemy324" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
-position = Vector2(6594, -2206)
+position = Vector2(6283, -2463.1)
 
 [node name="Enemy328" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
-position = Vector2(6482, -2346)
+position = Vector2(6123, -2655.1)
 
 [node name="Enemy325" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
-position = Vector2(6765, -1967)
+position = Vector2(6417, -2211.1)
+
+[node name="Enemy522" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(7947, -1469)
+
+[node name="Enemy527" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(8159, -1306)
+
+[node name="Enemy523" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(8334, -818)
+
+[node name="Enemy529" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(8536, -818)
+
+[node name="Enemy524" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(8731, -1355)
+
+[node name="Enemy530" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(8875, -1536)
+
+[node name="Enemy525" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(8577, -1098)
+
+[node name="Enemy526" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
+position = Vector2(8243, -1108)
 
 [node name="Enemy326" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
-position = Vector2(6536, -2528)
+position = Vector2(6230, -2837.1)
 
 [node name="Enemy327" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
-position = Vector2(6522, -2788)
+position = Vector2(6213, -3123.1)
 
 [node name="Enemy6" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
-position = Vector2(1370, -5475)
+position = Vector2(1308, -5496)
 
 [node name="Enemy476" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
-position = Vector2(1389, -5621)
+position = Vector2(1472, -5677)
 
 [node name="Enemy477" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
-position = Vector2(1551, -5572)
+position = Vector2(1721, -5653)
 
 [node name="Enemy478" parent="WorldHolder/Enemies" instance=ExtResource("7_pdnlg")]
 position = Vector2(-2033, -6009)
@@ -1605,29 +1721,26 @@ position = Vector2(-9992.9, -2463)
 
 [node name="Obstacles" type="Node2D" parent="WorldHolder"]
 
-[node name="Obstacle5" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(315, 897)
-
 [node name="Obstacle6" parent="WorldHolder/Obstacles" instance=ExtResource("8_t88bx")]
 position = Vector2(1376.9, 155.8)
 
 [node name="Obstacle21" parent="WorldHolder/Obstacles" instance=ExtResource("8_t88bx")]
-position = Vector2(3022, 1993)
+position = Vector2(2233, 1575)
 
 [node name="Obstacle23" parent="WorldHolder/Obstacles" instance=ExtResource("8_t88bx")]
-position = Vector2(3882.9, 1772.9)
+position = Vector2(3093.9, 1354.9)
 
 [node name="Obstacle24" parent="WorldHolder/Obstacles" instance=ExtResource("8_t88bx")]
-position = Vector2(3519.9, -1279.1)
+position = Vector2(2990, -853)
 
 [node name="Obstacle33" parent="WorldHolder/Obstacles" instance=ExtResource("8_t88bx")]
 position = Vector2(5460, -60)
 
 [node name="Obstacle54" parent="WorldHolder/Obstacles" instance=ExtResource("8_t88bx")]
-position = Vector2(6244, -2882)
+position = Vector2(5933, -3139.1)
 
 [node name="Obstacle26" parent="WorldHolder/Obstacles" instance=ExtResource("8_t88bx")]
-position = Vector2(4169.9, -1375.1)
+position = Vector2(3983, -891)
 
 [node name="Obstacle27" parent="WorldHolder/Obstacles" instance=ExtResource("8_t88bx")]
 position = Vector2(5079, 2472)
@@ -1636,13 +1749,10 @@ position = Vector2(5079, 2472)
 position = Vector2(5891.9, 2834.9)
 
 [node name="Obstacle30" parent="WorldHolder/Obstacles" instance=ExtResource("8_t88bx")]
-position = Vector2(2355, 3857)
+position = Vector2(2313, 3282.9)
 
 [node name="Obstacle32" parent="WorldHolder/Obstacles" instance=ExtResource("8_t88bx")]
-position = Vector2(3238, 3767)
-
-[node name="Obstacle9" parent="WorldHolder/Obstacles" instance=ExtResource("9_n5sno")]
-position = Vector2(1913, -1700)
+position = Vector2(3196, 3192.9)
 
 [node name="Obstacle10" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
 position = Vector2(-762, 787)
@@ -1654,19 +1764,19 @@ position = Vector2(-1965, 2585)
 position = Vector2(-2023, 4082)
 
 [node name="Obstacle17" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(-1293, 3339)
+position = Vector2(-806, 3565)
 
 [node name="Obstacle13" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(346, 2581)
+position = Vector2(346, 1286.7)
 
 [node name="Obstacle14" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(772, 3146)
+position = Vector2(772, 1851.7)
 
 [node name="Obstacle15" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(146, 3963)
+position = Vector2(146, 2668.7)
 
 [node name="Obstacle181" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(956, 3918)
+position = Vector2(956, 2623.7)
 
 [node name="Obstacle37" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
 position = Vector2(-3908, 816)
@@ -1675,10 +1785,10 @@ position = Vector2(-3908, 816)
 position = Vector2(-5312, 957)
 
 [node name="Obstacle39" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(-6233.2, 2753.7)
+position = Vector2(-5238.4, 2482.7)
 
 [node name="Obstacle41" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(-6757, 3241)
+position = Vector2(-5762.2, 2970)
 
 [node name="Obstacle42" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
 position = Vector2(-4036.2, 2552.7)
@@ -1716,9 +1826,6 @@ position = Vector2(-7843, -1719)
 [node name="Obstacle63" parent="WorldHolder/Obstacles" instance=ExtResource("9_n5sno")]
 position = Vector2(-7488, -2987)
 
-[node name="Obstacle119" parent="WorldHolder/Obstacles" instance=ExtResource("9_n5sno")]
-position = Vector2(-5682, -3057)
-
 [node name="Obstacle120" parent="WorldHolder/Obstacles" instance=ExtResource("9_n5sno")]
 position = Vector2(-121, -6692)
 
@@ -1729,7 +1836,7 @@ position = Vector2(-1144, -305)
 position = Vector2(-3222, -4822)
 
 [node name="Obstacle59" parent="WorldHolder/Obstacles" instance=ExtResource("9_n5sno")]
-position = Vector2(-4490, -1796)
+position = Vector2(-5017, -1416)
 
 [node name="Obstacle127" parent="WorldHolder/Obstacles" instance=ExtResource("9_n5sno")]
 position = Vector2(2815, -3469)
@@ -1740,6 +1847,9 @@ position = Vector2(-5005, -6973)
 [node name="Obstacle" parent="WorldHolder/Obstacles" instance=ExtResource("10_epjys")]
 position = Vector2(7676, -207)
 
+[node name="Obstacle5" parent="WorldHolder/Obstacles" instance=ExtResource("10_epjys")]
+position = Vector2(6240, -1461)
+
 [node name="Obstacle52" parent="WorldHolder/Obstacles" instance=ExtResource("10_epjys")]
 position = Vector2(-3363, 4575)
 
@@ -1747,10 +1857,13 @@ position = Vector2(-3363, 4575)
 position = Vector2(6591, 1554)
 
 [node name="Obstacle51" parent="WorldHolder/Obstacles" instance=ExtResource("11_34m0w")]
-position = Vector2(-3137, 1329)
+position = Vector2(-3475, 1179)
 
 [node name="Obstacle50" parent="WorldHolder/Obstacles" instance=ExtResource("11_34m0w")]
 position = Vector2(1507, 564)
+
+[node name="Obstacle119" parent="WorldHolder/Obstacles" instance=ExtResource("11_34m0w")]
+position = Vector2(-2442, -580)
 
 [node name="Obstacle3" parent="WorldHolder/Obstacles" instance=ExtResource("12_ercq4")]
 position = Vector2(6065, 1579)
@@ -1794,6 +1907,9 @@ position = Vector2(7643.7, -66.9996)
 [node name="Obstacle48" parent="WorldHolder/Obstacles" instance=ExtResource("13_5bshv")]
 position = Vector2(7460, -11)
 
+[node name="Obstacle272" parent="WorldHolder/Obstacles" instance=ExtResource("13_5bshv")]
+position = Vector2(7109, 3429)
+
 [node name="Obstacle44" parent="WorldHolder/Obstacles" instance=ExtResource("19_r4xfw")]
 position = Vector2(487, -870.3)
 
@@ -1801,7 +1917,7 @@ position = Vector2(487, -870.3)
 position = Vector2(111, -4298)
 
 [node name="Obstacle122" parent="WorldHolder/Obstacles" instance=ExtResource("19_r4xfw")]
-position = Vector2(-493, -2990)
+position = Vector2(-2004, -4690)
 
 [node name="Obstacle187" parent="WorldHolder/Obstacles" instance=ExtResource("19_r4xfw")]
 position = Vector2(1981, -2864)
@@ -1809,8 +1925,8 @@ position = Vector2(1981, -2864)
 [node name="Obstacle179" parent="WorldHolder/Obstacles" instance=ExtResource("19_r4xfw")]
 position = Vector2(-3340, -1775)
 
-[node name="Obstacle201" parent="WorldHolder/Obstacles" instance=ExtResource("19_r4xfw")]
-position = Vector2(-5716, -700)
+[node name="Obstacle258" parent="WorldHolder/Obstacles" instance=ExtResource("19_r4xfw")]
+position = Vector2(-625, -1914)
 
 [node name="Obstacle180" parent="WorldHolder/Obstacles" instance=ExtResource("19_r4xfw")]
 position = Vector2(-8409, -3803)
@@ -1822,7 +1938,7 @@ position = Vector2(-662, -5297)
 position = Vector2(1912, 532)
 
 [node name="Obstacle56" parent="WorldHolder/Obstacles" instance=ExtResource("21_8grfm")]
-position = Vector2(6293, -2161)
+position = Vector2(5982, -2418.1)
 
 [node name="Obstacle58" parent="WorldHolder/Obstacles" instance=ExtResource("22_vqx21")]
 position = Vector2(6699, -607)
@@ -1843,13 +1959,13 @@ position = Vector2(9308.1, -2692)
 position = Vector2(9531, -3300.1)
 
 [node name="Obstacle249" parent="WorldHolder/Obstacles" instance=ExtResource("8_t88bx")]
-position = Vector2(5188.9, -8886)
+position = Vector2(5325.9, -7909)
 
 [node name="Obstacle250" parent="WorldHolder/Obstacles" instance=ExtResource("8_t88bx")]
-position = Vector2(5826.9, -8498)
+position = Vector2(5963.9, -7521)
 
 [node name="Obstacle251" parent="WorldHolder/Obstacles" instance=ExtResource("8_t88bx")]
-position = Vector2(6049.8, -9106.1)
+position = Vector2(6186.8, -8129.1)
 
 [node name="Obstacle68" parent="WorldHolder/Obstacles" instance=ExtResource("8_t88bx")]
 position = Vector2(11108.1, -5133)
@@ -1891,22 +2007,22 @@ position = Vector2(15332.4, -3640.1)
 position = Vector2(14988.4, -2969.1)
 
 [node name="Obstacle243" parent="WorldHolder/Obstacles" instance=ExtResource("10_epjys")]
-position = Vector2(1821.4, -9303.1)
+position = Vector2(854.399, -8365.1)
 
 [node name="Obstacle244" parent="WorldHolder/Obstacles" instance=ExtResource("11_34m0w")]
-position = Vector2(1789.1, -9163.1)
+position = Vector2(822.099, -8225.1)
 
 [node name="Obstacle245" parent="WorldHolder/Obstacles" instance=ExtResource("13_5bshv")]
-position = Vector2(1605.4, -9107.1)
+position = Vector2(638.399, -8169.1)
 
 [node name="Obstacle246" parent="WorldHolder/Obstacles" instance=ExtResource("22_vqx21")]
-position = Vector2(844.401, -9703.1)
+position = Vector2(-122.6, -8765.1)
 
 [node name="Obstacle247" parent="WorldHolder/Obstacles" instance=ExtResource("8_t88bx")]
-position = Vector2(2493.4, -10546.1)
+position = Vector2(1526.4, -9608.1)
 
 [node name="Obstacle248" parent="WorldHolder/Obstacles" instance=ExtResource("8_t88bx")]
-position = Vector2(2149.4, -9875.1)
+position = Vector2(1182.4, -8937.1)
 
 [node name="Obstacle75" parent="WorldHolder/Obstacles" instance=ExtResource("10_epjys")]
 position = Vector2(13324.1, -5280)
@@ -2044,13 +2160,13 @@ position = Vector2(15150, 157)
 position = Vector2(9953.1, 558)
 
 [node name="Obstacle220" parent="WorldHolder/Obstacles" instance=ExtResource("8_t88bx")]
-position = Vector2(3080, 5636.9)
+position = Vector2(3938, 6767.9)
 
 [node name="Obstacle221" parent="WorldHolder/Obstacles" instance=ExtResource("11_34m0w")]
-position = Vector2(2859.1, 5935.1)
+position = Vector2(3717.1, 7066.1)
 
 [node name="Obstacle222" parent="WorldHolder/Obstacles" instance=ExtResource("20_ovg8a")]
-position = Vector2(3264.1, 5903.1)
+position = Vector2(4122.1, 7034.1)
 
 [node name="Obstacle108" parent="WorldHolder/Obstacles" instance=ExtResource("22_vqx21")]
 position = Vector2(15029, -590)
@@ -2059,7 +2175,7 @@ position = Vector2(15029, -590)
 position = Vector2(5790, -6527)
 
 [node name="Obstacle129" parent="WorldHolder/Obstacles" instance=ExtResource("12_ercq4")]
-position = Vector2(5176, -3032.8)
+position = Vector2(2838, -2123)
 
 [node name="Obstacle223" parent="WorldHolder/Obstacles" instance=ExtResource("12_ercq4")]
 position = Vector2(5698, -4335.8)
@@ -2089,34 +2205,28 @@ position = Vector2(-2175, 7248)
 position = Vector2(-1933, 5613)
 
 [node name="Obstacle146" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(335.8, 4693.7)
+position = Vector2(335.8, 3399.4)
 
 [node name="Obstacle147" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(761.8, 5258.7)
-
-[node name="Obstacle148" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(135.8, 6075.7)
+position = Vector2(761.8, 3964.4)
 
 [node name="Obstacle55" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(-8081, -492.3)
+position = Vector2(-6205.1, -3120.3)
 
 [node name="Obstacle188" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(-7655, 72.7)
+position = Vector2(-5716, -2376)
 
 [node name="Obstacle189" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(-8281, 889.7)
-
-[node name="Obstacle190" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(-7471, 844.7)
+position = Vector2(-6405.1, -1738.3)
 
 [node name="Obstacle191" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(-8091.2, 1620.4)
+position = Vector2(-6284, -1076)
 
 [node name="Obstacle192" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(-7665.2, 2185.4)
+position = Vector2(-5728, -285)
 
 [node name="Obstacle193" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(-8291.2, 3002.4)
+position = Vector2(-6415.3, 374.4)
 
 [node name="Obstacle149" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
 position = Vector2(-5483, 5223)
@@ -2146,16 +2256,22 @@ position = Vector2(-563, 7734)
 position = Vector2(-3671, -543)
 
 [node name="Obstacle20" parent="WorldHolder/Obstacles" instance=ExtResource("20_ovg8a")]
-position = Vector2(-3407, -2739)
-
-[node name="Obstacle22" parent="WorldHolder/Obstacles" instance=ExtResource("20_ovg8a")]
-position = Vector2(-6350, -1909)
+position = Vector2(-2964, -2969)
 
 [node name="Obstacle25" parent="WorldHolder/Obstacles" instance=ExtResource("20_ovg8a")]
 position = Vector2(-57.0005, -4233)
 
 [node name="Obstacle28" parent="WorldHolder/Obstacles" instance=ExtResource("20_ovg8a")]
 position = Vector2(167, -4140)
+
+[node name="Obstacle276" parent="WorldHolder/Obstacles" instance=ExtResource("19_r4xfw")]
+position = Vector2(1730, -1449)
+
+[node name="Obstacle277" parent="WorldHolder/Obstacles" instance=ExtResource("20_ovg8a")]
+position = Vector2(1562, -1384)
+
+[node name="Obstacle278" parent="WorldHolder/Obstacles" instance=ExtResource("20_ovg8a")]
+position = Vector2(1786, -1291)
 
 [node name="Obstacle157" parent="WorldHolder/Obstacles" instance=ExtResource("9_n5sno")]
 position = Vector2(-5211.1, -5064)
@@ -2266,13 +2382,22 @@ position = Vector2(-1692, -3514)
 position = Vector2(2120, 28)
 
 [node name="Obstacle136" parent="WorldHolder/Obstacles" instance=ExtResource("32_oi11m")]
-position = Vector2(3875, -742)
+position = Vector2(3455, -289)
 
 [node name="Obstacle137" parent="WorldHolder/Obstacles" instance=ExtResource("32_oi11m")]
-position = Vector2(3664, 2298)
+position = Vector2(2875, 1880)
 
 [node name="Obstacle138" parent="WorldHolder/Obstacles" instance=ExtResource("32_oi11m")]
-position = Vector2(2809, 4064)
+position = Vector2(2767, 3489.9)
+
+[node name="Obstacle273" parent="WorldHolder/Obstacles" instance=ExtResource("8_t88bx")]
+position = Vector2(1075, 6538.9)
+
+[node name="Obstacle274" parent="WorldHolder/Obstacles" instance=ExtResource("8_t88bx")]
+position = Vector2(1958, 6448.9)
+
+[node name="Obstacle275" parent="WorldHolder/Obstacles" instance=ExtResource("32_oi11m")]
+position = Vector2(1529, 6745.9)
 
 [node name="Obstacle139" parent="WorldHolder/Obstacles" instance=ExtResource("32_oi11m")]
 position = Vector2(5299, 3352)
@@ -2282,6 +2407,12 @@ position = Vector2(9369, 1840)
 
 [node name="Obstacle141" parent="WorldHolder/Obstacles" instance=ExtResource("21_8grfm")]
 position = Vector2(9204, 1894)
+
+[node name="Obstacle279" parent="WorldHolder/Obstacles" instance=ExtResource("33_dcflu")]
+position = Vector2(4298, 1068)
+
+[node name="Obstacle280" parent="WorldHolder/Obstacles" instance=ExtResource("21_8grfm")]
+position = Vector2(4133, 1122)
 
 [node name="Obstacle203" parent="WorldHolder/Obstacles" instance=ExtResource("33_dcflu")]
 position = Vector2(12830, -1800)
@@ -2315,67 +2446,52 @@ position = Vector2(-3834.2, 5123.7)
 position = Vector2(-4683, 4845)
 
 [node name="Obstacle224" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(-10684, 742)
+position = Vector2(-8396.3, -69.9999)
 
 [node name="Obstacle225" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(-10742, 2239)
+position = Vector2(-8454.3, 1427)
 
 [node name="Obstacle226" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(-10012, 1496)
+position = Vector2(-7724.3, 684)
 
 [node name="Obstacle227" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(-12755.2, 709.7)
+position = Vector2(-10467.5, -102.3)
 
 [node name="Obstacle228" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(-12788, 2051)
+position = Vector2(-10500.3, 1239)
 
 [node name="Obstacle229" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(-11808, 1730)
+position = Vector2(-9520.3, 918)
 
 [node name="Obstacle231" parent="WorldHolder/Obstacles" instance=ExtResource("12_ercq4")]
-position = Vector2(-13153, 1476)
+position = Vector2(-10865.3, 664)
 
 [node name="Obstacle232" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(-9970, 2989)
+position = Vector2(-7682.3, 2177)
 
 [node name="Obstacle233" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(-10652, 3770)
+position = Vector2(-8364.3, 2958)
 
 [node name="Obstacle198" parent="WorldHolder/Obstacles" instance=ExtResource("30_tndvq")]
 position = Vector2(-6267, 4895)
 
 [node name="Obstacle252" parent="WorldHolder/Obstacles" instance=ExtResource("10_epjys")]
-position = Vector2(4226.8, 6424.3)
+position = Vector2(4214, 4089)
 
 [node name="Obstacle253" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(2106.8, 7072.3)
+position = Vector2(1958.8, 5069.7)
 
 [node name="Obstacle254" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(493.799, 7207.3)
+position = Vector2(345.8, 5204.7)
 
 [node name="Obstacle255" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(3755.6, 6973)
+position = Vector2(3607.6, 4970.4)
 
 [node name="Obstacle256" parent="WorldHolder/Obstacles" instance=ExtResource("30_tndvq")]
-position = Vector2(2906.8, 6694.3)
+position = Vector2(2758.8, 4691.7)
 
 [node name="Obstacle257" parent="WorldHolder/Obstacles" instance=ExtResource("30_tndvq")]
-position = Vector2(1322.8, 6744.3)
-
-[node name="Obstacle258" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(2106.8, 7072.3)
-
-[node name="Obstacle259" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(493.799, 7207.3)
-
-[node name="Obstacle260" parent="WorldHolder/Obstacles" instance=ExtResource("7_pbjam")]
-position = Vector2(3755.6, 6973)
-
-[node name="Obstacle261" parent="WorldHolder/Obstacles" instance=ExtResource("30_tndvq")]
-position = Vector2(2906.8, 6694.3)
-
-[node name="Obstacle262" parent="WorldHolder/Obstacles" instance=ExtResource("30_tndvq")]
-position = Vector2(1322.8, 6744.3)
+position = Vector2(1174.8, 4741.7)
 
 [node name="Obstacle199" parent="WorldHolder/Obstacles" instance=ExtResource("30_tndvq")]
 position = Vector2(-4485, 1433)
@@ -2387,7 +2503,7 @@ position = Vector2(-2121.2, 717.7)
 position = Vector2(-1350.2, 1230.7)
 
 [node name="Obstacle219" parent="WorldHolder/Obstacles" instance=ExtResource("30_tndvq")]
-position = Vector2(-2698.2, 1334.7)
+position = Vector2(-2955.2, 1021)
 
 [node name="Obstacle200" parent="WorldHolder/Obstacles" instance=ExtResource("30_tndvq")]
 position = Vector2(-5960, 1408)
@@ -2396,7 +2512,7 @@ position = Vector2(-5960, 1408)
 position = Vector2(-7295, -5410)
 
 [node name="Obstacle264" parent="WorldHolder/Obstacles" instance=ExtResource("32_oi11m")]
-position = Vector2(6809, -2681)
+position = Vector2(6498, -2938.1)
 
 [node name="Obstacle265" parent="WorldHolder/Obstacles" instance=ExtResource("32_oi11m")]
 position = Vector2(8881, -925)
@@ -2405,7 +2521,7 @@ position = Vector2(8881, -925)
 position = Vector2(15865.4, -3115.1)
 
 [node name="Obstacle267" parent="WorldHolder/Obstacles" instance=ExtResource("32_oi11m")]
-position = Vector2(3026.4, -10021.1)
+position = Vector2(2059.4, -9083.1)
 
 [node name="Obstacle268" parent="WorldHolder/Obstacles" instance=ExtResource("32_oi11m")]
 position = Vector2(11437, -2359)
@@ -2418,6 +2534,24 @@ position = Vector2(-3696, -9080)
 
 [node name="Obstacle271" parent="WorldHolder/Obstacles" instance=ExtResource("12_ercq4")]
 position = Vector2(-12267.9, -2389)
+
+[node name="Enemy" parent="." instance=ExtResource("7_pdnlg")]
+position = Vector2(-3388, -2949)
+
+[node name="Enemy2" parent="." instance=ExtResource("7_pdnlg")]
+position = Vector2(-3256, -3313)
+
+[node name="Enemy3" parent="." instance=ExtResource("7_pdnlg")]
+position = Vector2(-2877, -3344)
+
+[node name="Enemy4" parent="." instance=ExtResource("7_pdnlg")]
+position = Vector2(-2559, -3220)
+
+[node name="Enemy5" parent="." instance=ExtResource("7_pdnlg")]
+position = Vector2(-2447, -2864)
+
+[node name="Enemy6" parent="." instance=ExtResource("7_pdnlg")]
+position = Vector2(-3016, -2678)
 
 [editable path="GUI Layer"]
 [editable path="WorldHolder/Player2"]

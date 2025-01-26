@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cy2ii3b76aj4g"]
+[gd_scene load_steps=4 format=3 uid="uid://cy2ii3b76aj4g"]
 
 [ext_resource type="Texture2D" uid="uid://8c4w780a6qao" path="res://BubbleGame/2D/Art/Obstacles/Rock 002.png" id="1_uhy3t"]
+[ext_resource type="PackedScene" uid="uid://c8kkiluebg5jw" path="res://BubbleGame/2D/Resources/Prefabs/Environment/Flower Bundles/flower-pack-1.tscn" id="2_yqfol"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_57urs"]
 size = Vector2(1455, 670)
@@ -15,3 +16,7 @@ texture = ExtResource("1_uhy3t")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-5, -9.99994)
 shape = SubResource("RectangleShape2D_57urs")
+
+[node name="EnvironmentArt" parent="." instance=ExtResource("2_yqfol")]
+position = Vector2(-135, 365)
+scale = Vector2(6, 6)
