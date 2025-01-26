@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b467ni12uwelh" path="res://BubbleGame/2D/Art/Obstacles/Tree 001.png" id="1_rolqe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_57urs"]
-size = Vector2(455, 940)
+size = Vector2(455, 615)
 
 [node name="Obstacle" type="Sprite2D"]
 position = Vector2(747, -157)
@@ -13,6 +13,6 @@ texture = ExtResource("1_rolqe")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(130, 1000)
+position = Vector2(130, 1162.5)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_57urs")

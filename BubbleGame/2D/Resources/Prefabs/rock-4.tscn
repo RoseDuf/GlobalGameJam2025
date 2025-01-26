@@ -1,18 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://dv5twmmnf0d62"]
+[gd_scene load_steps=3 format=3 uid="uid://bx2jow18jl55q"]
 
-[ext_resource type="Texture2D" uid="uid://cvydg110upjv3" path="res://BubbleGame/2D/Art/Obstacles/Tree 002.png" id="1_c7hkn"]
+[ext_resource type="Texture2D" uid="uid://dgcqpfjdnqvn4" path="res://BubbleGame/2D/Art/Obstacles/Rock 004.png" id="1_ae4a6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_57urs"]
-size = Vector2(190, 575)
+size = Vector2(1455, 715)
 
 [node name="Obstacle" type="Sprite2D"]
 position = Vector2(747, -157)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_c7hkn")
+texture = ExtResource("1_ae4a6")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(5, 1642.5)
+position = Vector2(-5, 187.5)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_57urs")
