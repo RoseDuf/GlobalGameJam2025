@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=4 format=3 uid="uid://ctjuqpk467yqx"]
+[gd_resource type="Resource" script_class="BugSwarmData" load_steps=4 format=3 uid="uid://ctjuqpk467yqx"]
 
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Obstacles/ObstaclesToSpawn.cs" id="1_hpc6p"]
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Obstacles/BugSwarmData.cs" id="1_xne4r"]
