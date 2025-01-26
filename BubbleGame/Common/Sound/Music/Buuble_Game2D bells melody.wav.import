@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://xygjv0rpcol1"
+path="res://.godot/imported/Buuble_Game2D bells melody.wav-4ea26d61ae8110a110059ced51a7c9a1.sample"
+
+[deps]
+
+source_file="res://BubbleGame/Common/Sound/Music/Buuble_Game2D bells melody.wav"
+dest_files=["res://.godot/imported/Buuble_Game2D bells melody.wav-4ea26d61ae8110a110059ced51a7c9a1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
