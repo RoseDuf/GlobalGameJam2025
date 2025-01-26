@@ -1,10 +1,43 @@
-[gd_scene load_steps=5 format=3 uid="uid://c358f7xu5nnju"]
+[gd_scene load_steps=14 format=3 uid="uid://c358f7xu5nnju"]
 
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/SpawnManager.cs" id="1_fs1cg"]
+[ext_resource type="Script" path="res://BubbleGame/3D/_Source/ObstacleData.cs" id="2_5ggot"]
 [ext_resource type="PackedScene" uid="uid://dwghalcje8h0q" path="res://BubbleGame/3D/Resources/Obstacles/DefaultObstacle.tscn" id="2_i5gjq"]
+[ext_resource type="Script" path="res://BubbleGame/3D/_Source/ObstaclesToSpawn.cs" id="3_htpmf"]
 [ext_resource type="PackedScene" uid="uid://cpwar8fyqpc55" path="res://BubbleGame/3D/Resources/Obstacles/Despawner.tscn" id="3_y6g5q"]
+[ext_resource type="Script" path="res://BubbleGame/3D/_Source/WaveData.cs" id="4_ikblo"]
 
 [sub_resource type="Environment" id="Environment_xyxs8"]
+
+[sub_resource type="Resource" id="Resource_nuvj1"]
+script = ExtResource("2_5ggot")
+speed = 3.0
+timeUntilMoving = 2.0
+
+[sub_resource type="Resource" id="Resource_leu1x"]
+script = ExtResource("3_htpmf")
+obstacleData = SubResource("Resource_nuvj1")
+numberToSpawn = 1
+
+[sub_resource type="Resource" id="Resource_wyvov"]
+script = ExtResource("4_ikblo")
+timeUntilWaveStarts = 1
+obstacles = Array[Object]([SubResource("Resource_leu1x")])
+
+[sub_resource type="Resource" id="Resource_cxe7x"]
+script = ExtResource("2_5ggot")
+speed = 4.0
+timeUntilMoving = 1.0
+
+[sub_resource type="Resource" id="Resource_nu3g0"]
+script = ExtResource("3_htpmf")
+obstacleData = SubResource("Resource_cxe7x")
+numberToSpawn = 1
+
+[sub_resource type="Resource" id="Resource_i28du"]
+script = ExtResource("4_ikblo")
+timeUntilWaveStarts = 2
+obstacles = Array[Object]([SubResource("Resource_nu3g0")])
 
 [node name="Bubble3D" type="Node"]
 
@@ -20,6 +53,7 @@ transform = Transform3D(-1, 4.17145e-08, -7.68286e-08, 0, 0.878817, 0.477159, 8.
 
 [node name="ObstacleSpawner" type="Node" parent="." node_paths=PackedStringArray("_obstacleSpawnTimer")]
 script = ExtResource("1_fs1cg")
+_waves = Array[Object]([SubResource("Resource_wyvov"), SubResource("Resource_i28du")])
 _obstacleScene = ExtResource("2_i5gjq")
 _obstacleSpawnTimer = NodePath("../ObstacleSpawnTimer")
 
