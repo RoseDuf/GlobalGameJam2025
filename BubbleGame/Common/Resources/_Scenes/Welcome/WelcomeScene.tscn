@@ -1,110 +1,106 @@
-[gd_scene load_steps=5 format=3 uid="uid://bjejpnnacm3p6"]
+[gd_scene load_steps=17 format=3 uid="uid://bjejpnnacm3p6"]
 
+[ext_resource type="Texture2D" uid="uid://byx4t3xq4jp1i" path="res://BubbleGame/Common/Art/MainMenu/background_menu.png" id="1_8m3os"]
 [ext_resource type="Script" path="res://BubbleGame/Common/_Source/CSharp/MainMenuView.cs" id="1_vmjco"]
+[ext_resource type="Script" path="res://BubbleGame/Common/_Source/GScript/MainMenu.gd" id="1_xjk0w"]
+[ext_resource type="Texture2D" uid="uid://ehhnhh2gw6ge" path="res://BubbleGame/Common/Art/MainMenu/bouton_jouer_defaut.png" id="3_11n0w"]
+[ext_resource type="Script" path="res://BubbleGame/Common/_Source/GScript/Debug3DButton.gd" id="4_hb5yk"]
+[ext_resource type="Texture2D" uid="uid://bijd6caiogu2a" path="res://BubbleGame/Common/Art/MainMenu/bouton_jouer_pressed.png" id="4_ppu6h"]
+[ext_resource type="Texture2D" uid="uid://cj77nt1xonfyx" path="res://BubbleGame/Common/Art/MainMenu/bouton_jouer_hover.png" id="5_ivlqn"]
+[ext_resource type="Texture2D" uid="uid://cqyt00gmcrq0w" path="res://BubbleGame/Common/Art/MainMenu/bouton_options_defaut.png" id="6_ghogi"]
+[ext_resource type="Script" path="res://BubbleGame/Common/_Source/GScript/MainMenuButton.gd" id="7_askyp"]
+[ext_resource type="Texture2D" uid="uid://fyi7rkvve3cd" path="res://BubbleGame/Common/Art/MainMenu/bouton_options_pressed.png" id="7_wp2kn"]
+[ext_resource type="Texture2D" uid="uid://br67sefhem0fu" path="res://BubbleGame/Common/Art/MainMenu/bouton_options_hover.png" id="8_37xw6"]
+[ext_resource type="Texture2D" uid="uid://v4t7fh2q0udi" path="res://BubbleGame/Common/Art/MainMenu/bouton_quitter_defaut.png" id="9_2qd1f"]
+[ext_resource type="Texture2D" uid="uid://cntsgtci4y274" path="res://BubbleGame/Common/Art/MainMenu/bouton_quitter_pressed.png" id="10_o15xp"]
+[ext_resource type="Texture2D" uid="uid://csmnm6luja2xu" path="res://BubbleGame/Common/Art/MainMenu/bouton_quitter_hover.png" id="11_1prnb"]
+[ext_resource type="FontFile" uid="uid://b510lfg5fi4uf" path="res://BubbleGame/Common/Resources/Chewy-Regular.ttf" id="12_lg4pt"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_6ro77"]
-font_size = 80
-outline_size = 5
-outline_color = Color(0.0666667, 0.0666667, 0.0666667, 1)
-shadow_color = Color(0, 0, 0, 0.501961)
-shadow_offset = Vector2(3, 3)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1t61e"]
-content_margin_left = 5.0
-content_margin_top = 5.0
-content_margin_right = 5.0
-content_margin_bottom = 5.0
-
-[sub_resource type="Environment" id="Environment_q3mx0"]
-background_mode = 1
-background_color = Color(0.0666667, 0.0666667, 0.0666667, 1)
+[sub_resource type="Theme" id="Theme_o55tg"]
+default_font = ExtResource("12_lg4pt")
+default_font_size = 18
 
 [node name="WelcomeScene" type="Node"]
+script = ExtResource("1_xjk0w")
 
-[node name="GUI" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MainMenuView" type="Control" parent="GUI"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("1_vmjco")
 
-[node name="Title" type="Label" parent="GUI/MainMenuView"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = 100.0
-offset_bottom = 210.0
-grow_horizontal = 2
-text = "Main Menu"
-label_settings = SubResource("LabelSettings_6ro77")
-horizontal_alignment = 1
+[node name="Background" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(960, 540)
+texture = ExtResource("1_8m3os")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="GUI/MainMenuView"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.3
-anchor_right = 0.7
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 250.0
-offset_right = 6.10352e-05
-offset_bottom = -78.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_1t61e")
+texture = ExtResource("1_8m3os")
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="GUI/MainMenuView/ScrollContainer"]
+[node name="3DButton" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(200, 40)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 251.0
+offset_top = -121.0
+offset_right = 508.0
+offset_bottom = -81.0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "3D (visible only on debug builds)"
+script = ExtResource("4_hb5yk")
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -155.0
+offset_top = 51.0
+offset_right = 155.0
+offset_bottom = 415.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="PlayButton" type="TextureButton" parent="CanvasLayer/GridContainer"]
 layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 3
-theme_override_constants/separation = 15
+texture_normal = ExtResource("3_11n0w")
+texture_pressed = ExtResource("4_ppu6h")
+texture_hover = ExtResource("5_ivlqn")
+script = ExtResource("7_askyp")
 
-[node name="PlayButton" type="Button" parent="GUI/MainMenuView/ScrollContainer/VBoxContainer"]
+[node name="OptionsButton" type="TextureButton" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_ghogi")
+texture_pressed = ExtResource("7_wp2kn")
+texture_hover = ExtResource("8_37xw6")
+script = ExtResource("7_askyp")
+
+[node name="QuitButton" type="TextureButton" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("9_2qd1f")
+texture_pressed = ExtResource("10_o15xp")
+texture_hover = ExtResource("11_1prnb")
+script = ExtResource("7_askyp")
+
+[node name="CreditsButton" type="Button" parent="CanvasLayer/GridContainer"]
 custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
-text = "Play"
-
-[node name="2DButton" type="Button" parent="GUI/MainMenuView/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(200, 40)
-layout_mode = 2
-text = "2D"
-
-[node name="3DButton" type="Button" parent="GUI/MainMenuView/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(200, 40)
-layout_mode = 2
-text = "3D"
-
-[node name="CreditsButton" type="Button" parent="GUI/MainMenuView/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(200, 40)
-layout_mode = 2
+theme = SubResource("Theme_o55tg")
+theme_type_variation = &"FlatButton"
 text = "Credits"
+script = ExtResource("7_askyp")
 
-[node name="QuitButton" type="Button" parent="GUI/MainMenuView/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(200, 40)
-layout_mode = 2
-text = "Quit"
-
-[node name="Environment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_q3mx0")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
-shadow_enabled = true
-
-[node name="Camera3D" type="Camera3D" parent="Environment"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
-
-[connection signal="pressed" from="GUI/MainMenuView/ScrollContainer/VBoxContainer/PlayButton" to="GUI/MainMenuView" method="PlayButton_Pressed"]
-[connection signal="pressed" from="GUI/MainMenuView/ScrollContainer/VBoxContainer/2DButton" to="GUI/MainMenuView" method="_2DButton_Pressed"]
-[connection signal="pressed" from="GUI/MainMenuView/ScrollContainer/VBoxContainer/3DButton" to="GUI/MainMenuView" method="_3DButton_Pressed"]
-[connection signal="pressed" from="GUI/MainMenuView/ScrollContainer/VBoxContainer/CreditsButton" to="GUI/MainMenuView" method="CreditsButton_Pressed"]
-[connection signal="pressed" from="GUI/MainMenuView/ScrollContainer/VBoxContainer/QuitButton" to="GUI/MainMenuView" method="QuitButton_Pressed"]
+[connection signal="pressed" from="CanvasLayer/3DButton" to="CanvasLayer" method="_3DButton_Pressed"]
+[connection signal="pressed" from="CanvasLayer/GridContainer/PlayButton" to="." method="OnPlayButtonPressed"]
+[connection signal="pressed" from="CanvasLayer/GridContainer/QuitButton" to="." method="OnQuitButtonPressed"]
+[connection signal="pressed" from="CanvasLayer/GridContainer/CreditsButton" to="CanvasLayer" method="CreditsButton_Pressed"]

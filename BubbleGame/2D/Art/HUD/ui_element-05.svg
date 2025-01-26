@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 565.17 109.09">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Dégradé_sans_nom_156);
+        filter: url(#drop-shadow-2);
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 4px;
+      }
+    </style>
+    <linearGradient id="Dégradé_sans_nom_156" data-name="Dégradé sans nom 156" x1="4.18" y1="57.56" x2="559.6" y2="57.56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#cc7a52"/>
+      <stop offset="1" stop-color="#d8c74c"/>
+    </linearGradient>
+    <filter id="drop-shadow-2" x="0" y="21.29" width="565.02" height="73.91" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1"/>
+      <feGaussianBlur result="blur" stdDeviation="0"/>
+      <feFlood flood-color="#000" flood-opacity=".3"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <polygon class="cls-1" points="554.71 37.49 497.71 33.6 444.62 33.6 444.62 33.6 344.88 26.19 272.97 32.49 120.07 25.3 4.18 38.87 6.63 89.75 142.21 85.47 252.85 86.39 343.41 87.11 444.53 89.75 444.53 89.8 514.42 86.11 559.6 89.82 554.71 37.49"/>
+</svg>
