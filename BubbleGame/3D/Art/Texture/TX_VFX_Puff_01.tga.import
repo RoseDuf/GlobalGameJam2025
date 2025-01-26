@@ -2,21 +2,22 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqbg7csa4ct2y"
-path="res://.godot/imported/TX_Gradient_01.png-01fb0e7a261f63003ada0514e5b8e4c1.ctex"
+uid="uid://cbq162kjjq5ia"
+path.s3tc="res://.godot/imported/TX_VFX_Puff_01.tga-68dc39b87f1a56f5f076783bf84f417a.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
-source_file="res://BubbleGame/3D/Art/Texture/TX_Gradient_01.png"
-dest_files=["res://.godot/imported/TX_Gradient_01.png-01fb0e7a261f63003ada0514e5b8e4c1.ctex"]
+source_file="res://BubbleGame/3D/Art/Texture/TX_VFX_Puff_01.tga"
+dest_files=["res://.godot/imported/TX_VFX_Puff_01.tga-68dc39b87f1a56f5f076783bf84f417a.s3tc.ctex"]
 
 [params]
 
-compress/mode=3
-compress/high_quality=true
+compress/mode=2
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
