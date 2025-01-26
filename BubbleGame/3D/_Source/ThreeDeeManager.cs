@@ -52,6 +52,6 @@ public partial class ThreeDeeManager : Node
 
     private void OnFinishGame()
     {
-        SceneManager.Instance.LoadScene("WelcomeScene");
+        SceneManager.Instance.LoadScene("Credits");
     }
 }
