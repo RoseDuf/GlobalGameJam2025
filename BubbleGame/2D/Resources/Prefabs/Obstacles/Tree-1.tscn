@@ -1,10 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwnvhrof5f2xb"]
+[gd_scene load_steps=8 format=3 uid="uid://cwnvhrof5f2xb"]
 
 [ext_resource type="Texture2D" uid="uid://b467ni12uwelh" path="res://BubbleGame/2D/Art/Obstacles/Tree 001.png" id="1_rolqe"]
 [ext_resource type="PackedScene" uid="uid://dgwusa5uauj4k" path="res://BubbleGame/2D/Resources/Prefabs/Environment/Flower Bundles/flower-pack-2.tscn" id="2_yd6q3"]
+[ext_resource type="Texture2D" uid="uid://casehb0wigo5t" path="res://BubbleGame/2D/Art/Textures/Leave_01.png" id="3_0axap"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_57urs"]
 size = Vector2(455, 615)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wkyep"]
+
+[sub_resource type="Curve" id="Curve_kctv6"]
+max_value = 0.01
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.997963, 19.3783), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_nqrtq"]
+offsets = PackedFloat32Array(0, 0.0388769, 0.736501, 0.933045, 1)
+colors = PackedColorArray(1, 1, 1, 0.0980392, 1, 1, 1, 1, 1, 1, 1, 1, 0.534881, 0.382684, 0.203168, 1, 1, 1, 1, 0)
 
 [node name="Obstacle" type="Sprite2D"]
 y_sort_enabled = true
@@ -21,3 +33,18 @@ shape = SubResource("RectangleShape2D_57urs")
 [node name="EnvironmentArt" parent="." instance=ExtResource("2_yd6q3")]
 position = Vector2(560, 885)
 scale = Vector2(6, 6)
+
+[node name="Leaves" type="CPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_wkyep")
+position = Vector2(-180, -1520)
+lifetime = 5.0
+preprocess = 5.0
+randomness = 0.46
+texture = ExtResource("3_0axap")
+emission_shape = 3
+emission_rect_extents = Vector2(512, 512)
+gravity = Vector2(-40, 30)
+angle_max = 28.2
+angle_curve = SubResource("Curve_kctv6")
+color = Color(0.392157, 0.454902, 0.2, 1)
+color_ramp = SubResource("Gradient_nqrtq")
