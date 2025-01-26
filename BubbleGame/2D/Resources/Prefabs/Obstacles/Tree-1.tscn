@@ -6,13 +6,13 @@
 size = Vector2(455, 615)
 
 [node name="Obstacle" type="Sprite2D"]
-position = Vector2(747, -157)
+y_sort_enabled = true
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_rolqe")
+offset = Vector2(0, -800)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(130, 1162.5)
-scale = Vector2(1, 1)
+position = Vector2(130, 360)
 shape = SubResource("RectangleShape2D_57urs")

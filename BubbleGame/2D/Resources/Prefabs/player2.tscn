@@ -1,0 +1,113 @@
+[gd_scene load_steps=15 format=3 uid="uid://3rnckv0e0dm7"]
+
+[ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/PlayerMovement.gd" id="1_5j78x"]
+[ext_resource type="Texture2D" uid="uid://c6ynir2hhqi8e" path="res://BubbleGame/2D/Art/Character/RunningFront/001.png" id="2_3cw23"]
+[ext_resource type="Texture2D" uid="uid://cqroy1u77d3hy" path="res://BubbleGame/2D/Art/Character/RunningFront/002.png" id="3_4n4yy"]
+[ext_resource type="Texture2D" uid="uid://dgxk3j5asm2cw" path="res://BubbleGame/2D/Art/Character/RunningFront/003.png" id="4_ku8rw"]
+[ext_resource type="Texture2D" uid="uid://dl36n7ihgniv7" path="res://BubbleGame/2D/Art/Character/RunningFront/004.png" id="5_akgbo"]
+[ext_resource type="Texture2D" uid="uid://cnv35xtieuenp" path="res://BubbleGame/2D/Art/Character/RunningFront/005.png" id="6_7duyh"]
+[ext_resource type="Texture2D" uid="uid://cei5buy65qasa" path="res://BubbleGame/2D/Art/Character/RunningFront/006.png" id="7_jt3ji"]
+[ext_resource type="Texture2D" uid="uid://dr7lvcua2l1ve" path="res://BubbleGame/2D/Art/WandFront.png" id="8_atug7"]
+[ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/WandHitbox.gd" id="9_0phpe"]
+[ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/BubbleTrail.gd" id="10_76roa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nxp7r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3cw23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4n4yy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ku8rw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_akgbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7duyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jt3ji")
+}],
+"loop": true,
+"name": &"RunningFront",
+"speed": 12.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dte2h"]
+radius = 49.0
+height = 166.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4i0xn"]
+radius = 11.0681
+
+[sub_resource type="Gradient" id="Gradient_owgmy"]
+colors = PackedColorArray(1, 1, 1, 0.784314, 0, 1, 1, 0.784314)
+
+[node name="Player" type="Node2D"]
+y_sort_enabled = true
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." node_paths=PackedStringArray("CharacterAnimations", "CharacterWand")]
+y_sort_enabled = true
+position = Vector2(-7, 4)
+motion_mode = 1
+platform_on_leave = 2
+script = ExtResource("1_5j78x")
+CharacterSpeed = 750.0
+CharacterAnimations = NodePath("AnimatedSprite2D")
+CharacterWand = NodePath("WandFront")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(-8, -59)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_nxp7r")
+animation = &"RunningFront"
+autoplay = "RunningFront"
+frame_progress = 0.470114
+
+[node name="WandFront" type="Sprite2D" parent="CharacterBody2D"]
+z_index = 2
+position = Vector2(-8, -59)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("8_atug7")
+
+[node name="CharacterHitbox" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(2, 0)
+shape = SubResource("CapsuleShape2D_dte2h")
+disabled = true
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 6
+script = ExtResource("9_0phpe")
+
+[node name="WandHitbox" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+position = Vector2(-6, -173)
+scale = Vector2(5.8, 5.8)
+shape = SubResource("CircleShape2D_4i0xn")
+
+[node name="BubbleTrail" type="Line2D" parent="." node_paths=PackedStringArray("WandPosition", "TrailHitbox", "CharacterMovement")]
+scale = Vector2(0.99654, 0.988506)
+width = 60.0
+gradient = SubResource("Gradient_owgmy")
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 1
+script = ExtResource("10_76roa")
+WandPosition = NodePath("../CharacterBody2D/Area2D/WandHitbox")
+TrailHitbox = NodePath("BubbleTrailHitbox")
+CharacterMovement = NodePath("../CharacterBody2D")
+
+[node name="BubbleTrailHitbox" type="StaticBody2D" parent="BubbleTrail"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="FmodEventEmitter2D" type="FmodEventEmitter2D" parent="."]
+event_name = "event:/2D/Footsteps"
+event_guid = "{f2bc2792-1a3c-4545-a31f-b56956186766}"
+autoplay = true
+
+[connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D/Area2D" method="_on_body_entered"]
