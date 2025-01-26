@@ -8,6 +8,7 @@ func _ready() -> void:
 	
 	HandleOver.max_value = SoapBarManager.MaximumBarValue;
 	max_value = SoapBarManager.MaximumBarValue
+	GameManager.playerDeath.connect(playerDeath)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -15,3 +16,6 @@ func _process(_delta: float) -> void:
 	set_value_no_signal(GameManager.RemainingSoapTime)
 	var SoapRatio = 1 - (GameManager.RemainingSoapTime / max_value)
 	soapSound.set_parameter_by_name("SoapBar", SoapRatio)
+
+func playerDeath():
+	soapSound.set_parameter_by_name("SoapBar", 1.1)

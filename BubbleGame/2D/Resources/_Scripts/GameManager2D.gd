@@ -2,10 +2,10 @@ extends Node
 class_name GameManager2D	
 
 var RemainingSoapTime: float = SoapBarManager.INITIAL_MAX_VALUE
-var CollectedBugsList: Dictionary;
+var CollectedBugsList: Array;
 
 const SectionName = "CachedData"
-
+signal playerDeath
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	RemainingSoapTime = SoapBarManager.MaximumBarValue;
@@ -18,16 +18,13 @@ func _process(delta: float) -> void:
 	if (RemainingSoapTime <= 0):
 		PrepareNextPhase()
 
-func CollectBug(time: float, bug: GlobalGameManager.BUGS) -> void:
-	CollectedBugsList.get_or_add(time, bug);
+func CollectBug(bug: GlobalGameManager.BUGS) -> void:
+	CollectBugTime(SoapBarManager.MaximumBarValue - RemainingSoapTime, bug);
+
+func CollectBugTime(time: float, bug: GlobalGameManager.BUGS) -> void:
+	CollectedBugsList.append([time, bug]	);
 
 func PrepareNextPhase() -> void:
-	
-	#TODO: Remove made-up data when collecting works
-	CollectBug(3.0, GlobalGameManager.BUGS.Bee);
-	CollectBug(5.01465, GlobalGameManager.BUGS.Mosquito);
-	CollectBug(8.0, GlobalGameManager.BUGS.Bee);
-	CollectBug(10.0, GlobalGameManager.BUGS.Butterfly);
 	
 	#Saving progress for part 2
 	var progressFile : ConfigFile = ConfigFile.new();
@@ -41,7 +38,7 @@ func PrepareNextPhase() -> void:
 	progressFile.set_value(SectionName, "TimeStamps", CollectedBugsList)
 	
 	progressFile.save("user://levelcache.cfg")
-	
+	playerDeath.emit()
 	call_deferred("LoadNextLevel")
 	
 func LoadNextLevel() -> void:

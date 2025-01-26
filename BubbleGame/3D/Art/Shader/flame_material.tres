@@ -1,7 +1,7 @@
 [gd_resource type="ShaderMaterial" load_steps=7 format=3 uid="uid://b4ay8kqlf0a74"]
 
 [ext_resource type="Shader" path="res://BubbleGame/3D/Art/Shader/Flame.gdshader" id="1_vy8jq"]
-[ext_resource type="Texture2D" uid="uid://erbr4kxf0nfd" path="res://GPUTrail-main/defaults/trail_ramp.tres" id="2_7u6q7"]
+[ext_resource type="Texture2D" uid="uid://bmq472rmwx8x1" path="res://GPUTrail-main/defaults/trail_ramp.tres" id="2_7u6q7"]
 
 [sub_resource type="Gradient" id="Gradient_11nfa"]
 offsets = PackedFloat32Array(0, 0.174515, 0.32687)
