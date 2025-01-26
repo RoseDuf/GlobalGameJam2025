@@ -1,12 +1,12 @@
 [gd_scene load_steps=2 format=3 uid="uid://b61b1b065mmhk"]
 
-[ext_resource type="PackedScene" uid="uid://dc4acbdj3mh8o" path="res://BubbleGame/3D/Art/Models/sm_tube_01.tscn" id="1_ooqne"]
+[ext_resource type="PackedScene" uid="uid://dc4acbdj3mh8o" path="res://BubbleGame/3D/Art/Models/sm_tube_01.tscn" id="1_mnxww"]
 
-[node name="Node3D" type="Node3D"]
+[node name="BubbleTunnel" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 
-[node name="SM_Tube_01" parent="." instance=ExtResource("1_ooqne")]
+[node name="SM_Tube_01" parent="." instance=ExtResource("1_mnxww")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.944723, 0.142996, 0.295042, -0.246104, -0.285307, 0.926301, 0.216635, -0.947709, -0.234344, 0, 0, 0)
