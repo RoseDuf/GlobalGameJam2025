@@ -71,6 +71,10 @@ folder_colors={
 "res://BubbleGame/Common/_Source/": "green"
 }
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 move_left={
