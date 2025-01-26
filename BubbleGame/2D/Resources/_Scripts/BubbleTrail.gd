@@ -6,6 +6,7 @@ var RemainingTimeBeforeNextPoint: float = IntervalNewPoint
 @export var WandPosition: Node2D
 @export var TrailHitbox: StaticBody2D;
 @export var CharacterMovement: PlayerMovement
+@export var CharacterHeight: float = 80
 
 var TopLeftPoint: Vector2;
 var BottomRightPoint: Vector2;
@@ -42,14 +43,14 @@ func _process(delta: float)-> void:
 				HitboxShape.b = points[pointsSize - 1];
 				NewHitbox.shape = HitboxShape
 				NewHitbox.disabled = true
-				await get_tree().create_timer(1.0).timeout
+				await get_tree().create_timer(0.5).timeout
 				NewHitbox.disabled = false
 		
 func GetWidth() -> float:
 	return abs(BottomRightPoint.x - TopLeftPoint.x)
 	
 func GetHeight() -> float:
-	return abs(BottomRightPoint.y - TopLeftPoint.y)
+	return abs(BottomRightPoint.y - TopLeftPoint.y) + CharacterHeight
 
 func GetMiddlePosition() -> Vector2:
 	return Vector2(TopLeftPoint.x + (GetWidth() / 2.0), TopLeftPoint.y + (GetHeight() /2.0))

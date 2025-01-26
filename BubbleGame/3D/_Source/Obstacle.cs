@@ -7,12 +7,6 @@ namespace BubbleGame._3D
 {
 	public partial class Obstacle : Node3D
 	{
-		public struct ObstacleData
-		{
-			public float speed;
-			public float timeUntilMoving;
-		}
-
         // Step 1: Define a delegate type
         public delegate void OnObstacleDestroyedEvent(Obstacle obstacle);
 
@@ -45,6 +39,7 @@ namespace BubbleGame._3D
 
         public override void _ExitTree()
         {
+            ObstacleDestroyedEventHandler?.Invoke(this);
         }
 
         public void Initialize(ObstacleData obstacleData)
@@ -56,7 +51,8 @@ namespace BubbleGame._3D
         {
             if (area.IsInGroup("despawner"))
             {
-                ObstacleDestroyedEventHandler?.Invoke(this);
+                this.GetParent().CallDeferred(MethodName.RemoveChild, this);
+                this.QueueFree();
             }
         }
     }

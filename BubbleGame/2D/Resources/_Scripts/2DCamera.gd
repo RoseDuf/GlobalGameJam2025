@@ -3,7 +3,7 @@ extends Camera2D
 @export var Trail: BubbleTrail
 @export var DezoomSpeed: float = .995
 var TargetZoom: float = 1.0
-const CameraMargin = 0.8
+const CameraMargin = .8
 
 func _ready() -> void:
 	position = Trail.GetMiddlePosition()

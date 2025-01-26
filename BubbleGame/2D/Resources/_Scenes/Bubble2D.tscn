@@ -11,27 +11,6 @@
 [node name="Bubble2D" type="Node"]
 script = ExtResource("1_3dlvb")
 
-[node name="Player" parent="." instance=ExtResource("1_virmh")]
-
-[node name="CharacterBody2D" parent="Player" index="1" node_paths=PackedStringArray("GameManager")]
-GameManager = NodePath("../..")
-
-[node name="Area2D" parent="Player/CharacterBody2D" index="2" node_paths=PackedStringArray("GameManager")]
-GameManager = NodePath("../../..")
-
-[node name="Obstacle" parent="." instance=ExtResource("5_ybu7b")]
-
-[node name="Obstacle2" parent="." instance=ExtResource("5_ybu7b")]
-position = Vector2(-471, 369)
-
-[node name="Camera" type="Camera2D" parent="." node_paths=PackedStringArray("Trail")]
-position = Vector2(325, 184)
-position_smoothing_enabled = true
-position_smoothing_speed = 10.0
-script = ExtResource("8_ud1mw")
-Trail = NodePath("../Player/BubbleTrail")
-DezoomSpeed = 0.9
-
 [node name="GUI Layer" type="CanvasLayer" parent="."]
 
 [node name="Soap Progress Bar" type="TextureProgressBar" parent="GUI Layer" node_paths=PackedStringArray("GameManager")]
@@ -49,5 +28,30 @@ texture_under = ExtResource("5_gbns2")
 texture_progress = ExtResource("6_t62to")
 script = ExtResource("7_5wy5c")
 GameManager = NodePath("../..")
+
+[node name="Player" parent="." instance=ExtResource("1_virmh")]
+
+[node name="CharacterBody2D" parent="Player" index="0" node_paths=PackedStringArray("GameManager")]
+GameManager = NodePath("../..")
+
+[node name="WandFront" parent="Player/CharacterBody2D" index="1"]
+texture = null
+
+[node name="Area2D" parent="Player/CharacterBody2D" index="3" node_paths=PackedStringArray("GameManager")]
+GameManager = NodePath("../../..")
+
+[node name="Obstacle" parent="." instance=ExtResource("5_ybu7b")]
+position = Vector2(724, -404)
+
+[node name="Obstacle2" parent="." instance=ExtResource("5_ybu7b")]
+position = Vector2(-471, 369)
+
+[node name="Camera" type="Camera2D" parent="." node_paths=PackedStringArray("Trail")]
+position = Vector2(325, 184)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+script = ExtResource("8_ud1mw")
+Trail = NodePath("../Player/BubbleTrail")
+DezoomSpeed = 0.9
 
 [editable path="Player"]
