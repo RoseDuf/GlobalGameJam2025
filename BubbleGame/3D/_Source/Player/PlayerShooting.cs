@@ -5,13 +5,13 @@ namespace BubbleGame._3D
 	/// <summary>
 	/// This class controls player shooting.
 	/// </summary>
-	public partial class PlayerShooting : Node
+	public partial class PlayerShooting : Node3D
 	{
 		[Export]
-		private Node3D _playerCursor;
+		public float speed = 8;
 
 		[Export]
-		private Node3D _player;
+		private Node3D _playerCursor;
 
 		[Export]
 		private PackedScene _bulletNode;
@@ -20,12 +20,16 @@ namespace BubbleGame._3D
 		{
 			base._Process(delta);
 
-			Vector3 shootVector = _playerCursor.Position - _player.Position;
+			Vector3 shootVector = _playerCursor.GlobalPosition - GlobalPosition;
 
 			if (Input.IsActionJustPressed("shoot"))
 			{
 				Node3D bulletInstance = _bulletNode.Instantiate<Node3D>();
+				Bullet bullet = bulletInstance as Bullet;
+				bullet.GlobalPosition = GlobalPosition;
 				GetTree().CurrentScene.AddChild(bulletInstance);
+
+				bullet.velocity = shootVector.Normalized() * speed;
 			}
 		}
 	}

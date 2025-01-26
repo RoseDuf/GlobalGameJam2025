@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://bddasn5pebfva"]
+[gd_scene load_steps=14 format=3 uid="uid://bddasn5pebfva"]
 
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/Player.cs" id="1_8n07s"]
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/PlayerMovement.cs" id="2_02mne"]
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/PlayerShooting.cs" id="3_06fj2"]
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/Cursor.cs" id="4_1xwlw"]
+[ext_resource type="PackedScene" uid="uid://cs6mpkq4pvwtw" path="res://BubbleGame/3D/Resources/Bullet.tscn" id="4_vu1xa"]
 [ext_resource type="PackedScene" uid="uid://cpwar8fyqpc55" path="res://BubbleGame/3D/Resources/Obstacles/Despawner.tscn" id="5_gvexs"]
 [ext_resource type="PackedScene" uid="uid://b035j4rxrryei" path="res://BubbleGame/3D/Resources/Obstacles/ObstacleSpawner.tscn" id="6_xfw0p"]
 [ext_resource type="PackedScene" uid="uid://dwghalcje8h0q" path="res://BubbleGame/3D/Resources/Obstacles/DefaultObstacle.tscn" id="6_ynck0"]
@@ -43,8 +44,12 @@ bottomScreenClampThreshold = -3.0
 leftScreenClampThreshold = 54.0
 rightScreenClampThreshold = -54.0
 
-[node name="PlayerShooting" type="Node" parent="Actors/Player/Player3D"]
+[node name="PlayerShooting" type="Node3D" parent="Actors/Player/Player3D" node_paths=PackedStringArray("_playerCursor")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00229645, 9.53674e-07, -0.0309143)
 script = ExtResource("3_06fj2")
+speed = 32.0
+_playerCursor = NodePath("../../Cursor3D")
+_bulletNode = ExtResource("4_vu1xa")
 
 [node name="Visuals" type="Node3D" parent="Actors/Player/Player3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
