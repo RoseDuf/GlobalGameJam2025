@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://ji8tigp0ro28"]
+
+[ext_resource type="PackedScene" uid="uid://cww8xpy7y6xet" path="res://BubbleGame/2D/Resources/Prefabs/enemies/enemy.tscn" id="1_28j04"]
+[ext_resource type="PackedScene" uid="uid://btpfnmhc6apmb" path="res://BubbleGame/2D/Resources/Prefabs/enemies/enemy-Wasp.tscn" id="2_y475d"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Enemy218" parent="." instance=ExtResource("1_28j04")]
+position = Vector2(-1257, 215)
+
+[node name="Enemy219" parent="." instance=ExtResource("1_28j04")]
+position = Vector2(-220, -28)
+
+[node name="Enemy220" parent="." instance=ExtResource("1_28j04")]
+position = Vector2(-388, 548)
+
+[node name="Enemy221" parent="." instance=ExtResource("2_y475d")]
+position = Vector2(-808, -16)
+
+[node name="Enemy222" parent="." instance=ExtResource("2_y475d")]
+position = Vector2(-892, 503)
+
+[node name="Enemy223" parent="." instance=ExtResource("2_y475d")]
+position = Vector2(61, 306)
+
+[node name="Enemy224" parent="." instance=ExtResource("1_28j04")]
+position = Vector2(-114, -622)
+
+[node name="Enemy225" parent="." instance=ExtResource("1_28j04")]
+position = Vector2(923, -865)
+
+[node name="Enemy226" parent="." instance=ExtResource("1_28j04")]
+position = Vector2(755, -289)
+
+[node name="Enemy227" parent="." instance=ExtResource("2_y475d")]
+position = Vector2(335, -853)
+
+[node name="Enemy228" parent="." instance=ExtResource("2_y475d")]
+position = Vector2(251, -334)
+
+[node name="Enemy229" parent="." instance=ExtResource("2_y475d")]
+position = Vector2(1204, -531)

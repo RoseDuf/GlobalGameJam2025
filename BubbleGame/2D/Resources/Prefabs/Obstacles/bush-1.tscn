@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5bmnd8st7uwf"]
+
+[ext_resource type="Texture2D" uid="uid://di376pfe2stq0" path="res://BubbleGame/2D/Art/Environment/Bush 001.png" id="1_v0ypf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57urs"]
+size = Vector2(1220, 800)
+
+[node name="Obstacle" type="Sprite2D"]
+position = Vector2(747, -157)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_v0ypf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(15.0002, 265)
+shape = SubResource("RectangleShape2D_57urs")

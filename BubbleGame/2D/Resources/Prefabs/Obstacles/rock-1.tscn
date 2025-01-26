@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://q5xyullvs1mc"]
+[gd_scene load_steps=4 format=3 uid="uid://q5xyullvs1mc"]
 
 [ext_resource type="Texture2D" uid="uid://cbelbq1g0elw" path="res://BubbleGame/2D/Art/Obstacles/Rock 001.png" id="1_gbvim"]
+[ext_resource type="PackedScene" uid="uid://datt0b3gao0lm" path="res://BubbleGame/2D/Resources/Prefabs/Environment/Flower Bundles/flower-pack.tscn" id="2_yacrn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_57urs"]
-size = Vector2(1455, 1005)
+size = Vector2(1455, 620)
 
 [node name="Obstacle" type="Sprite2D"]
 position = Vector2(747, -157)
@@ -13,6 +14,11 @@ texture = ExtResource("1_gbvim")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-5, 27.5)
+position = Vector2(-5, 220)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_57urs")
+
+[node name="EnvironmentArt" parent="." instance=ExtResource("2_yacrn")]
+show_behind_parent = true
+position = Vector2(-30, 540)
+scale = Vector2(6, 6)
