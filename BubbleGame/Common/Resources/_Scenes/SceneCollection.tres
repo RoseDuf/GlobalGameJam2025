@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=11 format=3 uid="uid://b67hbsqmc4sk5"]
+[gd_resource type="Resource" load_steps=13 format=3 uid="uid://b67hbsqmc4sk5"]
 
 [ext_resource type="PackedScene" uid="uid://bjejpnnacm3p6" path="res://BubbleGame/Common/Resources/_Scenes/Welcome/WelcomeScene.tscn" id="1_lahq7"]
 [ext_resource type="Script" path="res://BubbleGame/Common/_Source/CSharp/SceneManagement/SceneInfo.cs" id="2_63evy"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://BubbleGame/Common/_Source/CSharp/SceneManagement/SceneCollection.cs" id="4_1qgw5"]
 [ext_resource type="PackedScene" uid="uid://boepbwv7lujx1" path="res://BubbleGame/2D/Resources/_Scenes/Bubble2D.tscn" id="4_03wy5"]
 [ext_resource type="PackedScene" uid="uid://cx38qckqgpcqa" path="res://BubbleGame/Common/Resources/_Scenes/Credits/Credits.tscn" id="5_qvlfj"]
+[ext_resource type="PackedScene" path="res://BubbleGame/Common/Resources/_Scenes/Results.tscn" id="6_cgcxy"]
 
 [sub_resource type="Resource" id="Resource_ew42f"]
 script = ExtResource("2_63evy")
@@ -23,6 +24,10 @@ PackedScene = ExtResource("4_03wy5")
 script = ExtResource("2_63evy")
 PackedScene = ExtResource("5_qvlfj")
 
+[sub_resource type="Resource" id="Resource_f0crp"]
+script = ExtResource("2_63evy")
+PackedScene = ExtResource("6_cgcxy")
+
 [resource]
 script = ExtResource("4_1qgw5")
-_scenes = Array[Object]([SubResource("Resource_ew42f"), SubResource("Resource_wl6ya"), SubResource("Resource_73eeh"), SubResource("Resource_wq5mw")])
+_scenes = Array[Object]([SubResource("Resource_ew42f"), SubResource("Resource_wl6ya"), SubResource("Resource_73eeh"), SubResource("Resource_wq5mw"), SubResource("Resource_f0crp")])
