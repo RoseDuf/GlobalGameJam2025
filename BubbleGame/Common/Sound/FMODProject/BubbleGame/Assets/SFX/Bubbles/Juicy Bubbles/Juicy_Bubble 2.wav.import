@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d2d6axesosu1"
+path="res://.godot/imported/Juicy_Bubble 2.wav-9e59513632392ffc17c624d36de522a4.sample"
+
+[deps]
+
+source_file="res://BubbleGame/Common/Sound/FMODProject/BubbleGame/Assets/SFX/Bubbles/Juicy Bubbles/Juicy_Bubble 2.wav"
+dest_files=["res://.godot/imported/Juicy_Bubble 2.wav-9e59513632392ffc17c624d36de522a4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

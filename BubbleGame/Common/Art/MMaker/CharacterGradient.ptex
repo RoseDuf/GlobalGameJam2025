@@ -1,0 +1,5757 @@
+{
+	"connections": [
+		{
+			"from": "reroute_2",
+			"from_port": 0,
+			"to": "reroute",
+			"to_port": 0
+		},
+		{
+			"from": "transform2_2",
+			"from_port": 0,
+			"to": "transform2_4",
+			"to_port": 1
+		},
+		{
+			"from": "colorize_13",
+			"from_port": 0,
+			"to": "transform2_5",
+			"to_port": 2
+		},
+		{
+			"from": "reroute_4",
+			"from_port": 0,
+			"to": "colorize_13",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_2",
+			"from_port": 0,
+			"to": "reroute_4",
+			"to_port": 0
+		},
+		{
+			"from": "transform2_5",
+			"from_port": 0,
+			"to": "transform2_4",
+			"to_port": 2
+		},
+		{
+			"from": "transform2_6",
+			"from_port": 0,
+			"to": "transform2_4",
+			"to_port": 3
+		},
+		{
+			"from": "gradient",
+			"from_port": 0,
+			"to": "auto_tones_2",
+			"to_port": 0
+		},
+		{
+			"from": "auto_tones_2",
+			"from_port": 0,
+			"to": "transform2",
+			"to_port": 0
+		},
+		{
+			"from": "auto_tones_2",
+			"from_port": 0,
+			"to": "colorize_3",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_3",
+			"from_port": 0,
+			"to": "blend2",
+			"to_port": 2
+		},
+		{
+			"from": "gradient_3",
+			"from_port": 0,
+			"to": "blend2",
+			"to_port": 0
+		},
+		{
+			"from": "transform2",
+			"from_port": 0,
+			"to": "gaussian_blur",
+			"to_port": 0
+		},
+		{
+			"from": "gaussian_blur",
+			"from_port": 0,
+			"to": "blend2",
+			"to_port": 1
+		},
+		{
+			"from": "blend2",
+			"from_port": 0,
+			"to": "reroute_2",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_5",
+			"from_port": 0,
+			"to": "colorize_18",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_5",
+			"from_port": 0,
+			"to": "colorize_19",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_5",
+			"from_port": 0,
+			"to": "colorize_4",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_18",
+			"from_port": 0,
+			"to": "transform2_3",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_19",
+			"from_port": 0,
+			"to": "transform2_3",
+			"to_port": 1
+		},
+		{
+			"from": "colorize_4",
+			"from_port": 0,
+			"to": "transform2_3",
+			"to_port": 3
+		},
+		{
+			"from": "reroute_2",
+			"from_port": 0,
+			"to": "reroute_5",
+			"to_port": 0
+		},
+		{
+			"from": "transform2_3",
+			"from_port": 0,
+			"to": "transform2_4",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_10",
+			"from_port": 0,
+			"to": "colorize_31",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_10",
+			"from_port": 0,
+			"to": "colorize_32",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_10",
+			"from_port": 0,
+			"to": "colorize_30",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_10",
+			"from_port": 0,
+			"to": "colorize_29",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_9",
+			"from_port": 0,
+			"to": "reroute_10",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_31",
+			"from_port": 0,
+			"to": "transform2_10",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_32",
+			"from_port": 0,
+			"to": "transform2_10",
+			"to_port": 1
+		},
+		{
+			"from": "colorize_30",
+			"from_port": 0,
+			"to": "transform2_10",
+			"to_port": 2
+		},
+		{
+			"from": "colorize_29",
+			"from_port": 0,
+			"to": "transform2_10",
+			"to_port": 3
+		},
+		{
+			"from": "transform2_10",
+			"from_port": 0,
+			"to": "transform2_11",
+			"to_port": 1
+		},
+		{
+			"from": "colorize_25",
+			"from_port": 0,
+			"to": "transform2_9",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_21",
+			"from_port": 0,
+			"to": "transform2_9",
+			"to_port": 1
+		},
+		{
+			"from": "colorize_24",
+			"from_port": 0,
+			"to": "transform2_9",
+			"to_port": 2
+		},
+		{
+			"from": "colorize_23",
+			"from_port": 0,
+			"to": "transform2_9",
+			"to_port": 3
+		},
+		{
+			"from": "reroute_8",
+			"from_port": 0,
+			"to": "colorize_22",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_8",
+			"from_port": 0,
+			"to": "colorize_26",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_8",
+			"from_port": 0,
+			"to": "colorize_27",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_8",
+			"from_port": 0,
+			"to": "colorize_28",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_7",
+			"from_port": 0,
+			"to": "reroute_8",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_7",
+			"from_port": 0,
+			"to": "colorize_23",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_7",
+			"from_port": 0,
+			"to": "colorize_24",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_7",
+			"from_port": 0,
+			"to": "colorize_25",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_22",
+			"from_port": 0,
+			"to": "transform2_8",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_26",
+			"from_port": 0,
+			"to": "transform2_8",
+			"to_port": 1
+		},
+		{
+			"from": "colorize_27",
+			"from_port": 0,
+			"to": "transform2_8",
+			"to_port": 2
+		},
+		{
+			"from": "colorize_28",
+			"from_port": 0,
+			"to": "transform2_8",
+			"to_port": 3
+		},
+		{
+			"from": "reroute_7",
+			"from_port": 0,
+			"to": "colorize_21",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_9",
+			"from_port": 0,
+			"to": "reroute_7",
+			"to_port": 0
+		},
+		{
+			"from": "transform2_9",
+			"from_port": 0,
+			"to": "transform2_11",
+			"to_port": 2
+		},
+		{
+			"from": "transform2_8",
+			"from_port": 0,
+			"to": "transform2_11",
+			"to_port": 3
+		},
+		{
+			"from": "reroute_6",
+			"from_port": 0,
+			"to": "colorize_33",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_6",
+			"from_port": 0,
+			"to": "colorize_34",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_6",
+			"from_port": 0,
+			"to": "colorize_2",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_6",
+			"from_port": 0,
+			"to": "colorize_20",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_33",
+			"from_port": 0,
+			"to": "transform2_7",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_34",
+			"from_port": 0,
+			"to": "transform2_7",
+			"to_port": 1
+		},
+		{
+			"from": "colorize_2",
+			"from_port": 0,
+			"to": "transform2_7",
+			"to_port": 2
+		},
+		{
+			"from": "colorize_20",
+			"from_port": 0,
+			"to": "transform2_7",
+			"to_port": 3
+		},
+		{
+			"from": "reroute_9",
+			"from_port": 0,
+			"to": "reroute_6",
+			"to_port": 0
+		},
+		{
+			"from": "transform2_7",
+			"from_port": 0,
+			"to": "transform2_11",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_2",
+			"from_port": 0,
+			"to": "reroute_9",
+			"to_port": 0
+		},
+		{
+			"from": "transform2_4",
+			"from_port": 0,
+			"to": "transform2_12",
+			"to_port": 0
+		},
+		{
+			"from": "transform2_11",
+			"from_port": 0,
+			"to": "transform2_12",
+			"to_port": 1
+		},
+		{
+			"from": "reroute_14",
+			"from_port": 0,
+			"to": "colorize_47",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_14",
+			"from_port": 0,
+			"to": "colorize_48",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_14",
+			"from_port": 0,
+			"to": "colorize_46",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_14",
+			"from_port": 0,
+			"to": "colorize_45",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_15",
+			"from_port": 0,
+			"to": "reroute_14",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_47",
+			"from_port": 0,
+			"to": "transform2_16",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_48",
+			"from_port": 0,
+			"to": "transform2_16",
+			"to_port": 1
+		},
+		{
+			"from": "colorize_46",
+			"from_port": 0,
+			"to": "transform2_16",
+			"to_port": 2
+		},
+		{
+			"from": "colorize_45",
+			"from_port": 0,
+			"to": "transform2_16",
+			"to_port": 3
+		},
+		{
+			"from": "transform2_16",
+			"from_port": 0,
+			"to": "transform2_17",
+			"to_port": 1
+		},
+		{
+			"from": "colorize_41",
+			"from_port": 0,
+			"to": "transform2_15",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_37",
+			"from_port": 0,
+			"to": "transform2_15",
+			"to_port": 1
+		},
+		{
+			"from": "colorize_40",
+			"from_port": 0,
+			"to": "transform2_15",
+			"to_port": 2
+		},
+		{
+			"from": "colorize_39",
+			"from_port": 0,
+			"to": "transform2_15",
+			"to_port": 3
+		},
+		{
+			"from": "reroute_13",
+			"from_port": 0,
+			"to": "colorize_38",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_13",
+			"from_port": 0,
+			"to": "colorize_42",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_13",
+			"from_port": 0,
+			"to": "colorize_43",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_13",
+			"from_port": 0,
+			"to": "colorize_44",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_12",
+			"from_port": 0,
+			"to": "reroute_13",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_12",
+			"from_port": 0,
+			"to": "colorize_39",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_12",
+			"from_port": 0,
+			"to": "colorize_40",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_12",
+			"from_port": 0,
+			"to": "colorize_41",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_38",
+			"from_port": 0,
+			"to": "transform2_14",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_42",
+			"from_port": 0,
+			"to": "transform2_14",
+			"to_port": 1
+		},
+		{
+			"from": "colorize_43",
+			"from_port": 0,
+			"to": "transform2_14",
+			"to_port": 2
+		},
+		{
+			"from": "colorize_44",
+			"from_port": 0,
+			"to": "transform2_14",
+			"to_port": 3
+		},
+		{
+			"from": "reroute_12",
+			"from_port": 0,
+			"to": "colorize_37",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_15",
+			"from_port": 0,
+			"to": "reroute_12",
+			"to_port": 0
+		},
+		{
+			"from": "transform2_15",
+			"from_port": 0,
+			"to": "transform2_17",
+			"to_port": 2
+		},
+		{
+			"from": "transform2_14",
+			"from_port": 0,
+			"to": "transform2_17",
+			"to_port": 3
+		},
+		{
+			"from": "reroute_11",
+			"from_port": 0,
+			"to": "colorize_49",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_11",
+			"from_port": 0,
+			"to": "colorize_50",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_11",
+			"from_port": 0,
+			"to": "colorize_35",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_11",
+			"from_port": 0,
+			"to": "colorize_36",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_49",
+			"from_port": 0,
+			"to": "transform2_13",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_50",
+			"from_port": 0,
+			"to": "transform2_13",
+			"to_port": 1
+		},
+		{
+			"from": "colorize_35",
+			"from_port": 0,
+			"to": "transform2_13",
+			"to_port": 2
+		},
+		{
+			"from": "colorize_36",
+			"from_port": 0,
+			"to": "transform2_13",
+			"to_port": 3
+		},
+		{
+			"from": "reroute_15",
+			"from_port": 0,
+			"to": "reroute_11",
+			"to_port": 0
+		},
+		{
+			"from": "transform2_13",
+			"from_port": 0,
+			"to": "transform2_17",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_17",
+			"from_port": 0,
+			"to": "colorize_53",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_17",
+			"from_port": 0,
+			"to": "colorize_52",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_17",
+			"from_port": 0,
+			"to": "colorize_54",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_17",
+			"from_port": 0,
+			"to": "colorize_55",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_16",
+			"from_port": 0,
+			"to": "reroute_17",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_53",
+			"from_port": 0,
+			"to": "transform2_19",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_52",
+			"from_port": 0,
+			"to": "transform2_19",
+			"to_port": 1
+		},
+		{
+			"from": "colorize_54",
+			"from_port": 0,
+			"to": "transform2_19",
+			"to_port": 2
+		},
+		{
+			"from": "colorize_55",
+			"from_port": 0,
+			"to": "transform2_19",
+			"to_port": 3
+		},
+		{
+			"from": "transform2_19",
+			"from_port": 0,
+			"to": "transform2_18",
+			"to_port": 1
+		},
+		{
+			"from": "colorize_59",
+			"from_port": 0,
+			"to": "transform2_20",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_63",
+			"from_port": 0,
+			"to": "transform2_20",
+			"to_port": 1
+		},
+		{
+			"from": "colorize_60",
+			"from_port": 0,
+			"to": "transform2_20",
+			"to_port": 2
+		},
+		{
+			"from": "colorize_61",
+			"from_port": 0,
+			"to": "transform2_20",
+			"to_port": 3
+		},
+		{
+			"from": "reroute_18",
+			"from_port": 0,
+			"to": "colorize_62",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_18",
+			"from_port": 0,
+			"to": "colorize_58",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_18",
+			"from_port": 0,
+			"to": "colorize_57",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_18",
+			"from_port": 0,
+			"to": "colorize_56",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_19",
+			"from_port": 0,
+			"to": "reroute_18",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_19",
+			"from_port": 0,
+			"to": "colorize_61",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_19",
+			"from_port": 0,
+			"to": "colorize_60",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_19",
+			"from_port": 0,
+			"to": "colorize_59",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_62",
+			"from_port": 0,
+			"to": "transform2_21",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_58",
+			"from_port": 0,
+			"to": "transform2_21",
+			"to_port": 1
+		},
+		{
+			"from": "colorize_57",
+			"from_port": 0,
+			"to": "transform2_21",
+			"to_port": 2
+		},
+		{
+			"from": "colorize_56",
+			"from_port": 0,
+			"to": "transform2_21",
+			"to_port": 3
+		},
+		{
+			"from": "reroute_19",
+			"from_port": 0,
+			"to": "colorize_63",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_16",
+			"from_port": 0,
+			"to": "reroute_19",
+			"to_port": 0
+		},
+		{
+			"from": "transform2_20",
+			"from_port": 0,
+			"to": "transform2_18",
+			"to_port": 2
+		},
+		{
+			"from": "transform2_21",
+			"from_port": 0,
+			"to": "transform2_18",
+			"to_port": 3
+		},
+		{
+			"from": "reroute_20",
+			"from_port": 0,
+			"to": "colorize_66",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_20",
+			"from_port": 0,
+			"to": "colorize_51",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_20",
+			"from_port": 0,
+			"to": "colorize_65",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_20",
+			"from_port": 0,
+			"to": "colorize_64",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_66",
+			"from_port": 0,
+			"to": "transform2_22",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_51",
+			"from_port": 0,
+			"to": "transform2_22",
+			"to_port": 1
+		},
+		{
+			"from": "colorize_65",
+			"from_port": 0,
+			"to": "transform2_22",
+			"to_port": 2
+		},
+		{
+			"from": "colorize_64",
+			"from_port": 0,
+			"to": "transform2_22",
+			"to_port": 3
+		},
+		{
+			"from": "reroute_16",
+			"from_port": 0,
+			"to": "reroute_20",
+			"to_port": 0
+		},
+		{
+			"from": "transform2_22",
+			"from_port": 0,
+			"to": "transform2_18",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_2",
+			"from_port": 0,
+			"to": "reroute_21",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_21",
+			"from_port": 0,
+			"to": "reroute_15",
+			"to_port": 0
+		},
+		{
+			"from": "reroute_21",
+			"from_port": 0,
+			"to": "reroute_16",
+			"to_port": 0
+		},
+		{
+			"from": "transform2_17",
+			"from_port": 0,
+			"to": "transform2_12",
+			"to_port": 2
+		},
+		{
+			"from": "transform2_18",
+			"from_port": 0,
+			"to": "transform2_12",
+			"to_port": 3
+		},
+		{
+			"from": "reroute",
+			"from_port": 0,
+			"to": "colorize_67",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_67",
+			"from_port": 0,
+			"to": "transform2_2",
+			"to_port": 1
+		},
+		{
+			"from": "colorize_67",
+			"from_port": 0,
+			"to": "transform2_2",
+			"to_port": 2
+		},
+		{
+			"from": "colorize_67",
+			"from_port": 0,
+			"to": "transform2_2",
+			"to_port": 3
+		},
+		{
+			"from": "reroute",
+			"from_port": 0,
+			"to": "colorize_17",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_17",
+			"from_port": 0,
+			"to": "transform2_2",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_4",
+			"from_port": 0,
+			"to": "transform2_3",
+			"to_port": 2
+		},
+		{
+			"from": "colorize_13",
+			"from_port": 0,
+			"to": "transform2_5",
+			"to_port": 1
+		},
+		{
+			"from": "colorize_13",
+			"from_port": 0,
+			"to": "transform2_5",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_13",
+			"from_port": 0,
+			"to": "transform2_5",
+			"to_port": 3
+		},
+		{
+			"from": "colorize_13",
+			"from_port": 0,
+			"to": "transform2_6",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_13",
+			"from_port": 0,
+			"to": "transform2_6",
+			"to_port": 2
+		},
+		{
+			"from": "colorize_13",
+			"from_port": 0,
+			"to": "transform2_6",
+			"to_port": 3
+		},
+		{
+			"from": "colorize_13",
+			"from_port": 0,
+			"to": "transform2_6",
+			"to_port": 1
+		},
+		{
+			"from": "transform2_12",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 0
+		},
+		{
+			"from": "transform2_12",
+			"from_port": 0,
+			"to": "export",
+			"to_port": 0
+		}
+	],
+	"label": "Graph",
+	"longdesc": "",
+	"name": "_Node_479",
+	"node_position": {
+		"x": 0.0,
+		"y": 0.0
+	},
+	"nodes": [
+		{
+			"export_paths": {
+
+			},
+			"name": "Material",
+			"node_position": {
+				"x": 2300.0,
+				"y": 2380.0
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1.0,
+					"b": 1.0,
+					"g": 1.0,
+					"r": 1.0,
+					"type": "Color"
+				},
+				"ao": 1.0,
+				"depth_scale": 0.5,
+				"emission_energy": 1.0,
+				"flags_transparent": true,
+				"metallic": 0.0,
+				"normal": 1.0,
+				"roughness": 1.0,
+				"size": 10.0,
+				"sss": 1.0
+			},
+			"seed_int": 0,
+			"type": "material"
+		},
+		{
+			"name": "gradient_5",
+			"node_position": {
+				"x": -1840.0,
+				"y": -1280.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 0.25,
+							"r": 1.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.25084849350325,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.282463729381561,
+							"g": 0.282463729381561,
+							"pos": 0.456731432266818,
+							"r": 0.282463729381561
+						},
+						{
+							"a": 1.0,
+							"b": 0.565300524234772,
+							"g": 0.565300524234772,
+							"pos": 0.66856349333552,
+							"r": 0.565300524234772
+						},
+						{
+							"a": 1.0,
+							"b": 0.860652208328247,
+							"g": 0.860652208328247,
+							"pos": 0.893754333030176,
+							"r": 0.860652208328247
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 1.0,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				},
+				"repeat": 1.0,
+				"rotate": 90.0
+			},
+			"seed_int": 0,
+			"type": "gradient"
+		},
+		{
+			"name": "transform2_4",
+			"node_position": {
+				"x": -60.0,
+				"y": -300.0
+			},
+			"parameters": {
+				"enable_scaling_i1": true,
+				"enable_scaling_i2": true,
+				"enable_scaling_i3": true,
+				"enable_scaling_i4": true,
+				"h1": 50.0,
+				"v1": 50.0
+			},
+			"seed_int": 0,
+			"shader_model": {
+				"code": "vec4 $(name_uv)_out;\nfloat scaled_h1 = $h1 / 100.0;\nfloat scaled_v1 = $v1 / 100.0;\n\nbool scaling_i1 = $enable_scaling_i1;\nbool scaling_i2 = $enable_scaling_i2;\nbool scaling_i3 = $enable_scaling_i3;\nbool scaling_i4 = $enable_scaling_i4;\n\nif ($uv.y < scaled_h1) {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i1) {\n      $(name_uv)_out = $i1($uv / vec2(scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i1($uv);\n    }\n  } else {\n    if (scaling_i2) {\n      $(name_uv)_out = $i2(($uv - vec2(scaled_v1, 0.0)) / vec2(1.0 - scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i2($uv);\n    }\n  }\n} else {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i3) {\n      $(name_uv)_out = $i3(($uv - vec2(0.0, scaled_h1)) / vec2(scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i3($uv);\n    }\n  } else {\n    if (scaling_i4) {\n      $(name_uv)_out = $i4(($uv - vec2(scaled_v1, scaled_h1)) / vec2(1.0 - scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i4($uv);\n    }\n  }\n}\n",
+				"global": "",
+				"inputs": [
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i1",
+						"shortdesc": "Input 1",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i2",
+						"shortdesc": "Input 2",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i3",
+						"shortdesc": "Input 3",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i4",
+						"shortdesc": "Input 4",
+						"type": "rgba"
+					}
+				],
+				"instance": "",
+				"name": "Trimsheet Quad Builder",
+				"outputs": [
+					{
+						"longdesc": "Scalable Trimsheets with 2 horizontal and 2 vertical sections",
+						"rgba": "$(name_uv)_out",
+						"shortdesc": "Output",
+						"type": "rgba"
+					}
+				],
+				"parameters": [
+					{
+						"default": false,
+						"label": "Scale Input 1",
+						"name": "enable_scaling_i1",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 2",
+						"name": "enable_scaling_i2",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 3",
+						"name": "enable_scaling_i3",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 4",
+						"name": "enable_scaling_i4",
+						"type": "boolean"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Horizontal",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "h1",
+						"step": 1.0,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Vertical",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "v1",
+						"step": 1.0,
+						"type": "float"
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"name": "transform2_2",
+			"node_position": {
+				"x": -500.0,
+				"y": -120.0
+			},
+			"parameters": {
+				"enable_scaling_i1": true,
+				"enable_scaling_i2": true,
+				"enable_scaling_i3": true,
+				"enable_scaling_i4": true,
+				"h1": 50.0,
+				"v1": 50.0
+			},
+			"seed_int": 0,
+			"shader_model": {
+				"code": "vec4 $(name_uv)_out;\nfloat scaled_h1 = $h1 / 100.0;\nfloat scaled_v1 = $v1 / 100.0;\n\nbool scaling_i1 = $enable_scaling_i1;\nbool scaling_i2 = $enable_scaling_i2;\nbool scaling_i3 = $enable_scaling_i3;\nbool scaling_i4 = $enable_scaling_i4;\n\nif ($uv.y < scaled_h1) {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i1) {\n      $(name_uv)_out = $i1($uv / vec2(scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i1($uv);\n    }\n  } else {\n    if (scaling_i2) {\n      $(name_uv)_out = $i2(($uv - vec2(scaled_v1, 0.0)) / vec2(1.0 - scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i2($uv);\n    }\n  }\n} else {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i3) {\n      $(name_uv)_out = $i3(($uv - vec2(0.0, scaled_h1)) / vec2(scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i3($uv);\n    }\n  } else {\n    if (scaling_i4) {\n      $(name_uv)_out = $i4(($uv - vec2(scaled_v1, scaled_h1)) / vec2(1.0 - scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i4($uv);\n    }\n  }\n}\n",
+				"global": "",
+				"inputs": [
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i1",
+						"shortdesc": "Input 1",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i2",
+						"shortdesc": "Input 2",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i3",
+						"shortdesc": "Input 3",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i4",
+						"shortdesc": "Input 4",
+						"type": "rgba"
+					}
+				],
+				"instance": "",
+				"name": "Trimsheet Quad Builder",
+				"outputs": [
+					{
+						"longdesc": "Scalable Trimsheets with 2 horizontal and 2 vertical sections",
+						"rgba": "$(name_uv)_out",
+						"shortdesc": "Output",
+						"type": "rgba"
+					}
+				],
+				"parameters": [
+					{
+						"default": false,
+						"label": "Scale Input 1",
+						"name": "enable_scaling_i1",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 2",
+						"name": "enable_scaling_i2",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 3",
+						"name": "enable_scaling_i3",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 4",
+						"name": "enable_scaling_i4",
+						"type": "boolean"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Horizontal",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "h1",
+						"step": 1.0,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Vertical",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "v1",
+						"step": 1.0,
+						"type": "float"
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"name": "reroute",
+			"node_position": {
+				"x": -1020.0,
+				"y": -20.0
+			},
+			"parameters": {
+				"preview": 0.0
+			},
+			"seed_int": 0,
+			"type": "reroute"
+		},
+		{
+			"name": "reroute_2",
+			"node_position": {
+				"x": -1740.0,
+				"y": 80.0
+			},
+			"parameters": {
+				"preview": 0.0
+			},
+			"seed_int": 0,
+			"type": "reroute"
+		},
+		{
+			"name": "colorize_13",
+			"node_position": {
+				"x": -820.0,
+				"y": 560.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.558124571356155,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "transform2_5",
+			"node_position": {
+				"x": -480.0,
+				"y": 660.0
+			},
+			"parameters": {
+				"enable_scaling_i1": true,
+				"enable_scaling_i2": true,
+				"enable_scaling_i3": true,
+				"enable_scaling_i4": true,
+				"h1": 50.0,
+				"v1": 50.0
+			},
+			"seed_int": 0,
+			"shader_model": {
+				"code": "vec4 $(name_uv)_out;\nfloat scaled_h1 = $h1 / 100.0;\nfloat scaled_v1 = $v1 / 100.0;\n\nbool scaling_i1 = $enable_scaling_i1;\nbool scaling_i2 = $enable_scaling_i2;\nbool scaling_i3 = $enable_scaling_i3;\nbool scaling_i4 = $enable_scaling_i4;\n\nif ($uv.y < scaled_h1) {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i1) {\n      $(name_uv)_out = $i1($uv / vec2(scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i1($uv);\n    }\n  } else {\n    if (scaling_i2) {\n      $(name_uv)_out = $i2(($uv - vec2(scaled_v1, 0.0)) / vec2(1.0 - scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i2($uv);\n    }\n  }\n} else {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i3) {\n      $(name_uv)_out = $i3(($uv - vec2(0.0, scaled_h1)) / vec2(scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i3($uv);\n    }\n  } else {\n    if (scaling_i4) {\n      $(name_uv)_out = $i4(($uv - vec2(scaled_v1, scaled_h1)) / vec2(1.0 - scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i4($uv);\n    }\n  }\n}\n",
+				"global": "",
+				"inputs": [
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i1",
+						"shortdesc": "Input 1",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i2",
+						"shortdesc": "Input 2",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i3",
+						"shortdesc": "Input 3",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i4",
+						"shortdesc": "Input 4",
+						"type": "rgba"
+					}
+				],
+				"instance": "",
+				"name": "Trimsheet Quad Builder",
+				"outputs": [
+					{
+						"longdesc": "Scalable Trimsheets with 2 horizontal and 2 vertical sections",
+						"rgba": "$(name_uv)_out",
+						"shortdesc": "Output",
+						"type": "rgba"
+					}
+				],
+				"parameters": [
+					{
+						"default": false,
+						"label": "Scale Input 1",
+						"name": "enable_scaling_i1",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 2",
+						"name": "enable_scaling_i2",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 3",
+						"name": "enable_scaling_i3",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 4",
+						"name": "enable_scaling_i4",
+						"type": "boolean"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Horizontal",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "h1",
+						"step": 1.0,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Vertical",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "v1",
+						"step": 1.0,
+						"type": "float"
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"name": "reroute_4",
+			"node_position": {
+				"x": -1380.0,
+				"y": 620.0
+			},
+			"parameters": {
+				"preview": 0.0
+			},
+			"seed_int": 0,
+			"type": "reroute"
+		},
+		{
+			"name": "transform2_6",
+			"node_position": {
+				"x": -460.0,
+				"y": 880.0
+			},
+			"parameters": {
+				"enable_scaling_i1": true,
+				"enable_scaling_i2": true,
+				"enable_scaling_i3": true,
+				"enable_scaling_i4": true,
+				"h1": 50.0,
+				"v1": 50.0
+			},
+			"seed_int": 0,
+			"shader_model": {
+				"code": "vec4 $(name_uv)_out;\nfloat scaled_h1 = $h1 / 100.0;\nfloat scaled_v1 = $v1 / 100.0;\n\nbool scaling_i1 = $enable_scaling_i1;\nbool scaling_i2 = $enable_scaling_i2;\nbool scaling_i3 = $enable_scaling_i3;\nbool scaling_i4 = $enable_scaling_i4;\n\nif ($uv.y < scaled_h1) {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i1) {\n      $(name_uv)_out = $i1($uv / vec2(scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i1($uv);\n    }\n  } else {\n    if (scaling_i2) {\n      $(name_uv)_out = $i2(($uv - vec2(scaled_v1, 0.0)) / vec2(1.0 - scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i2($uv);\n    }\n  }\n} else {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i3) {\n      $(name_uv)_out = $i3(($uv - vec2(0.0, scaled_h1)) / vec2(scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i3($uv);\n    }\n  } else {\n    if (scaling_i4) {\n      $(name_uv)_out = $i4(($uv - vec2(scaled_v1, scaled_h1)) / vec2(1.0 - scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i4($uv);\n    }\n  }\n}\n",
+				"global": "",
+				"inputs": [
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i1",
+						"shortdesc": "Input 1",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i2",
+						"shortdesc": "Input 2",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i3",
+						"shortdesc": "Input 3",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i4",
+						"shortdesc": "Input 4",
+						"type": "rgba"
+					}
+				],
+				"instance": "",
+				"name": "Trimsheet Quad Builder",
+				"outputs": [
+					{
+						"longdesc": "Scalable Trimsheets with 2 horizontal and 2 vertical sections",
+						"rgba": "$(name_uv)_out",
+						"shortdesc": "Output",
+						"type": "rgba"
+					}
+				],
+				"parameters": [
+					{
+						"default": false,
+						"label": "Scale Input 1",
+						"name": "enable_scaling_i1",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 2",
+						"name": "enable_scaling_i2",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 3",
+						"name": "enable_scaling_i3",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 4",
+						"name": "enable_scaling_i4",
+						"type": "boolean"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Horizontal",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "h1",
+						"step": 1.0,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Vertical",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "v1",
+						"step": 1.0,
+						"type": "float"
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"name": "gradient",
+			"node_position": {
+				"x": -3440.0,
+				"y": -140.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 0,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.24999,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.318076103925705,
+							"g": 0.318076103925705,
+							"pos": 0.25001,
+							"r": 0.318076103925705
+						},
+						{
+							"a": 1.0,
+							"b": 0.318076103925705,
+							"g": 0.318076103925705,
+							"pos": 0.49999,
+							"r": 0.318076103925705
+						},
+						{
+							"a": 1.0,
+							"b": 0.545175313949585,
+							"g": 0.545175313949585,
+							"pos": 0.50001,
+							"r": 0.545175313949585
+						},
+						{
+							"a": 1.0,
+							"b": 0.545175313949585,
+							"g": 0.545175313949585,
+							"pos": 0.74999,
+							"r": 0.545175313949585
+						},
+						{
+							"a": 1.0,
+							"b": 0.78181654214859,
+							"g": 0.78181654214859,
+							"pos": 0.75001,
+							"r": 0.78181654214859
+						},
+						{
+							"a": 1.0,
+							"b": 0.78181654214859,
+							"g": 0.78181654214859,
+							"pos": 0.990437066212428,
+							"r": 0.78181654214859
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 0.990457066212428,
+							"r": 1.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 0.999979050945253,
+							"r": 1.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.999999050945253,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				},
+				"repeat": 1.0,
+				"rotate": 90.0
+			},
+			"seed_int": 0,
+			"type": "gradient"
+		},
+		{
+			"name": "gaussian_blur",
+			"node_position": {
+				"x": -2460.0,
+				"y": -100.0
+			},
+			"parameters": {
+				"param0": 9.0,
+				"param1": 15.1,
+				"param2": 2.0,
+				"param3": true
+			},
+			"seed_int": 0,
+			"type": "gaussian_blur"
+		},
+		{
+			"generic_size": 1,
+			"name": "blend2",
+			"node_position": {
+				"x": -2260.0,
+				"y": -620.0
+			},
+			"parameters": {
+				"amount1": 1.0,
+				"blend_type1": 0.0
+			},
+			"seed_int": 0,
+			"type": "blend2"
+		},
+		{
+			"name": "gradient_3",
+			"node_position": {
+				"x": -2880.0,
+				"y": -720.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 0.249875308903119,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				},
+				"repeat": 1.0,
+				"rotate": 90.0
+			},
+			"seed_int": 0,
+			"type": "gradient"
+		},
+		{
+			"generic_size": 1,
+			"name": "transform2",
+			"node_position": {
+				"x": -2900.0,
+				"y": -160.0
+			},
+			"parameters": {
+				"mode": 0.0,
+				"rotate": 0.0,
+				"scale_x": 1.0,
+				"scale_y": 0.75,
+				"translate_x": 0.0,
+				"translate_y": 0.13
+			},
+			"seed_int": 0,
+			"type": "transform2"
+		},
+		{
+			"name": "auto_tones_2",
+			"node_position": {
+				"x": -3160.0,
+				"y": -260.0
+			},
+			"parameters": {
+				"size": 5.0
+			},
+			"seed_int": 0,
+			"type": "auto_tones"
+		},
+		{
+			"name": "colorize_3",
+			"node_position": {
+				"x": -2880.0,
+				"y": -500.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 0,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0656479869394084,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 0.0656679869394084,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "reroute_5",
+			"node_position": {
+				"x": -960.0,
+				"y": -560.0
+			},
+			"parameters": {
+				"preview": 0.0
+			},
+			"seed_int": 0,
+			"type": "reroute"
+		},
+		{
+			"name": "colorize_4",
+			"node_position": {
+				"x": -800.0,
+				"y": -560.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.788264500275823,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_17",
+			"node_position": {
+				"x": -840.0,
+				"y": -300.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.133333340287209,
+							"g": 0.152941182255745,
+							"pos": 0.0,
+							"r": 0.211764708161354
+						},
+						{
+							"a": 1.0,
+							"b": 0.18823529779911,
+							"g": 0.607843160629272,
+							"pos": 0.5,
+							"r": 0.600000023841858
+						},
+						{
+							"a": 1.0,
+							"b": 0.556862771511078,
+							"g": 0.823529422283173,
+							"pos": 1.0,
+							"r": 0.796078443527222
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_18",
+			"node_position": {
+				"x": -780.0,
+				"y": -900.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 1.0,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_19",
+			"node_position": {
+				"x": -780.0,
+				"y": -740.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0509803928434849,
+							"g": 0.0980392172932625,
+							"pos": 0.0,
+							"r": 0.23137255012989
+						},
+						{
+							"a": 1.0,
+							"b": 0.0901960805058479,
+							"g": 0.10196078568697,
+							"pos": 0.25,
+							"r": 0.584313750267029
+						},
+						{
+							"a": 1.0,
+							"b": 0.24705882370472,
+							"g": 0.356862753629684,
+							"pos": 0.5,
+							"r": 1.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.564705908298492,
+							"g": 0.635294139385223,
+							"pos": 0.779564777403387,
+							"r": 1.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.615686297416687,
+							"g": 0.909803926944733,
+							"pos": 1.0,
+							"r": 0.996078431606293
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "transform2_3",
+			"node_position": {
+				"x": -480.0,
+				"y": -640.0
+			},
+			"parameters": {
+				"enable_scaling_i1": true,
+				"enable_scaling_i2": true,
+				"enable_scaling_i3": true,
+				"enable_scaling_i4": true,
+				"h1": 50.0,
+				"v1": 50.0
+			},
+			"seed_int": 0,
+			"shader_model": {
+				"code": "vec4 $(name_uv)_out;\nfloat scaled_h1 = $h1 / 100.0;\nfloat scaled_v1 = $v1 / 100.0;\n\nbool scaling_i1 = $enable_scaling_i1;\nbool scaling_i2 = $enable_scaling_i2;\nbool scaling_i3 = $enable_scaling_i3;\nbool scaling_i4 = $enable_scaling_i4;\n\nif ($uv.y < scaled_h1) {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i1) {\n      $(name_uv)_out = $i1($uv / vec2(scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i1($uv);\n    }\n  } else {\n    if (scaling_i2) {\n      $(name_uv)_out = $i2(($uv - vec2(scaled_v1, 0.0)) / vec2(1.0 - scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i2($uv);\n    }\n  }\n} else {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i3) {\n      $(name_uv)_out = $i3(($uv - vec2(0.0, scaled_h1)) / vec2(scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i3($uv);\n    }\n  } else {\n    if (scaling_i4) {\n      $(name_uv)_out = $i4(($uv - vec2(scaled_v1, scaled_h1)) / vec2(1.0 - scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i4($uv);\n    }\n  }\n}\n",
+				"global": "",
+				"inputs": [
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i1",
+						"shortdesc": "Input 1",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i2",
+						"shortdesc": "Input 2",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i3",
+						"shortdesc": "Input 3",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i4",
+						"shortdesc": "Input 4",
+						"type": "rgba"
+					}
+				],
+				"instance": "",
+				"name": "Trimsheet Quad Builder",
+				"outputs": [
+					{
+						"longdesc": "Scalable Trimsheets with 2 horizontal and 2 vertical sections",
+						"rgba": "$(name_uv)_out",
+						"shortdesc": "Output",
+						"type": "rgba"
+					}
+				],
+				"parameters": [
+					{
+						"default": false,
+						"label": "Scale Input 1",
+						"name": "enable_scaling_i1",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 2",
+						"name": "enable_scaling_i2",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 3",
+						"name": "enable_scaling_i3",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 4",
+						"name": "enable_scaling_i4",
+						"type": "boolean"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Horizontal",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "h1",
+						"step": 1.0,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Vertical",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "v1",
+						"step": 1.0,
+						"type": "float"
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"name": "transform2_7",
+			"node_position": {
+				"x": -200.0,
+				"y": 1540.0
+			},
+			"parameters": {
+				"enable_scaling_i1": true,
+				"enable_scaling_i2": true,
+				"enable_scaling_i3": true,
+				"enable_scaling_i4": true,
+				"h1": 50.0,
+				"v1": 50.0
+			},
+			"seed_int": 0,
+			"shader_model": {
+				"code": "vec4 $(name_uv)_out;\nfloat scaled_h1 = $h1 / 100.0;\nfloat scaled_v1 = $v1 / 100.0;\n\nbool scaling_i1 = $enable_scaling_i1;\nbool scaling_i2 = $enable_scaling_i2;\nbool scaling_i3 = $enable_scaling_i3;\nbool scaling_i4 = $enable_scaling_i4;\n\nif ($uv.y < scaled_h1) {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i1) {\n      $(name_uv)_out = $i1($uv / vec2(scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i1($uv);\n    }\n  } else {\n    if (scaling_i2) {\n      $(name_uv)_out = $i2(($uv - vec2(scaled_v1, 0.0)) / vec2(1.0 - scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i2($uv);\n    }\n  }\n} else {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i3) {\n      $(name_uv)_out = $i3(($uv - vec2(0.0, scaled_h1)) / vec2(scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i3($uv);\n    }\n  } else {\n    if (scaling_i4) {\n      $(name_uv)_out = $i4(($uv - vec2(scaled_v1, scaled_h1)) / vec2(1.0 - scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i4($uv);\n    }\n  }\n}\n",
+				"global": "",
+				"inputs": [
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i1",
+						"shortdesc": "Input 1",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i2",
+						"shortdesc": "Input 2",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i3",
+						"shortdesc": "Input 3",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i4",
+						"shortdesc": "Input 4",
+						"type": "rgba"
+					}
+				],
+				"instance": "",
+				"name": "Trimsheet Quad Builder",
+				"outputs": [
+					{
+						"longdesc": "Scalable Trimsheets with 2 horizontal and 2 vertical sections",
+						"rgba": "$(name_uv)_out",
+						"shortdesc": "Output",
+						"type": "rgba"
+					}
+				],
+				"parameters": [
+					{
+						"default": false,
+						"label": "Scale Input 1",
+						"name": "enable_scaling_i1",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 2",
+						"name": "enable_scaling_i2",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 3",
+						"name": "enable_scaling_i3",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 4",
+						"name": "enable_scaling_i4",
+						"type": "boolean"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Horizontal",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "h1",
+						"step": 1.0,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Vertical",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "v1",
+						"step": 1.0,
+						"type": "float"
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"name": "colorize_2",
+			"node_position": {
+				"x": -607.479431152344,
+				"y": 1741.93188476563
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.625,
+							"g": 1.0,
+							"pos": 0.992907771357784,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_20",
+			"node_position": {
+				"x": -607.479431152344,
+				"y": 1861.93188476563
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 0.507482363853926,
+							"r": 1.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.7578125,
+							"g": 0.118408203125,
+							"pos": 0.793261115933642,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "reroute_6",
+			"node_position": {
+				"x": -767.479431152344,
+				"y": 1641.93188476563
+			},
+			"parameters": {
+				"preview": 0.0
+			},
+			"seed_int": 0,
+			"type": "reroute"
+		},
+		{
+			"name": "transform2_8",
+			"node_position": {
+				"x": -287.479431152344,
+				"y": 3081.93188476563
+			},
+			"parameters": {
+				"enable_scaling_i1": true,
+				"enable_scaling_i2": true,
+				"enable_scaling_i3": true,
+				"enable_scaling_i4": true,
+				"h1": 50.0,
+				"v1": 50.0
+			},
+			"seed_int": 0,
+			"shader_model": {
+				"code": "vec4 $(name_uv)_out;\nfloat scaled_h1 = $h1 / 100.0;\nfloat scaled_v1 = $v1 / 100.0;\n\nbool scaling_i1 = $enable_scaling_i1;\nbool scaling_i2 = $enable_scaling_i2;\nbool scaling_i3 = $enable_scaling_i3;\nbool scaling_i4 = $enable_scaling_i4;\n\nif ($uv.y < scaled_h1) {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i1) {\n      $(name_uv)_out = $i1($uv / vec2(scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i1($uv);\n    }\n  } else {\n    if (scaling_i2) {\n      $(name_uv)_out = $i2(($uv - vec2(scaled_v1, 0.0)) / vec2(1.0 - scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i2($uv);\n    }\n  }\n} else {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i3) {\n      $(name_uv)_out = $i3(($uv - vec2(0.0, scaled_h1)) / vec2(scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i3($uv);\n    }\n  } else {\n    if (scaling_i4) {\n      $(name_uv)_out = $i4(($uv - vec2(scaled_v1, scaled_h1)) / vec2(1.0 - scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i4($uv);\n    }\n  }\n}\n",
+				"global": "",
+				"inputs": [
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i1",
+						"shortdesc": "Input 1",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i2",
+						"shortdesc": "Input 2",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i3",
+						"shortdesc": "Input 3",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i4",
+						"shortdesc": "Input 4",
+						"type": "rgba"
+					}
+				],
+				"instance": "",
+				"name": "Trimsheet Quad Builder",
+				"outputs": [
+					{
+						"longdesc": "Scalable Trimsheets with 2 horizontal and 2 vertical sections",
+						"rgba": "$(name_uv)_out",
+						"shortdesc": "Output",
+						"type": "rgba"
+					}
+				],
+				"parameters": [
+					{
+						"default": false,
+						"label": "Scale Input 1",
+						"name": "enable_scaling_i1",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 2",
+						"name": "enable_scaling_i2",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 3",
+						"name": "enable_scaling_i3",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 4",
+						"name": "enable_scaling_i4",
+						"type": "boolean"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Horizontal",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "h1",
+						"step": 1.0,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Vertical",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "v1",
+						"step": 1.0,
+						"type": "float"
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"name": "reroute_7",
+			"node_position": {
+				"x": -1187.4794921875,
+				"y": 2821.93188476563
+			},
+			"parameters": {
+				"preview": 0.0
+			},
+			"seed_int": 0,
+			"type": "reroute"
+		},
+		{
+			"name": "transform2_9",
+			"node_position": {
+				"x": -287.479431152344,
+				"y": 2861.93188476563
+			},
+			"parameters": {
+				"enable_scaling_i1": true,
+				"enable_scaling_i2": true,
+				"enable_scaling_i3": true,
+				"enable_scaling_i4": true,
+				"h1": 50.0,
+				"v1": 50.0
+			},
+			"seed_int": 0,
+			"shader_model": {
+				"code": "vec4 $(name_uv)_out;\nfloat scaled_h1 = $h1 / 100.0;\nfloat scaled_v1 = $v1 / 100.0;\n\nbool scaling_i1 = $enable_scaling_i1;\nbool scaling_i2 = $enable_scaling_i2;\nbool scaling_i3 = $enable_scaling_i3;\nbool scaling_i4 = $enable_scaling_i4;\n\nif ($uv.y < scaled_h1) {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i1) {\n      $(name_uv)_out = $i1($uv / vec2(scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i1($uv);\n    }\n  } else {\n    if (scaling_i2) {\n      $(name_uv)_out = $i2(($uv - vec2(scaled_v1, 0.0)) / vec2(1.0 - scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i2($uv);\n    }\n  }\n} else {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i3) {\n      $(name_uv)_out = $i3(($uv - vec2(0.0, scaled_h1)) / vec2(scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i3($uv);\n    }\n  } else {\n    if (scaling_i4) {\n      $(name_uv)_out = $i4(($uv - vec2(scaled_v1, scaled_h1)) / vec2(1.0 - scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i4($uv);\n    }\n  }\n}\n",
+				"global": "",
+				"inputs": [
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i1",
+						"shortdesc": "Input 1",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i2",
+						"shortdesc": "Input 2",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i3",
+						"shortdesc": "Input 3",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i4",
+						"shortdesc": "Input 4",
+						"type": "rgba"
+					}
+				],
+				"instance": "",
+				"name": "Trimsheet Quad Builder",
+				"outputs": [
+					{
+						"longdesc": "Scalable Trimsheets with 2 horizontal and 2 vertical sections",
+						"rgba": "$(name_uv)_out",
+						"shortdesc": "Output",
+						"type": "rgba"
+					}
+				],
+				"parameters": [
+					{
+						"default": false,
+						"label": "Scale Input 1",
+						"name": "enable_scaling_i1",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 2",
+						"name": "enable_scaling_i2",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 3",
+						"name": "enable_scaling_i3",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 4",
+						"name": "enable_scaling_i4",
+						"type": "boolean"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Horizontal",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "h1",
+						"step": 1.0,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Vertical",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "v1",
+						"step": 1.0,
+						"type": "float"
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"name": "colorize_21",
+			"node_position": {
+				"x": -607.479431152344,
+				"y": 2661.93188476563
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.87590347101659,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.992907771357784,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_22",
+			"node_position": {
+				"x": -607.479431152344,
+				"y": 3021.93188476563
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 1.0,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "reroute_8",
+			"node_position": {
+				"x": -767.479431152344,
+				"y": 3161.93188476563
+			},
+			"parameters": {
+				"preview": 0.0
+			},
+			"seed_int": 0,
+			"type": "reroute"
+		},
+		{
+			"name": "colorize_23",
+			"node_position": {
+				"x": -627.479431152344,
+				"y": 2881.93188476563
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.797914104697145,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 1.0,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_24",
+			"node_position": {
+				"x": -627.479431152344,
+				"y": 2761.93188476563
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.558124571356155,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_25",
+			"node_position": {
+				"x": -627.479431152344,
+				"y": 2521.93188476563
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 0.401693461853781,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_26",
+			"node_position": {
+				"x": -587.479431152344,
+				"y": 3161.93188476563
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.992907808027195,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_27",
+			"node_position": {
+				"x": -607.479431152344,
+				"y": 3261.93188476563
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.625,
+							"g": 1.0,
+							"pos": 0.992907771357784,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_28",
+			"node_position": {
+				"x": -607.479431152344,
+				"y": 3381.93188476563
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 0.507482363853926,
+							"r": 1.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.7578125,
+							"g": 0.118408203125,
+							"pos": 0.793261115933642,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "reroute_9",
+			"node_position": {
+				"x": -1207.4794921875,
+				"y": 1821.93188476563
+			},
+			"parameters": {
+				"preview": 0.0
+			},
+			"seed_int": 0,
+			"type": "reroute"
+		},
+		{
+			"name": "reroute_10",
+			"node_position": {
+				"x": -787.479431152344,
+				"y": 2161.93188476563
+			},
+			"parameters": {
+				"preview": 0.0
+			},
+			"seed_int": 0,
+			"type": "reroute"
+		},
+		{
+			"name": "colorize_29",
+			"node_position": {
+				"x": -627.479431152344,
+				"y": 2381.93188476563
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 0.507482363853926,
+							"r": 1.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.7578125,
+							"g": 0.118408203125,
+							"pos": 0.793261115933642,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_30",
+			"node_position": {
+				"x": -627.479431152344,
+				"y": 2261.93188476563
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.625,
+							"g": 1.0,
+							"pos": 0.992907771357784,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_31",
+			"node_position": {
+				"x": -627.479431152344,
+				"y": 2021.93188476563
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 1.0,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_32",
+			"node_position": {
+				"x": -607.479431152344,
+				"y": 2161.93188476563
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.992907808027195,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "transform2_10",
+			"node_position": {
+				"x": -307.479431152344,
+				"y": 2081.93188476563
+			},
+			"parameters": {
+				"enable_scaling_i1": true,
+				"enable_scaling_i2": true,
+				"enable_scaling_i3": true,
+				"enable_scaling_i4": true,
+				"h1": 50.0,
+				"v1": 50.0
+			},
+			"seed_int": 0,
+			"shader_model": {
+				"code": "vec4 $(name_uv)_out;\nfloat scaled_h1 = $h1 / 100.0;\nfloat scaled_v1 = $v1 / 100.0;\n\nbool scaling_i1 = $enable_scaling_i1;\nbool scaling_i2 = $enable_scaling_i2;\nbool scaling_i3 = $enable_scaling_i3;\nbool scaling_i4 = $enable_scaling_i4;\n\nif ($uv.y < scaled_h1) {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i1) {\n      $(name_uv)_out = $i1($uv / vec2(scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i1($uv);\n    }\n  } else {\n    if (scaling_i2) {\n      $(name_uv)_out = $i2(($uv - vec2(scaled_v1, 0.0)) / vec2(1.0 - scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i2($uv);\n    }\n  }\n} else {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i3) {\n      $(name_uv)_out = $i3(($uv - vec2(0.0, scaled_h1)) / vec2(scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i3($uv);\n    }\n  } else {\n    if (scaling_i4) {\n      $(name_uv)_out = $i4(($uv - vec2(scaled_v1, scaled_h1)) / vec2(1.0 - scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i4($uv);\n    }\n  }\n}\n",
+				"global": "",
+				"inputs": [
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i1",
+						"shortdesc": "Input 1",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i2",
+						"shortdesc": "Input 2",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i3",
+						"shortdesc": "Input 3",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i4",
+						"shortdesc": "Input 4",
+						"type": "rgba"
+					}
+				],
+				"instance": "",
+				"name": "Trimsheet Quad Builder",
+				"outputs": [
+					{
+						"longdesc": "Scalable Trimsheets with 2 horizontal and 2 vertical sections",
+						"rgba": "$(name_uv)_out",
+						"shortdesc": "Output",
+						"type": "rgba"
+					}
+				],
+				"parameters": [
+					{
+						"default": false,
+						"label": "Scale Input 1",
+						"name": "enable_scaling_i1",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 2",
+						"name": "enable_scaling_i2",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 3",
+						"name": "enable_scaling_i3",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 4",
+						"name": "enable_scaling_i4",
+						"type": "boolean"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Horizontal",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "h1",
+						"step": 1.0,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Vertical",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "v1",
+						"step": 1.0,
+						"type": "float"
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"name": "colorize_33",
+			"node_position": {
+				"x": -607.479431152344,
+				"y": 1501.93188476563
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 1.0,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_34",
+			"node_position": {
+				"x": -587.479431152344,
+				"y": 1641.93188476563
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.486274510622025,
+							"g": 0.0,
+							"pos": 0.462010418927228,
+							"r": 1.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.747959494590759,
+							"g": 0.7421875,
+							"pos": 0.742475344810957,
+							"r": 1.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 0.992548048496246,
+							"pos": 0.893039279513889,
+							"r": 0.7578125
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "transform2_11",
+			"node_position": {
+				"x": 132.520568847656,
+				"y": 1901.93188476563
+			},
+			"parameters": {
+				"enable_scaling_i1": true,
+				"enable_scaling_i2": true,
+				"enable_scaling_i3": true,
+				"enable_scaling_i4": true,
+				"h1": 50.0,
+				"v1": 50.0
+			},
+			"seed_int": 0,
+			"shader_model": {
+				"code": "vec4 $(name_uv)_out;\nfloat scaled_h1 = $h1 / 100.0;\nfloat scaled_v1 = $v1 / 100.0;\n\nbool scaling_i1 = $enable_scaling_i1;\nbool scaling_i2 = $enable_scaling_i2;\nbool scaling_i3 = $enable_scaling_i3;\nbool scaling_i4 = $enable_scaling_i4;\n\nif ($uv.y < scaled_h1) {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i1) {\n      $(name_uv)_out = $i1($uv / vec2(scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i1($uv);\n    }\n  } else {\n    if (scaling_i2) {\n      $(name_uv)_out = $i2(($uv - vec2(scaled_v1, 0.0)) / vec2(1.0 - scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i2($uv);\n    }\n  }\n} else {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i3) {\n      $(name_uv)_out = $i3(($uv - vec2(0.0, scaled_h1)) / vec2(scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i3($uv);\n    }\n  } else {\n    if (scaling_i4) {\n      $(name_uv)_out = $i4(($uv - vec2(scaled_v1, scaled_h1)) / vec2(1.0 - scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i4($uv);\n    }\n  }\n}\n",
+				"global": "",
+				"inputs": [
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i1",
+						"shortdesc": "Input 1",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i2",
+						"shortdesc": "Input 2",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i3",
+						"shortdesc": "Input 3",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i4",
+						"shortdesc": "Input 4",
+						"type": "rgba"
+					}
+				],
+				"instance": "",
+				"name": "Trimsheet Quad Builder",
+				"outputs": [
+					{
+						"longdesc": "Scalable Trimsheets with 2 horizontal and 2 vertical sections",
+						"rgba": "$(name_uv)_out",
+						"shortdesc": "Output",
+						"type": "rgba"
+					}
+				],
+				"parameters": [
+					{
+						"default": false,
+						"label": "Scale Input 1",
+						"name": "enable_scaling_i1",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 2",
+						"name": "enable_scaling_i2",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 3",
+						"name": "enable_scaling_i3",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 4",
+						"name": "enable_scaling_i4",
+						"type": "boolean"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Horizontal",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "h1",
+						"step": 1.0,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Vertical",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "v1",
+						"step": 1.0,
+						"type": "float"
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"name": "transform2_12",
+			"node_position": {
+				"x": 1780.0,
+				"y": 2480.0
+			},
+			"parameters": {
+				"enable_scaling_i1": true,
+				"enable_scaling_i2": true,
+				"enable_scaling_i3": true,
+				"enable_scaling_i4": true,
+				"h1": 50.0,
+				"v1": 50.0
+			},
+			"seed_int": 0,
+			"shader_model": {
+				"code": "vec4 $(name_uv)_out;\nfloat scaled_h1 = $h1 / 100.0;\nfloat scaled_v1 = $v1 / 100.0;\n\nbool scaling_i1 = $enable_scaling_i1;\nbool scaling_i2 = $enable_scaling_i2;\nbool scaling_i3 = $enable_scaling_i3;\nbool scaling_i4 = $enable_scaling_i4;\n\nif ($uv.y < scaled_h1) {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i1) {\n      $(name_uv)_out = $i1($uv / vec2(scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i1($uv);\n    }\n  } else {\n    if (scaling_i2) {\n      $(name_uv)_out = $i2(($uv - vec2(scaled_v1, 0.0)) / vec2(1.0 - scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i2($uv);\n    }\n  }\n} else {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i3) {\n      $(name_uv)_out = $i3(($uv - vec2(0.0, scaled_h1)) / vec2(scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i3($uv);\n    }\n  } else {\n    if (scaling_i4) {\n      $(name_uv)_out = $i4(($uv - vec2(scaled_v1, scaled_h1)) / vec2(1.0 - scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i4($uv);\n    }\n  }\n}\n",
+				"global": "",
+				"inputs": [
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i1",
+						"shortdesc": "Input 1",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i2",
+						"shortdesc": "Input 2",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i3",
+						"shortdesc": "Input 3",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i4",
+						"shortdesc": "Input 4",
+						"type": "rgba"
+					}
+				],
+				"instance": "",
+				"name": "Trimsheet Quad Builder",
+				"outputs": [
+					{
+						"longdesc": "Scalable Trimsheets with 2 horizontal and 2 vertical sections",
+						"rgba": "$(name_uv)_out",
+						"shortdesc": "Output",
+						"type": "rgba"
+					}
+				],
+				"parameters": [
+					{
+						"default": false,
+						"label": "Scale Input 1",
+						"name": "enable_scaling_i1",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 2",
+						"name": "enable_scaling_i2",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 3",
+						"name": "enable_scaling_i3",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 4",
+						"name": "enable_scaling_i4",
+						"type": "boolean"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Horizontal",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "h1",
+						"step": 1.0,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Vertical",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "v1",
+						"step": 1.0,
+						"type": "float"
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"name": "transform2_13",
+			"node_position": {
+				"x": -400.0,
+				"y": 3640.0
+			},
+			"parameters": {
+				"enable_scaling_i1": true,
+				"enable_scaling_i2": true,
+				"enable_scaling_i3": true,
+				"enable_scaling_i4": true,
+				"h1": 50.0,
+				"v1": 50.0
+			},
+			"seed_int": 0,
+			"shader_model": {
+				"code": "vec4 $(name_uv)_out;\nfloat scaled_h1 = $h1 / 100.0;\nfloat scaled_v1 = $v1 / 100.0;\n\nbool scaling_i1 = $enable_scaling_i1;\nbool scaling_i2 = $enable_scaling_i2;\nbool scaling_i3 = $enable_scaling_i3;\nbool scaling_i4 = $enable_scaling_i4;\n\nif ($uv.y < scaled_h1) {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i1) {\n      $(name_uv)_out = $i1($uv / vec2(scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i1($uv);\n    }\n  } else {\n    if (scaling_i2) {\n      $(name_uv)_out = $i2(($uv - vec2(scaled_v1, 0.0)) / vec2(1.0 - scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i2($uv);\n    }\n  }\n} else {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i3) {\n      $(name_uv)_out = $i3(($uv - vec2(0.0, scaled_h1)) / vec2(scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i3($uv);\n    }\n  } else {\n    if (scaling_i4) {\n      $(name_uv)_out = $i4(($uv - vec2(scaled_v1, scaled_h1)) / vec2(1.0 - scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i4($uv);\n    }\n  }\n}\n",
+				"global": "",
+				"inputs": [
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i1",
+						"shortdesc": "Input 1",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i2",
+						"shortdesc": "Input 2",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i3",
+						"shortdesc": "Input 3",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i4",
+						"shortdesc": "Input 4",
+						"type": "rgba"
+					}
+				],
+				"instance": "",
+				"name": "Trimsheet Quad Builder",
+				"outputs": [
+					{
+						"longdesc": "Scalable Trimsheets with 2 horizontal and 2 vertical sections",
+						"rgba": "$(name_uv)_out",
+						"shortdesc": "Output",
+						"type": "rgba"
+					}
+				],
+				"parameters": [
+					{
+						"default": false,
+						"label": "Scale Input 1",
+						"name": "enable_scaling_i1",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 2",
+						"name": "enable_scaling_i2",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 3",
+						"name": "enable_scaling_i3",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 4",
+						"name": "enable_scaling_i4",
+						"type": "boolean"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Horizontal",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "h1",
+						"step": 1.0,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Vertical",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "v1",
+						"step": 1.0,
+						"type": "float"
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"name": "colorize_35",
+			"node_position": {
+				"x": -720.0,
+				"y": 3820.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.625,
+							"g": 1.0,
+							"pos": 0.992907771357784,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_36",
+			"node_position": {
+				"x": -720.0,
+				"y": 3940.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 0.507482363853926,
+							"r": 1.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.7578125,
+							"g": 0.118408203125,
+							"pos": 0.793261115933642,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "reroute_11",
+			"node_position": {
+				"x": -880.0,
+				"y": 3720.0
+			},
+			"parameters": {
+				"preview": 0.0
+			},
+			"seed_int": 0,
+			"type": "reroute"
+		},
+		{
+			"name": "transform2_14",
+			"node_position": {
+				"x": -400.0,
+				"y": 5160.0
+			},
+			"parameters": {
+				"enable_scaling_i1": true,
+				"enable_scaling_i2": true,
+				"enable_scaling_i3": true,
+				"enable_scaling_i4": true,
+				"h1": 50.0,
+				"v1": 50.0
+			},
+			"seed_int": 0,
+			"shader_model": {
+				"code": "vec4 $(name_uv)_out;\nfloat scaled_h1 = $h1 / 100.0;\nfloat scaled_v1 = $v1 / 100.0;\n\nbool scaling_i1 = $enable_scaling_i1;\nbool scaling_i2 = $enable_scaling_i2;\nbool scaling_i3 = $enable_scaling_i3;\nbool scaling_i4 = $enable_scaling_i4;\n\nif ($uv.y < scaled_h1) {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i1) {\n      $(name_uv)_out = $i1($uv / vec2(scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i1($uv);\n    }\n  } else {\n    if (scaling_i2) {\n      $(name_uv)_out = $i2(($uv - vec2(scaled_v1, 0.0)) / vec2(1.0 - scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i2($uv);\n    }\n  }\n} else {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i3) {\n      $(name_uv)_out = $i3(($uv - vec2(0.0, scaled_h1)) / vec2(scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i3($uv);\n    }\n  } else {\n    if (scaling_i4) {\n      $(name_uv)_out = $i4(($uv - vec2(scaled_v1, scaled_h1)) / vec2(1.0 - scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i4($uv);\n    }\n  }\n}\n",
+				"global": "",
+				"inputs": [
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i1",
+						"shortdesc": "Input 1",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i2",
+						"shortdesc": "Input 2",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i3",
+						"shortdesc": "Input 3",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i4",
+						"shortdesc": "Input 4",
+						"type": "rgba"
+					}
+				],
+				"instance": "",
+				"name": "Trimsheet Quad Builder",
+				"outputs": [
+					{
+						"longdesc": "Scalable Trimsheets with 2 horizontal and 2 vertical sections",
+						"rgba": "$(name_uv)_out",
+						"shortdesc": "Output",
+						"type": "rgba"
+					}
+				],
+				"parameters": [
+					{
+						"default": false,
+						"label": "Scale Input 1",
+						"name": "enable_scaling_i1",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 2",
+						"name": "enable_scaling_i2",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 3",
+						"name": "enable_scaling_i3",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 4",
+						"name": "enable_scaling_i4",
+						"type": "boolean"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Horizontal",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "h1",
+						"step": 1.0,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Vertical",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "v1",
+						"step": 1.0,
+						"type": "float"
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"name": "reroute_12",
+			"node_position": {
+				"x": -1300.0,
+				"y": 4900.0
+			},
+			"parameters": {
+				"preview": 0.0
+			},
+			"seed_int": 0,
+			"type": "reroute"
+		},
+		{
+			"name": "transform2_15",
+			"node_position": {
+				"x": -400.0,
+				"y": 4940.0
+			},
+			"parameters": {
+				"enable_scaling_i1": true,
+				"enable_scaling_i2": true,
+				"enable_scaling_i3": true,
+				"enable_scaling_i4": true,
+				"h1": 50.0,
+				"v1": 50.0
+			},
+			"seed_int": 0,
+			"shader_model": {
+				"code": "vec4 $(name_uv)_out;\nfloat scaled_h1 = $h1 / 100.0;\nfloat scaled_v1 = $v1 / 100.0;\n\nbool scaling_i1 = $enable_scaling_i1;\nbool scaling_i2 = $enable_scaling_i2;\nbool scaling_i3 = $enable_scaling_i3;\nbool scaling_i4 = $enable_scaling_i4;\n\nif ($uv.y < scaled_h1) {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i1) {\n      $(name_uv)_out = $i1($uv / vec2(scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i1($uv);\n    }\n  } else {\n    if (scaling_i2) {\n      $(name_uv)_out = $i2(($uv - vec2(scaled_v1, 0.0)) / vec2(1.0 - scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i2($uv);\n    }\n  }\n} else {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i3) {\n      $(name_uv)_out = $i3(($uv - vec2(0.0, scaled_h1)) / vec2(scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i3($uv);\n    }\n  } else {\n    if (scaling_i4) {\n      $(name_uv)_out = $i4(($uv - vec2(scaled_v1, scaled_h1)) / vec2(1.0 - scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i4($uv);\n    }\n  }\n}\n",
+				"global": "",
+				"inputs": [
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i1",
+						"shortdesc": "Input 1",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i2",
+						"shortdesc": "Input 2",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i3",
+						"shortdesc": "Input 3",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i4",
+						"shortdesc": "Input 4",
+						"type": "rgba"
+					}
+				],
+				"instance": "",
+				"name": "Trimsheet Quad Builder",
+				"outputs": [
+					{
+						"longdesc": "Scalable Trimsheets with 2 horizontal and 2 vertical sections",
+						"rgba": "$(name_uv)_out",
+						"shortdesc": "Output",
+						"type": "rgba"
+					}
+				],
+				"parameters": [
+					{
+						"default": false,
+						"label": "Scale Input 1",
+						"name": "enable_scaling_i1",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 2",
+						"name": "enable_scaling_i2",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 3",
+						"name": "enable_scaling_i3",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 4",
+						"name": "enable_scaling_i4",
+						"type": "boolean"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Horizontal",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "h1",
+						"step": 1.0,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Vertical",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "v1",
+						"step": 1.0,
+						"type": "float"
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"name": "colorize_37",
+			"node_position": {
+				"x": -720.0,
+				"y": 4740.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.87590347101659,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.992907771357784,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_38",
+			"node_position": {
+				"x": -720.0,
+				"y": 5100.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 1.0,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "reroute_13",
+			"node_position": {
+				"x": -880.0,
+				"y": 5240.0
+			},
+			"parameters": {
+				"preview": 0.0
+			},
+			"seed_int": 0,
+			"type": "reroute"
+		},
+		{
+			"name": "colorize_39",
+			"node_position": {
+				"x": -740.0,
+				"y": 4960.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.797914104697145,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 1.0,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_40",
+			"node_position": {
+				"x": -740.0,
+				"y": 4840.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.558124571356155,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_41",
+			"node_position": {
+				"x": -740.0,
+				"y": 4600.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 0.401693461853781,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_42",
+			"node_position": {
+				"x": -700.0,
+				"y": 5240.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.992907808027195,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_43",
+			"node_position": {
+				"x": -720.0,
+				"y": 5340.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.625,
+							"g": 1.0,
+							"pos": 0.992907771357784,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_44",
+			"node_position": {
+				"x": -720.0,
+				"y": 5460.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 0.507482363853926,
+							"r": 1.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.7578125,
+							"g": 0.118408203125,
+							"pos": 0.793261115933642,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "reroute_14",
+			"node_position": {
+				"x": -900.0,
+				"y": 4240.0
+			},
+			"parameters": {
+				"preview": 0.0
+			},
+			"seed_int": 0,
+			"type": "reroute"
+		},
+		{
+			"name": "colorize_45",
+			"node_position": {
+				"x": -740.0,
+				"y": 4460.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 0.507482363853926,
+							"r": 1.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.7578125,
+							"g": 0.118408203125,
+							"pos": 0.793261115933642,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_46",
+			"node_position": {
+				"x": -740.0,
+				"y": 4340.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.625,
+							"g": 1.0,
+							"pos": 0.992907771357784,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_47",
+			"node_position": {
+				"x": -740.0,
+				"y": 4100.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 1.0,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_48",
+			"node_position": {
+				"x": -720.0,
+				"y": 4240.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.992907808027195,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "transform2_16",
+			"node_position": {
+				"x": -420.0,
+				"y": 4160.0
+			},
+			"parameters": {
+				"enable_scaling_i1": true,
+				"enable_scaling_i2": true,
+				"enable_scaling_i3": true,
+				"enable_scaling_i4": true,
+				"h1": 50.0,
+				"v1": 50.0
+			},
+			"seed_int": 0,
+			"shader_model": {
+				"code": "vec4 $(name_uv)_out;\nfloat scaled_h1 = $h1 / 100.0;\nfloat scaled_v1 = $v1 / 100.0;\n\nbool scaling_i1 = $enable_scaling_i1;\nbool scaling_i2 = $enable_scaling_i2;\nbool scaling_i3 = $enable_scaling_i3;\nbool scaling_i4 = $enable_scaling_i4;\n\nif ($uv.y < scaled_h1) {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i1) {\n      $(name_uv)_out = $i1($uv / vec2(scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i1($uv);\n    }\n  } else {\n    if (scaling_i2) {\n      $(name_uv)_out = $i2(($uv - vec2(scaled_v1, 0.0)) / vec2(1.0 - scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i2($uv);\n    }\n  }\n} else {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i3) {\n      $(name_uv)_out = $i3(($uv - vec2(0.0, scaled_h1)) / vec2(scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i3($uv);\n    }\n  } else {\n    if (scaling_i4) {\n      $(name_uv)_out = $i4(($uv - vec2(scaled_v1, scaled_h1)) / vec2(1.0 - scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i4($uv);\n    }\n  }\n}\n",
+				"global": "",
+				"inputs": [
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i1",
+						"shortdesc": "Input 1",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i2",
+						"shortdesc": "Input 2",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i3",
+						"shortdesc": "Input 3",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i4",
+						"shortdesc": "Input 4",
+						"type": "rgba"
+					}
+				],
+				"instance": "",
+				"name": "Trimsheet Quad Builder",
+				"outputs": [
+					{
+						"longdesc": "Scalable Trimsheets with 2 horizontal and 2 vertical sections",
+						"rgba": "$(name_uv)_out",
+						"shortdesc": "Output",
+						"type": "rgba"
+					}
+				],
+				"parameters": [
+					{
+						"default": false,
+						"label": "Scale Input 1",
+						"name": "enable_scaling_i1",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 2",
+						"name": "enable_scaling_i2",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 3",
+						"name": "enable_scaling_i3",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 4",
+						"name": "enable_scaling_i4",
+						"type": "boolean"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Horizontal",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "h1",
+						"step": 1.0,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Vertical",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "v1",
+						"step": 1.0,
+						"type": "float"
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"name": "colorize_49",
+			"node_position": {
+				"x": -720.0,
+				"y": 3580.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 1.0,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_50",
+			"node_position": {
+				"x": -700.0,
+				"y": 3720.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.486274510622025,
+							"g": 0.0,
+							"pos": 0.462010418927228,
+							"r": 1.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.747959494590759,
+							"g": 0.7421875,
+							"pos": 0.742475344810957,
+							"r": 1.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 0.992548048496246,
+							"pos": 0.893039279513889,
+							"r": 0.7578125
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "transform2_17",
+			"node_position": {
+				"x": 20.0,
+				"y": 3980.0
+			},
+			"parameters": {
+				"enable_scaling_i1": true,
+				"enable_scaling_i2": true,
+				"enable_scaling_i3": true,
+				"enable_scaling_i4": true,
+				"h1": 50.0,
+				"v1": 50.0
+			},
+			"seed_int": 0,
+			"shader_model": {
+				"code": "vec4 $(name_uv)_out;\nfloat scaled_h1 = $h1 / 100.0;\nfloat scaled_v1 = $v1 / 100.0;\n\nbool scaling_i1 = $enable_scaling_i1;\nbool scaling_i2 = $enable_scaling_i2;\nbool scaling_i3 = $enable_scaling_i3;\nbool scaling_i4 = $enable_scaling_i4;\n\nif ($uv.y < scaled_h1) {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i1) {\n      $(name_uv)_out = $i1($uv / vec2(scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i1($uv);\n    }\n  } else {\n    if (scaling_i2) {\n      $(name_uv)_out = $i2(($uv - vec2(scaled_v1, 0.0)) / vec2(1.0 - scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i2($uv);\n    }\n  }\n} else {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i3) {\n      $(name_uv)_out = $i3(($uv - vec2(0.0, scaled_h1)) / vec2(scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i3($uv);\n    }\n  } else {\n    if (scaling_i4) {\n      $(name_uv)_out = $i4(($uv - vec2(scaled_v1, scaled_h1)) / vec2(1.0 - scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i4($uv);\n    }\n  }\n}\n",
+				"global": "",
+				"inputs": [
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i1",
+						"shortdesc": "Input 1",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i2",
+						"shortdesc": "Input 2",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i3",
+						"shortdesc": "Input 3",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i4",
+						"shortdesc": "Input 4",
+						"type": "rgba"
+					}
+				],
+				"instance": "",
+				"name": "Trimsheet Quad Builder",
+				"outputs": [
+					{
+						"longdesc": "Scalable Trimsheets with 2 horizontal and 2 vertical sections",
+						"rgba": "$(name_uv)_out",
+						"shortdesc": "Output",
+						"type": "rgba"
+					}
+				],
+				"parameters": [
+					{
+						"default": false,
+						"label": "Scale Input 1",
+						"name": "enable_scaling_i1",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 2",
+						"name": "enable_scaling_i2",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 3",
+						"name": "enable_scaling_i3",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 4",
+						"name": "enable_scaling_i4",
+						"type": "boolean"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Horizontal",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "h1",
+						"step": 1.0,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Vertical",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "v1",
+						"step": 1.0,
+						"type": "float"
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"name": "reroute_15",
+			"node_position": {
+				"x": -1660.0,
+				"y": 4000.0
+			},
+			"parameters": {
+				"preview": 0.0
+			},
+			"seed_int": 0,
+			"type": "reroute"
+		},
+		{
+			"name": "reroute_16",
+			"node_position": {
+				"x": -1540.0,
+				"y": 6200.0
+			},
+			"parameters": {
+				"preview": 0.0
+			},
+			"seed_int": 0,
+			"type": "reroute"
+		},
+		{
+			"name": "transform2_18",
+			"node_position": {
+				"x": 140.0,
+				"y": 6180.0
+			},
+			"parameters": {
+				"enable_scaling_i1": true,
+				"enable_scaling_i2": true,
+				"enable_scaling_i3": true,
+				"enable_scaling_i4": true,
+				"h1": 50.0,
+				"v1": 50.0
+			},
+			"seed_int": 0,
+			"shader_model": {
+				"code": "vec4 $(name_uv)_out;\nfloat scaled_h1 = $h1 / 100.0;\nfloat scaled_v1 = $v1 / 100.0;\n\nbool scaling_i1 = $enable_scaling_i1;\nbool scaling_i2 = $enable_scaling_i2;\nbool scaling_i3 = $enable_scaling_i3;\nbool scaling_i4 = $enable_scaling_i4;\n\nif ($uv.y < scaled_h1) {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i1) {\n      $(name_uv)_out = $i1($uv / vec2(scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i1($uv);\n    }\n  } else {\n    if (scaling_i2) {\n      $(name_uv)_out = $i2(($uv - vec2(scaled_v1, 0.0)) / vec2(1.0 - scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i2($uv);\n    }\n  }\n} else {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i3) {\n      $(name_uv)_out = $i3(($uv - vec2(0.0, scaled_h1)) / vec2(scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i3($uv);\n    }\n  } else {\n    if (scaling_i4) {\n      $(name_uv)_out = $i4(($uv - vec2(scaled_v1, scaled_h1)) / vec2(1.0 - scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i4($uv);\n    }\n  }\n}\n",
+				"global": "",
+				"inputs": [
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i1",
+						"shortdesc": "Input 1",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i2",
+						"shortdesc": "Input 2",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i3",
+						"shortdesc": "Input 3",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i4",
+						"shortdesc": "Input 4",
+						"type": "rgba"
+					}
+				],
+				"instance": "",
+				"name": "Trimsheet Quad Builder",
+				"outputs": [
+					{
+						"longdesc": "Scalable Trimsheets with 2 horizontal and 2 vertical sections",
+						"rgba": "$(name_uv)_out",
+						"shortdesc": "Output",
+						"type": "rgba"
+					}
+				],
+				"parameters": [
+					{
+						"default": false,
+						"label": "Scale Input 1",
+						"name": "enable_scaling_i1",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 2",
+						"name": "enable_scaling_i2",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 3",
+						"name": "enable_scaling_i3",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 4",
+						"name": "enable_scaling_i4",
+						"type": "boolean"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Horizontal",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "h1",
+						"step": 1.0,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Vertical",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "v1",
+						"step": 1.0,
+						"type": "float"
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"name": "colorize_51",
+			"node_position": {
+				"x": -580.0,
+				"y": 5920.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.486274510622025,
+							"g": 0.0,
+							"pos": 0.462010418927228,
+							"r": 1.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.747959494590759,
+							"g": 0.7421875,
+							"pos": 0.742475344810957,
+							"r": 1.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 0.992548048496246,
+							"pos": 0.893039279513889,
+							"r": 0.7578125
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "transform2_19",
+			"node_position": {
+				"x": -300.0,
+				"y": 6360.0
+			},
+			"parameters": {
+				"enable_scaling_i1": true,
+				"enable_scaling_i2": true,
+				"enable_scaling_i3": true,
+				"enable_scaling_i4": true,
+				"h1": 50.0,
+				"v1": 50.0
+			},
+			"seed_int": 0,
+			"shader_model": {
+				"code": "vec4 $(name_uv)_out;\nfloat scaled_h1 = $h1 / 100.0;\nfloat scaled_v1 = $v1 / 100.0;\n\nbool scaling_i1 = $enable_scaling_i1;\nbool scaling_i2 = $enable_scaling_i2;\nbool scaling_i3 = $enable_scaling_i3;\nbool scaling_i4 = $enable_scaling_i4;\n\nif ($uv.y < scaled_h1) {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i1) {\n      $(name_uv)_out = $i1($uv / vec2(scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i1($uv);\n    }\n  } else {\n    if (scaling_i2) {\n      $(name_uv)_out = $i2(($uv - vec2(scaled_v1, 0.0)) / vec2(1.0 - scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i2($uv);\n    }\n  }\n} else {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i3) {\n      $(name_uv)_out = $i3(($uv - vec2(0.0, scaled_h1)) / vec2(scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i3($uv);\n    }\n  } else {\n    if (scaling_i4) {\n      $(name_uv)_out = $i4(($uv - vec2(scaled_v1, scaled_h1)) / vec2(1.0 - scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i4($uv);\n    }\n  }\n}\n",
+				"global": "",
+				"inputs": [
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i1",
+						"shortdesc": "Input 1",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i2",
+						"shortdesc": "Input 2",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i3",
+						"shortdesc": "Input 3",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i4",
+						"shortdesc": "Input 4",
+						"type": "rgba"
+					}
+				],
+				"instance": "",
+				"name": "Trimsheet Quad Builder",
+				"outputs": [
+					{
+						"longdesc": "Scalable Trimsheets with 2 horizontal and 2 vertical sections",
+						"rgba": "$(name_uv)_out",
+						"shortdesc": "Output",
+						"type": "rgba"
+					}
+				],
+				"parameters": [
+					{
+						"default": false,
+						"label": "Scale Input 1",
+						"name": "enable_scaling_i1",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 2",
+						"name": "enable_scaling_i2",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 3",
+						"name": "enable_scaling_i3",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 4",
+						"name": "enable_scaling_i4",
+						"type": "boolean"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Horizontal",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "h1",
+						"step": 1.0,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Vertical",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "v1",
+						"step": 1.0,
+						"type": "float"
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"name": "colorize_52",
+			"node_position": {
+				"x": -600.0,
+				"y": 6440.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.992907808027195,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_53",
+			"node_position": {
+				"x": -620.0,
+				"y": 6300.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 1.0,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_54",
+			"node_position": {
+				"x": -620.0,
+				"y": 6540.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.625,
+							"g": 1.0,
+							"pos": 0.992907771357784,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_55",
+			"node_position": {
+				"x": -620.0,
+				"y": 6660.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 0.507482363853926,
+							"r": 1.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.7578125,
+							"g": 0.118408203125,
+							"pos": 0.793261115933642,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "reroute_17",
+			"node_position": {
+				"x": -780.0,
+				"y": 6440.0
+			},
+			"parameters": {
+				"preview": 0.0
+			},
+			"seed_int": 0,
+			"type": "reroute"
+		},
+		{
+			"name": "colorize_56",
+			"node_position": {
+				"x": -600.0,
+				"y": 7660.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 0.507482363853926,
+							"r": 1.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.7578125,
+							"g": 0.118408203125,
+							"pos": 0.793261115933642,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_57",
+			"node_position": {
+				"x": -600.0,
+				"y": 7540.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.625,
+							"g": 1.0,
+							"pos": 0.992907771357784,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_58",
+			"node_position": {
+				"x": -580.0,
+				"y": 7440.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.992907808027195,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_59",
+			"node_position": {
+				"x": -620.0,
+				"y": 6800.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 0.401693461853781,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_60",
+			"node_position": {
+				"x": -620.0,
+				"y": 7040.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.558124571356155,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_61",
+			"node_position": {
+				"x": -620.0,
+				"y": 7160.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.797914104697145,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 1.0,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "reroute_18",
+			"node_position": {
+				"x": -760.0,
+				"y": 7440.0
+			},
+			"parameters": {
+				"preview": 0.0
+			},
+			"seed_int": 0,
+			"type": "reroute"
+		},
+		{
+			"name": "colorize_62",
+			"node_position": {
+				"x": -600.0,
+				"y": 7300.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 1.0,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_63",
+			"node_position": {
+				"x": -600.0,
+				"y": 6940.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.87590347101659,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.992907771357784,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "transform2_20",
+			"node_position": {
+				"x": -280.0,
+				"y": 7140.0
+			},
+			"parameters": {
+				"enable_scaling_i1": true,
+				"enable_scaling_i2": true,
+				"enable_scaling_i3": true,
+				"enable_scaling_i4": true,
+				"h1": 50.0,
+				"v1": 50.0
+			},
+			"seed_int": 0,
+			"shader_model": {
+				"code": "vec4 $(name_uv)_out;\nfloat scaled_h1 = $h1 / 100.0;\nfloat scaled_v1 = $v1 / 100.0;\n\nbool scaling_i1 = $enable_scaling_i1;\nbool scaling_i2 = $enable_scaling_i2;\nbool scaling_i3 = $enable_scaling_i3;\nbool scaling_i4 = $enable_scaling_i4;\n\nif ($uv.y < scaled_h1) {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i1) {\n      $(name_uv)_out = $i1($uv / vec2(scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i1($uv);\n    }\n  } else {\n    if (scaling_i2) {\n      $(name_uv)_out = $i2(($uv - vec2(scaled_v1, 0.0)) / vec2(1.0 - scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i2($uv);\n    }\n  }\n} else {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i3) {\n      $(name_uv)_out = $i3(($uv - vec2(0.0, scaled_h1)) / vec2(scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i3($uv);\n    }\n  } else {\n    if (scaling_i4) {\n      $(name_uv)_out = $i4(($uv - vec2(scaled_v1, scaled_h1)) / vec2(1.0 - scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i4($uv);\n    }\n  }\n}\n",
+				"global": "",
+				"inputs": [
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i1",
+						"shortdesc": "Input 1",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i2",
+						"shortdesc": "Input 2",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i3",
+						"shortdesc": "Input 3",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i4",
+						"shortdesc": "Input 4",
+						"type": "rgba"
+					}
+				],
+				"instance": "",
+				"name": "Trimsheet Quad Builder",
+				"outputs": [
+					{
+						"longdesc": "Scalable Trimsheets with 2 horizontal and 2 vertical sections",
+						"rgba": "$(name_uv)_out",
+						"shortdesc": "Output",
+						"type": "rgba"
+					}
+				],
+				"parameters": [
+					{
+						"default": false,
+						"label": "Scale Input 1",
+						"name": "enable_scaling_i1",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 2",
+						"name": "enable_scaling_i2",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 3",
+						"name": "enable_scaling_i3",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 4",
+						"name": "enable_scaling_i4",
+						"type": "boolean"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Horizontal",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "h1",
+						"step": 1.0,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Vertical",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "v1",
+						"step": 1.0,
+						"type": "float"
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"name": "reroute_19",
+			"node_position": {
+				"x": -1180.0,
+				"y": 7100.0
+			},
+			"parameters": {
+				"preview": 0.0
+			},
+			"seed_int": 0,
+			"type": "reroute"
+		},
+		{
+			"name": "transform2_21",
+			"node_position": {
+				"x": -280.0,
+				"y": 7360.0
+			},
+			"parameters": {
+				"enable_scaling_i1": true,
+				"enable_scaling_i2": true,
+				"enable_scaling_i3": true,
+				"enable_scaling_i4": true,
+				"h1": 50.0,
+				"v1": 50.0
+			},
+			"seed_int": 0,
+			"shader_model": {
+				"code": "vec4 $(name_uv)_out;\nfloat scaled_h1 = $h1 / 100.0;\nfloat scaled_v1 = $v1 / 100.0;\n\nbool scaling_i1 = $enable_scaling_i1;\nbool scaling_i2 = $enable_scaling_i2;\nbool scaling_i3 = $enable_scaling_i3;\nbool scaling_i4 = $enable_scaling_i4;\n\nif ($uv.y < scaled_h1) {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i1) {\n      $(name_uv)_out = $i1($uv / vec2(scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i1($uv);\n    }\n  } else {\n    if (scaling_i2) {\n      $(name_uv)_out = $i2(($uv - vec2(scaled_v1, 0.0)) / vec2(1.0 - scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i2($uv);\n    }\n  }\n} else {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i3) {\n      $(name_uv)_out = $i3(($uv - vec2(0.0, scaled_h1)) / vec2(scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i3($uv);\n    }\n  } else {\n    if (scaling_i4) {\n      $(name_uv)_out = $i4(($uv - vec2(scaled_v1, scaled_h1)) / vec2(1.0 - scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i4($uv);\n    }\n  }\n}\n",
+				"global": "",
+				"inputs": [
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i1",
+						"shortdesc": "Input 1",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i2",
+						"shortdesc": "Input 2",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i3",
+						"shortdesc": "Input 3",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i4",
+						"shortdesc": "Input 4",
+						"type": "rgba"
+					}
+				],
+				"instance": "",
+				"name": "Trimsheet Quad Builder",
+				"outputs": [
+					{
+						"longdesc": "Scalable Trimsheets with 2 horizontal and 2 vertical sections",
+						"rgba": "$(name_uv)_out",
+						"shortdesc": "Output",
+						"type": "rgba"
+					}
+				],
+				"parameters": [
+					{
+						"default": false,
+						"label": "Scale Input 1",
+						"name": "enable_scaling_i1",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 2",
+						"name": "enable_scaling_i2",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 3",
+						"name": "enable_scaling_i3",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 4",
+						"name": "enable_scaling_i4",
+						"type": "boolean"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Horizontal",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "h1",
+						"step": 1.0,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Vertical",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "v1",
+						"step": 1.0,
+						"type": "float"
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"name": "reroute_20",
+			"node_position": {
+				"x": -760.0,
+				"y": 5920.0
+			},
+			"parameters": {
+				"preview": 0.0
+			},
+			"seed_int": 0,
+			"type": "reroute"
+		},
+		{
+			"name": "colorize_64",
+			"node_position": {
+				"x": -600.0,
+				"y": 6140.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 0.507482363853926,
+							"r": 1.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.7578125,
+							"g": 0.118408203125,
+							"pos": 0.793261115933642,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize_65",
+			"node_position": {
+				"x": -600.0,
+				"y": 6020.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.625,
+							"g": 1.0,
+							"pos": 0.992907771357784,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "transform2_22",
+			"node_position": {
+				"x": -280.0,
+				"y": 5840.0
+			},
+			"parameters": {
+				"enable_scaling_i1": true,
+				"enable_scaling_i2": true,
+				"enable_scaling_i3": true,
+				"enable_scaling_i4": true,
+				"h1": 50.0,
+				"v1": 50.0
+			},
+			"seed_int": 0,
+			"shader_model": {
+				"code": "vec4 $(name_uv)_out;\nfloat scaled_h1 = $h1 / 100.0;\nfloat scaled_v1 = $v1 / 100.0;\n\nbool scaling_i1 = $enable_scaling_i1;\nbool scaling_i2 = $enable_scaling_i2;\nbool scaling_i3 = $enable_scaling_i3;\nbool scaling_i4 = $enable_scaling_i4;\n\nif ($uv.y < scaled_h1) {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i1) {\n      $(name_uv)_out = $i1($uv / vec2(scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i1($uv);\n    }\n  } else {\n    if (scaling_i2) {\n      $(name_uv)_out = $i2(($uv - vec2(scaled_v1, 0.0)) / vec2(1.0 - scaled_v1, scaled_h1));\n    } else {\n      $(name_uv)_out = $i2($uv);\n    }\n  }\n} else {\n  if ($uv.x < scaled_v1) {\n    if (scaling_i3) {\n      $(name_uv)_out = $i3(($uv - vec2(0.0, scaled_h1)) / vec2(scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i3($uv);\n    }\n  } else {\n    if (scaling_i4) {\n      $(name_uv)_out = $i4(($uv - vec2(scaled_v1, scaled_h1)) / vec2(1.0 - scaled_v1, 1.0 - scaled_h1));\n    } else {\n      $(name_uv)_out = $i4($uv);\n    }\n  }\n}\n",
+				"global": "",
+				"inputs": [
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i1",
+						"shortdesc": "Input 1",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i2",
+						"shortdesc": "Input 2",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i3",
+						"shortdesc": "Input 3",
+						"type": "rgba"
+					},
+					{
+						"default": "vec4(0.0)",
+						"function": true,
+						"label": "",
+						"name": "i4",
+						"shortdesc": "Input 4",
+						"type": "rgba"
+					}
+				],
+				"instance": "",
+				"name": "Trimsheet Quad Builder",
+				"outputs": [
+					{
+						"longdesc": "Scalable Trimsheets with 2 horizontal and 2 vertical sections",
+						"rgba": "$(name_uv)_out",
+						"shortdesc": "Output",
+						"type": "rgba"
+					}
+				],
+				"parameters": [
+					{
+						"default": false,
+						"label": "Scale Input 1",
+						"name": "enable_scaling_i1",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 2",
+						"name": "enable_scaling_i2",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 3",
+						"name": "enable_scaling_i3",
+						"type": "boolean"
+					},
+					{
+						"default": false,
+						"label": "Scale Input 4",
+						"name": "enable_scaling_i4",
+						"type": "boolean"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Horizontal",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "h1",
+						"step": 1.0,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 50.0,
+						"label": "Vertical",
+						"max": 100.0,
+						"min": 0.0,
+						"name": "v1",
+						"step": 1.0,
+						"type": "float"
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"name": "colorize_66",
+			"node_position": {
+				"x": -600.0,
+				"y": 5780.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 1.0,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "reroute_21",
+			"node_position": {
+				"x": -1740.0,
+				"y": 3880.0
+			},
+			"parameters": {
+				"preview": 0.0
+			},
+			"seed_int": 0,
+			"type": "reroute"
+		},
+		{
+			"name": "colorize_67",
+			"node_position": {
+				"x": -820.0,
+				"y": -40.0
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.788264500275823,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "export",
+			"node_position": {
+				"x": 2280.0,
+				"y": 2060.0
+			},
+			"parameters": {
+				"size": 10.0,
+				"suffix": "TX_"
+			},
+			"seed_int": 0,
+			"type": "export"
+		}
+	],
+	"parameters": {
+
+	},
+	"seed_int": 0,
+	"shortdesc": "",
+	"type": "graph"
+}

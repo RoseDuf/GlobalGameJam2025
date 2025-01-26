@@ -1,0 +1,75 @@
+[gd_scene load_steps=14 format=3 uid="uid://dtt1eg61b0ol7"]
+
+[ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/GameManager2D.gd" id="1_ki77s"]
+[ext_resource type="Texture2D" uid="uid://cr5xry6fsqq7c" path="res://BubbleGame/2D/Resources/_DebugArt/SoapBarBack.png" id="2_mmc8a"]
+[ext_resource type="Texture2D" uid="uid://bolm5fact546j" path="res://BubbleGame/2D/Resources/_DebugArt/SoapBarFill.png" id="3_hhlf1"]
+[ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/SoapBarMeter.gd" id="4_idnyp"]
+[ext_resource type="PackedScene" uid="uid://bqjdygfsmbxya" path="res://BubbleGame/2D/Resources/Prefabs/player.tscn" id="5_iogq5"]
+[ext_resource type="PackedScene" uid="uid://cwnvhrof5f2xb" path="res://BubbleGame/2D/Resources/Prefabs/Tree-1.tscn" id="7_ct0ym"]
+[ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/2DCamera.gd" id="7_cy4kp"]
+[ext_resource type="PackedScene" uid="uid://dv5twmmnf0d62" path="res://BubbleGame/2D/Resources/Prefabs/Tree-2.tscn" id="8_2l1qa"]
+[ext_resource type="PackedScene" uid="uid://b0ffhomm52x3y" path="res://BubbleGame/2D/Resources/Prefabs/Tree-3.tscn" id="9_rl086"]
+[ext_resource type="PackedScene" uid="uid://q5xyullvs1mc" path="res://BubbleGame/2D/Resources/Prefabs/rock-1.tscn" id="10_k8p5m"]
+[ext_resource type="PackedScene" uid="uid://cy2ii3b76aj4g" path="res://BubbleGame/2D/Resources/Prefabs/rock-2.tscn" id="11_y45na"]
+[ext_resource type="PackedScene" uid="uid://egv3vjfw0mrs" path="res://BubbleGame/2D/Resources/Prefabs/rock-3.tscn" id="12_v2xmh"]
+[ext_resource type="PackedScene" uid="uid://bx2jow18jl55q" path="res://BubbleGame/2D/Resources/Prefabs/rock-4.tscn" id="13_xk2jf"]
+
+[node name="Bubble2D" type="Node"]
+script = ExtResource("1_ki77s")
+
+[node name="GUI Layer" type="CanvasLayer" parent="."]
+
+[node name="Soap Progress Bar" type="TextureProgressBar" parent="GUI Layer" node_paths=PackedStringArray("GameManager")]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 20.0
+offset_right = 300.0
+offset_bottom = 80.0
+grow_horizontal = 2
+max_value = 11.0
+step = 0.01
+texture_under = ExtResource("2_mmc8a")
+texture_progress = ExtResource("3_hhlf1")
+script = ExtResource("4_idnyp")
+GameManager = NodePath("../..")
+
+[node name="Player" parent="." instance=ExtResource("5_iogq5")]
+
+[node name="CharacterBody2D" parent="Player" index="0" node_paths=PackedStringArray("GameManager")]
+GameManager = NodePath("../..")
+
+[node name="Area2D" parent="Player/CharacterBody2D" index="3" node_paths=PackedStringArray("GameManager")]
+GameManager = NodePath("../../..")
+
+[node name="Camera" type="Camera2D" parent="." node_paths=PackedStringArray("Trail")]
+position = Vector2(325, 184)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+script = ExtResource("7_cy4kp")
+Trail = NodePath("../Player/BubbleTrail")
+DezoomSpeed = 0.9
+
+[node name="Obstacle" parent="." instance=ExtResource("7_ct0ym")]
+position = Vector2(876, -216)
+
+[node name="Obstacle2" parent="." instance=ExtResource("8_2l1qa")]
+position = Vector2(308, 363)
+
+[node name="Obstacle3" parent="." instance=ExtResource("9_rl086")]
+position = Vector2(-619, -384)
+
+[node name="Obstacle4" parent="." instance=ExtResource("10_k8p5m")]
+position = Vector2(479, -634)
+
+[node name="Obstacle5" parent="." instance=ExtResource("11_y45na")]
+position = Vector2(1311, 824)
+
+[node name="Obstacle6" parent="." instance=ExtResource("12_v2xmh")]
+position = Vector2(587, 550)
+
+[node name="Obstacle7" parent="." instance=ExtResource("13_xk2jf")]
+position = Vector2(-741, 652)
+
+[editable path="Player"]

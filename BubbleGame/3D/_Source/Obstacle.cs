@@ -1,60 +1,59 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+using static Godot.TextServer;
 
 namespace BubbleGame._3D
 {
 	public partial class Obstacle : Node3D
 	{
-		struct ObstacleData
-		{
-			public float speed;
-			public float time;
-		}
+        // Step 1: Define a delegate type
+        public delegate void OnObstacleDestroyedEvent(Obstacle obstacle);
 
-		private List<ObstacleData> _obstacles = new()
-		{
-			new ObstacleData { speed = 1, time = 0 },
-			new ObstacleData { speed = 2, time = 5 },
-			new ObstacleData { speed = 3, time = 10 },
-		};
+        // Step 2: Declare an event using the delegate
+        public event OnObstacleDestroyedEvent ObstacleDestroyedEventHandler;
 
-		private List<(int, int)[]> _waves = new()
-		{
-			new (int, int)[] { (0, 5), (1, 2), (2, 3) },
-			new (int, int)[] { (0, 1), (1, 0), (2, 0) },
-		};
+        [Export] private Area3D _colliderArea;
 
-		[Export] private PackedScene _enemyScene;
+        private ObstacleData _data;
+        private float _timeSinceSpawn = 0;
+        private Vector3 _moveDirection = Vector3.Zero;
 
-		private List<int> _waveData = new();
-		private int _currentWavePosition;
+        public override void _Ready()
+        {
+            LookAt(Vector3.Back, Vector3.Up);
+        }
 
-		// Called when the node enters the scene tree for the first time.
-		public override void _Ready()
-		{
-		}
-
-		// Called every frame. 'delta' is the elapsed time since the previous frame.
 		public override void _Process(double delta)
 		{
-
-
-		}
-
-		private void StartWave(int waveIndex)
-		{
-			_waveData.Clear();
-			foreach ((int type, int count) in _waves[waveIndex])
+			// Move obstacle when time for moving is reached
+			if (_timeSinceSpawn >= _data.timeUntilMoving)
 			{
-				for (int i = 0; i < count; i++)
-				{
-					_waveData.Add(type);
+                _moveDirection = Vector3.Forward;
+                Translate(_moveDirection * _data.speed * (float)delta);
+            }
 
-				}
-			}
+            _timeSinceSpawn += (float)delta;
 
-			_currentWavePosition = 0;
-		}
-	}
+        }
+
+        public override void _ExitTree()
+        {
+            ObstacleDestroyedEventHandler?.Invoke(this);
+        }
+
+        public void Initialize(ObstacleData obstacleData)
+		{
+			_data = obstacleData;
+        }
+
+        private void OnAreaEntered(Area3D area)
+        {
+            if (area.IsInGroup("despawner"))
+            {
+                this.GetParent().CallDeferred(MethodName.RemoveChild, this);
+                this.QueueFree();
+            }
+        }
+    }
 }

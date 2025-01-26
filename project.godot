@@ -39,11 +39,12 @@ config/icon="res://BubbleGame/Common/Resources/icon.svg"
 
 Bootstrap="*res://BubbleGame/Common/Resources/_Scenes/Bootstrap/Bootstrap.tscn"
 FmodManager="*res://addons/fmod/FmodManager.gd"
+SoapBarManager="*res://BubbleGame/2D/Resources/_Scripts/SoapBarManager.gd"
 
 [display]
 
-window/size/viewport_width=960
-window/size/viewport_height=540
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [dotnet]
 
@@ -58,7 +59,6 @@ enabled=PackedStringArray("res://addons/fmod/plugin.cfg")
 folder_colors={
 "res://BubbleGame/2D/Art/": "purple",
 "res://BubbleGame/2D/Resources/": "orange",
-"res://BubbleGame/2D/Sound/": "yellow",
 "res://BubbleGame/2D/_Source/": "green",
 "res://BubbleGame/3D/Art/": "purple",
 "res://BubbleGame/3D/Resources/": "orange",
@@ -69,6 +69,10 @@ folder_colors={
 "res://BubbleGame/Common/Sound/": "yellow",
 "res://BubbleGame/Common/_Source/": "green"
 }
+
+[filesystem]
+
+import/blender/enabled=false
 
 [input]
 
