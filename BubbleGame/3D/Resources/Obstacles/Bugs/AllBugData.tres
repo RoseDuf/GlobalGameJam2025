@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="BugData" load_steps=7 format=3 uid="uid://cbdgpbbfac5u4"]
 
-[ext_resource type="PackedScene" path="res://BubbleGame/3D/Resources/Obstacles/BugTest1.tscn" id="1_fjfc8"]
+[ext_resource type="PackedScene" uid="uid://mgmospjkkqm8" path="res://BubbleGame/3D/Resources/Obstacles/BugTest1.tscn" id="1_fjfc8"]
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Obstacles/ObstacleData.cs" id="2_akuva"]
 [ext_resource type="PackedScene" uid="uid://cy4k1fywfqmwu" path="res://BubbleGame/3D/Resources/Obstacles/BugTest2.tscn" id="3_2xhne"]
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Obstacles/BugData.cs" id="3_uaoaq"]

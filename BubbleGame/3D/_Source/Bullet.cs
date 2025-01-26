@@ -36,14 +36,11 @@ namespace BubbleGame._3D
 		{
 			if (area.Name != "PlayerArea3D" && area.Name != "Despawner")
 			{
-				GD.Print(area.Name);
 				if (area.Name == "ObstacleArea3D")
 				{
 					Node other = area.GetParent();
 
 					Obstacle obstacle = other as Obstacle;
-
-					GD.Print($"Obstacle health: {obstacle.data.health}");
 
 					if (obstacle.data.health == 0)
 					{
