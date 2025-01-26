@@ -34,6 +34,9 @@ GameManager = NodePath("../..")
 [node name="CharacterBody2D" parent="Player" index="0" node_paths=PackedStringArray("GameManager")]
 GameManager = NodePath("../..")
 
+[node name="WandFront" parent="Player/CharacterBody2D" index="1"]
+texture = null
+
 [node name="Area2D" parent="Player/CharacterBody2D" index="3" node_paths=PackedStringArray("GameManager")]
 GameManager = NodePath("../../..")
 
