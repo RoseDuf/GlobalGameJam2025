@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bddasn5pebfva"]
 
-[ext_resource type="Script" path="res://BubbleGame/3D/Resources/_Scenes/Bubble3D.cs" id="1_ngrq7"]
+[ext_resource type="PackedScene" uid="uid://nxwvmt24pe5h" path="res://BubbleGame/3D/Resources/gui_3d.tscn" id="1_0kqq2"]
 [ext_resource type="PackedScene" uid="uid://b5gucax43h73" path="res://BubbleGame/3D/Resources/player.tscn" id="2_shqa5"]
 [ext_resource type="PackedScene" uid="uid://cpwar8fyqpc55" path="res://BubbleGame/3D/Resources/Obstacles/Despawner.tscn" id="5_gvexs"]
 [ext_resource type="PackedScene" uid="uid://b035j4rxrryei" path="res://BubbleGame/3D/Resources/Obstacles/ObstacleSpawner.tscn" id="6_xfw0p"]
@@ -10,7 +10,8 @@
 [sub_resource type="Environment" id="Environment_xyxs8"]
 
 [node name="Bubble3D" type="Node"]
-script = ExtResource("1_ngrq7")
+
+[node name="GUI-3D" parent="." instance=ExtResource("1_0kqq2")]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2, -13.615)
@@ -38,4 +39,5 @@ transform = Transform3D(31.9719, 0, 0, 0, 25.0914, 0, 0, 0, 1, 0, 0, -14.0146)
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 18.403)
 _obstacleScene = ExtResource("6_ynck0")
 
+[editable path="GUI-3D"]
 [editable path="Actors/Player"]
