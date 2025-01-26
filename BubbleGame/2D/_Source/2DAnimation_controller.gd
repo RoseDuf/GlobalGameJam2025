@@ -12,5 +12,8 @@ func _process(delta):
 	pass
 
 func on_player_death():
-	play("Hurt")
+	if GameManager.RemainingSoapTime >= 0:
+		play("Hurt")
+	else:
+		play("Win")
 	pass
