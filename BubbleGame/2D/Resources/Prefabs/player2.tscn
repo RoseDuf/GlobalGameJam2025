@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dvn4l35vstqj0"]
+[gd_scene load_steps=35 format=3 uid="uid://dvn4l35vstqj0"]
 
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/PlayerMovement.gd" id="1_5j78x"]
 [ext_resource type="Texture2D" uid="uid://c6ynir2hhqi8e" path="res://BubbleGame/2D/Art/Character/RunningFront/001.png" id="2_3cw23"]
@@ -16,8 +16,12 @@
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/WandHitbox.gd" id="9_0phpe"]
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/BubbleTrail.gd" id="10_76roa"]
 [ext_resource type="Material" uid="uid://dqcphfypa1nae" path="res://BubbleGame/2D/Art/BubbleShader/Buble_2d.tres" id="10_rng4n"]
+[ext_resource type="Texture2D" uid="uid://daroip6cg24eh" path="res://BubbleGame/2D/Art/Character/Win/Victory_Pose 001.png" id="13_hwhlv"]
 [ext_resource type="Script" path="res://BubbleGame/2D/_Source/2DAnimation_controller.gd" id="13_u0aj1"]
+[ext_resource type="Texture2D" uid="uid://bckatpnsraqy2" path="res://BubbleGame/2D/Art/Character/Win/Victory_Pose 002.png" id="14_6pyx7"]
 [ext_resource type="Script" path="res://BubbleGame/2D/_Source/disableOnDeath.gd" id="15_76heo"]
+[ext_resource type="Texture2D" uid="uid://df7yukf7oln6h" path="res://BubbleGame/2D/Art/Character/Win/Victory_Pose 003.png" id="15_aytkq"]
+[ext_resource type="Texture2D" uid="uid://5u3yeq2ghy07" path="res://BubbleGame/2D/Art/Character/Win/Victory_Pose 004.png" id="16_o6mqy"]
 [ext_resource type="Shader" path="res://BubbleGame/2D/Art/BubbleShader/Bubble_Shader_2D.gdshader" id="17_q7ndn"]
 [ext_resource type="Texture2D" uid="uid://q7foh2jnhhae" path="res://BubbleGame/2D/Art/Textures/bubble_dir.png" id="18_mlfo8"]
 [ext_resource type="Texture2D" uid="uid://b3a3tl8bnn2jx" path="res://BubbleGame/2D/Art/Textures/bubble_mask.png" id="19_v251p"]
@@ -69,6 +73,23 @@ animations = [{
 "loop": true,
 "name": &"RunningFront",
 "speed": 12.0
+}, {
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("13_hwhlv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_6pyx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_aytkq")
+}, {
+"duration": 10.0,
+"texture": ExtResource("16_o6mqy")
+}],
+"loop": false,
+"name": &"Win",
+"speed": 3.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dte2h"]
@@ -120,7 +141,7 @@ CharacterWand = NodePath("WandFront")
 position = Vector2(-8, -59)
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_nxp7r")
-animation = &"Hurt"
+animation = &"Win"
 autoplay = "RunningFront"
 script = ExtResource("13_u0aj1")
 
