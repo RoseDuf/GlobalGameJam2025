@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{b8038e18-3cfb-4259-9d17-18a889b343c8}">
+	<object class="AudioFile" id="{8c3a4171-1bbf-40a5-b937-449d6b57518e}">
 		<property name="assetPath">
-			<value>SFX/Bubbles/2D_Footstep_Walk_Grass_5.wav</value>
+			<value>SFX/2D/RAW/2D_Footstep_Walk_Grass_5.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>96</value>

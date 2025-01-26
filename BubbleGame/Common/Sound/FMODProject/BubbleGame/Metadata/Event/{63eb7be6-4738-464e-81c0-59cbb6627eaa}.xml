@@ -375,8 +375,11 @@
 		</property>
 	</object>
 	<object class="SpatialiserEffect" id="{c1b44295-806a-4d5f-ba72-e76424118cf0}">
+		<property name="extentMode">
+			<value>1</value>
+		</property>
 		<property name="soundSize">
-			<value>0.300000012</value>
+			<value>0.5</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{20e45f64-6d2e-4fcf-8556-6b9a72ea112c}">

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{b78a18fa-59e7-46f4-812d-3180325c5a54}">
+		<property name="name">
+			<value>HasToBecome3D</value>
+		</property>
+		<relationship name="folder">
+			<destination>{fc4d84cc-3449-4384-aec5-203627bea1f8}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{61845822-d2b8-438e-8ee6-4ea8d77065b4}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{61845822-d2b8-438e-8ee6-4ea8d77065b4}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>False</value>
+			<value>True</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
