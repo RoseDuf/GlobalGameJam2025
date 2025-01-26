@@ -16,6 +16,9 @@ script = ExtResource("1_3dlvb")
 [node name="CharacterBody2D" parent="Player" index="1" node_paths=PackedStringArray("GameManager")]
 GameManager = NodePath("../..")
 
+[node name="Area2D" parent="Player/CharacterBody2D" index="2" node_paths=PackedStringArray("GameManager")]
+GameManager = NodePath("../../..")
+
 [node name="Obstacle" parent="." instance=ExtResource("5_ybu7b")]
 
 [node name="Obstacle2" parent="." instance=ExtResource("5_ybu7b")]

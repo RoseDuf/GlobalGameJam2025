@@ -89,18 +89,18 @@ namespace BubbleGame._3D
 			}
 
 			Vector3 adjustment = _cursorMovement * moveSpeed * (float)delta;
-			playerCursor.Position += adjustment;
+			playerCursor.GlobalPosition += adjustment;
 
 			Plane playerPlane = new Plane(Vector3.Forward, player.Position);
 			Vector3 projectedPoint = playerPlane.Project(playerCursor.Position);
 			Vector3 playerMovement = projectedPoint - player.Position;
 			playerMovement.Z = 0;
 
-			Vector3 desiredPosition = player.Position + playerMovement;
+			Vector3 desiredPosition = player.GlobalPosition + playerMovement;
 
-			player.Position = player.Position.Lerp(desiredPosition, lerpSpeed * (float)delta);
+			player.GlobalPosition = player.GlobalPosition.Lerp(desiredPosition, lerpSpeed * (float)delta);
 
-			player.LookAt(playerCursor.Position);
+			player.LookAt(playerCursor.GlobalPosition);
 
 			_accumulatedCursorMovement += _cursorMovement;
 		}
