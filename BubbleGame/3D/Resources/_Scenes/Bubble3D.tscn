@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bddasn5pebfva"]
+[gd_scene load_steps=15 format=3 uid="uid://bddasn5pebfva"]
 
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/Player.cs" id="1_8n07s"]
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/PlayerMovement.cs" id="2_02mne"]
@@ -9,6 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://b035j4rxrryei" path="res://BubbleGame/3D/Resources/Obstacles/ObstacleSpawner.tscn" id="6_xfw0p"]
 [ext_resource type="PackedScene" uid="uid://dwghalcje8h0q" path="res://BubbleGame/3D/Resources/Obstacles/DefaultObstacle.tscn" id="6_ynck0"]
 [ext_resource type="PackedScene" uid="uid://b61b1b065mmhk" path="res://BubbleGame/3D/Art/Scenes/BubbleTunnel.tscn" id="7_hkl0d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jfk08"]
+size = Vector3(1, 0.25, 1)
 
 [sub_resource type="PrismMesh" id="PrismMesh_7hgvn"]
 
@@ -50,6 +53,11 @@ speed = 32.0
 _playerCursor = NodePath("../../Cursor3D")
 _bulletNode = ExtResource("4_vu1xa")
 
+[node name="Area3D" type="Area3D" parent="Actors/Player/Player3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Actors/Player/Player3D/Area3D"]
+shape = SubResource("BoxShape3D_jfk08")
+
 [node name="Visuals" type="Node3D" parent="Actors/Player/Player3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
@@ -83,3 +91,5 @@ transform = Transform3D(31.9719, 0, 0, 0, 25.0914, 0, 0, 0, 1, 0, 0, -14.0146)
 [node name="ObstacleSpawner" parent="." instance=ExtResource("6_xfw0p")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 18.403)
 _obstacleScene = ExtResource("6_ynck0")
+
+[connection signal="area_entered" from="Actors/Player/Player3D/Area3D" to="Actors/Player/Player3D" method="Area3D_AreaEntered"]

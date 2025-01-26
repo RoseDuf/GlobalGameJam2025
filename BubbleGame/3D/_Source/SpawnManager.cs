@@ -12,30 +12,7 @@ namespace BubbleGame._3D
     */
     public partial class SpawnManager : Node
     {
-        private List<Obstacle.ObstacleData> _obstacles = new()
-        {
-            new Obstacle.ObstacleData { speed = 3, timeUntilMoving = 1 },
-            new Obstacle.ObstacleData { speed = 2, timeUntilMoving = 2 },
-            new Obstacle.ObstacleData { speed = 3, timeUntilMoving = 0 },
-        };
-
-        struct WaveData
-        {
-            public int timeUntilWaveStarts; // Time it will take for this wave to start (starting from the last one)
-            public List<(int, int)> obstacles; // first int is obstacle type, second is how many of that type
-
-            public WaveData(int _timeUntilWaveStarts, List<(int, int)> _obstacles)
-            {
-                timeUntilWaveStarts = _timeUntilWaveStarts;
-                obstacles = _obstacles;
-            }
-        } 
-
-        private List<WaveData> _waves = new List<WaveData>
-        {
-            new WaveData(1, new List<(int, int)>{ (0, 1) }),
-            new WaveData(2, new List<(int, int)>{(0, 1), (1, 10), (2, 0) }),
-        };
+        [Export] private WaveData[] _waves;
 
         [Export] private PackedScene _obstacleScene;
         [Export] private Timer _obstacleSpawnTimer;
@@ -46,7 +23,7 @@ namespace BubbleGame._3D
 
         public override void _Ready()
         {
-            if (_waves.Count > 0)
+            if (_waves != null && _waves.Length > 0)
             {
                 StartNewWave(0);
             }
@@ -58,7 +35,7 @@ namespace BubbleGame._3D
 
         private void StartNewWave(int waveIndex)
         {
-            if (_currentWaveIndex >= _waves.Count)
+            if (_waves == null || _currentWaveIndex >= _waves.Length)
             {
                 return;
             }
@@ -72,21 +49,18 @@ namespace BubbleGame._3D
             _obstacleSpawnTimer.Stop();
 
             WaveData currentWave = _waves[_currentWaveIndex];
-            foreach ((int listIndex, int count) in currentWave.obstacles)
+            foreach (ObstaclesToSpawn obstacleToSpawn in currentWave.obstacles)
             {
-                for (int i = 0; i < count; i++)
+                for (int i = 0; i < obstacleToSpawn.numberToSpawn; i++)
                 {
-                    if (_obstacles.Count > i)
-                    {
-                        SpawnObstacleFromList(listIndex);
-                    }
+                    SpawnObstacleFromList(obstacleToSpawn);
                 }
             }
         }
 
-        private void SpawnObstacleFromList(int listIndex)
+        private void SpawnObstacleFromList(ObstaclesToSpawn obstacleToSpawn)
         {
-            Obstacle.ObstacleData obstacleData = _obstacles[listIndex];
+            ObstacleData obstacleData = obstacleToSpawn.obstacleData;
 
             Obstacle obstacle = _obstacleScene.Instantiate<Obstacle>();
             obstacle.Initialize(obstacleData);
@@ -103,17 +77,12 @@ namespace BubbleGame._3D
             {
                 obstacle.ObstacleDestroyedEventHandler -= OnObstacleDestroyedEvent;
                 _currentObstacles.Remove(obstacle);
-                CallDeferred(MethodName.RemoveChild, obstacle);
-                obstacle.QueueFree();
             }
-            else
-            {
-                if (_waves.Count > _currentWaveIndex)
-                {
-                    StartNewWave(_currentWaveIndex);
 
-                    _currentWaveIndex++;
-                }
+            if (_currentObstacles.Count == 0 && _waves != null && _waves.Length > _currentWaveIndex)
+            {
+                _currentWaveIndex++;
+                StartNewWave(_currentWaveIndex);
             }
         }
     }
