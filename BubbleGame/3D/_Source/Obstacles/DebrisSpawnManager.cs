@@ -12,22 +12,36 @@ namespace BubbleGame._3D
     */
     public partial class DebrisSpawnManager : Node
     {
-        [Export] public ObstacleData obstacleData;
-
-        [Export] private Timer _obstacleSpawnTimer;
+        [Export] public ObstacleData[] obstacleData;
+        [Export(PropertyHint.Range, "0.0, 5.0")] private float _spawnDelayRangeMin;
+        [Export(PropertyHint.Range, "0.0, 5.0")] private float _spawnDelayRangeMax;
+        [Export(PropertyHint.Range, "0.0, 5.0")] private int _spawnAmountRangeMin;
+        [Export(PropertyHint.Range, "0.0, 5.0")] private int _spawnAmountRangeMax;
 
         private int _currentWaveIndex;
-
-        private List<Obstacle> _currentObstacles = new();
 
         private float _timeToStopWave = 0;
         private float _timer = 0;
         private bool _canSpawn = false;
 
+        private float _spawnDelayTime = 0;
+        private float _randomTimer = 0;
+        private RandomNumberGenerator _randomNumberGenerator;
+
         public void StartDebrisWave(float timeToStopWave)
         {
             _timeToStopWave = timeToStopWave;
             _canSpawn = true;
+        }
+
+        public void StopDebrisWave()
+        {
+            _timeToStopWave = 0;
+            _canSpawn = false;
+        }
+        public override void _Ready()
+        {
+            _randomNumberGenerator = new RandomNumberGenerator();
         }
 
         public override void _Process(double delta)
@@ -36,65 +50,40 @@ namespace BubbleGame._3D
             {
                 _timer += (float)delta;
 
-                if (_timer < _timeToStopWave)
+                if (_timer > _timeToStopWave)
                 {
                     _timer = 0;
                     _canSpawn = false;
                 }
-            }
-        }
-
-        private void StartNewWave(int waveIndex)
-        {
-            if (_waves == null || _currentWaveIndex >= _waves.Length)
-            {
-                return;
-            }
-
-            _obstacleSpawnTimer.WaitTime = _waves[_currentWaveIndex].timeUntilWaveStarts;
-            _obstacleSpawnTimer.Start();
-        }
-
-        private void OnSpawnObstacles()
-        {
-            _obstacleSpawnTimer.Stop();
-
-            WaveData currentWave = _waves[_currentWaveIndex];
-            foreach (ObstaclesToSpawn obstacleToSpawn in currentWave.obstacles)
-            {
-                for (int i = 0; i < obstacleToSpawn.numberToSpawn; i++)
+                else
                 {
-                    SpawnObstacleFromList(obstacleToSpawn);
+                    _randomTimer += (float)delta;
+
+                    if (_randomTimer > _spawnDelayTime)
+                    {
+                        ObstaclesToSpawn newObstaclesToSpawn = new ObstaclesToSpawn();
+                        newObstaclesToSpawn.numberToSpawn = _randomNumberGenerator.RandiRange(_spawnAmountRangeMin, _spawnAmountRangeMax);
+                        if (obstacleData != null && obstacleData.Length > 0)
+                        {
+                            int obstacleIndex = _randomNumberGenerator.RandiRange(0, obstacleData.Length);
+                            newObstaclesToSpawn.obstacleData = obstacleData[obstacleIndex];
+                        }
+                        SpawnObstacle(newObstaclesToSpawn);
+
+                        _spawnDelayTime = _randomNumberGenerator.RandfRange(_spawnDelayRangeMin, _spawnDelayRangeMax);
+                        _randomTimer = 0;
+                    }
                 }
             }
         }
 
-        private void SpawnObstacleFromList(ObstaclesToSpawn obstacleToSpawn)
+        private void SpawnObstacle(ObstaclesToSpawn obstacleToSpawn)
         {
             ObstacleData obstacleData = obstacleToSpawn.obstacleData;
 
             Obstacle obstacle = obstacleData.obstacleScene.Instantiate<Obstacle>();
             obstacle.Initialize(obstacleData);
             this.AddChild(obstacle);
-
-            _currentObstacles.Add(obstacle);
-
-            obstacle.ObstacleDestroyedEventHandler += OnObstacleDestroyedEvent;
-        }
-
-        private void OnObstacleDestroyedEvent(Obstacle obstacle)
-        {
-            if (_currentObstacles.Count > 0)
-            {
-                obstacle.ObstacleDestroyedEventHandler -= OnObstacleDestroyedEvent;
-                _currentObstacles.Remove(obstacle);
-            }
-
-            if (_currentObstacles.Count == 0 && _waves != null && _waves.Length > _currentWaveIndex)
-            {
-                _currentWaveIndex++;
-                StartNewWave(_currentWaveIndex);
-            }
         }
     }
 }

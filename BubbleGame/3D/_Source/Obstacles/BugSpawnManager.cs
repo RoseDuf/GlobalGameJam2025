@@ -12,7 +12,7 @@ namespace BubbleGame._3D
     */
     public partial class BugSpawnManager : Node
     {
-        [Export] private WaveData[] _waves;
+        [Export] public WaveData[] waves;
         [Export] private Timer _obstacleSpawnTimer;
 
         public delegate void OnBugWaveStart();
@@ -27,9 +27,9 @@ namespace BubbleGame._3D
 
         public override void _Ready()
         {
-            if (_waves != null && _waves.Length > 0)
+            if (waves != null && waves.Length > 0)
             {
-                StartNewWave(0);
+                StartTimerForNextWave(0);
             }
         }
 
@@ -37,14 +37,14 @@ namespace BubbleGame._3D
         {
         }
 
-        private void StartNewWave(int waveIndex)
+        private void StartTimerForNextWave(int waveIndex)
         {
-            if (_waves == null || _currentWaveIndex >= _waves.Length)
+            if (waves == null || _currentWaveIndex >= waves.Length)
             {
                 return;
             }
 
-            _obstacleSpawnTimer.WaitTime = _waves[_currentWaveIndex].timeUntilWaveStarts;
+            _obstacleSpawnTimer.WaitTime = waves[_currentWaveIndex].timeUntilWaveStarts;
             _obstacleSpawnTimer.Start();
         }
 
@@ -52,17 +52,17 @@ namespace BubbleGame._3D
         {
             _obstacleSpawnTimer.Stop();
 
-            WaveData currentWave = _waves[_currentWaveIndex];
+            WaveData currentWave = waves[_currentWaveIndex];
             foreach (ObstaclesToSpawn obstacleToSpawn in currentWave.obstacles)
             {
                 for (int i = 0; i < obstacleToSpawn.numberToSpawn; i++)
                 {
-                    SpawnObstacleFromList(obstacleToSpawn);
+                    SpawnObstacle(obstacleToSpawn);
                 }
             }
         }
 
-        private void SpawnObstacleFromList(ObstaclesToSpawn obstacleToSpawn)
+        private void SpawnObstacle(ObstaclesToSpawn obstacleToSpawn)
         {
             ObstacleData obstacleData = obstacleToSpawn.obstacleData;
 
@@ -83,10 +83,10 @@ namespace BubbleGame._3D
                 _currentObstacles.Remove(obstacle);
             }
 
-            if (_currentObstacles.Count == 0 && _waves != null && _waves.Length > _currentWaveIndex)
+            if (_currentObstacles.Count == 0 && waves != null && waves.Length > _currentWaveIndex)
             {
                 _currentWaveIndex++;
-                StartNewWave(_currentWaveIndex);
+                StartTimerForNextWave(_currentWaveIndex);
             }
         }
     }

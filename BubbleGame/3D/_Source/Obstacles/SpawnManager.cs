@@ -21,7 +21,11 @@ namespace BubbleGame._3D
         {
             bugSpawnManager.BugWaveStartHandler += OnBugWaveStart;
             bugSpawnManager.BugWaveEndHandler += OnBugWaveEnd;
-            
+
+            if (bugSpawnManager.waves != null || bugSpawnManager.waves.Length > 0)
+            {
+                debrisSpawnManager.StartDebrisWave(bugSpawnManager.waves[0].timeUntilWaveStarts - _delayBetweenWaves);
+            }
         }
         public override void _ExitTree()
         {
@@ -31,6 +35,7 @@ namespace BubbleGame._3D
 
         private void OnBugWaveStart()
         {
+            debrisSpawnManager.StopDebrisWave();
         }
 
         private void OnBugWaveEnd(float TimeForNextWave)
