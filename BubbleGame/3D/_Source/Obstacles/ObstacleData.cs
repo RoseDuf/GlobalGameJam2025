@@ -13,5 +13,6 @@ namespace BubbleGame._3D
         [Export] public PackedScene obstacleScene;
         [Export] public float speed;
         [Export] public float frontOfPlayerTime;
-    }
+		[Export] public int health = 1;
+	}
 }

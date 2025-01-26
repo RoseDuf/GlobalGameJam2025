@@ -12,10 +12,10 @@ namespace BubbleGame._3D
 
         [Export] private Area3D _colliderArea;
 
-        [Export]
-        public int health = 1;
-
         private ObstacleData _data;
+
+        public ObstacleData data => _data;
+
         private float _timeSinceSpawn = 0;
         private Vector3 _moveDirection = Vector3.Zero;
 

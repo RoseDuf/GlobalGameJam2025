@@ -36,14 +36,14 @@ namespace BubbleGame._3D
 
 					Obstacle obstacle = other.GetScript().As<Obstacle>();
 
-					if (obstacle.health == 0)
+					if (obstacle.data.health == 0)
 					{
 						GetTree().CurrentScene.CallDeferred(MethodName.RemoveChild, other);
 						other.QueueFree();
 					}
-					else if (obstacle.health > 0)
+					else if (obstacle.data.health > 0)
 					{
-						obstacle.health--;
+						obstacle.data.health--;
 					}
 				}
 
