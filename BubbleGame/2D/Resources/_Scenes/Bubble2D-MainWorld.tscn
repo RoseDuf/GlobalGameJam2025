@@ -6,14 +6,14 @@
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/SoapBarMeter.gd" id="4_tyop4"]
 [ext_resource type="PackedScene" uid="uid://bqjdygfsmbxya" path="res://BubbleGame/2D/Resources/Prefabs/player.tscn" id="5_vjnj5"]
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/2DCamera.gd" id="7_bgt82"]
-[ext_resource type="PackedScene" path="res://BubbleGame/2D/Resources/Prefabs/Tree-1.tscn" id="7_pbjam"]
-[ext_resource type="PackedScene" path="res://BubbleGame/2D/Resources/Prefabs/Tree-2.tscn" id="8_t88bx"]
-[ext_resource type="PackedScene" uid="uid://b0ffhomm52x3y" path="res://BubbleGame/2D/Resources/Prefabs/Tree-3.tscn" id="9_n5sno"]
-[ext_resource type="PackedScene" path="res://BubbleGame/2D/Resources/Prefabs/rock-1.tscn" id="10_epjys"]
-[ext_resource type="PackedScene" path="res://BubbleGame/2D/Resources/Prefabs/rock-2.tscn" id="11_34m0w"]
-[ext_resource type="PackedScene" path="res://BubbleGame/2D/Resources/Prefabs/rock-3.tscn" id="12_ercq4"]
-[ext_resource type="PackedScene" path="res://BubbleGame/2D/Resources/Prefabs/rock-4.tscn" id="13_5bshv"]
-[ext_resource type="PackedScene" path="res://BubbleGame/2D/Resources/Prefabs/enemy.tscn" id="14_2depf"]
+[ext_resource type="PackedScene" uid="uid://cwnvhrof5f2xb" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/Tree-1.tscn" id="7_pbjam"]
+[ext_resource type="PackedScene" uid="uid://dv5twmmnf0d62" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/Tree-2.tscn" id="8_t88bx"]
+[ext_resource type="PackedScene" uid="uid://b0ffhomm52x3y" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/Tree-3.tscn" id="9_n5sno"]
+[ext_resource type="PackedScene" uid="uid://q5xyullvs1mc" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/rock-1.tscn" id="10_epjys"]
+[ext_resource type="PackedScene" uid="uid://cy2ii3b76aj4g" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/rock-2.tscn" id="11_34m0w"]
+[ext_resource type="PackedScene" uid="uid://egv3vjfw0mrs" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/rock-3.tscn" id="12_ercq4"]
+[ext_resource type="PackedScene" uid="uid://bx2jow18jl55q" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/rock-4.tscn" id="13_5bshv"]
+[ext_resource type="PackedScene" uid="uid://cww8xpy7y6xet" path="res://BubbleGame/2D/Resources/Prefabs/enemies/enemy.tscn" id="14_2depf"]
 
 [node name="Bubble2D" type="Node"]
 script = ExtResource("1_rkm85")
@@ -233,7 +233,6 @@ position = Vector2(447, -253)
 [node name="Audio" type="Node2D" parent="."]
 
 [node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="Audio"]
-event_name = "event:/2D/AMB"
 event_guid = "{ecb95390-f078-4b0a-8007-7722bd635b56}"
 autoplay = true
 
