@@ -44,7 +44,7 @@ func PrepareNextPhase() -> void:
 	
 func LoadNextLevel() -> void:
 	playerDeath.emit()
-	var timer:SceneTreeTimer = get_tree().create_timer(3)
+	var timer:SceneTreeTimer = get_tree().create_timer(2.5)
 	timer.timeout.connect(_on_timer_timeout)  
 
 	

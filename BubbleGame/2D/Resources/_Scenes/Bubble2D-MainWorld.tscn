@@ -1,7 +1,7 @@
 [gd_scene load_steps=32 format=3 uid="uid://42lb31xtstgk"]
 
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/GameManager2D.gd" id="1_rkm85"]
-[ext_resource type="PackedScene" uid="uid://3rnckv0e0dm7" path="res://BubbleGame/2D/Resources/Prefabs/player2.tscn" id="4_2nxv3"]
+[ext_resource type="PackedScene" uid="uid://dvn4l35vstqj0" path="res://BubbleGame/2D/Resources/Prefabs/player2.tscn" id="4_2nxv3"]
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/2DCamera.gd" id="7_bgt82"]
 [ext_resource type="PackedScene" uid="uid://cwnvhrof5f2xb" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/Tree-1.tscn" id="7_pbjam"]
 [ext_resource type="PackedScene" uid="uid://mrmgv3bmgfq1" path="res://BubbleGame/2D/Resources/Prefabs/enemies/enemy-mosquito.tscn" id="7_pdnlg"]
@@ -76,6 +76,12 @@ y_sort_enabled = true
 
 [node name="CharacterBody2D" parent="WorldHolder/Player2" index="0" node_paths=PackedStringArray("GameManager")]
 GameManager = NodePath("../../..")
+
+[node name="AnimatedSprite2D" parent="WorldHolder/Player2/CharacterBody2D" index="0" node_paths=PackedStringArray("GameManager")]
+GameManager = NodePath("../../../..")
+
+[node name="WandFront" parent="WorldHolder/Player2/CharacterBody2D" index="1" node_paths=PackedStringArray("GameManager")]
+GameManager = NodePath("../../../..")
 
 [node name="Area2D" parent="WorldHolder/Player2/CharacterBody2D" index="3" node_paths=PackedStringArray("GameManager")]
 GameManager = NodePath("../../../..")
