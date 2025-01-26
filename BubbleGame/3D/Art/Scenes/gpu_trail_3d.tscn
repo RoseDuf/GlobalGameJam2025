@@ -1,6 +1,55 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvq08l11m2cpa"]
+[gd_scene load_steps=8 format=3 uid="uid://dvq08l11m2cpa"]
 
-[ext_resource type="Material" uid="uid://dmveibvym3cnp" path="res://BubbleGame/2D/Art/BubbleShader/Bubble.tres" id="1_futwv"]
+[ext_resource type="Shader" path="res://BubbleGame/2D/Art/BubbleShader/Bubble.gdshader" id="1_yui8s"]
+[ext_resource type="Texture2D" uid="uid://bqxh1mn26ap32" path="res://BubbleGame/2D/Art/BubbleShader/BUBBLES_NORMALS_01.png" id="2_p345i"]
+
+[sub_resource type="Gradient" id="Gradient_6eoh3"]
+colors = PackedColorArray(1, 0.8705, 0.63, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_eyujs"]
+gradient = SubResource("Gradient_6eoh3")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cikkw"]
+render_priority = 0
+shader = ExtResource("1_yui8s")
+shader_parameter/albedo = Color(0.49184, 0.456142, 9.62615e-08, 1)
+shader_parameter/distortion = 0.1
+shader_parameter/spec_color = Color(0.659726, 0.607744, 0.617053, 1)
+shader_parameter/transparency = 1.0
+shader_parameter/metallic = 0.45
+shader_parameter/roughness = 0.05
+shader_parameter/max_visible_depth = 10.0
+shader_parameter/color_deep = Color(0, 0.1, 0.4, 1)
+shader_parameter/wave_move_direction_a = Vector2(-1, 0)
+shader_parameter/wave_move_direction_b = Vector2(0, 1)
+shader_parameter/wave_noise_scale_a = 15.0
+shader_parameter/wave_noise_scale_b = 15.0
+shader_parameter/wave_time_scale_a = 0.025
+shader_parameter/wave_time_scale_b = 0.025
+shader_parameter/wave_height_scale = 0.4
+shader_parameter/wave_normal_flatness = 16.0
+shader_parameter/surface_normals_move_direction_a = Vector2(-1, 0)
+shader_parameter/surface_normals_move_direction_b = Vector2(0, 1)
+shader_parameter/surface_texture_roughness = 0.6
+shader_parameter/surface_texture_scale = 0.3
+shader_parameter/surface_texture_time_scale = 0.06
+shader_parameter/ssr_resolution = 2.0
+shader_parameter/ssr_max_travel = 30.0
+shader_parameter/ssr_max_diff = 4.0
+shader_parameter/ssr_mix_strength = 0.7
+shader_parameter/ssr_screen_border_fadeout = 0.3
+shader_parameter/ssr_samples = 2
+shader_parameter/ssr_sample_radius = 0.2
+shader_parameter/refraction_intensity = 0.4
+shader_parameter/border_color = Color(1, 1, 1, 1)
+shader_parameter/border_scale = 2.0
+shader_parameter/border_near = 0.5
+shader_parameter/border_far = 300.0
+shader_parameter/lightDir = Vector3(-1, -1, -1)
+shader_parameter/cut_out_x = 0.0
+shader_parameter/cut_out_z = 0.0
+shader_parameter/colorRamp = SubResource("GradientTexture1D_eyujs")
+shader_parameter/normal_map = ExtResource("2_p345i")
 
 [sub_resource type="TorusMesh" id="TorusMesh_q7nwl"]
 
@@ -12,16 +61,16 @@ point_count = 3
 
 [node name="CPUParticles3D" type="CPUParticles3D" parent="."]
 transform = Transform3D(0.999982, 0, -0.00603876, 0, 1, 0, 0.00603876, 0, 0.999982, 0, 0, 0)
-material_override = ExtResource("1_futwv")
+material_override = SubResource("ShaderMaterial_cikkw")
 amount = 64
-lifetime = 0.5
+lifetime = 0.15
 speed_scale = 0.2
-lifetime_randomness = 0.1
+randomness = 0.13
 mesh = SubResource("TorusMesh_q7nwl")
 particle_flag_align_y = true
 direction = Vector3(0, 0, 1)
-spread = 0.0
-gravity = Vector3(0, 5, 0)
+spread = 2.0
+gravity = Vector3(0, 50, 0)
 initial_velocity_min = 10.0
 initial_velocity_max = 10.0
 scale_amount_min = 0.23

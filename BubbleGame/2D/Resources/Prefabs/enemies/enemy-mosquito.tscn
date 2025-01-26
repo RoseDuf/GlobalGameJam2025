@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://mrmgv3bmgfq1"]
+[gd_scene load_steps=10 format=3 uid="uid://mrmgv3bmgfq1"]
 
 [ext_resource type="Texture2D" uid="uid://c8nm26g12vjnn" path="res://BubbleGame/2D/Art/Enemies/Mosquito/Mosquito 001.png" id="1_at71c"]
+[ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/BugCollectible.gd" id="1_gkehv"]
 [ext_resource type="Texture2D" uid="uid://cg224sqrk0ofi" path="res://BubbleGame/2D/Art/Enemies/Mosquito/Mosquito 002.png" id="2_y0ahs"]
 [ext_resource type="Texture2D" uid="uid://rma7t6w1qlo6" path="res://BubbleGame/2D/Art/Enemies/Mosquito/Mosquito 003.png" id="3_wg7ij"]
 [ext_resource type="Texture2D" uid="uid://bb4r28w4vdqi3" path="res://BubbleGame/2D/Art/Enemies/Mosquito/Mosquito 004.png" id="4_dm4ms"]
@@ -26,13 +27,18 @@ frame_5/duration = 1.0
 size = Vector2(840, 820)
 
 [node name="Enemy" type="Node2D"]
+position = Vector2(0, -37)
+script = ExtResource("1_gkehv")
+BugType = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
 texture = SubResource("AnimatedTexture_ckee5")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+collision_layer = 4
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_d2syh")
-disabled = true

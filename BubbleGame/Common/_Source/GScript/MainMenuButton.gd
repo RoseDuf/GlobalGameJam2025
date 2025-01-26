@@ -11,4 +11,5 @@ func OnFocusEnter() -> void:
 	
 func OnPressed() -> void:
 	#SFX: Main menu UI Press sound
+	GlobalAudioManager.PlaySoundOneShot("event:/UI/UIClick")
 	pass

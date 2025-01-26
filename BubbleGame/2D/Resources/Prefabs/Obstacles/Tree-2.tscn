@@ -1,23 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://dv5twmmnf0d62"]
+[gd_scene load_steps=3 format=3 uid="uid://dv5twmmnf0d62"]
 
 [ext_resource type="Texture2D" uid="uid://cvydg110upjv3" path="res://BubbleGame/2D/Art/Obstacles/Tree 002.png" id="1_c7hkn"]
-[ext_resource type="PackedScene" uid="uid://datt0b3gao0lm" path="res://BubbleGame/2D/Resources/Prefabs/Environment/Flower Bundles/flower-pack.tscn" id="6_cjaa3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_57urs"]
 size = Vector2(190, 575)
 
 [node name="Obstacle" type="Sprite2D"]
-position = Vector2(747, -157)
+y_sort_enabled = true
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_c7hkn")
+offset = Vector2(0, -1000)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(5, 1642.5)
+position = Vector2(5, 525)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_57urs")
-
-[node name="EnvironmentArt5" parent="." instance=ExtResource("6_cjaa3")]
-show_behind_parent = true
-position = Vector2(-1430, 1355)
-scale = Vector2(6, 6)

@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cww8xpy7y6xet"]
+[gd_scene load_steps=8 format=3 uid="uid://cww8xpy7y6xet"]
 
+[ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/BugCollectible.gd" id="1_rey3v"]
 [ext_resource type="Texture2D" uid="uid://du3nujs12lxtr" path="res://BubbleGame/2D/Art/Enemies/Butterfly/Butterfly 001.png" id="1_yh5de"]
 [ext_resource type="Texture2D" uid="uid://bp84ymcsrm2rb" path="res://BubbleGame/2D/Art/Enemies/Butterfly/Butterfly 002.png" id="2_5q732"]
 [ext_resource type="Texture2D" uid="uid://cmluu6rgsspyf" path="res://BubbleGame/2D/Art/Enemies/Butterfly/Butterfly 003.png" id="3_bbeak"]
@@ -20,13 +21,17 @@ frame_3/duration = 1.0
 size = Vector2(840, 820)
 
 [node name="Enemy" type="Node2D"]
+position = Vector2(0, -59)
+script = ExtResource("1_rey3v")
+BugType = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.2, 0.2)
 texture = SubResource("AnimatedTexture_a5cy8")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+collision_layer = 4
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
 shape = SubResource("RectangleShape2D_d2syh")
-disabled = true
