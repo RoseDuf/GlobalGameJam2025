@@ -8,10 +8,8 @@ using System.Threading.Tasks;
 namespace BubbleGame._3D
 {
     [GlobalClass]
-    public partial class ObstacleData : Resource
+    public partial class DebrisData : Resource
     {
-        [Export] public PackedScene obstacleScene;
-        [Export] public float speed;
-        [Export] public float frontOfPlayerTime;
+        [Export] public ObstacleData[] debrisTypes;
     }
 }

@@ -12,6 +12,6 @@ namespace BubbleGame._3D
     public partial class ObstaclesToSpawn : Resource
     {
         [Export] public int numberToSpawn;
-        [Export] public ObstacleData obstacleData;
+        [Export] public int obstacleType; // kinda an enum, for which resourse to spawn from list
     }
 }

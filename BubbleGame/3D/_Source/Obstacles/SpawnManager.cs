@@ -15,32 +15,32 @@ namespace BubbleGame._3D
     {
         [Export] public BugSpawnManager bugSpawnManager;
         [Export] public DebrisSpawnManager debrisSpawnManager;
-        [Export] public float _delayBetweenWaves = 1;
+        [Export] public float _delayBetweenSwarms = 1;
 
         public override void _Ready()
         {
-            bugSpawnManager.BugWaveStartHandler += OnBugWaveStart;
-            bugSpawnManager.BugWaveEndHandler += OnBugWaveEnd;
+            bugSpawnManager.BugSwarmStartHandler += OnBugSwarmStart;
+            bugSpawnManager.BugSwarmEndHandler += OnBugSwarmEnd;
 
-            if (bugSpawnManager.waves != null || bugSpawnManager.waves.Length > 0)
+            if (bugSpawnManager.swarms != null || bugSpawnManager.swarms.Length > 0)
             {
-                debrisSpawnManager.StartDebrisWave(bugSpawnManager.waves[0].timeUntilWaveStarts - _delayBetweenWaves);
+                debrisSpawnManager.StartDebris(/*bugSpawnManager.swarms[0].timeUntilSwarmStarts*/ 3 - _delayBetweenSwarms);
             }
         }
         public override void _ExitTree()
         {
-            bugSpawnManager.BugWaveStartHandler -= OnBugWaveStart;
-            bugSpawnManager.BugWaveEndHandler -= OnBugWaveEnd;
+            bugSpawnManager.BugSwarmStartHandler -= OnBugSwarmStart;
+            bugSpawnManager.BugSwarmEndHandler -= OnBugSwarmEnd;
         }
 
-        private void OnBugWaveStart()
+        private void OnBugSwarmStart()
         {
-            debrisSpawnManager.StopDebrisWave();
+            debrisSpawnManager.StopDebris();
         }
 
-        private void OnBugWaveEnd(float TimeForNextWave)
+        private void OnBugSwarmEnd(float TimeForNextWave)
         {
-            debrisSpawnManager.StartDebrisWave(TimeForNextWave - _delayBetweenWaves);
+            debrisSpawnManager.StartDebris(TimeForNextWave - _delayBetweenSwarms);
         }
     }
 }

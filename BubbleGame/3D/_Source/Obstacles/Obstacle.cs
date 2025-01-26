@@ -18,19 +18,13 @@ namespace BubbleGame._3D
 
         public override void _Ready()
         {
-            LookAt(Vector3.Back, Vector3.Up);
+            LookAt(GlobalPosition + -Vector3.Back, Vector3.Up);
         }
 
 		public override void _Process(double delta)
-		{
-			// Move obstacle when time for moving is reached
-			if (_timeSinceSpawn >= _data.timeUntilMoving)
-			{
-                _moveDirection = Vector3.Forward;
-                Translate(_moveDirection * _data.speed * (float)delta);
-            }
-
-            _timeSinceSpawn += (float)delta;
+        {
+            _moveDirection = Vector3.Forward;
+            Translate(_moveDirection * _data.speed * (float)delta);
 
         }
 

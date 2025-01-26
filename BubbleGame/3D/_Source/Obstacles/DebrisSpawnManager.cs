@@ -12,36 +12,35 @@ namespace BubbleGame._3D
     */
     public partial class DebrisSpawnManager : Node
     {
-        [Export] public ObstacleData[] obstacleData;
+        [Export] private MeshInstance3D planeMesh;
+        [Export] public DebrisData debrisData;
         [Export(PropertyHint.Range, "0.0, 5.0")] private float _spawnDelayRangeMin;
         [Export(PropertyHint.Range, "0.0, 5.0")] private float _spawnDelayRangeMax;
         [Export(PropertyHint.Range, "0.0, 5.0")] private int _spawnAmountRangeMin;
         [Export(PropertyHint.Range, "0.0, 5.0")] private int _spawnAmountRangeMax;
 
-        private int _currentWaveIndex;
-
-        private float _timeToStopWave = 0;
+        private float _timeToStopDebris = 0;
         private float _timer = 0;
         private bool _canSpawn = false;
 
         private float _spawnDelayTime = 0;
         private float _randomTimer = 0;
-        private RandomNumberGenerator _randomNumberGenerator;
+        private RandomNumberGenerator _rng;
 
-        public void StartDebrisWave(float timeToStopWave)
+        public void StartDebris(float timeToStopDebris)
         {
-            _timeToStopWave = timeToStopWave;
+            _timeToStopDebris = timeToStopDebris;
             _canSpawn = true;
         }
 
-        public void StopDebrisWave()
+        public void StopDebris()
         {
-            _timeToStopWave = 0;
+            _timeToStopDebris = 0;
             _canSpawn = false;
         }
         public override void _Ready()
         {
-            _randomNumberGenerator = new RandomNumberGenerator();
+            _rng = new RandomNumberGenerator();
         }
 
         public override void _Process(double delta)
@@ -50,7 +49,7 @@ namespace BubbleGame._3D
             {
                 _timer += (float)delta;
 
-                if (_timer > _timeToStopWave)
+                if (_timer > _timeToStopDebris)
                 {
                     _timer = 0;
                     _canSpawn = false;
@@ -62,15 +61,15 @@ namespace BubbleGame._3D
                     if (_randomTimer > _spawnDelayTime)
                     {
                         ObstaclesToSpawn newObstaclesToSpawn = new ObstaclesToSpawn();
-                        newObstaclesToSpawn.numberToSpawn = _randomNumberGenerator.RandiRange(_spawnAmountRangeMin, _spawnAmountRangeMax);
-                        if (obstacleData != null && obstacleData.Length > 0)
+                        newObstaclesToSpawn.numberToSpawn = _rng.RandiRange(_spawnAmountRangeMin, _spawnAmountRangeMax);
+                        if (debrisData != null && debrisData.debrisTypes.Length > 0)
                         {
-                            int obstacleIndex = _randomNumberGenerator.RandiRange(0, obstacleData.Length);
-                            newObstaclesToSpawn.obstacleData = obstacleData[obstacleIndex];
+                            int obstacleIndex = _rng.RandiRange(0, debrisData.debrisTypes.Length);
+                            newObstaclesToSpawn.obstacleType = obstacleIndex;
                         }
                         SpawnObstacle(newObstaclesToSpawn);
 
-                        _spawnDelayTime = _randomNumberGenerator.RandfRange(_spawnDelayRangeMin, _spawnDelayRangeMax);
+                        _spawnDelayTime = _rng.RandfRange(_spawnDelayRangeMin, _spawnDelayRangeMax);
                         _randomTimer = 0;
                     }
                 }
@@ -79,9 +78,36 @@ namespace BubbleGame._3D
 
         private void SpawnObstacle(ObstaclesToSpawn obstacleToSpawn)
         {
-            ObstacleData obstacleData = obstacleToSpawn.obstacleData;
+            if (debrisData == null || debrisData.debrisTypes == null || debrisData.debrisTypes.Length == 0 || obstacleToSpawn.obstacleType >= debrisData.debrisTypes.Length)
+            {
+                return;
+            }
+
+            // Get the radius of the circular spawn area (based on the X and Z scale of the plane)
+            Vector3 planeScale = planeMesh.Scale;
+            float radius = planeScale.X;  // Assuming X and Z have the same scale for a circular area
+
+            // Generate random polar coordinates
+            float angle = _rng.RandfRange(0f, 2 * Mathf.Pi);  // Random angle in radians
+            float randomRadius = _rng.RandfRange(0f, radius); // Random radius within the circle
+
+            // Convert polar coordinates to Cartesian coordinates (x, z, z)
+            float x = Mathf.Cos(angle) * randomRadius;
+            float y = Mathf.Sin(angle) * randomRadius;
+            float z = 0;
+
+            // Generate the final position
+            Vector3 randomPosition = new Vector3(x, y, z);
+
+            // Transform random position to world space
+            Transform3D planeTransform = planeMesh.GlobalTransform;
+            randomPosition = planeTransform * randomPosition;
+
+            ObstacleData obstacleData = debrisData.debrisTypes[obstacleToSpawn.obstacleType];
 
             Obstacle obstacle = obstacleData.obstacleScene.Instantiate<Obstacle>();
+            obstacle.GlobalTransform = new Transform3D(obstacle.GlobalTransform.Basis, randomPosition);
+
             obstacle.Initialize(obstacleData);
             this.AddChild(obstacle);
         }
