@@ -38,6 +38,7 @@ func _process(_delta: float) -> void:
 		CharacterWand.flip_h = CharacterAnimations.flip_h
 
 func on_playerd_death():
-	footstepSounds.stop(FmodServer.FMOD_STUDIO_STOP_ALLOWFADEOUT)
-	footstepSounds.release()
-	input_enabled = false
+	if footstepSounds:
+		footstepSounds.stop(FmodServer.FMOD_STUDIO_STOP_ALLOWFADEOUT)
+		footstepSounds.release()
+		input_enabled = false

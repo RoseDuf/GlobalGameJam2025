@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/GameManager2D.gd" id="1_3dlvb"]
 [ext_resource type="PackedScene" uid="uid://bqjdygfsmbxya" path="res://BubbleGame/2D/Resources/Prefabs/player.tscn" id="1_virmh"]
-[ext_resource type="PackedScene" uid="uid://ciexpftus1pqo" path="res://BubbleGame/2D/Resources/Prefabs/gui_layer.tscn" id="2_ebma1"]
+[ext_resource type="PackedScene" path="res://BubbleGame/2D/Resources/Prefabs/gui_layer.tscn" id="2_ebma1"]
 [ext_resource type="PackedScene" uid="uid://dbntmby25h61t" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/obstacle.tscn" id="5_ybu7b"]
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/2DCamera.gd" id="8_ud1mw"]
 
-[node name="Bubble2D" type="Node"]
+[node name="Bubble2D2" type="Node"]
 script = ExtResource("1_3dlvb")
 
 [node name="GUI Layer" parent="." instance=ExtResource("2_ebma1")]
