@@ -106,10 +106,10 @@ namespace BubbleGame._3D
             ObstacleData obstacleData = debrisData.debrisTypes[obstacleToSpawn.obstacleType];
 
             Obstacle obstacle = obstacleData.obstacleScene.Instantiate<Obstacle>();
+            this.AddChild(obstacle);
             obstacle.GlobalTransform = new Transform3D(obstacle.GlobalTransform.Basis, randomPosition);
 
             obstacle.Initialize(obstacleData);
-            this.AddChild(obstacle);
         }
     }
 }

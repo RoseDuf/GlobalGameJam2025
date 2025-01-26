@@ -10,4 +10,5 @@ obstacleType = 0
 
 [resource]
 script = ExtResource("2_3ogck")
+swarmDepth = 0.0
 obstacles = Array[Object]([SubResource("Resource_ad6ab")])

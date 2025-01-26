@@ -69,21 +69,17 @@ namespace BubbleGame._3D
 			Vector2 viewPortMousePos = GetViewport().GetMousePosition();
 			Vector3 positionOnViewPort = camera.ProjectRayOrigin(viewPortMousePos);
 
-			// trying to get mouse movement working
-			//Vector2 viewPortMousePos = GetViewport().GetMousePosition();
-			//Vector3 rayOrigin = camera.ProjectRayOrigin(viewPortMousePos);
-			//Vector3 rayEnd = camera.ProjectRayOrigin(viewPortMousePos);
-			//Vector3 aimingRay = rayEnd - rayOrigin;
-			//GD.Print($"ray: {aimingRay}");
+			Vector2 screenPosition = camera.UnprojectPosition(playerCursor.GlobalPosition);
+			Vector2 screenSize = GetViewport().GetVisibleRect().Size;
 
-			if ((_accumulatedCursorMovement.Y >= topScreenClampThreshold && _cursorMovement.Y > 0) ||
-				(_accumulatedCursorMovement.Y <= bottomScreenClampThreshold && _cursorMovement.Y < 0))
+			if (((screenPosition.Y / screenSize.Y) <= topScreenClampThreshold && _cursorMovement.Y > 0) ||
+				((screenPosition.Y / screenSize.Y) >= bottomScreenClampThreshold && _cursorMovement.Y < 0))
 			{
 				_cursorMovement.Y = 0;
 			}
 
-			if ((_accumulatedCursorMovement.X > leftScreenClampThreshold && _cursorMovement.X > 0) ||
-				(_accumulatedCursorMovement.X < rightScreenClampThreshold && _cursorMovement.X < 0))
+			if (((screenPosition.X / screenSize.X) <= leftScreenClampThreshold && _cursorMovement.X > 0) ||
+				((screenPosition.X / screenSize.X) >= rightScreenClampThreshold && _cursorMovement.X < 0))
 			{
 				_cursorMovement.X = 0;
 			}

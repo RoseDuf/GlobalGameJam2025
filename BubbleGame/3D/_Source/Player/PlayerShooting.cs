@@ -25,9 +25,9 @@ namespace BubbleGame._3D
 			if (Input.IsActionJustPressed("shoot"))
 			{
 				Node3D bulletInstance = _bulletNode.Instantiate<Node3D>();
+				GetTree().CurrentScene.AddChild(bulletInstance);
 				Bullet bullet = bulletInstance as Bullet;
 				bullet.GlobalPosition = GlobalPosition;
-				GetTree().CurrentScene.AddChild(bulletInstance);
 
 				bullet.velocity = shootVector.Normalized() * speed;
 			}

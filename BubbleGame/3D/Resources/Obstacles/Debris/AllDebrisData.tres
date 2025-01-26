@@ -1,21 +1,21 @@
 [gd_resource type="Resource" script_class="DebrisData" load_steps=7 format=3 uid="uid://d8p1ii0xrapa"]
 
-[ext_resource type="PackedScene" uid="uid://pxj3xap1d3ul" path="res://BubbleGame/3D/Resources/Obstacles/DebrisTest1.tscn" id="1_twn84"]
+[ext_resource type="PackedScene" path="res://BubbleGame/3D/Resources/Obstacles/DebrisTest1.tscn" id="1_twn84"]
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Obstacles/ObstacleData.cs" id="2_hndu3"]
-[ext_resource type="PackedScene" uid="uid://fpn3q7dhm0yr" path="res://BubbleGame/3D/Resources/Obstacles/DebrisTest2.tscn" id="3_pdv2a"]
+[ext_resource type="PackedScene" path="res://BubbleGame/3D/Resources/Obstacles/DebrisTest2.tscn" id="3_pdv2a"]
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Obstacles/DebrisData.cs" id="3_t6sa1"]
 
 [sub_resource type="Resource" id="Resource_2bwdf"]
 script = ExtResource("2_hndu3")
 obstacleScene = ExtResource("1_twn84")
 speed = 3.0
-timeUntilMoving = 0.0
+frontOfPlayerTime = 0.0
 
 [sub_resource type="Resource" id="Resource_3gjbq"]
 script = ExtResource("2_hndu3")
 obstacleScene = ExtResource("3_pdv2a")
 speed = 3.0
-timeUntilMoving = 0.0
+frontOfPlayerTime = 0.0
 
 [resource]
 script = ExtResource("3_t6sa1")
