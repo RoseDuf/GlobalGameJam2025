@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dd8qqug60e8fj"]
+[gd_scene load_steps=17 format=3 uid="uid://gluqq5jdusco"]
 
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/GameManager2D.gd" id="1_rkm85"]
 [ext_resource type="Texture2D" uid="uid://cr5xry6fsqq7c" path="res://BubbleGame/2D/Resources/_DebugArt/SoapBarBack.png" id="2_fgk37"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bx2jow18jl55q" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/rock-4.tscn" id="13_5bshv"]
 [ext_resource type="PackedScene" uid="uid://cww8xpy7y6xet" path="res://BubbleGame/2D/Resources/Prefabs/enemies/enemy.tscn" id="14_2depf"]
 [ext_resource type="PackedScene" uid="uid://btpfnmhc6apmb" path="res://BubbleGame/2D/Resources/Prefabs/enemies/enemy-Wasp.tscn" id="15_wbc4g"]
+[ext_resource type="PackedScene" uid="uid://btwowamtu70sn" path="res://BubbleGame/2D/Resources/_Scenes/background.tscn" id="16_6k0ec"]
 
 [node name="Bubble2D" type="Node"]
 script = ExtResource("1_rkm85")
@@ -474,5 +475,7 @@ position = Vector2(-3599, 66)
 event_name = "event:/2D/AMB"
 event_guid = "{ecb95390-f078-4b0a-8007-7722bd635b56}"
 autoplay = true
+
+[node name="Background" parent="." instance=ExtResource("16_6k0ec")]
 
 [editable path="Player"]
