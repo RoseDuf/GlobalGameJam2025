@@ -18,7 +18,7 @@ transform = Transform3D(-1, 4.17145e-08, -7.68286e-08, 0, 0.878817, 0.477159, 8.
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
 
 [node name="ObstacleSpawner" parent="." instance=ExtResource("1_invbc")]
-transform = Transform3D(6.72559, 0, 0, 0, 5.77034, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(-6.72559, 0, -8.74228e-08, 0, 5.77034, 0, 5.8797e-07, 0, -1, 0, 0, 0)
 
 [node name="Despawner" parent="." groups=["despawners"] instance=ExtResource("3_y6g5q")]
-transform = Transform3D(12.5397, 0, 0, 0, 8.87503, 0, 0, 0, 1, 0.119589, 0, 8.58433)
+transform = Transform3D(12.5397, 0, 0, 0, 8.87503, 0, 0, 0, 1, 0.119589, 0, -12.4067)

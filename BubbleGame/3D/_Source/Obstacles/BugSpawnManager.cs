@@ -1,4 +1,5 @@
-﻿using Godot;
+﻿using BubbleGame.Common.SceneManagement;
+using Godot;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,14 +24,23 @@ namespace BubbleGame._3D
         public delegate void OnBugSwarmEnd(float TimeToStopSwarm);
         public event OnBugSwarmEnd BugSwarmEndHandler;
 
+        public delegate void OnNoMoreBugsLeft();
+        public event OnNoMoreBugsLeft NoMoreBugsLeftHandler;
+
         private int _currentSwarmIndex;
+        private int _currentSwarmToSpawn;
+        private float _accumulatedTime = 0;
 
         private List<Obstacle> _currentObstacles = new();
 
         private RandomNumberGenerator _rng = new RandomNumberGenerator();
 
+        private Godot.Collections.Array _timeStamps;
+
         public override void _Ready()
         {
+            _timeStamps = SceneManager.Instance.GetTimeStampsCachedData();
+
             if (swarms != null && swarms.Length > 0)
             {
                 StartTimerForNextSwarm(0);
@@ -43,13 +53,16 @@ namespace BubbleGame._3D
 
         private void StartTimerForNextSwarm(int swarmIndex)
         {
-            if (_currentSwarmIndex >= swarms.Length)
+            Godot.Collections.Array timeStampArray = (Godot.Collections.Array)_timeStamps[_currentSwarmIndex];
+            if (_currentSwarmIndex >= timeStampArray.Count)
             {
-                // End of 3D happens here technically
+                NoMoreBugsLeftHandler.Invoke();
                 return;
             }
 
-            _obstacleSpawnTimer.WaitTime = 3; //swarms[_currentSwarmIndex].timeUntilSwarmStarts;
+            _currentSwarmToSpawn = (int)timeStampArray[1] % swarms.Length;
+            _obstacleSpawnTimer.WaitTime = (float)timeStampArray[0] - _accumulatedTime;
+            _accumulatedTime = (float)timeStampArray[0];
             _obstacleSpawnTimer.Start();
         }
 
@@ -57,7 +70,7 @@ namespace BubbleGame._3D
         {
             _obstacleSpawnTimer.Stop();
 
-            BugSwarmData currentSwarm = swarms[_currentSwarmIndex];
+            BugSwarmData currentSwarm = swarms[_currentSwarmToSpawn];
             for (int i = 0; i < currentSwarm.obstacles.Length; i++)
             {
                 for (int j = 0; j < currentSwarm.obstacles[i].numberToSpawn; j++)
@@ -87,7 +100,7 @@ namespace BubbleGame._3D
             float y = Mathf.Sin(angle) * randomRadius;
 
             // Generate random depth (z)
-            float z = _rng.RandfRange(0, -swarms[_currentSwarmIndex].swarmDepth);
+            float z = _rng.RandfRange(0, -swarms[_currentSwarmToSpawn].swarmDepth);
 
             // Generate the final position
             Vector3 randomPosition = new Vector3(x, y, z);
