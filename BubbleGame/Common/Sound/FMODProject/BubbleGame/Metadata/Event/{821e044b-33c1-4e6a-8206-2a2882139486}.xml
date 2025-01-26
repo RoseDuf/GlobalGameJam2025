@@ -24,6 +24,9 @@
 		</relationship>
 		<relationship name="markerTracks">
 			<destination>{8eb1a9ef-a334-47a3-a76a-9f64e77c9304}</destination>
+			<destination>{e9ec7103-b35f-4c37-bf0a-eb7d32d399b7}</destination>
+			<destination>{d11aa094-7d51-4a0a-97d9-d948b00b0d3f}</destination>
+			<destination>{8f1ce566-7e2c-4926-9b69-33889c159cb6}</destination>
 		</relationship>
 		<relationship name="timeline">
 			<destination>{1a6e59da-fd9b-4ca8-8531-04346adeaf0d}</destination>
@@ -68,12 +71,17 @@
 	</object>
 	<object class="EventAutomatableProperties" id="{fc56a3e2-761a-457f-8448-e2a2b212646f}" />
 	<object class="MarkerTrack" id="{8eb1a9ef-a334-47a3-a76a-9f64e77c9304}" />
+	<object class="MarkerTrack" id="{e9ec7103-b35f-4c37-bf0a-eb7d32d399b7}" />
+	<object class="MarkerTrack" id="{d11aa094-7d51-4a0a-97d9-d948b00b0d3f}" />
+	<object class="MarkerTrack" id="{8f1ce566-7e2c-4926-9b69-33889c159cb6}" />
 	<object class="Timeline" id="{1a6e59da-fd9b-4ca8-8531-04346adeaf0d}">
 		<relationship name="modules">
 			<destination>{cbe287a7-0c78-4a51-8e1f-2371ea796829}</destination>
 		</relationship>
 		<relationship name="markers">
 			<destination>{5e171699-b6d3-4937-a59f-be777a4100c0}</destination>
+			<destination>{44d292d6-e90c-4efd-8c16-7ab80d092268}</destination>
+			<destination>{426d1e02-5b31-417c-b88b-8b502ec5464b}</destination>
 		</relationship>
 	</object>
 	<object class="ParameterProxy" id="{967833e0-727f-439d-82dc-ac677c99c36f}">
@@ -121,11 +129,8 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{cbe287a7-0c78-4a51-8e1f-2371ea796829}">
-		<property name="isAsync">
-			<value>true</value>
-		</property>
 		<property name="length">
-			<value>0.5</value>
+			<value>6.5</value>
 		</property>
 		<property name="looping">
 			<value>true</value>
@@ -145,7 +150,38 @@
 			<value>0</value>
 		</property>
 		<property name="length">
-			<value>0.5</value>
+			<value>6.5</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{1a6e59da-fd9b-4ca8-8531-04346adeaf0d}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{e9ec7103-b35f-4c37-bf0a-eb7d32d399b7}</destination>
+		</relationship>
+		<relationship name="triggerConditions">
+			<destination>{fdf38a80-2b0f-4367-9c4b-a8c3dea32e2a}</destination>
+		</relationship>
+	</object>
+	<object class="NamedMarker" id="{44d292d6-e90c-4efd-8c16-7ab80d092268}">
+		<property name="position">
+			<value>7.8000000000000007</value>
+		</property>
+		<property name="name">
+			<value>Bye]</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{1a6e59da-fd9b-4ca8-8531-04346adeaf0d}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{8f1ce566-7e2c-4926-9b69-33889c159cb6}</destination>
+		</relationship>
+	</object>
+	<object class="TransitionRegion" id="{426d1e02-5b31-417c-b88b-8b502ec5464b}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="length">
+			<value>6.5</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{1a6e59da-fd9b-4ca8-8531-04346adeaf0d}</destination>
@@ -153,8 +189,11 @@
 		<relationship name="markerTrack">
 			<destination>{8eb1a9ef-a334-47a3-a76a-9f64e77c9304}</destination>
 		</relationship>
+		<relationship name="destination">
+			<destination>{44d292d6-e90c-4efd-8c16-7ab80d092268}</destination>
+		</relationship>
 		<relationship name="triggerConditions">
-			<destination>{fdf38a80-2b0f-4367-9c4b-a8c3dea32e2a}</destination>
+			<destination>{c1691954-6784-4280-9549-d8b6fadb6a13}</destination>
 		</relationship>
 	</object>
 	<object class="Automator" id="{bf96676d-bbcf-48f1-b23e-37bf13b10eb7}">
@@ -180,6 +219,17 @@
 		</property>
 		<property name="maximum">
 			<value>1.0900000333786011</value>
+		</property>
+		<relationship name="parameter">
+			<destination>{a8e815a5-7d07-4eac-8a20-111844ccf750}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterCondition" id="{c1691954-6784-4280-9549-d8b6fadb6a13}">
+		<property name="minimum">
+			<value>1.0900000333786011</value>
+		</property>
+		<property name="maximum">
+			<value>1.1000000238418579</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{a8e815a5-7d07-4eac-8a20-111844ccf750}</destination>
