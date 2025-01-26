@@ -1,0 +1,112 @@
+[gd_scene load_steps=11 format=3 uid="uid://bak4813qtom6j"]
+
+[ext_resource type="Script" path="res://BubbleGame/Common/_Source/GScript/ResultsMenu.gd" id="1_qpj61"]
+[ext_resource type="Texture2D" uid="uid://ehhnhh2gw6ge" path="res://BubbleGame/Common/Art/MainMenu/bouton_jouer_defaut.png" id="1_y2jee"]
+[ext_resource type="Texture2D" uid="uid://bijd6caiogu2a" path="res://BubbleGame/Common/Art/MainMenu/bouton_jouer_pressed.png" id="2_a7uia"]
+[ext_resource type="Texture2D" uid="uid://byx4t3xq4jp1i" path="res://BubbleGame/Common/Art/MainMenu/background_menu.png" id="2_bylvt"]
+[ext_resource type="Texture2D" uid="uid://cj77nt1xonfyx" path="res://BubbleGame/Common/Art/MainMenu/bouton_jouer_hover.png" id="3_iby22"]
+[ext_resource type="Script" path="res://BubbleGame/Common/_Source/GScript/MainMenuButton.gd" id="4_ovyyy"]
+[ext_resource type="Texture2D" uid="uid://v4t7fh2q0udi" path="res://BubbleGame/Common/Art/MainMenu/bouton_quitter_defaut.png" id="5_6c1w5"]
+[ext_resource type="Texture2D" uid="uid://cntsgtci4y274" path="res://BubbleGame/Common/Art/MainMenu/bouton_quitter_pressed.png" id="6_tctjo"]
+[ext_resource type="Texture2D" uid="uid://csmnm6luja2xu" path="res://BubbleGame/Common/Art/MainMenu/bouton_quitter_hover.png" id="7_ljkwy"]
+[ext_resource type="FontFile" uid="uid://b510lfg5fi4uf" path="res://BubbleGame/Common/Resources/Chewy-Regular.ttf" id="10_10rrq"]
+
+[node name="Results" type="Control" node_paths=PackedStringArray("ScoreText")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qpj61")
+ScoreText = NodePath("Score handler")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_bylvt")
+stretch_mode = 4
+
+[node name="PlayButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -395.0
+offset_top = -176.0
+offset_right = -85.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("1_y2jee")
+texture_pressed = ExtResource("2_a7uia")
+texture_hover = ExtResource("3_iby22")
+script = ExtResource("4_ovyyy")
+
+[node name="QuitButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 85.0
+offset_top = -176.0
+offset_right = 395.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("5_6c1w5")
+texture_pressed = ExtResource("6_tctjo")
+texture_hover = ExtResource("7_ljkwy")
+script = ExtResource("4_ovyyy")
+
+[node name="Final score text" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.0
+offset_top = 46.0
+offset_right = 130.0
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("10_10rrq")
+theme_override_font_sizes/normal_font_size = 80
+text = "Final score:"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="Score handler" type="RichTextLabel" parent="."]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.5
+offset_top = 136.0
+offset_right = 29.5
+offset_bottom = 261.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.847059, 0.698039, 0.223529, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("10_10rrq")
+theme_override_font_sizes/normal_font_size = 96
+text = "0"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[connection signal="pressed" from="PlayButton" to="." method="OnPlayButtonPressed"]
+[connection signal="pressed" from="QuitButton" to="." method="OnQuitButtonPressed"]

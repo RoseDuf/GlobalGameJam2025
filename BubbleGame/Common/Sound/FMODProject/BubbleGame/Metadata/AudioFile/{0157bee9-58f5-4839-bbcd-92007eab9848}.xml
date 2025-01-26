@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{0157bee9-58f5-4839-bbcd-92007eab9848}">
+		<property name="assetPath">
+			<value>Fly By 03_1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{d34d05e5-6b20-4220-b641-36df0f786d52}</destination>
+		</relationship>
+	</object>
+</objects>

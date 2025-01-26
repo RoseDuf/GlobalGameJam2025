@@ -1,6 +1,12 @@
 extends Area2D
 
 @export var GameManager: GameManager2D
+@export var Character: AnimatedSprite2D
+@export var WandFront: Sprite2D
+
+func _process(_delta: float) -> void:
+	pass;
+	#WandFront.global_position = Character.global_position;
 
 func _on_body_entered(body: Node2D) -> void:
 	
