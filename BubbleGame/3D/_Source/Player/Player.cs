@@ -8,6 +8,15 @@ namespace BubbleGame._3D
 	/// </summary>
 	public partial class Player : Node3D
 	{
-		public int health;
+		public int health = 3;
+
+		public void Area3D_AreaEntered(Area3D area)
+		{
+			if (area.IsInGroup("obstacle"))
+			{
+				health--;
+				GD.Print(health);
+			}
+		}
 	}
 }
