@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://bjejpnnacm3p6"]
+[gd_scene load_steps=17 format=3 uid="uid://bjejpnnacm3p6"]
 
 [ext_resource type="Texture2D" uid="uid://byx4t3xq4jp1i" path="res://BubbleGame/Common/Art/MainMenu/background_menu.png" id="1_8m3os"]
 [ext_resource type="Script" path="res://BubbleGame/Common/_Source/CSharp/MainMenuView.cs" id="1_vmjco"]
 [ext_resource type="Script" path="res://BubbleGame/Common/_Source/GScript/MainMenu.gd" id="1_xjk0w"]
 [ext_resource type="Texture2D" uid="uid://ehhnhh2gw6ge" path="res://BubbleGame/Common/Art/MainMenu/bouton_jouer_defaut.png" id="3_11n0w"]
+[ext_resource type="Script" path="res://BubbleGame/Common/_Source/GScript/Debug3DButton.gd" id="4_hb5yk"]
 [ext_resource type="Texture2D" uid="uid://bijd6caiogu2a" path="res://BubbleGame/Common/Art/MainMenu/bouton_jouer_pressed.png" id="4_ppu6h"]
 [ext_resource type="Texture2D" uid="uid://cj77nt1xonfyx" path="res://BubbleGame/Common/Art/MainMenu/bouton_jouer_hover.png" id="5_ivlqn"]
 [ext_resource type="Texture2D" uid="uid://cqyt00gmcrq0w" path="res://BubbleGame/Common/Art/MainMenu/bouton_options_defaut.png" id="6_ghogi"]
@@ -42,13 +43,18 @@ metadata/_edit_use_anchors_ = true
 
 [node name="3DButton" type="Button" parent="CanvasLayer"]
 custom_minimum_size = Vector2(200, 40)
-offset_left = 420.0
-offset_top = 946.0
-offset_right = 620.0
-offset_bottom = 986.0
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 251.0
+offset_top = -121.0
+offset_right = 508.0
+offset_bottom = -81.0
+grow_vertical = 0
 size_flags_horizontal = 0
 size_flags_vertical = 8
-text = "3D (dbg)"
+text = "3D (visible only on debug builds)"
+script = ExtResource("4_hb5yk")
 
 [node name="GridContainer" type="GridContainer" parent="CanvasLayer"]
 anchors_preset = 8
