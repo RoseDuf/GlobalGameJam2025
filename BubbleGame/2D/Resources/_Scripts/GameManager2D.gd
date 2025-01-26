@@ -8,6 +8,7 @@ const SectionName = "CachedData"
 signal playerDeath
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	GlobalAudioManager.open_game()
 	RemainingSoapTime = SoapBarManager.MaximumBarValue;
 
 
@@ -43,9 +44,10 @@ func PrepareNextPhase() -> void:
 	
 func LoadNextLevel() -> void:
 	playerDeath.emit()
-	var timer:SceneTreeTimer = get_tree().create_timer(3)  
+	var timer:SceneTreeTimer = get_tree().create_timer(3)
 	timer.timeout.connect(_on_timer_timeout)  
 
 	
 func _on_timer_timeout():
-		get_tree().change_scene_to_file("res://BubbleGame/3D/Resources/_Scenes/Bubble3D.tscn")
+	GlobalAudioManager.switch_to_3d()
+	get_tree().change_scene_to_file("res://BubbleGame/3D/Resources/_Scenes/Bubble3D.tscn")

@@ -1,18 +1,25 @@
-[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://dqcphfypa1nae"]
+[gd_resource type="ShaderMaterial" load_steps=7 format=3 uid="uid://dqcphfypa1nae"]
 
 [ext_resource type="Shader" path="res://BubbleGame/2D/Art/BubbleShader/Bubble_Shader_2D.gdshader" id="1_a1wn0"]
+[ext_resource type="Texture2D" uid="uid://b3a3tl8bnn2jx" path="res://BubbleGame/2D/Art/Textures/bubble_mask.png" id="2_e5sjs"]
+[ext_resource type="Texture2D" uid="uid://q7foh2jnhhae" path="res://BubbleGame/2D/Art/Textures/bubble_dir.png" id="2_fe5ba"]
 [ext_resource type="Texture2D" uid="uid://cwwfgn5dykn3h" path="res://BubbleGame/2D/Art/BubbleShader/iridescencyramp.png" id="2_mut6i"]
 [ext_resource type="Texture2D" uid="uid://bqxh1mn26ap32" path="res://BubbleGame/2D/Art/BubbleShader/BUBBLES_NORMALS_01.png" id="3_5ogum"]
 [ext_resource type="Texture2D" uid="uid://pef0fi1iis83" path="res://BubbleGame/2D/Art/BubbleShader/bubble_noise_texture.tres" id="3_blr32"]
 
 [resource]
 shader = ExtResource("1_a1wn0")
-shader_parameter/albedo = Color(0.02, 0.45, 0.8, 1)
+shader_parameter/albedo = Color(0.648565, 0.813152, 0.998724, 1)
 shader_parameter/vertexDistortion = 0.1
 shader_parameter/distortion = 0.1
 shader_parameter/spec_color = Color(0.6, 0.6, 0.8, 1)
 shader_parameter/lightDir = Vector3(1, -1, 1)
+shader_parameter/noiseColorStrength = 0.5
+shader_parameter/skyColor = Color(0.663744, 0.843164, 0.797171, 1)
+shader_parameter/bubblesColor = Color(0.34, 0.417, 1, 1)
 shader_parameter/opacity = null
 shader_parameter/normal_map = ExtResource("3_5ogum")
 shader_parameter/colorRamp = ExtResource("2_mut6i")
 shader_parameter/noise_tex = ExtResource("3_blr32")
+shader_parameter/bubbles_tex = ExtResource("2_e5sjs")
+shader_parameter/bubble_dir_tex = ExtResource("2_fe5ba")

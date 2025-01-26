@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://capwet0apcocn"
+path="res://.godot/imported/insetct_captured8.wav-27bd0d764db86ae0097307236025d61a.sample"
+
+[deps]
+
+source_file="res://BubbleGame/Common/Sound/SFX/Insects/Insects captured/insetct_captured8.wav"
+dest_files=["res://.godot/imported/insetct_captured8.wav-27bd0d764db86ae0097307236025d61a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
