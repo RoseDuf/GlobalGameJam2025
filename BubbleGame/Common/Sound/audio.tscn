@@ -5,3 +5,4 @@
 [node name="Audio" type="Node"]
 
 [node name="FmodBankLoader" parent="." instance=ExtResource("1_e3d73")]
+bank_paths = ["res://BubbleGame/Common/Sound/FMODProject/BubbleGame/Build/Desktop/Master.strings.bank", "res://BubbleGame/Common/Sound/FMODProject/BubbleGame/Build/Desktop/Master.bank"]
