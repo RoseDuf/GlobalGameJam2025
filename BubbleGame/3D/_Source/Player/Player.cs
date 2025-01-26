@@ -15,7 +15,6 @@ namespace BubbleGame._3D
 			if (area.IsInGroup("obstacle"))
 			{
 				health--;
-				GD.Print(health);
 			}
 		}
 	}

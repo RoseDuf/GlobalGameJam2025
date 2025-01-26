@@ -39,9 +39,9 @@ speed = 32.0
 _playerCursor = NodePath("../../Cursor3D")
 _bulletNode = ExtResource("4_3aukb")
 
-[node name="Area3D" type="Area3D" parent="Player3D"]
+[node name="PlayerArea3D" type="Area3D" parent="Player3D"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player3D/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player3D/PlayerArea3D"]
 shape = SubResource("BoxShape3D_jfk08")
 
 [node name="Visuals" type="Node3D" parent="Player3D"]
@@ -70,4 +70,4 @@ mesh = SubResource("SphereMesh_mby3m")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_jlnir")
 
-[connection signal="area_entered" from="Player3D/Area3D" to="Player3D" method="Area3D_AreaEntered"]
+[connection signal="area_entered" from="Player3D/PlayerArea3D" to="Player3D" method="Area3D_AreaEntered"]
