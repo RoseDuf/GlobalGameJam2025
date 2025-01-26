@@ -22,7 +22,7 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_nxp7r"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 3.0,
 "texture": ExtResource("2_kjqx4")
 }, {
 "duration": 1.0,
@@ -39,7 +39,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Hurt",
-"speed": 2.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
