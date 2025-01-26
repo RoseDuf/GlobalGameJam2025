@@ -5,12 +5,11 @@
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/PlayerShooting.cs" id="3_t5yct"]
 [ext_resource type="PackedScene" uid="uid://cs6mpkq4pvwtw" path="res://BubbleGame/3D/Resources/Bullet.tscn" id="4_3aukb"]
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/MovementAudio.gd" id="5_tycmx"]
+[ext_resource type="PackedScene" path="res://BubbleGame/3D/Art/Models/sm_spaceship_01.tscn" id="5_wy0ga"]
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/Cursor.cs" id="6_1fpc1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jfk08"]
 size = Vector3(1, 0.25, 1)
-
-[sub_resource type="PrismMesh" id="PrismMesh_7hgvn"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_mby3m"]
 
@@ -48,10 +47,7 @@ shape = SubResource("BoxShape3D_jfk08")
 [node name="Visuals" type="Node3D" parent="Player3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
-[node name="Cube" type="MeshInstance3D" parent="Player3D/Visuals"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -0.25, 0, 1, -1.09278e-08, 0, 0, 0)
-mesh = SubResource("PrismMesh_7hgvn")
-skeleton = NodePath("../..")
+[node name="ST_Spaceship_01" parent="Player3D/Visuals" instance=ExtResource("5_wy0ga")]
 
 [node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="Player3D"]
 event_name = "event:/3D/Movement"
