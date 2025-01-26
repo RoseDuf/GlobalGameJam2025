@@ -1,9 +1,6 @@
-[gd_resource type="VisualShader" load_steps=42 format=3 uid="uid://iihqgj51qag1"]
-
-[ext_resource type="Texture2D" uid="uid://battaygeoxkwn" path="res://BubbleGame/3D/Art/Texture/TX_Simplex_XYZ.png" id="1_5a5r7"]
+[gd_resource type="VisualShader" load_steps=41 format=3 uid="uid://iihqgj51qag1"]
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_nx56j"]
-texture = ExtResource("1_5a5r7")
 
 [sub_resource type="VisualShaderNodeFresnel" id="VisualShaderNodeFresnel_nssbv"]
 default_input_values = [2, false, 3, 5.0]
@@ -56,7 +53,7 @@ op_type = 0
 operator = 2
 
 [sub_resource type="VisualShaderNodeVectorCompose" id="VisualShaderNodeVectorCompose_y3bwu"]
-default_input_values = [0, 1.0, 1, 2.0, 2, 0.0]
+default_input_values = [0, 1.0, 1, 3.0, 2, 0.0]
 op_type = 0
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_ypqhf"]
@@ -67,7 +64,6 @@ input_name = "time"
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_xuhup"]
 output_port_for_preview = 0
-texture = ExtResource("1_5a5r7")
 
 [sub_resource type="VisualShaderNodeVectorCompose" id="VisualShaderNodeVectorCompose_b47e7"]
 default_input_values = [0, 0.6, 1, -1.3, 2, 0.0]
@@ -88,12 +84,11 @@ op_type = 0
 operator = 2
 
 [sub_resource type="VisualShaderNodeVectorCompose" id="VisualShaderNodeVectorCompose_4l4f0"]
-default_input_values = [0, 2.0, 1, 6.0, 2, 0.0]
+default_input_values = [0, 2.0, 1, 4.0, 2, 0.0]
 op_type = 0
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_o46ur"]
 output_port_for_preview = 0
-texture = ExtResource("1_5a5r7")
 
 [sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_sj8le"]
 
@@ -114,7 +109,7 @@ input_name = "vertex"
 [sub_resource type="VisualShaderNodeReroute" id="VisualShaderNodeReroute_xa147"]
 
 [sub_resource type="VisualShaderNodeMix" id="VisualShaderNodeMix_6fxw1"]
-default_input_values = [0, 0.1, 1, 1.2, 2, 0.5]
+default_input_values = [0, 0.1, 1, 0.7, 2, 0.5]
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_paxv6"]
 input_name = "normal"
@@ -160,7 +155,7 @@ void vertex() {
 
 // VectorCompose:24
 	float n_in24p0 = 2.00000;
-	float n_in24p1 = 6.00000;
+	float n_in24p1 = 4.00000;
 	vec2 n_out24p0 = vec2(n_in24p0, n_in24p1);
 
 
@@ -196,7 +191,7 @@ void vertex() {
 
 // VectorCompose:17
 	float n_in17p0 = 1.00000;
-	float n_in17p1 = 2.00000;
+	float n_in17p1 = 3.00000;
 	vec2 n_out17p0 = vec2(n_in17p0, n_in17p1);
 
 
@@ -261,7 +256,7 @@ void vertex() {
 
 // Mix:31
 	float n_in31p0 = 0.10000;
-	float n_in31p1 = 1.20000;
+	float n_in31p1 = 0.70000;
 	float n_out31p0 = mix(n_in31p0, n_in31p1, n_out34p0);
 
 
