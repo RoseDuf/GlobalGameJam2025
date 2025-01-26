@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://v7yxid1u4bpp"]
+[gd_scene load_steps=4 format=3 uid="uid://deb00m7d7sdcy"]
 
 [ext_resource type="Material" uid="uid://dmveibvym3cnp" path="res://BubbleGame/2D/Art/BubbleShader/Bubble.tres" id="1_jpo7h"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ylcht"]
+transparency = 1
+albedo_color = Color(1, 0, 1, 0.34902)
+
+[sub_resource type="SphereMesh" id="SphereMesh_8xead"]
+material = SubResource("StandardMaterial3D_ylcht")
 
 [node name="Bubble" type="Node3D"]
 
@@ -8,3 +15,7 @@
 radial_segments = 30
 rings = 30
 material = ExtResource("1_jpo7h")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.05, 0, 0, 0, 1.05, 0, 0, 0, 1.05, 0, 0, 0)
+mesh = SubResource("SphereMesh_8xead")

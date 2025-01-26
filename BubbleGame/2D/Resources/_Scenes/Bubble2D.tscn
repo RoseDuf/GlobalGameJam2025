@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/GameManager2D.gd" id="1_3dlvb"]
 [ext_resource type="PackedScene" uid="uid://bqjdygfsmbxya" path="res://BubbleGame/2D/Resources/Prefabs/player.tscn" id="1_virmh"]
 [ext_resource type="Texture2D" uid="uid://cr5xry6fsqq7c" path="res://BubbleGame/2D/Resources/_DebugArt/SoapBarBack.png" id="5_gbns2"]
-[ext_resource type="PackedScene" uid="uid://dbntmby25h61t" path="res://BubbleGame/2D/Resources/Prefabs/obstacle.tscn" id="5_ybu7b"]
+[ext_resource type="PackedScene" uid="uid://dbntmby25h61t" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/obstacle.tscn" id="5_ybu7b"]
 [ext_resource type="Texture2D" uid="uid://bolm5fact546j" path="res://BubbleGame/2D/Resources/_DebugArt/SoapBarFill.png" id="6_t62to"]
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/SoapBarMeter.gd" id="7_5wy5c"]
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/2DCamera.gd" id="8_ud1mw"]
@@ -53,5 +53,10 @@ position_smoothing_speed = 10.0
 script = ExtResource("8_ud1mw")
 Trail = NodePath("../Player/BubbleTrail")
 DezoomSpeed = 0.9
+
+[node name="FmodEventEmitter2D" type="FmodEventEmitter2D" parent="."]
+event_name = "event:/2D/AMB"
+event_guid = "{ecb95390-f078-4b0a-8007-7722bd635b56}"
+autoplay = true
 
 [editable path="Player"]

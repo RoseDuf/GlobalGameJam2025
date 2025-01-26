@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://2i85jiso13ut"]
+
+[ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/GameManager2D.gd" id="1_i4pmm"]
+[ext_resource type="Texture2D" uid="uid://cr5xry6fsqq7c" path="res://BubbleGame/2D/Resources/_DebugArt/SoapBarBack.png" id="2_7t4rv"]
+[ext_resource type="Texture2D" uid="uid://bolm5fact546j" path="res://BubbleGame/2D/Resources/_DebugArt/SoapBarFill.png" id="3_li6r8"]
+[ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/SoapBarMeter.gd" id="4_37qsl"]
+[ext_resource type="PackedScene" uid="uid://bqjdygfsmbxya" path="res://BubbleGame/2D/Resources/Prefabs/player.tscn" id="5_sxexv"]
+[ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/2DCamera.gd" id="6_8pki4"]
+[ext_resource type="PackedScene" uid="uid://cwnvhrof5f2xb" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/Tree-1.tscn" id="11_qnjg4"]
+[ext_resource type="PackedScene" uid="uid://b0ffhomm52x3y" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/Tree-3.tscn" id="13_alq4h"]
+
+[node name="Bubble2D" type="Node"]
+script = ExtResource("1_i4pmm")
+
+[node name="GUI Layer" type="CanvasLayer" parent="."]
+
+[node name="Soap Progress Bar" type="TextureProgressBar" parent="GUI Layer" node_paths=PackedStringArray("GameManager")]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 20.0
+offset_right = 300.0
+offset_bottom = 80.0
+grow_horizontal = 2
+max_value = 11.0
+step = 0.01
+texture_under = ExtResource("2_7t4rv")
+texture_progress = ExtResource("3_li6r8")
+script = ExtResource("4_37qsl")
+GameManager = NodePath("../..")
+
+[node name="Player" parent="." instance=ExtResource("5_sxexv")]
+
+[node name="CharacterBody2D" parent="Player" index="0" node_paths=PackedStringArray("GameManager")]
+GameManager = NodePath("../..")
+
+[node name="Area2D" parent="Player/CharacterBody2D" index="3" node_paths=PackedStringArray("GameManager")]
+GameManager = NodePath("../../..")
+
+[node name="Camera" type="Camera2D" parent="." node_paths=PackedStringArray("Trail")]
+position = Vector2(325, 184)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+script = ExtResource("6_8pki4")
+Trail = NodePath("../Player/BubbleTrail")
+DezoomSpeed = 0.9
+
+[node name="Obstacle5" parent="." instance=ExtResource("11_qnjg4")]
+position = Vector2(221, 491)
+
+[node name="Obstacle14" parent="." instance=ExtResource("11_qnjg4")]
+position = Vector2(1079.8, -507.3)
+
+[node name="Obstacle16" parent="." instance=ExtResource("11_qnjg4")]
+position = Vector2(304, -537)
+
+[node name="Obstacle7" parent="." instance=ExtResource("13_alq4h")]
+position = Vector2(707, 543)
+
+[node name="Obstacle15" parent="." instance=ExtResource("13_alq4h")]
+position = Vector2(636, -397)
+
+[node name="Obstacle10" parent="." instance=ExtResource("13_alq4h")]
+position = Vector2(-236, 551)
+
+[editable path="Player"]
