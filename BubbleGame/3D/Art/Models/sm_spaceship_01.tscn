@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://c2je4f36vj1qm"]
 
 [ext_resource type="PackedScene" uid="uid://2gy4ni3bpgcs" path="res://BubbleGame/3D/Art/Models/Export/ST_Spaceship_01_DoNotUse.fbx" id="1_nbwq0"]
-[ext_resource type="Material" uid="uid://d4c43s7gbjtt7" path="res://BubbleGame/3D/Art/Shader/M_Spaceship_Metal_01.tres" id="2_mi35w"]
-[ext_resource type="Material" uid="uid://diw6cx2x2vy8i" path="res://BubbleGame/3D/Art/Shader/M_Spaceship_Glass_01.tres" id="3_4m3ef"]
+[ext_resource type="Material" uid="uid://cfofatq0075yq" path="res://BubbleGame/3D/Art/Shader/M_Spaceship_Metal_01.tres" id="2_mi35w"]
+[ext_resource type="Material" uid="uid://bjnlr3bq0eohp" path="res://BubbleGame/3D/Art/Shader/M_Spaceship_Glass_01.tres" id="3_4m3ef"]
 [ext_resource type="PackedScene" path="res://BubbleGame/3D/Resources/_Scenes/ship_trails.tscn" id="4_1ujc6"]
 
 [node name="ST_Spaceship_01" instance=ExtResource("1_nbwq0")]
