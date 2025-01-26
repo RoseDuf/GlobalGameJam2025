@@ -1,0 +1,77 @@
+[gd_scene load_steps=9 format=3 uid="uid://ciexpftus1pqo"]
+
+[ext_resource type="Texture2D" uid="uid://bx4rf77sm07iw" path="res://BubbleGame/2D/Art/HUD/recherches UI GG2025-06.png" id="1_yaoq4"]
+[ext_resource type="Texture2D" uid="uid://bxtb3pjvyyuq3" path="res://BubbleGame/2D/Art/HUD/recherches UI GG2025-05.png" id="2_4rfw5"]
+[ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/SoapBarMeter.gd" id="3_vmhcq"]
+[ext_resource type="Texture2D" uid="uid://dfsoq1dm8sy3d" path="res://BubbleGame/2D/Art/HUD/recherches UI GG2025-07.png" id="4_iqgm8"]
+[ext_resource type="Texture2D" uid="uid://cypxed302rxsl" path="res://BubbleGame/2D/Art/HUD/recherches UI GG2025_Plan de travail 1 copie 2.png" id="5_cncqq"]
+[ext_resource type="FontFile" uid="uid://b510lfg5fi4uf" path="res://BubbleGame/Common/Resources/Chewy-Regular.ttf" id="6_x3dqq"]
+[ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/ScoreDisplayer.gd" id="7_6hrs5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iyo7u"]
+
+[node name="GUI Layer" type="CanvasLayer"]
+
+[node name="Soap Progress Bar" type="TextureProgressBar" parent="." node_paths=PackedStringArray("GameManager", "HandleOver")]
+offset_left = 68.0
+offset_top = 52.0
+offset_right = 668.0
+offset_bottom = 161.0
+max_value = 11.0
+step = 0.01
+texture_under = ExtResource("1_yaoq4")
+texture_progress = ExtResource("2_4rfw5")
+script = ExtResource("3_vmhcq")
+GameManager = NodePath("")
+HandleOver = NodePath("SliderTop")
+
+[node name="SliderTop" type="HSlider" parent="Soap Progress Bar"]
+layout_mode = 0
+offset_right = 600.0
+offset_bottom = 109.0
+theme_override_icons/grabber_disabled = ExtResource("4_iqgm8")
+theme_override_styles/slider = SubResource("StyleBoxEmpty_iyo7u")
+max_value = 11.0
+step = 0.01
+value = 11.0
+editable = false
+scrollable = false
+
+[node name="ScoreHolder" type="TextureRect" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -320.0
+offset_top = 60.0
+offset_right = -55.0
+offset_bottom = 176.0
+grow_horizontal = 0
+texture = ExtResource("5_cncqq")
+stretch_mode = 4
+
+[node name="Score" type="RichTextLabel" parent="ScoreHolder"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 17.5
+offset_top = -35.0
+offset_right = 49.5
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.847059, 0.698039, 0.223529, 1)
+theme_override_fonts/normal_font = ExtResource("6_x3dqq")
+theme_override_font_sizes/normal_font_size = 52
+text = "0
+"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+script = ExtResource("7_6hrs5")
