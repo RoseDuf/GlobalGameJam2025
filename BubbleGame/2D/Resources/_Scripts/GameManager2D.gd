@@ -38,8 +38,9 @@ func PrepareNextPhase() -> void:
 	progressFile.set_value(SectionName, "TimeStamps", CollectedBugsList)
 	
 	progressFile.save("user://levelcache.cfg")
-	playerDeath.emit()
+	
 	call_deferred("LoadNextLevel")
 	
 func LoadNextLevel() -> void:
+	playerDeath.emit()
 	get_tree().change_scene_to_file("res://BubbleGame/3D/Resources/_Scenes/Bubble3D.tscn")
