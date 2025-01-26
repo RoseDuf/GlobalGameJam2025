@@ -21,7 +21,7 @@ namespace BubbleGame._3D
         public delegate void OnBugSwarmStart();
         public event OnBugSwarmStart BugSwarmStartHandler;
 
-        public delegate void OnBugSwarmEnd(float TimeToStopSwarm);
+        public delegate void OnBugSwarmEnd(float TimeForNextWave);
         public event OnBugSwarmEnd BugSwarmEndHandler;
 
         public delegate void OnNoMoreBugsLeft();
@@ -53,12 +53,13 @@ namespace BubbleGame._3D
 
         private void StartTimerForNextSwarm(int swarmIndex)
         {
-            Godot.Collections.Array timeStampArray = (Godot.Collections.Array)_timeStamps[_currentSwarmIndex];
-            if (_currentSwarmIndex >= timeStampArray.Count)
+            if (_currentSwarmIndex >= _timeStamps.Count)
             {
                 NoMoreBugsLeftHandler.Invoke();
                 return;
             }
+
+            Godot.Collections.Array timeStampArray = (Godot.Collections.Array)_timeStamps[_currentSwarmIndex];
 
             _currentSwarmToSpawn = (int)timeStampArray[1] % swarms.Length;
             _obstacleSpawnTimer.WaitTime = (float)timeStampArray[0] - _accumulatedTime;
@@ -135,7 +136,10 @@ namespace BubbleGame._3D
             {
                 _currentSwarmIndex++;
                 StartTimerForNextSwarm(_currentSwarmIndex);
-                BugSwarmEndHandler.Invoke(3);
+
+                Godot.Collections.Array timeStampArray = (Godot.Collections.Array)_timeStamps[_currentSwarmIndex];
+                float timeForNextWave = (float)timeStampArray[0] - _accumulatedTime;
+                BugSwarmEndHandler.Invoke(timeForNextWave);
             }
         }
     }

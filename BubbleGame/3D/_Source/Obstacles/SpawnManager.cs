@@ -20,6 +20,9 @@ namespace BubbleGame._3D
 
         private Godot.Collections.Array _timeStamps;
 
+        public delegate void OnNoMoreBugsLeftEvent();
+        public event OnNoMoreBugsLeftEvent NoMoreBugsLeftHandler;
+
         public override void _Ready()
         {
             _timeStamps = SceneManager.Instance.GetTimeStampsCachedData();
@@ -53,7 +56,7 @@ namespace BubbleGame._3D
 
         private void OnNoMoreBugsLeft()
         {
-            // go back to 2D or main menu
+            NoMoreBugsLeftHandler?.Invoke();
         }
     }
 }
