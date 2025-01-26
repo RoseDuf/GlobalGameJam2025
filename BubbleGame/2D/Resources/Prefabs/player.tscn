@@ -44,6 +44,7 @@ radius = 49.0
 height = 218.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4i0xn"]
+radius = 11.0681
 
 [node name="Player" type="Node"]
 
@@ -76,20 +77,20 @@ scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_nxp7r")
 animation = &"RunningFront"
 autoplay = "RunningFront"
-frame_progress = 0.937694
+frame_progress = 0.18107
 
 [node name="CharacterHitbox" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(2, 0)
 shape = SubResource("CapsuleShape2D_dte2h")
 
 [node name="Area2D" type="Area2D" parent="CharacterBody2D"]
-collision_layer = 0
-collision_mask = 0
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("3_57tbh")
 
 [node name="WandHitbox" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
 position = Vector2(-6, -173)
-scale = Vector2(4.16, 4.16)
+scale = Vector2(5.8, 5.8)
 shape = SubResource("CircleShape2D_4i0xn")
 
 [connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D/Area2D" method="_on_body_entered"]
