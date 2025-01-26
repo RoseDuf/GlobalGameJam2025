@@ -8,7 +8,7 @@
 
 [sub_resource type="Environment" id="Environment_xyxs8"]
 
-[node name="Bubble3D2" type="Node"]
+[node name="Bubble3D" type="Node"]
 
 [node name="GUI-3D" parent="." instance=ExtResource("1_0kqq2")]
 
