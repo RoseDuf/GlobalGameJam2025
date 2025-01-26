@@ -14,6 +14,7 @@ uniform sampler2D bubble_dir_tex:repeat_enable;
 uniform vec3 bubblesColor:source_color;
 
 uniform sampler2D SCREEN_TEXTURE:hint_screen_texture;
+uniform float alphaMask = 0;
 
 uniform float opacity;
 
@@ -30,14 +31,14 @@ vec2 bulgeUv(vec2 uv, float bias, float scale)
 {
 	uv = uv*scale + bias;
 	vec2 baseUv = uv;
-	
+
 	uv *= 0.5;
-	
+
 	uv = (1. - max(dot(uv,uv),0.)) * uv;
-	
+
 	return baseUv - uv;
 }
-	
+
 
 // Based on Morgan McGuire @morgan3d
 // https://www.shadertoy.com/view/4dS3Wd
@@ -75,7 +76,7 @@ float fbm ( in vec2 _st) {
 }
 
 float fbmNoise(vec2 uv, float time) {
-	
+
 	vec2 st = uv;
     // st += st * abs(sin(u_time*0.1)*3.0);
     vec3 color = vec3(0.0);
@@ -89,7 +90,7 @@ float fbmNoise(vec2 uv, float time) {
     r.y = fbm( st + 1.0*q + vec2(8.3,2.8)+ 0.126*time);
 
     float f = fbm(st+r);
-	
+
 	return f;
 }
 
@@ -103,10 +104,10 @@ vec3 DecodeNormals(vec2 n){
 	n = n*2. - 1.;
 	float z = sqrt(1. - n.x*n.x - n.y * n.y);
 	return vec3(n.x,n.y,z);
-} 
+}
 
 void vertex() {
-	
+
 	world_pos =(MODEL_MATRIX * vec4(VERTEX, 0.0, 1.0)).xy;
 	// Called for every vertex the material is visible on.
 }
@@ -115,41 +116,42 @@ void fragment() {
 	vec2 raw_uv = UV;
 	vec2 uv = UV - 0.5;
 	//uv =fract( bulgeUv(uv,0,0.1));
-	
+
 	float n = texture(noise_tex,world_pos*0.002 + TIME*0.1).x *2. - 1.;
-	
-	uv.y += n*0.03;
+
+	uv.y += n*0.1;
 	vec3 normal1 =normalize(DecodeNormals( texture(normal_map,world_pos*0.01 + TIME*0.1).xy)*.01);
 	vec3 normal2 = normalize(DecodeNormals(texture(normal_map,world_pos*0.001 + TIME*.1).xy));
-	
+
 	vec3 normal = normalize(mix(normal1,normal2,0.5));
 	float m = abs(uv.y);
 	float f =1. - smoothstep(.4,.42, m);
 	float f2 = 1.-smoothstep(0.35,0.37,m);
-	
+
 	float edge = f - f2;
 	float c = (f - f2)*n;
-	
+
 	float fbm_noise = fbmNoise(world_pos*0.01 + vec2(uv.x*0.1,pow(abs(uv.y),1./15.)),TIME);
 	c = fbm_noise;
 	vec3 fbmColor = texture(colorRamp,vec2(fbm_noise,0.5)).xyz;
-	
+
 	vec2 screen_uv = SCREEN_PIXEL_SIZE/ TEXTURE_PIXEL_SIZE;
 
 	vec3 screenColor = textureLod(SCREEN_TEXTURE, SCREEN_UV + normal.xy*0.03, 0.0).xyz;
 	vec3 reflectedColor = textureLod(SCREEN_TEXTURE,SCREEN_UV - (uv + normal.xy*5.)*0.0,0.).xyz;
-	
+
 	vec3 color = mix(albedo ,fbmColor, noiseColorStrength);
-	
+
 	float topMask = max(dot(uv,vec2(0.,1.)),0.) * fbm_noise;
 	float bottomMask = 1. - topMask;
 	topMask = smoothstep(0.,0.2,topMask);
 	float thickness = smoothstep(0.1,.3,abs(uv.y));
-	color = mix(screenColor,color,thickness+.4) + reflectedColor*0.1; 
+	color = mix(screenColor,color,thickness+.4) + reflectedColor*0.1;
 	float edgeNoise =  texture(noise_tex,world_pos*0.006 + TIME*0.08).x *  texture(noise_tex,world_pos*0.001 + TIME*0.08).x;
 	vec2 bubble_dir = texture(bubble_dir_tex, world_pos*0.01 ).xy;
 	color = mix(color,skyColor,topMask) +  smoothstep(0.4,0.45, (edge * edgeNoise)) + texture(bubbles_tex,world_pos*0.01 + bubble_dir + TIME*0.2).xyz*bubblesColor;
-	
+	float alpha_mask =1. - smoothstep(0.3,.33,length(UV - 0.5));
+	f = mix(f,f*alpha_mask*COLOR.a,alphaMask);
 	COLOR = vec4(color,f);
 }
 

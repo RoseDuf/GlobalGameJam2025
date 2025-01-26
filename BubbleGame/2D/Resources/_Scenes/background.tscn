@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://btwowamtu70sn"]
+[gd_scene load_steps=9 format=3 uid="uid://btwowamtu70sn"]
 
 [ext_resource type="Shader" path="res://BubbleGame/2D/Art/Shaders/Shader_Background2D.gdshader" id="1_nv34s"]
-[ext_resource type="Texture2D" uid="uid://bwkx3y8e3dqxt" path="res://T_Brackground_GradientMap.png" id="2_lvkid"]
 [ext_resource type="Texture2D" uid="uid://uwitcususeae" path="res://BubbleGame/2D/Art/Textures/Voronoi_Mask.png" id="3_grclv"]
 [ext_resource type="Texture2D" uid="uid://c28jsisuaq6us" path="res://T_Brackground_Greyscale.png" id="4_lv5s1"]
 
@@ -13,13 +12,20 @@ fractal_type = 0
 seamless = true
 noise = SubResource("FastNoiseLite_bt1b6")
 
+[sub_resource type="Gradient" id="Gradient_pag75"]
+offsets = PackedFloat32Array(0, 0.473563, 1)
+colors = PackedColorArray(0.51786, 0.54, 0.3186, 1, 0.69, 0.64009, 0.4761, 1, 0.655707, 0.67, 0.4556, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_707ed"]
+gradient = SubResource("Gradient_pag75")
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_towb0"]
 shader = ExtResource("1_nv34s")
 shader_parameter/tilling = 0.1
 shader_parameter/offset_strength = 50.0
 shader_parameter/voronoi_mask = ExtResource("3_grclv")
 shader_parameter/mask_noise = SubResource("NoiseTexture2D_k28wj")
-shader_parameter/ramp_texture = ExtResource("2_lvkid")
+shader_parameter/ramp_texture = SubResource("GradientTexture1D_707ed")
 
 [node name="Background" type="Sprite2D"]
 z_index = -69

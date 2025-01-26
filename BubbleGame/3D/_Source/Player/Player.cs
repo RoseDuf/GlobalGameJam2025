@@ -1,3 +1,4 @@
+using BubbleGame.Common.SceneManagement;
 using Godot;
 
 namespace BubbleGame._3D
@@ -13,9 +14,14 @@ namespace BubbleGame._3D
 
 		public void Area3D_AreaEntered(Area3D area)
 		{
-			if (area.IsInGroup("Obstacle"))
+			if (area.Name == "ObstacleArea3D")
 			{
 				health--;
+
+				if (health <= 0)
+				{
+					SceneManager.Instance.LoadScene("WelcomeScene");
+				}
 			}
 		}
 	}

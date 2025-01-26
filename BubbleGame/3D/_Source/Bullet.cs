@@ -36,11 +36,11 @@ namespace BubbleGame._3D
 		{
 			if (area.Name != "PlayerArea3D" && area.Name != "Despawner")
 			{
-				if (area.IsInGroup("Obstacle"))
+				if (area.Name == "ObstacleArea3D")
 				{
 					Node other = area.GetParent();
 
-					Obstacle obstacle = other.GetScript().As<Obstacle>();
+					Obstacle obstacle = other as Obstacle;
 
 					if (obstacle.data.health == 0)
 					{
@@ -55,9 +55,8 @@ namespace BubbleGame._3D
 
 				if (!_isDespawned)
 				{
-					Node parent = GetParent();
-					GetTree().CurrentScene.CallDeferred(MethodName.RemoveChild, parent);
-					parent.QueueFree();
+					GetTree().CurrentScene.CallDeferred(MethodName.RemoveChild, this);
+					this.QueueFree();
 					_isDespawned = true;
 				}
 			}

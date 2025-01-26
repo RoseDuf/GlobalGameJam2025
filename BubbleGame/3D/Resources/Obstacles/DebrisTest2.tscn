@@ -8,14 +8,14 @@ radius = 0.4
 
 [node name="DefaultObstacle" type="Node3D" node_paths=PackedStringArray("_colliderArea") groups=["obstacle"]]
 script = ExtResource("1_8vti8")
-_colliderArea = NodePath("Area3D")
+_colliderArea = NodePath("ObstacleArea3D")
 
 [node name="ST_Obstacle_03" parent="." instance=ExtResource("2_o01fc")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 
-[node name="Area3D" type="Area3D" parent="." groups=["obstacle"]]
+[node name="ObstacleArea3D" type="Area3D" parent="." groups=["obstacle"]]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ObstacleArea3D" groups=["obstacle"]]
 shape = SubResource("SphereShape3D_wmke5")
 
-[connection signal="area_entered" from="Area3D" to="." method="OnAreaEntered"]
+[connection signal="area_entered" from="ObstacleArea3D" to="." method="OnAreaEntered"]

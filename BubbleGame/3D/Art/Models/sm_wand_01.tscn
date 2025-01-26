@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcqgudmprycfr"]
+
+[ext_resource type="PackedScene" uid="uid://curq8bhy6uesa" path="res://BubbleGame/3D/Art/Models/Export/ST_Wand_01.fbx" id="1_mooae"]
+[ext_resource type="Material" path="res://BubbleGame/3D/Art/Shader/M_Spaceship_Obstacles_01.tres" id="2_e6avm"]
+
+[node name="ST_Wand_01" instance=ExtResource("1_mooae")]
+
+[node name="Wand" parent="." index="0"]
+transform = Transform3D(0.140175, 0, 0, 0, 0, 0.132217, 0, -0.132217, 0, -2.63237, -0.03734, 0.0739854)
+material_override = ExtResource("2_e6avm")

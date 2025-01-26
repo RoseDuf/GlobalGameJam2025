@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dvn4l35vstqj0"]
+[gd_scene load_steps=35 format=3 uid="uid://dvn4l35vstqj0"]
 
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/PlayerMovement.gd" id="1_5j78x"]
 [ext_resource type="Texture2D" uid="uid://c6ynir2hhqi8e" path="res://BubbleGame/2D/Art/Character/RunningFront/001.png" id="2_3cw23"]
@@ -16,13 +16,23 @@
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/WandHitbox.gd" id="9_0phpe"]
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/BubbleTrail.gd" id="10_76roa"]
 [ext_resource type="Material" uid="uid://dqcphfypa1nae" path="res://BubbleGame/2D/Art/BubbleShader/Buble_2d.tres" id="10_rng4n"]
+[ext_resource type="Texture2D" uid="uid://daroip6cg24eh" path="res://BubbleGame/2D/Art/Character/Win/Victory_Pose 001.png" id="13_hwhlv"]
 [ext_resource type="Script" path="res://BubbleGame/2D/_Source/2DAnimation_controller.gd" id="13_u0aj1"]
+[ext_resource type="Texture2D" uid="uid://bckatpnsraqy2" path="res://BubbleGame/2D/Art/Character/Win/Victory_Pose 002.png" id="14_6pyx7"]
 [ext_resource type="Script" path="res://BubbleGame/2D/_Source/disableOnDeath.gd" id="15_76heo"]
+[ext_resource type="Texture2D" uid="uid://df7yukf7oln6h" path="res://BubbleGame/2D/Art/Character/Win/Victory_Pose 003.png" id="15_aytkq"]
+[ext_resource type="Texture2D" uid="uid://5u3yeq2ghy07" path="res://BubbleGame/2D/Art/Character/Win/Victory_Pose 004.png" id="16_o6mqy"]
+[ext_resource type="Shader" path="res://BubbleGame/2D/Art/BubbleShader/Bubble_Shader_2D.gdshader" id="17_q7ndn"]
+[ext_resource type="Texture2D" uid="uid://q7foh2jnhhae" path="res://BubbleGame/2D/Art/Textures/bubble_dir.png" id="18_mlfo8"]
+[ext_resource type="Texture2D" uid="uid://b3a3tl8bnn2jx" path="res://BubbleGame/2D/Art/Textures/bubble_mask.png" id="19_v251p"]
+[ext_resource type="Texture2D" uid="uid://cwwfgn5dykn3h" path="res://BubbleGame/2D/Art/BubbleShader/iridescencyramp.png" id="20_fvdqr"]
+[ext_resource type="Texture2D" uid="uid://pef0fi1iis83" path="res://BubbleGame/2D/Art/BubbleShader/bubble_noise_texture.tres" id="21_n6gmi"]
+[ext_resource type="Texture2D" uid="uid://bqxh1mn26ap32" path="res://BubbleGame/2D/Art/BubbleShader/BUBBLES_NORMALS_01.png" id="22_to7k7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nxp7r"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 3.0,
 "texture": ExtResource("2_kjqx4")
 }, {
 "duration": 1.0,
@@ -39,7 +49,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Hurt",
-"speed": 2.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -63,6 +73,23 @@ animations = [{
 "loop": true,
 "name": &"RunningFront",
 "speed": 12.0
+}, {
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("13_hwhlv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_6pyx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_aytkq")
+}, {
+"duration": 10.0,
+"texture": ExtResource("16_o6mqy")
+}],
+"loop": false,
+"name": &"Win",
+"speed": 3.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dte2h"]
@@ -71,6 +98,28 @@ height = 166.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4i0xn"]
 radius = 11.0681
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pehfr"]
+shader = ExtResource("17_q7ndn")
+shader_parameter/albedo = Color(0.648565, 0.813152, 0.998724, 1)
+shader_parameter/vertexDistortion = 0.1
+shader_parameter/distortion = 0.1
+shader_parameter/spec_color = Color(0.6, 0.6, 0.8, 1)
+shader_parameter/lightDir = Vector3(1, -1, 1)
+shader_parameter/noiseColorStrength = 0.5
+shader_parameter/skyColor = Color(0.663744, 0.843164, 0.797171, 1)
+shader_parameter/bubblesColor = Color(0.34, 0.417, 1, 1)
+shader_parameter/alphaMask = 1.0
+shader_parameter/opacity = null
+shader_parameter/normal_map = ExtResource("22_to7k7")
+shader_parameter/colorRamp = ExtResource("20_fvdqr")
+shader_parameter/noise_tex = ExtResource("21_n6gmi")
+shader_parameter/bubbles_tex = ExtResource("19_v251p")
+shader_parameter/bubble_dir_tex = ExtResource("18_mlfo8")
+
+[sub_resource type="Gradient" id="Gradient_ullyb"]
+offsets = PackedFloat32Array(0, 0.0647948, 0.866091, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0.04, 0.04, 0.04, 1, 0.89, 0.89, 0.89, 1, 1, 1, 1, 0)
 
 [sub_resource type="Gradient" id="Gradient_owgmy"]
 colors = PackedColorArray(1, 1, 1, 0.784314, 0, 1, 1, 0.784314)
@@ -92,7 +141,7 @@ CharacterWand = NodePath("WandFront")
 position = Vector2(-8, -59)
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_nxp7r")
-animation = &"Hurt"
+animation = &"Win"
 autoplay = "RunningFront"
 script = ExtResource("13_u0aj1")
 
@@ -116,6 +165,19 @@ script = ExtResource("9_0phpe")
 position = Vector2(-6, -173)
 scale = Vector2(5.8, 5.8)
 shape = SubResource("CircleShape2D_4i0xn")
+
+[node name="Bubbles_Particles" type="CPUParticles2D" parent="CharacterBody2D/Area2D/WandHitbox"]
+material = SubResource("ShaderMaterial_pehfr")
+amount = 16
+randomness = 0.15
+emission_shape = 1
+emission_sphere_radius = 7.52
+direction = Vector2(1, 1)
+spread = 100.48
+gravity = Vector2(0, -300)
+scale_amount_min = 5.19
+scale_amount_max = 58.55
+color_ramp = SubResource("Gradient_ullyb")
 
 [node name="BubbleTrail" type="Line2D" parent="." node_paths=PackedStringArray("WandPosition", "TrailHitbox", "CharacterMovement")]
 material = ExtResource("10_rng4n")

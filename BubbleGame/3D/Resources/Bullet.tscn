@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cs6mpkq4pvwtw"]
+[gd_scene load_steps=6 format=3 uid="uid://cs6mpkq4pvwtw"]
 
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Bullet.cs" id="1_mkh7a"]
 [ext_resource type="PackedScene" uid="uid://deb00m7d7sdcy" path="res://BubbleGame/3D/Art/Models/Model_Bubble.tscn" id="2_caa4d"]
@@ -9,6 +9,8 @@ albedo_color = Color(1, 0, 0, 1)
 [sub_resource type="SphereMesh" id="SphereMesh_2gqei"]
 material = SubResource("StandardMaterial3D_t3lwe")
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_3pg8n"]
+
 [node name="Bullet" type="Node3D"]
 script = ExtResource("1_mkh7a")
 
@@ -18,3 +20,11 @@ mesh = SubResource("SphereMesh_2gqei")
 
 [node name="Bubble" parent="." instance=ExtResource("2_caa4d")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(0.52, 0, 0, 0, 0.52, 0, 0, 0, 0.52, 0, 0, 0)
+shape = SubResource("SphereShape3D_3pg8n")
+
+[connection signal="area_entered" from="Area3D" to="." method="Area3D_AreaEntered"]

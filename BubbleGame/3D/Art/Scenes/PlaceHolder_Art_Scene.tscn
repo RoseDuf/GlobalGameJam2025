@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://ypnx44eo0ryd"]
+[gd_scene load_steps=9 format=3 uid="uid://ypnx44eo0ryd"]
 
-[ext_resource type="PackedScene" uid="uid://ddd0o0ywdqlb3" path="res://BubbleGame/3D/Art/Models/sm_spaceship_01.tscn" id="2_3cqmu"]
+[ext_resource type="PackedScene" uid="uid://c2je4f36vj1qm" path="res://BubbleGame/3D/Art/Models/sm_spaceship_01.tscn" id="2_3cqmu"]
 [ext_resource type="PackedScene" uid="uid://jns0jadq0euk" path="res://BubbleGame/3D/Art/Models/Export/SM_TestCube_1x1x1_Houdini_01.fbx" id="2_gdls3"]
-[ext_resource type="PackedScene" uid="uid://c6vtx0hhpkdv2" path="res://BubbleGame/3D/Art/Models/sm_obstacle_01.tscn" id="3_bcajh"]
-[ext_resource type="PackedScene" uid="uid://pflyesbmfo6f" path="res://BubbleGame/3D/Art/Models/sm_obstacle_02.tscn" id="4_xioat"]
-[ext_resource type="PackedScene" uid="uid://3wrn1p5ii3ov" path="res://BubbleGame/3D/Art/Models/sm_obstacle_03.tscn" id="5_wyc4a"]
+[ext_resource type="PackedScene" uid="uid://dymx20s8ic2of" path="res://BubbleGame/3D/Art/Models/sm_obstacle_01.tscn" id="3_bcajh"]
+[ext_resource type="PackedScene" uid="uid://cu4pwufeyk3xn" path="res://BubbleGame/3D/Art/Models/sm_obstacle_02.tscn" id="4_xioat"]
+[ext_resource type="PackedScene" uid="uid://cxl68csrhkt1v" path="res://BubbleGame/3D/Art/Models/sm_obstacle_03.tscn" id="5_wyc4a"]
 [ext_resource type="PackedScene" uid="uid://cr5xp2dcfylqv" path="res://BubbleGame/3D/Art/VFX/VFX_BOOM_01.tscn" id="6_tjyht"]
+[ext_resource type="PackedScene" path="res://BubbleGame/3D/Art/Models/sm_wasp_01.tscn" id="7_1i35a"]
+[ext_resource type="PackedScene" uid="uid://curq8bhy6uesa" path="res://BubbleGame/3D/Art/Models/Export/ST_Wand_01.fbx" id="8_er36p"]
 
 [node name="PlaceHolderArtScene" type="Node3D"]
 
@@ -25,3 +27,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.507)
 
 [node name="Vfx_Boom01" parent="." instance=ExtResource("6_tjyht")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35959, 1.19209e-07, 1.72773)
+
+[node name="SK_Wasp_01" parent="." instance=ExtResource("7_1i35a")]
+
+[node name="ST_Wand_01" parent="." instance=ExtResource("8_er36p")]

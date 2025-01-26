@@ -8,19 +8,19 @@ size = Vector3(1.04736, 1, 1)
 
 [node name="DefaultObstacle" type="Node3D" node_paths=PackedStringArray("_colliderArea") groups=["obstacle"]]
 script = ExtResource("1_ewd7e")
-_colliderArea = NodePath("Area3D")
+_colliderArea = NodePath("ObstacleArea3D")
 
 [node name="ST_Obstacle_02" parent="." instance=ExtResource("2_5ewdd")]
 transform = Transform3D(-4.37114e-08, 0, 1, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, 1.91069e-15, 0, 0, 0)
 
-[node name="Area3D" type="Area3D" parent="." groups=["obstacle"]]
+[node name="ObstacleArea3D" type="Area3D" parent="." groups=["obstacle"]]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ObstacleArea3D" groups=["obstacle"]]
 transform = Transform3D(0.56, 0, 0, 0, 0.44, 0, 0, 0, 0.125, 0.220738, 0, 0)
 shape = SubResource("BoxShape3D_87b83")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="ObstacleArea3D" groups=["obstacle"]]
 transform = Transform3D(0.395, 0, 0, 0, 0.105, 0, 0, 0, 0.06, -0.20875, -0.031369, 0)
 shape = SubResource("BoxShape3D_87b83")
 
-[connection signal="area_entered" from="Area3D" to="." method="OnAreaEntered"]
+[connection signal="area_entered" from="ObstacleArea3D" to="." method="OnAreaEntered"]

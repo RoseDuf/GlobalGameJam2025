@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://bv0rsh5hpv5gr"]
+
+[ext_resource type="PackedScene" uid="uid://cfgfj6kqwf8hh" path="res://BubbleGame/3D/Art/Models/Export/SK_Wasp_01.fbx" id="1_lruob"]
+[ext_resource type="Material" uid="uid://bdxsa1m56ni5m" path="res://BubbleGame/3D/Art/Shader/M_Spaceship_Obstacles_01.tres" id="2_ejs1s"]
+
+[node name="SK_Wasp_01" instance=ExtResource("1_lruob")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="Body" parent="." index="0"]
+material_override = ExtResource("2_ejs1s")
+
+[node name="Dummy001" parent="." index="1"]
+transform = Transform3D(0.328331, 0.784886, -0.525503, 0.577274, 0.273614, 0.769344, 0.747632, -0.555958, -0.363258, 0.54584, 0.775676, 1.03815)
+
+[node name="patte006" parent="Dummy001" index="0"]
+surface_material_override/0 = ExtResource("2_ejs1s")
+
+[node name="Dummy002" parent="." index="2"]
+transform = Transform3D(0.742637, 0.19545, -0.640539, 0.42488, 0.601815, 0.676236, 0.517656, -0.77435, 0.363887, 0.513042, 0.723985, 0.655448)
+
+[node name="patte001" parent="Dummy002" index="0"]
+surface_material_override/0 = ExtResource("2_ejs1s")
+
+[node name="Dummy003" parent="." index="3"]
+transform = Transform3D(0.749577, 0.385199, -0.53829, 0.256001, 0.581236, 0.772417, 0.610408, -0.716789, 0.33707, 0.38106, 0.339871, 0.0966464)
+
+[node name="patte002" parent="Dummy003" index="0"]
+surface_material_override/0 = ExtResource("2_ejs1s")
+
+[node name="Dummy004" parent="." index="4"]
+transform = Transform3D(-0.985865, 0.0854515, 0.14411, 0.142866, 0.87808, 0.456688, -0.0875152, 0.470821, -0.877877, -0.56662, 0.775676, 1.04758)
+
+[node name="patte003" parent="Dummy004" index="0"]
+surface_material_override/0 = ExtResource("2_ejs1s")
+
+[node name="Dummy005" parent="." index="5"]
+transform = Transform3D(-0.757377, -0.200055, 0.621578, 0.197854, 0.836853, 0.510421, -0.622282, 0.509563, -0.594232, -0.458874, 0.765794, 0.674116)
+
+[node name="patte004" parent="Dummy005" index="0"]
+surface_material_override/0 = ExtResource("2_ejs1s")
+
+[node name="Dummy006" parent="." index="6"]
+transform = Transform3D(-0.757377, -0.200055, 0.621578, 0.352171, 0.676454, 0.646828, -0.549869, 0.708794, -0.441877, -0.400799, 0.356648, 0.105332)
+
+[node name="patte005" parent="Dummy006" index="0"]
+surface_material_override/0 = ExtResource("2_ejs1s")
+
+[node name="Dummy007" parent="." index="7"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.37926, 0.550816)
+
+[node name="Wings" parent="Dummy007" index="0"]
+surface_material_override/0 = ExtResource("2_ejs1s")
+
+[node name="Dummy009" parent="." index="8"]
+transform = Transform3D(-0.0294561, 0.059702, 0.997782, -0.24219, 0.968044, -0.0650725, -0.969782, -0.243569, -0.0140556, 0, 1.20597, 1.4104)
+
+[node name="Head" parent="Dummy009" index="0"]
+surface_material_override/0 = ExtResource("2_ejs1s")
+
+[node name="Dummy008" parent="Dummy009/Head" index="0"]
+transform = Transform3D(0.0663534, 0.000221985, 1.00022, -1.17812, 0.570959, 0.0378904, -0.817755, -0.822549, 0.0265709, -2.63317e-07, 0.258318, -0.349047)
+
+[node name="antenna" parent="Dummy009/Head/Dummy008" index="0"]
+surface_material_override/0 = ExtResource("2_ejs1s")
+
+[node name="Node3D" type="Node3D" parent="." index="10"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0.36996, 1.26098, 0.600472)
