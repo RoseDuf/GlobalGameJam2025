@@ -308,7 +308,6 @@ void fragment() {
 
 }
 "
-graph_offset = Vector2(-1795.17, -114.159)
 modes/depth_draw = 1
 modes/diffuse = 1
 flags/world_vertex_coords = true

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://pflyesbmfo6f"]
+
+[ext_resource type="PackedScene" uid="uid://bd28ej3d61uch" path="res://BubbleGame/3D/Art/Models/Export/ST_Obstacle_02_DoNotUse.fbx" id="1_pf1fd"]
+[ext_resource type="Material" uid="uid://bdxsa1m56ni5m" path="res://BubbleGame/3D/Art/Shader/M_Spaceship_Obstacles_01.tres" id="2_1hlao"]
+
+[node name="ST_Obstacle_02" instance=ExtResource("1_pf1fd")]
+
+[node name="Cylinder002" parent="." index="0"]
+transform = Transform3D(-2.98273e-08, -0.227457, -2.7115e-08, -1.98849e-08, -2.7115e-08, 0.227457, -0.227457, 2.98273e-08, -1.98849e-08, -0.004, -0.0144952, 0.00121535)
+material_override = ExtResource("2_1hlao")
