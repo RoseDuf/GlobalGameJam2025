@@ -10,27 +10,38 @@ namespace BubbleGame._3D
     /*
      * This class handles the bubble path the player has to navigate through. And how/when enemies/debris will appear
     */
-    public partial class SpawnManager : Node
+    public partial class DebrisSpawnManager : Node
     {
-        [Export] private WaveData[] _waves;
+        [Export] public ObstacleData obstacleData;
 
-        [Export] private PackedScene _obstacleScene;
         [Export] private Timer _obstacleSpawnTimer;
 
         private int _currentWaveIndex;
 
         private List<Obstacle> _currentObstacles = new();
 
-        public override void _Ready()
+        private float _timeToStopWave = 0;
+        private float _timer = 0;
+        private bool _canSpawn = false;
+
+        public void StartDebrisWave(float timeToStopWave)
         {
-            if (_waves != null && _waves.Length > 0)
-            {
-                StartNewWave(0);
-            }
+            _timeToStopWave = timeToStopWave;
+            _canSpawn = true;
         }
 
         public override void _Process(double delta)
         {
+            if (_canSpawn)
+            {
+                _timer += (float)delta;
+
+                if (_timer < _timeToStopWave)
+                {
+                    _timer = 0;
+                    _canSpawn = false;
+                }
+            }
         }
 
         private void StartNewWave(int waveIndex)
@@ -62,7 +73,7 @@ namespace BubbleGame._3D
         {
             ObstacleData obstacleData = obstacleToSpawn.obstacleData;
 
-            Obstacle obstacle = _obstacleScene.Instantiate<Obstacle>();
+            Obstacle obstacle = obstacleData.obstacleScene.Instantiate<Obstacle>();
             obstacle.Initialize(obstacleData);
             this.AddChild(obstacle);
 

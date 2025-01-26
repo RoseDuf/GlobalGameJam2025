@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c358f7xu5nnju"]
+[gd_scene load_steps=6 format=3 uid="uid://c358f7xu5nnju"]
 
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/SpawnManager.cs" id="1_fs1cg"]
+[ext_resource type="Resource" uid="uid://dydr5be8sn1wq" path="res://BubbleGame/3D/Resources/Obstacles/WavesDataTest.tres" id="2_48ntx"]
 [ext_resource type="PackedScene" uid="uid://dwghalcje8h0q" path="res://BubbleGame/3D/Resources/Obstacles/DefaultObstacle.tscn" id="2_i5gjq"]
 [ext_resource type="PackedScene" uid="uid://cpwar8fyqpc55" path="res://BubbleGame/3D/Resources/Obstacles/Despawner.tscn" id="3_y6g5q"]
 
@@ -20,6 +21,7 @@ transform = Transform3D(-1, 4.17145e-08, -7.68286e-08, 0, 0.878817, 0.477159, 8.
 
 [node name="ObstacleSpawner" type="Node" parent="." node_paths=PackedStringArray("_obstacleSpawnTimer")]
 script = ExtResource("1_fs1cg")
+_waves = Array[Object]([ExtResource("2_48ntx"), ExtResource("2_48ntx")])
 _obstacleScene = ExtResource("2_i5gjq")
 _obstacleSpawnTimer = NodePath("../ObstacleSpawnTimer")
 

@@ -10,6 +10,7 @@ namespace BubbleGame._3D
     [GlobalClass]
     public partial class ObstacleData : Resource
     {
+        [Export] public PackedScene obstacleScene;
         [Export] public float speed;
         [Export] public float timeUntilMoving;
     }

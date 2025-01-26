@@ -11,7 +11,7 @@ namespace BubbleGame._3D
     [GlobalClass]
     public partial class ObstaclesToSpawn : Resource
     {
-        [Export] public ObstacleData obstacleData;
         [Export] public int numberToSpawn;
+        [Export] public ObstacleData obstacleData;
     }
 }

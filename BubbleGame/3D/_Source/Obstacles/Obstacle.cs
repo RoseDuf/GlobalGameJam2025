@@ -7,10 +7,7 @@ namespace BubbleGame._3D
 {
 	public partial class Obstacle : Node3D
 	{
-        // Step 1: Define a delegate type
         public delegate void OnObstacleDestroyedEvent(Obstacle obstacle);
-
-        // Step 2: Declare an event using the delegate
         public event OnObstacleDestroyedEvent ObstacleDestroyedEventHandler;
 
         [Export] private Area3D _colliderArea;
