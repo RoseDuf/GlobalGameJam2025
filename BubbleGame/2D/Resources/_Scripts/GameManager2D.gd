@@ -17,5 +17,7 @@ func _process(delta: float) -> void:
 		PrepareNextPhase()
 
 func PrepareNextPhase() -> void:
-	assert(false, "NOT TEH GAEM 	OVERZ")
+	call_deferred("LoadNextLevel")
 	
+func LoadNextLevel() -> void:
+	get_tree().change_scene_to_file("res://BubbleGame/3D/Resources/_Scenes/Bubble3D.tscn")

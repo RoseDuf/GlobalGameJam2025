@@ -4,7 +4,7 @@ using BubbleGame.Common.SceneManagement;
 
 namespace BubbleGame.Common
 {
-	public partial class MainMenuView : Control
+	public partial class MainMenuView : CanvasLayer	
 	{
 		private void PlayButton_Pressed()
 		{

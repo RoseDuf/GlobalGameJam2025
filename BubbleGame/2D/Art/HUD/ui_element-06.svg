@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 565.17 109.09">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #686559;
+      }
+
+      .cls-2 {
+        opacity: .4;
+      }
+
+      .cls-3 {
+        fill: #efebd8;
+        filter: url(#drop-shadow-1);
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 4px;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="0" y="21.29" width="564.88" height="73.91" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1"/>
+      <feGaussianBlur result="blur" stdDeviation="0"/>
+      <feFlood flood-color="#000" flood-opacity=".3"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <polygon class="cls-3" points="554.56 37.49 497.57 33.6 444.62 33.6 444.62 33.6 344.88 26.19 272.97 32.49 120.07 25.3 4.18 38.87 6.63 89.75 142.21 85.47 252.85 86.39 343.41 87.11 444.39 89.75 444.39 89.8 514.28 86.11 559.45 89.82 554.56 37.49"/>
+  <g class="cls-2">
+    <polygon class="cls-1" points="5.21 39.88 121.1 26.32 274.01 33.5 345.91 27.2 445.65 34.61 498.6 34.61 554.68 38.44 554.6 37.5 497.6 33.61 444.65 33.61 344.91 26.2 273.01 32.5 120.1 25.32 4.21 38.88 6.66 89.76 7.61 89.73 5.21 39.88"/>
+  </g>
+</svg>
