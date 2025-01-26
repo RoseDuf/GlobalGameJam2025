@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://k0tbv4f3f3dn"]
+
+[ext_resource type="PackedScene" uid="uid://mrmgv3bmgfq1" path="res://BubbleGame/2D/Resources/Prefabs/enemies/enemy-mosquito.tscn" id="1_n3jf2"]
+
+[node name="Mosquito-circle" type="Node2D"]
+
+[node name="Enemy198" parent="." instance=ExtResource("1_n3jf2")]
+position = Vector2(-528, -25)
+
+[node name="Enemy199" parent="." instance=ExtResource("1_n3jf2")]
+position = Vector2(-336, 229)
+
+[node name="Enemy200" parent="." instance=ExtResource("1_n3jf2")]
+position = Vector2(1, 286)
+
+[node name="Enemy201" parent="." instance=ExtResource("1_n3jf2")]
+position = Vector2(441, 189)
+
+[node name="Enemy202" parent="." instance=ExtResource("1_n3jf2")]
+position = Vector2(429, -113)
+
+[node name="Enemy203" parent="." instance=ExtResource("1_n3jf2")]
+position = Vector2(133, -307)
+
+[node name="Enemy204" parent="." instance=ExtResource("1_n3jf2")]
+position = Vector2(-222, -254)

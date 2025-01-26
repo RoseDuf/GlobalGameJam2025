@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1ecyc3ge22fa"]
+
+[ext_resource type="Texture2D" uid="uid://ct72aoqcdd3sm" path="res://BubbleGame/2D/Art/Environment/Flowers 001.png" id="1_wivf0"]
+[ext_resource type="PackedScene" uid="uid://cuwgb53vam2t6" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/Obstacle-art-prefabs/obs-flowers-5.tscn" id="2_1jlef"]
+[ext_resource type="PackedScene" uid="uid://dwl2cb6pn0lkn" path="res://BubbleGame/2D/Resources/Prefabs/Environment/env-flowers-2.tscn" id="3_qftfx"]
+
+[node name="EnvironmentArt" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_wivf0")
+
+[node name="EnvironmentArt" parent="." instance=ExtResource("2_1jlef")]
+position = Vector2(-69, -39)
+
+[node name="EnvironmentArt2" parent="." instance=ExtResource("2_1jlef")]
+position = Vector2(-28, -29)
+scale = Vector2(-1, 1)
+
+[node name="EnvironmentArt3" parent="." instance=ExtResource("2_1jlef")]
+position = Vector2(88, -59)
+
+[node name="EnvironmentArt4" parent="." instance=ExtResource("3_qftfx")]
+show_behind_parent = true
+position = Vector2(5, -70)
