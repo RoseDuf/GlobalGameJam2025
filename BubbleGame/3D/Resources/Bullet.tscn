@@ -27,4 +27,11 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 transform = Transform3D(0.52, 0, 0, 0, 0.52, 0, 0, 0, 0.52, 0, 0, 0)
 shape = SubResource("SphereShape3D_3pg8n")
 
+[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/3D/Shooting"
+event_guid = "{1cde84e3-fb9e-456e-a37a-4ec97e14f980}"
+autoplay = true
+auto_release = true
+volume = 50.0
+
 [connection signal="area_entered" from="Area3D" to="." method="Area3D_AreaEntered"]

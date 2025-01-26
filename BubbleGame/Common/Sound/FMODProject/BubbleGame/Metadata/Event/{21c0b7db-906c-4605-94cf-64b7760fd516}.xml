@@ -5,7 +5,7 @@
 			<value>Helicopter Loop</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{3097b8a9-9c12-40d7-a1ce-e8517d5b7ba8}</destination>
@@ -142,6 +142,7 @@
 	<object class="MixerBusEffectChain" id="{2d3faf19-58aa-4188-b697-bd94bbd4be5b}">
 		<relationship name="effects">
 			<destination>{ba423ff8-2926-4e57-9ba1-8b9b5911d57b}</destination>
+			<destination>{b987cc2d-ecd3-4942-821a-72d5670f14eb}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{fde4937c-ae82-464a-96f8-8977a126a906}" />
@@ -179,10 +180,19 @@
 			<destination>{1e88a0a4-0255-4df5-80a2-3471dec542bd}</destination>
 			<destination>{a2377ffa-db42-4b8a-9801-61d478c657b6}</destination>
 			<destination>{2c60b054-b758-4973-99f1-0ff72cbfd908}</destination>
+			<destination>{9653a0ab-39df-4ea0-a631-529143c434cc}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{931f6e6a-8e79-4ca4-a4b0-99768c4dc5b9}" />
 	<object class="MixerBusFader" id="{ba423ff8-2926-4e57-9ba1-8b9b5911d57b}" />
+	<object class="SpatialiserEffect" id="{b987cc2d-ecd3-4942-821a-72d5670f14eb}">
+		<property name="extentMode">
+			<value>1</value>
+		</property>
+		<property name="soundSize">
+			<value>20</value>
+		</property>
+	</object>
 	<object class="AutomationPoint" id="{3fee4b1b-55f0-4bae-a39b-b2319c1afaf5}">
 		<property name="position">
 			<value>0.29857914708414002</value>
@@ -228,4 +238,5 @@
 			<value>-21.2068958</value>
 		</property>
 	</object>
+	<object class="SpatialiserEffect" id="{9653a0ab-39df-4ea0-a631-529143c434cc}" />
 </objects>

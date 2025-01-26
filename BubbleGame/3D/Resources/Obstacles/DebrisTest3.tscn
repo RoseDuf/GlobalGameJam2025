@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cs8fosr03yugf"]
 
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Obstacles/Obstacle.cs" id="1_ewd7e"]
-[ext_resource type="PackedScene" uid="uid://cu4pwufeyk3xn" path="res://BubbleGame/3D/Art/Models/sm_obstacle_02.tscn" id="2_5ewdd"]
+[ext_resource type="PackedScene" path="res://BubbleGame/3D/Art/Models/sm_obstacle_02.tscn" id="2_5ewdd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_87b83"]
 size = Vector3(1.04736, 1, 1)

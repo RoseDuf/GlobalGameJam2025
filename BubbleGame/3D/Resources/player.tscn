@@ -52,6 +52,7 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 
 [node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="Player3D"]
 event_name = "event:/3D/Movement"
 event_guid = "{63eb7be6-4738-464e-81c0-59cbb6627eaa}"
+auto_release = true
 volume = 20.0
 fmod_parameters/Speed/id = -5554117826464266780
 fmod_parameters/Speed = 0.0
