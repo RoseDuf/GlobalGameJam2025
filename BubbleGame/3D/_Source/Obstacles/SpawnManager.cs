@@ -1,4 +1,5 @@
-﻿using Godot;
+﻿using BubbleGame.Common.SceneManagement;
+using Godot;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,20 +18,27 @@ namespace BubbleGame._3D
         [Export] public DebrisSpawnManager debrisSpawnManager;
         [Export] public float _delayBetweenSwarms = 1;
 
+        private Godot.Collections.Array _timeStamps;
+
         public override void _Ready()
         {
+            _timeStamps = SceneManager.Instance.GetTimeStampsCachedData();
+
             bugSpawnManager.BugSwarmStartHandler += OnBugSwarmStart;
             bugSpawnManager.BugSwarmEndHandler += OnBugSwarmEnd;
+            bugSpawnManager.NoMoreBugsLeftHandler += OnNoMoreBugsLeft;
 
             if (bugSpawnManager.swarms != null || bugSpawnManager.swarms.Length > 0)
             {
-                debrisSpawnManager.StartDebris(/*bugSpawnManager.swarms[0].timeUntilSwarmStarts*/ 3 - _delayBetweenSwarms);
+                Godot.Collections.Array array = (Godot.Collections.Array)_timeStamps[0];
+                debrisSpawnManager.StartDebris((float)array[0] - _delayBetweenSwarms);
             }
         }
         public override void _ExitTree()
         {
             bugSpawnManager.BugSwarmStartHandler -= OnBugSwarmStart;
             bugSpawnManager.BugSwarmEndHandler -= OnBugSwarmEnd;
+            bugSpawnManager.NoMoreBugsLeftHandler -= OnNoMoreBugsLeft;
         }
 
         private void OnBugSwarmStart()
@@ -41,6 +49,11 @@ namespace BubbleGame._3D
         private void OnBugSwarmEnd(float TimeForNextWave)
         {
             debrisSpawnManager.StartDebris(TimeForNextWave - _delayBetweenSwarms);
+        }
+
+        private void OnNoMoreBugsLeft()
+        {
+            // go back to 2D or main menu
         }
     }
 }

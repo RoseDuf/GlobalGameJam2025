@@ -27,6 +27,7 @@ frame_5/duration = 1.0
 size = Vector2(840, 820)
 
 [node name="Enemy" type="Node2D"]
+position = Vector2(0, -37)
 script = ExtResource("1_gkehv")
 BugType = 2
 
@@ -39,4 +40,5 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_d2syh")

@@ -13,5 +13,5 @@ func _process(delta: float) -> void:
 	pass
 
 func IncreaseScore() -> GlobalGameManager.BUGS:
-	GlobalGameManager.Score += 50;
+	GlobalGameManager.Score += 5;
 	return BugType;

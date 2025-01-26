@@ -1,7 +1,6 @@
 using Godot;
 using System;
 using System.Collections.Generic;
-using static Godot.TextServer;
 
 namespace BubbleGame._3D
 {
@@ -11,6 +10,9 @@ namespace BubbleGame._3D
         public event OnObstacleDestroyedEvent ObstacleDestroyedEventHandler;
 
         [Export] private Area3D _colliderArea;
+
+        [Export]
+        public float rewardScore = 1;
 
         private ObstacleData _data;
 
@@ -28,12 +30,12 @@ namespace BubbleGame._3D
         {
             _moveDirection = Vector3.Forward;
             Translate(_moveDirection * _data.speed * (float)delta);
-
         }
 
         public override void _ExitTree()
         {
             ObstacleDestroyedEventHandler?.Invoke(this);
+            GameManager.Instance.score += rewardScore;
         }
 
         public void Initialize(ObstacleData obstacleData)
