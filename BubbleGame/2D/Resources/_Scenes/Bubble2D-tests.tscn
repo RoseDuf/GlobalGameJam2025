@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dtt1eg61b0ol7"]
+[gd_scene load_steps=14 format=3 uid="uid://wx6yw8mq521b"]
 
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/GameManager2D.gd" id="1_ki77s"]
 [ext_resource type="Texture2D" uid="uid://cr5xry6fsqq7c" path="res://BubbleGame/2D/Resources/_DebugArt/SoapBarBack.png" id="2_mmc8a"]
@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://egv3vjfw0mrs" path="res://BubbleGame/2D/Resources/Prefabs/rock-3.tscn" id="12_v2xmh"]
 [ext_resource type="PackedScene" uid="uid://bx2jow18jl55q" path="res://BubbleGame/2D/Resources/Prefabs/rock-4.tscn" id="13_xk2jf"]
 
-[node name="Bubble2D" type="Node"]
+[node name="Bubble2D2" type="Node"]
 script = ExtResource("1_ki77s")
 
 [node name="GUI Layer" type="CanvasLayer" parent="."]

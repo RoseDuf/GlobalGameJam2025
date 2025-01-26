@@ -54,4 +54,9 @@ script = ExtResource("8_ud1mw")
 Trail = NodePath("../Player/BubbleTrail")
 DezoomSpeed = 0.9
 
+[node name="FmodEventEmitter2D" type="FmodEventEmitter2D" parent="."]
+event_name = "event:/2D/AMB"
+event_guid = "{ecb95390-f078-4b0a-8007-7722bd635b56}"
+autoplay = true
+
 [editable path="Player"]

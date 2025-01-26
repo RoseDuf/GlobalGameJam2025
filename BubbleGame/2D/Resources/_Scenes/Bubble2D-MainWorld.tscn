@@ -1,0 +1,240 @@
+[gd_scene load_steps=15 format=3 uid="uid://dd8qqug60e8fj"]
+
+[ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/GameManager2D.gd" id="1_rkm85"]
+[ext_resource type="Texture2D" uid="uid://cr5xry6fsqq7c" path="res://BubbleGame/2D/Resources/_DebugArt/SoapBarBack.png" id="2_fgk37"]
+[ext_resource type="Texture2D" uid="uid://bolm5fact546j" path="res://BubbleGame/2D/Resources/_DebugArt/SoapBarFill.png" id="3_6cbk5"]
+[ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/SoapBarMeter.gd" id="4_tyop4"]
+[ext_resource type="PackedScene" uid="uid://bqjdygfsmbxya" path="res://BubbleGame/2D/Resources/Prefabs/player.tscn" id="5_vjnj5"]
+[ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/2DCamera.gd" id="7_bgt82"]
+[ext_resource type="PackedScene" path="res://BubbleGame/2D/Resources/Prefabs/Tree-1.tscn" id="7_pbjam"]
+[ext_resource type="PackedScene" path="res://BubbleGame/2D/Resources/Prefabs/Tree-2.tscn" id="8_t88bx"]
+[ext_resource type="PackedScene" uid="uid://b0ffhomm52x3y" path="res://BubbleGame/2D/Resources/Prefabs/Tree-3.tscn" id="9_n5sno"]
+[ext_resource type="PackedScene" path="res://BubbleGame/2D/Resources/Prefabs/rock-1.tscn" id="10_epjys"]
+[ext_resource type="PackedScene" path="res://BubbleGame/2D/Resources/Prefabs/rock-2.tscn" id="11_34m0w"]
+[ext_resource type="PackedScene" path="res://BubbleGame/2D/Resources/Prefabs/rock-3.tscn" id="12_ercq4"]
+[ext_resource type="PackedScene" path="res://BubbleGame/2D/Resources/Prefabs/rock-4.tscn" id="13_5bshv"]
+[ext_resource type="PackedScene" path="res://BubbleGame/2D/Resources/Prefabs/enemy.tscn" id="14_2depf"]
+
+[node name="Bubble2D" type="Node"]
+script = ExtResource("1_rkm85")
+
+[node name="GUI Layer" type="CanvasLayer" parent="."]
+
+[node name="Soap Progress Bar" type="TextureProgressBar" parent="GUI Layer" node_paths=PackedStringArray("GameManager")]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 20.0
+offset_right = 300.0
+offset_bottom = 80.0
+grow_horizontal = 2
+max_value = 11.0
+step = 0.01
+texture_under = ExtResource("2_fgk37")
+texture_progress = ExtResource("3_6cbk5")
+script = ExtResource("4_tyop4")
+GameManager = NodePath("../..")
+
+[node name="Player" parent="." instance=ExtResource("5_vjnj5")]
+
+[node name="CharacterBody2D" parent="Player" index="0" node_paths=PackedStringArray("GameManager")]
+GameManager = NodePath("../..")
+
+[node name="WandFront" parent="Player/CharacterBody2D" index="1"]
+texture = null
+
+[node name="Area2D" parent="Player/CharacterBody2D" index="3" node_paths=PackedStringArray("GameManager")]
+GameManager = NodePath("../../..")
+
+[node name="Camera" type="Camera2D" parent="." node_paths=PackedStringArray("Trail")]
+position = Vector2(325, 184)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+script = ExtResource("7_bgt82")
+Trail = NodePath("../Player/BubbleTrail")
+DezoomSpeed = 0.9
+
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="Obstacle5" parent="Obstacles" instance=ExtResource("7_pbjam")]
+position = Vector2(315, 897)
+
+[node name="Obstacle6" parent="Obstacles" instance=ExtResource("8_t88bx")]
+position = Vector2(1376.9, 155.8)
+
+[node name="Obstacle7" parent="Obstacles" instance=ExtResource("8_t88bx")]
+position = Vector2(1727.9, 265.8)
+
+[node name="Obstacle8" parent="Obstacles" instance=ExtResource("8_t88bx")]
+position = Vector2(2026.9, 59.8)
+
+[node name="Obstacle21" parent="Obstacles" instance=ExtResource("8_t88bx")]
+position = Vector2(3022, 1993)
+
+[node name="Obstacle22" parent="Obstacles" instance=ExtResource("8_t88bx")]
+position = Vector2(3660, 2381)
+
+[node name="Obstacle23" parent="Obstacles" instance=ExtResource("8_t88bx")]
+position = Vector2(3882.9, 1772.9)
+
+[node name="Obstacle24" parent="Obstacles" instance=ExtResource("8_t88bx")]
+position = Vector2(3519.9, -1279.1)
+
+[node name="Obstacle25" parent="Obstacles" instance=ExtResource("8_t88bx")]
+position = Vector2(3919, -681)
+
+[node name="Obstacle33" parent="Obstacles" instance=ExtResource("8_t88bx")]
+position = Vector2(5460, -60)
+
+[node name="Obstacle26" parent="Obstacles" instance=ExtResource("8_t88bx")]
+position = Vector2(4169.9, -1375.1)
+
+[node name="Obstacle27" parent="Obstacles" instance=ExtResource("8_t88bx")]
+position = Vector2(5079, 2472)
+
+[node name="Obstacle28" parent="Obstacles" instance=ExtResource("8_t88bx")]
+position = Vector2(5268, 3376)
+
+[node name="Obstacle29" parent="Obstacles" instance=ExtResource("8_t88bx")]
+position = Vector2(5891.9, 2834.9)
+
+[node name="Obstacle30" parent="Obstacles" instance=ExtResource("8_t88bx")]
+position = Vector2(2447.9, 3849.9)
+
+[node name="Obstacle31" parent="Obstacles" instance=ExtResource("8_t88bx")]
+position = Vector2(2798.9, 3959.9)
+
+[node name="Obstacle32" parent="Obstacles" instance=ExtResource("8_t88bx")]
+position = Vector2(3097.9, 3753.9)
+
+[node name="Obstacle9" parent="Obstacles" instance=ExtResource("9_n5sno")]
+position = Vector2(1913, -1700)
+
+[node name="Obstacle10" parent="Obstacles" instance=ExtResource("7_pbjam")]
+position = Vector2(-762, 787)
+
+[node name="Obstacle16" parent="Obstacles" instance=ExtResource("7_pbjam")]
+position = Vector2(-1851, 2782)
+
+[node name="Obstacle36" parent="Obstacles" instance=ExtResource("7_pbjam")]
+position = Vector2(-2377, 4677)
+
+[node name="Obstacle17" parent="Obstacles" instance=ExtResource("7_pbjam")]
+position = Vector2(-1437, 3279)
+
+[node name="Obstacle13" parent="Obstacles" instance=ExtResource("7_pbjam")]
+position = Vector2(346, 2581)
+
+[node name="Obstacle14" parent="Obstacles" instance=ExtResource("7_pbjam")]
+position = Vector2(772, 3146)
+
+[node name="Obstacle15" parent="Obstacles" instance=ExtResource("7_pbjam")]
+position = Vector2(146, 3963)
+
+[node name="Obstacle37" parent="Obstacles" instance=ExtResource("7_pbjam")]
+position = Vector2(-3737, 977)
+
+[node name="Obstacle38" parent="Obstacles" instance=ExtResource("7_pbjam")]
+position = Vector2(-5382, 591)
+
+[node name="Obstacle39" parent="Obstacles" instance=ExtResource("7_pbjam")]
+position = Vector2(-6233.2, 2753.7)
+
+[node name="Obstacle40" parent="Obstacles" instance=ExtResource("7_pbjam")]
+position = Vector2(-6759.2, 4648.7)
+
+[node name="Obstacle41" parent="Obstacles" instance=ExtResource("7_pbjam")]
+position = Vector2(-6757, 3241)
+
+[node name="Obstacle42" parent="Obstacles" instance=ExtResource("7_pbjam")]
+position = Vector2(-4036.2, 2552.7)
+
+[node name="Obstacle43" parent="Obstacles" instance=ExtResource("7_pbjam")]
+position = Vector2(-4069, 3894)
+
+[node name="Obstacle11" parent="Obstacles" instance=ExtResource("9_n5sno")]
+position = Vector2(-516, -588)
+
+[node name="Obstacle34" parent="Obstacles" instance=ExtResource("9_n5sno")]
+position = Vector2(737, -2830)
+
+[node name="Obstacle35" parent="Obstacles" instance=ExtResource("9_n5sno")]
+position = Vector2(2823, -3710)
+
+[node name="Obstacle18" parent="Obstacles" instance=ExtResource("9_n5sno")]
+position = Vector2(-2020, -1613)
+
+[node name="Obstacle20" parent="Obstacles" instance=ExtResource("9_n5sno")]
+position = Vector2(-3558, -957)
+
+[node name="Obstacle19" parent="Obstacles" instance=ExtResource("9_n5sno")]
+position = Vector2(-840, -2346)
+
+[node name="Obstacle12" parent="Obstacles" instance=ExtResource("9_n5sno")]
+position = Vector2(-1144, -305)
+
+[node name="Obstacle" parent="Obstacles" instance=ExtResource("10_epjys")]
+position = Vector2(7676, -207)
+
+[node name="Obstacle52" parent="Obstacles" instance=ExtResource("10_epjys")]
+position = Vector2(-3363, 4575)
+
+[node name="Obstacle2" parent="Obstacles" instance=ExtResource("11_34m0w")]
+position = Vector2(6591, 1554)
+
+[node name="Obstacle51" parent="Obstacles" instance=ExtResource("11_34m0w")]
+position = Vector2(-3137, 1329)
+
+[node name="Obstacle50" parent="Obstacles" instance=ExtResource("11_34m0w")]
+position = Vector2(1507, 564)
+
+[node name="Obstacle3" parent="Obstacles" instance=ExtResource("12_ercq4")]
+position = Vector2(6065, 1579)
+
+[node name="Obstacle47" parent="Obstacles" instance=ExtResource("12_ercq4")]
+position = Vector2(4790, 241)
+
+[node name="Obstacle53" parent="Obstacles" instance=ExtResource("12_ercq4")]
+position = Vector2(-4434, 3319)
+
+[node name="Obstacle49" parent="Obstacles" instance=ExtResource("12_ercq4")]
+position = Vector2(1900, 548)
+
+[node name="Obstacle54" parent="Obstacles" instance=ExtResource("12_ercq4")]
+position = Vector2(306, -620)
+
+[node name="Obstacle45" parent="Obstacles" instance=ExtResource("12_ercq4")]
+position = Vector2(7798, 1056)
+
+[node name="Obstacle4" parent="Obstacles" instance=ExtResource("13_5bshv")]
+position = Vector2(6331, 1544)
+
+[node name="Obstacle46" parent="Obstacles" instance=ExtResource("11_34m0w")]
+position = Vector2(7643.7, -66.9996)
+
+[node name="Obstacle48" parent="Obstacles" instance=ExtResource("13_5bshv")]
+position = Vector2(7383.7, -76.9999)
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource("14_2depf")]
+position = Vector2(832, -174)
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource("14_2depf")]
+position = Vector2(496, 287)
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource("14_2depf")]
+position = Vector2(-342, 304)
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource("14_2depf")]
+position = Vector2(447, -253)
+
+[node name="Audio" type="Node2D" parent="."]
+
+[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="Audio"]
+event_name = "event:/2D/AMB"
+event_guid = "{ecb95390-f078-4b0a-8007-7722bd635b56}"
+autoplay = true
+
+[editable path="Player"]

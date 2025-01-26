@@ -9,4 +9,4 @@
 [node name="SM_Tube_01" parent="." instance=ExtResource("1_mnxww")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.944723, 0.142996, 0.295042, -0.246104, -0.285307, 0.926301, 0.216635, -0.947709, -0.234344, 0, 0, 0)
+transform = Transform3D(0.879166, -0.00900394, 0.476428, -0.445775, -0.368821, 0.815633, 0.168373, -0.929457, -0.328269, 0, 0, 0)
