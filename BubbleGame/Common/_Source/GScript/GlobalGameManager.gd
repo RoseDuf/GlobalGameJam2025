@@ -1,5 +1,7 @@
 extends Node
 
+enum BUGS {Bee, Butterfly, Mosquito}
+
 const INITIAL_LIVES = 3
 
 var RemainingLives: int = INITIAL_LIVES;
