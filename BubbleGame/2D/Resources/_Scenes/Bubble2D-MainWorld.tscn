@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cww8xpy7y6xet" path="res://BubbleGame/2D/Resources/Prefabs/enemies/enemy.tscn" id="14_2depf"]
 [ext_resource type="PackedScene" uid="uid://ciexpftus1pqo" path="res://BubbleGame/2D/Resources/Prefabs/gui_layer.tscn" id="14_moaot"]
 [ext_resource type="PackedScene" uid="uid://btpfnmhc6apmb" path="res://BubbleGame/2D/Resources/Prefabs/enemies/enemy-Wasp.tscn" id="15_wbc4g"]
-[ext_resource type="PackedScene" path="res://BubbleGame/2D/Resources/_Scenes/background.tscn" id="16_6k0ec"]
+[ext_resource type="PackedScene" uid="uid://btwowamtu70sn" path="res://BubbleGame/2D/Resources/_Scenes/background.tscn" id="16_6k0ec"]
 
 [node name="Bubble2D" type="Node"]
 script = ExtResource("1_rkm85")

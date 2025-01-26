@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cl81gs66ept5f"]
+
+[ext_resource type="PackedScene" uid="uid://dvq08l11m2cpa" path="res://BubbleGame/3D/Art/Scenes/gpu_trail_3d.tscn" id="1_20dio"]
+[ext_resource type="PackedScene" uid="uid://51hri0fhwnxl" path="res://BubbleGame/3D/Resources/_Scenes/flame_model.tscn" id="2_rs6tq"]
+
+[node name="Ship_Trails" type="Node3D"]
+transform = Transform3D(1, -1.10126e-09, -1.9593e-08, -1.10126e-09, 0.993702, -0.112059, 1.9593e-08, 0.112059, 0.993702, 2.98023e-08, 0.190133, 0)
+
+[node name="Trail_Left" type="Node3D" parent="."]
+transform = Transform3D(1, 0, -1.74846e-07, -1.74846e-07, 0, -1, 0, 1, 0, -0.160474, -0.744047, 0.048213)
+
+[node name="GPUTrail3D" parent="Trail_Left" instance=ExtResource("1_20dio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.083, 0, 0.285)
+
+[node name="Trail_Right" type="Node3D" parent="."]
+transform = Transform3D(1, 0, -1.74846e-07, -1.74846e-07, 0, -1, 0, 1, 0, 0.161869, -0.744047, 0.048213)
+
+[node name="GPUTrail3D" parent="Trail_Right" instance=ExtResource("1_20dio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.083, 0, 0.285)
+
+[node name="Flame_Model" parent="." instance=ExtResource("2_rs6tq")]
+transform = Transform3D(0.152806, -0.476078, -2.48925e-09, 0.472059, 0.151516, -0.0648305, 0.0617288, 0.019813, 0.495779, -0.000363618, -0.989932, 0.0504579)

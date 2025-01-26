@@ -13,6 +13,9 @@ namespace BubbleGame._3D
         [Export] private Area3D _colliderArea;
 
         private ObstacleData _data;
+
+        public ObstacleData data => _data;
+
         private float _timeSinceSpawn = 0;
         private Vector3 _moveDirection = Vector3.Zero;
 
@@ -42,7 +45,7 @@ namespace BubbleGame._3D
         {
             if (area.IsInGroup("despawner"))
             {
-                this.GetParent().CallDeferred(MethodName.RemoveChild, this);
+				GetTree().CurrentScene.CallDeferred(MethodName.RemoveChild, this);
                 this.QueueFree();
             }
         }
