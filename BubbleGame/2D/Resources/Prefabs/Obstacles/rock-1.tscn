@@ -6,7 +6,7 @@
 size = Vector2(1455, 1005)
 
 [node name="Obstacle" type="Sprite2D"]
-position = Vector2(747, -157)
+position = Vector2(747, -106)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_gbvim")
 
@@ -14,5 +14,4 @@ texture = ExtResource("1_gbvim")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-5, 27.5)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_57urs")
