@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{4809779e-f0b6-441c-8a61-3acfcc67017f}">
+		<property name="name">
+			<value>SoapBar</value>
+		</property>
+		<relationship name="folder">
+			<destination>{fc4d84cc-3449-4384-aec5-203627bea1f8}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{a8e815a5-7d07-4eac-8a20-111844ccf750}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{a8e815a5-7d07-4eac-8a20-111844ccf750}">
+		<property name="maximum">
+			<value>1.1000000000000001</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
