@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ixq6o5xwgmrc"]
+
+[ext_resource type="PackedScene" uid="uid://c30leo30iaxob" path="res://BubbleGame/3D/Art/Models/Export/ST_Sky.fbx" id="1_q06ly"]
+[ext_resource type="Material" uid="uid://db0yxl474sjge" path="res://BubbleGame/3D/Art/Shader/M_Sky_01.tres" id="2_74q2e"]
+
+[node name="ST_Sky" instance=ExtResource("1_q06ly")]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+
+[node name="reverse1" parent="." index="0"]
+material_override = ExtResource("2_74q2e")

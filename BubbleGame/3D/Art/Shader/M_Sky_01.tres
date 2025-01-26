@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://db0yxl474sjge"]
+
+[ext_resource type="Shader" uid="uid://8hgmjdhajwyi" path="res://BubbleGame/3D/Art/Shader/S_Sky_01.tres" id="1_cf02o"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_cf02o")
