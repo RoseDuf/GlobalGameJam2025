@@ -14,6 +14,7 @@ uniform sampler2D bubble_dir_tex:repeat_enable;
 uniform vec3 bubblesColor:source_color;
 
 uniform sampler2D SCREEN_TEXTURE:hint_screen_texture;
+uniform float alphaMask = 0;
 
 uniform float opacity;
 
@@ -149,7 +150,8 @@ void fragment() {
 	float edgeNoise =  texture(noise_tex,world_pos*0.006 + TIME*0.08).x *  texture(noise_tex,world_pos*0.001 + TIME*0.08).x;
 	vec2 bubble_dir = texture(bubble_dir_tex, world_pos*0.01 ).xy;
 	color = mix(color,skyColor,topMask) +  smoothstep(0.4,0.45, (edge * edgeNoise)) + texture(bubbles_tex,world_pos*0.01 + bubble_dir + TIME*0.2).xyz*bubblesColor;
-
+	float alpha_mask =1. - smoothstep(0.3,.33,length(UV - 0.5));
+	f = mix(f,f*alpha_mask*COLOR.a,alphaMask);
 	COLOR = vec4(color,f);
 }
 
