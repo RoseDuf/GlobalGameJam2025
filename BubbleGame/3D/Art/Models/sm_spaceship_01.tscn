@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2je4f36vj1qm"]
+
+[ext_resource type="PackedScene" uid="uid://2gy4ni3bpgcs" path="res://BubbleGame/3D/Art/Models/Export/ST_Spaceship_01.fbx" id="1_nbwq0"]
+[ext_resource type="Material" uid="uid://byeu5xlgbmkwm" path="res://BubbleGame/3D/Art/Shader/M_Spaceship_Metal_01.tres" id="2_mi35w"]
+[ext_resource type="Material" uid="uid://cexgv4qqu1dto" path="res://BubbleGame/3D/Art/Shader/M_Spaceship_Glass_01.tres" id="3_4m3ef"]
+
+[node name="ST_Spaceship_01" instance=ExtResource("1_nbwq0")]
+
+[node name="Cabine" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_mi35w")
+surface_material_override/1 = ExtResource("3_4m3ef")

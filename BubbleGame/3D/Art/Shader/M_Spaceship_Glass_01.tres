@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cexgv4qqu1dto"]
+
+[ext_resource type="Shader" uid="uid://cxok10wd1drsd" path="res://BubbleGame/3D/Art/Shader/S_Spaceship_Glass_01.tres" id="1_kymn6"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_kymn6")
+shader_parameter/ColorParameter = Color(0.000111, 0.991034, 0.992358, 1)

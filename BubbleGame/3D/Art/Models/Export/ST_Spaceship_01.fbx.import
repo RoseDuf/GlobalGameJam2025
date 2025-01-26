@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://n716563j3afd"
-path="res://.godot/imported/SM_Cube_1x1x1_Houdini_01.fbx-a5e51f0f914a2a3cc81ce1d9912c22fb.scn"
+uid="uid://2gy4ni3bpgcs"
+path="res://.godot/imported/ST_Spaceship_01.fbx-055d78085c1b5a98d57e228414f6718f.scn"
 
 [deps]
 
-source_file="res://BubbleGame/3D/Art/Models/Export/SM_Cube_1x1x1_Houdini_01.fbx"
-dest_files=["res://.godot/imported/SM_Cube_1x1x1_Houdini_01.fbx-a5e51f0f914a2a3cc81ce1d9912c22fb.scn"]
+source_file="res://BubbleGame/3D/Art/Models/Export/ST_Spaceship_01.fbx"
+dest_files=["res://.godot/imported/ST_Spaceship_01.fbx-055d78085c1b5a98d57e228414f6718f.scn"]
 
 [params]
 

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ypnx44eo0ryd"]
+
+[ext_resource type="PackedScene" uid="uid://c2je4f36vj1qm" path="res://BubbleGame/3D/Art/Models/sm_spaceship_01.tscn" id="2_3cqmu"]
+[ext_resource type="PackedScene" uid="uid://jns0jadq0euk" path="res://BubbleGame/3D/Art/Models/Export/SM_TestCube_1x1x1_Houdini_01.fbx" id="2_gdls3"]
+
+[node name="PlaceHolderArtScene" type="Node3D"]
+
+[node name="SM_TestCube_1x1x1_Houdini_01" parent="." instance=ExtResource("2_gdls3")]
+
+[node name="ST_Spaceship_01" parent="." instance=ExtResource("2_3cqmu")]
