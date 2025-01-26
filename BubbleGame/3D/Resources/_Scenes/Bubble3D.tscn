@@ -1,9 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://bddasn5pebfva"]
+[gd_scene load_steps=14 format=3 uid="uid://bddasn5pebfva"]
 
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/Player.cs" id="1_8n07s"]
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/PlayerMovement.cs" id="2_02mne"]
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/PlayerShooting.cs" id="3_06fj2"]
 [ext_resource type="Script" path="res://BubbleGame/3D/_Source/Player/Cursor.cs" id="4_1xwlw"]
+[ext_resource type="PackedScene" uid="uid://cs6mpkq4pvwtw" path="res://BubbleGame/3D/Resources/Bullet.tscn" id="4_vu1xa"]
+[ext_resource type="PackedScene" uid="uid://cpwar8fyqpc55" path="res://BubbleGame/3D/Resources/Obstacles/Despawner.tscn" id="5_gvexs"]
+[ext_resource type="PackedScene" uid="uid://b035j4rxrryei" path="res://BubbleGame/3D/Resources/Obstacles/ObstacleSpawner.tscn" id="6_xfw0p"]
+[ext_resource type="PackedScene" uid="uid://dwghalcje8h0q" path="res://BubbleGame/3D/Resources/Obstacles/DefaultObstacle.tscn" id="6_ynck0"]
 
 [sub_resource type="PrismMesh" id="PrismMesh_7hgvn"]
 
@@ -40,8 +44,12 @@ bottomScreenClampThreshold = -3.0
 leftScreenClampThreshold = 54.0
 rightScreenClampThreshold = -54.0
 
-[node name="PlayerShooting" type="Node" parent="Actors/Player/Player3D"]
+[node name="PlayerShooting" type="Node3D" parent="Actors/Player/Player3D" node_paths=PackedStringArray("_playerCursor")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00229645, 9.53674e-07, -0.0309143)
 script = ExtResource("3_06fj2")
+speed = 32.0
+_playerCursor = NodePath("../../Cursor3D")
+_bulletNode = ExtResource("4_vu1xa")
 
 [node name="Visuals" type="Node3D" parent="Actors/Player/Player3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
@@ -68,14 +76,17 @@ environment = SubResource("Environment_xyxs8")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
-mesh = SubResource("CapsuleMesh_e5wub")
-
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Environment"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.44794, 0, 10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3226, -1.68516, 5.27769)
 mesh = SubResource("CapsuleMesh_e5wub")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3808, 0, -3)
 mesh = SubResource("CapsuleMesh_e5wub")
+
+[node name="Despawner" parent="." instance=ExtResource("5_gvexs")]
+transform = Transform3D(31.9719, 0, 0, 0, 25.0914, 0, 0, 0, 1, 0, 0, -14.0146)
+
+[node name="ObstacleSpawner" parent="." instance=ExtResource("6_xfw0p")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 18.403)
+_obstacleScene = ExtResource("6_ynck0")

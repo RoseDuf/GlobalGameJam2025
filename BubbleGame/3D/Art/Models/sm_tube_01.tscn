@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dc4acbdj3mh8o"]
+
+[ext_resource type="PackedScene" uid="uid://ckk5qfilmw2i5" path="res://BubbleGame/3D/Art/Models/Export/SM_Tube_01.fbx" id="1_fo87v"]
+[ext_resource type="Material" uid="uid://2wgr30rwg2m1" path="res://BubbleGame/3D/Art/Shader/M_Tunnel_Bubble_01.tres" id="2_tuphk"]
+
+[node name="SM_Tube_01" instance=ExtResource("1_fo87v")]
+
+[node name="Mesh_Tube_01" parent="." index="0"]
+cast_shadow = 0
+lod_bias = 50.001
+surface_material_override/0 = ExtResource("2_tuphk")

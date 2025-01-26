@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b035j4rxrryei"]
+
+[ext_resource type="Script" path="res://BubbleGame/3D/_Source/SpawnManager.cs" id="1_jwqii"]
+
+[node name="ObstacleSpawner" type="Node3D" node_paths=PackedStringArray("_obstacleSpawnTimer")]
+script = ExtResource("1_jwqii")
+_obstacleSpawnTimer = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="OnSpawnObstacles"]

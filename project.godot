@@ -39,6 +39,7 @@ config/icon="res://BubbleGame/Common/Resources/icon.svg"
 
 Bootstrap="*res://BubbleGame/Common/Resources/_Scenes/Bootstrap/Bootstrap.tscn"
 FmodManager="*res://addons/fmod/FmodManager.gd"
+SoapBarManager="*res://BubbleGame/2D/Resources/_Scripts/SoapBarManager.gd"
 
 [display]
 

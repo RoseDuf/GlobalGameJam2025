@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://2wgr30rwg2m1"]
+
+[ext_resource type="Shader" uid="uid://iihqgj51qag1" path="res://BubbleGame/3D/Art/Shader/S_Tunnel_Bubble.tres" id="1_ebhn4"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_ebhn4")
