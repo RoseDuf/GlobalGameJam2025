@@ -1,9 +1,43 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqjdygfsmbxya"]
+[gd_scene load_steps=14 format=3 uid="uid://bqjdygfsmbxya"]
 
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/PlayerMovement.gd" id="1_glry7"]
-[ext_resource type="Texture2D" uid="uid://bbpjqfvmoagvd" path="res://BubbleGame/2D/Resources/_DebugArt/Player.png" id="2_7lpvr"]
+[ext_resource type="Texture2D" uid="uid://c6ynir2hhqi8e" path="res://BubbleGame/2D/Art/Character/RunningFront/001.png" id="2_wrk7v"]
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/WandHitbox.gd" id="3_57tbh"]
+[ext_resource type="Texture2D" uid="uid://cqroy1u77d3hy" path="res://BubbleGame/2D/Art/Character/RunningFront/002.png" id="3_pn5gd"]
 [ext_resource type="Script" path="res://BubbleGame/2D/Resources/_Scripts/BubbleTrail.gd" id="4_jru3i"]
+[ext_resource type="Texture2D" uid="uid://dgxk3j5asm2cw" path="res://BubbleGame/2D/Art/Character/RunningFront/003.png" id="4_qu7sn"]
+[ext_resource type="Texture2D" uid="uid://dl36n7ihgniv7" path="res://BubbleGame/2D/Art/Character/RunningFront/004.png" id="5_7tfwl"]
+[ext_resource type="Texture2D" uid="uid://cnv35xtieuenp" path="res://BubbleGame/2D/Art/Character/RunningFront/005.png" id="6_6tlrg"]
+[ext_resource type="Texture2D" uid="uid://cei5buy65qasa" path="res://BubbleGame/2D/Art/Character/RunningFront/006.png" id="7_agphy"]
+
+[sub_resource type="Gradient" id="Gradient_owgmy"]
+colors = PackedColorArray(1, 1, 1, 0.784314, 0, 1, 1, 0.784314)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nxp7r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wrk7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pn5gd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qu7sn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7tfwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6tlrg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_agphy")
+}],
+"loop": true,
+"name": &"RunningFront",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dte2h"]
 radius = 49.0
@@ -11,36 +45,10 @@ height = 218.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4i0xn"]
 
-[sub_resource type="Gradient" id="Gradient_owgmy"]
-colors = PackedColorArray(1, 1, 1, 0.784314, 0, 1, 1, 0.784314)
-
 [node name="Player" type="Node"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(-7, 4)
-motion_mode = 1
-platform_on_leave = 2
-script = ExtResource("1_glry7")
-CharacterSpeed = 500.0
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-texture = ExtResource("2_7lpvr")
-
-[node name="CharacterHitbox" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(2, 0)
-shape = SubResource("CapsuleShape2D_dte2h")
-
-[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
-collision_layer = 0
-collision_mask = 0
-script = ExtResource("3_57tbh")
-
-[node name="WandHitbox" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
-position = Vector2(30, -180)
-shape = SubResource("CircleShape2D_4i0xn")
-
 [node name="BubbleTrail" type="Line2D" parent="." node_paths=PackedStringArray("WandPosition", "TrailHitbox", "CharacterMovement")]
-width = 40.0
+width = 60.0
 gradient = SubResource("Gradient_owgmy")
 joint_mode = 2
 begin_cap_mode = 2
@@ -53,5 +61,35 @@ CharacterMovement = NodePath("../CharacterBody2D")
 [node name="BubbleTrailHitbox" type="StaticBody2D" parent="BubbleTrail"]
 collision_layer = 2
 collision_mask = 2
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." node_paths=PackedStringArray("CharacterAnimations")]
+position = Vector2(-7, 4)
+motion_mode = 1
+platform_on_leave = 2
+script = ExtResource("1_glry7")
+CharacterSpeed = 500.0
+CharacterAnimations = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(-8, -59)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_nxp7r")
+animation = &"RunningFront"
+autoplay = "RunningFront"
+frame_progress = 0.937694
+
+[node name="CharacterHitbox" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(2, 0)
+shape = SubResource("CapsuleShape2D_dte2h")
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("3_57tbh")
+
+[node name="WandHitbox" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+position = Vector2(-6, -173)
+scale = Vector2(4.16, 4.16)
+shape = SubResource("CircleShape2D_4i0xn")
 
 [connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D/Area2D" method="_on_body_entered"]
