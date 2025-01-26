@@ -5,7 +5,6 @@
 [ext_resource type="Material" path="res://BubbleGame/3D/Art/Shader/M_Spaceship_Glass_01.tres" id="3_4m3ef"]
 
 [node name="ST_Spaceship_01" instance=ExtResource("1_nbwq0")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="Cabine" parent="." index="0"]
 surface_material_override/0 = ExtResource("2_mi35w")

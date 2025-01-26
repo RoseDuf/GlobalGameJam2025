@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bddasn5pebfva"]
 
 [ext_resource type="Script" path="res://BubbleGame/3D/Resources/_Scenes/Bubble3D.cs" id="1_ngrq7"]
-[ext_resource type="PackedScene" path="res://BubbleGame/3D/Resources/player.tscn" id="2_shqa5"]
+[ext_resource type="PackedScene" uid="uid://b5gucax43h73" path="res://BubbleGame/3D/Resources/player.tscn" id="2_shqa5"]
 [ext_resource type="PackedScene" uid="uid://cpwar8fyqpc55" path="res://BubbleGame/3D/Resources/Obstacles/Despawner.tscn" id="5_gvexs"]
 [ext_resource type="PackedScene" uid="uid://b035j4rxrryei" path="res://BubbleGame/3D/Resources/Obstacles/ObstacleSpawner.tscn" id="6_xfw0p"]
 [ext_resource type="PackedScene" uid="uid://dwghalcje8h0q" path="res://BubbleGame/3D/Resources/Obstacles/DefaultObstacle.tscn" id="6_ynck0"]
@@ -21,6 +21,9 @@ fov = 25.0
 [node name="Actors" type="Node" parent="."]
 
 [node name="Player" parent="Actors" instance=ExtResource("2_shqa5")]
+
+[node name="Visuals" parent="Actors/Player/Player3D" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Environment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_xyxs8")
