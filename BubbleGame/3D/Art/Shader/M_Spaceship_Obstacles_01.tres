@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bdxsa1m56ni5m"]
+
+[ext_resource type="Shader" uid="uid://6ky4ev3fgcty" path="res://BubbleGame/3D/Art/Shader/S_Objects_01.tres" id="1_l1elf"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_l1elf")

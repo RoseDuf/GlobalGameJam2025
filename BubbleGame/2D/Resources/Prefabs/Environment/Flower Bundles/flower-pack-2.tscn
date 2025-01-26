@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgwusa5uauj4k"]
+
+[ext_resource type="Texture2D" uid="uid://ct72aoqcdd3sm" path="res://BubbleGame/2D/Art/Environment/Flowers 001.png" id="1_xg7xv"]
+[ext_resource type="PackedScene" uid="uid://cuwgb53vam2t6" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/Obstacle-art-prefabs/obs-flowers-5.tscn" id="3_3iwma"]
+[ext_resource type="PackedScene" uid="uid://bn0qsyx13mw57" path="res://BubbleGame/2D/Resources/Prefabs/Obstacles/Obstacle-art-prefabs/obs-flowers-4.tscn" id="3_t7ole"]
+[ext_resource type="PackedScene" uid="uid://3wej0cngy5y2" path="res://BubbleGame/2D/Resources/Prefabs/Environment/env-flowers-1.tscn" id="4_3k8bs"]
+
+[node name="EnvironmentArt" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_xg7xv")
+
+[node name="EnvironmentArt2" parent="." instance=ExtResource("3_3iwma")]
+position = Vector2(-73, -48)
+
+[node name="EnvironmentArt" parent="." instance=ExtResource("3_t7ole")]
+position = Vector2(-48, -47)
+
+[node name="EnvironmentArt3" parent="." instance=ExtResource("4_3k8bs")]
+position = Vector2(99, -61)

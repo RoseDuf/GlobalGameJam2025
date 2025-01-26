@@ -1,0 +1,26 @@
+[gd_resource type="ShaderMaterial" load_steps=7 format=3 uid="uid://crwy00buiitiq"]
+
+[ext_resource type="Shader" path="res://BubbleGame/3D/Art/Shader/Flame.gdshader" id="1_vy8jq"]
+[ext_resource type="Texture2D" uid="uid://dkfn1n75roe43" path="res://GPUTrail-main/defaults/trail_ramp.tres" id="2_7u6q7"]
+
+[sub_resource type="Gradient" id="Gradient_11nfa"]
+offsets = PackedFloat32Array(0, 0.174515, 0.32687)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 1, 0.099986, 0.099986, 0.099986, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_kgnoj"]
+gradient = SubResource("Gradient_11nfa")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_dd6tx"]
+frequency = 0.0126
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_dsrpg"]
+seamless = true
+noise = SubResource("FastNoiseLite_dd6tx")
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_vy8jq")
+shader_parameter/distortionStrength = 0.2
+shader_parameter/noiseTexture = SubResource("NoiseTexture2D_dsrpg")
+shader_parameter/distortionRamp = SubResource("GradientTexture1D_kgnoj")
+shader_parameter/colorRamp = ExtResource("2_7u6q7")

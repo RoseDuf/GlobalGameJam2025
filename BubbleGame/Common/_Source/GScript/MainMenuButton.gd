@@ -11,4 +11,8 @@ func OnFocusEnter() -> void:
 	
 func OnPressed() -> void:
 	#SFX: Main menu UI Press sound
+	GlobalAudioManager.PlaySoundOneShot("event:/UI/UIClick")
+	if (self.name == "PlayButton"):
+		MusicManager.open_game()
+		MusicManager.switch_to_2d()
 	pass

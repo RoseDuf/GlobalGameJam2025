@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://chschod04p11n"]
+
+[ext_resource type="Texture2D" uid="uid://ct72aoqcdd3sm" path="res://BubbleGame/2D/Art/Environment/Flowers 001.png" id="1_ya05d"]
+
+[node name="EnvironmentArt" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_ya05d")

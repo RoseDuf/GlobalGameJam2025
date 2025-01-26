@@ -1,4 +1,4 @@
-﻿
+
 
 namespace BubbleGame.Common.SceneManagement
 {

@@ -1,4 +1,5 @@
 extends Node2D
+class_name BugCollectible
 
 @export var BugType: GlobalGameManager.BUGS
 
@@ -10,3 +11,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func IncreaseScore() -> GlobalGameManager.BUGS:
+	GlobalGameManager.Score += 50;
+	return BugType;

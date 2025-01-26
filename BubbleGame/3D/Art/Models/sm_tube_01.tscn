@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dc4acbdj3mh8o"]
 
-[ext_resource type="PackedScene" uid="uid://ckk5qfilmw2i5" path="res://BubbleGame/3D/Art/Models/Export/SM_Tube_01.fbx" id="1_fo87v"]
+[ext_resource type="PackedScene" uid="uid://ckk5qfilmw2i5" path="res://BubbleGame/3D/Art/Models/Export/SM_Tube_01_DoNotUse.fbx" id="1_fo87v"]
 [ext_resource type="Material" uid="uid://2wgr30rwg2m1" path="res://BubbleGame/3D/Art/Shader/M_Tunnel_Bubble_01.tres" id="2_tuphk"]
 
 [node name="SM_Tube_01" instance=ExtResource("1_fo87v")]
