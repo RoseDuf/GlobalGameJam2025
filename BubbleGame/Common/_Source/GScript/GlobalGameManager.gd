@@ -16,4 +16,5 @@ func _input(event: InputEvent) -> void:
 		call_deferred("LoadMainMenu")
 	
 func LoadMainMenu() -> void:
+	MusicManager.open_menu()
 	get_tree().change_scene_to_file("res://BubbleGame/Common/Resources/_Scenes/Welcome/WelcomeScene.tscn")

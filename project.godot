@@ -42,6 +42,7 @@ FmodManager="*res://addons/fmod/FmodManager.gd"
 SoapBarManager="*res://BubbleGame/2D/Resources/_Scripts/SoapBarManager.gd"
 GlobalGameManager="*res://BubbleGame/Common/_Source/GScript/GlobalGameManager.gd"
 GlobalAudioManager="*res://BubbleGame/Common/_Source/GScript/GlobalAudioManager.gd"
+MusicManager="*res://BubbleGame/Common/_Source/GScript/Audio/music_manager.gd"
 
 [display]
 
