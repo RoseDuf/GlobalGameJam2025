@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqxh1mn26ap32"
 path.s3tc="res://.godot/imported/BUBBLES_NORMALS_01.png-f1d6e380f777b398a61b024ab63be954.s3tc.ctex"
+path.etc2="res://.godot/imported/BUBBLES_NORMALS_01.png-f1d6e380f777b398a61b024ab63be954.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://BubbleGame/2D/Art/BubbleShader/BUBBLES_NORMALS_01.png"
-dest_files=["res://.godot/imported/BUBBLES_NORMALS_01.png-f1d6e380f777b398a61b024ab63be954.s3tc.ctex"]
+dest_files=["res://.godot/imported/BUBBLES_NORMALS_01.png-f1d6e380f777b398a61b024ab63be954.s3tc.ctex", "res://.godot/imported/BUBBLES_NORMALS_01.png-f1d6e380f777b398a61b024ab63be954.etc2.ctex"]
 
 [params]
 
