@@ -29,7 +29,8 @@ DSP/dsp_buffer_count=4
 [application]
 
 config/name="Bugsie's Zoomies"
-config/version="0.1"
+config/description="Bugsie's Zoomies is about a cat running around with his bubble wand, trying to make the longest bubble while catching bugs and avoiding obtacles. When the bubble start bursting, Bugsie is thrown into his paper spaceship inside the bubble tunnel, and must try to escape it before the bubble completely burst, while shooting bugs trying to slow him down."
+config/version="1.0"
 run/main_scene="res://BubbleGame/Common/Resources/_Scenes/Bootstrap/Main.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 boot_splash/bg_color=Color(0.85098, 0.584314, 0.443137, 1)
