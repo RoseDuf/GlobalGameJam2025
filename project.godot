@@ -32,7 +32,9 @@ config/name="Bugsie's Zoomies"
 config/version="0.1"
 run/main_scene="res://BubbleGame/Common/Resources/_Scenes/Bootstrap/Main.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
-boot_splash/bg_color=Color(0.0666667, 0.0666667, 0.0666667, 1)
+boot_splash/bg_color=Color(0.85098, 0.584314, 0.443137, 1)
+boot_splash/image="res://BubbleGame/Common/Art/BootImage.png"
+boot_splash/fullsize=false
 config/icon="res://BubbleGame/Common/Resources/icon.svg"
 
 [autoload]

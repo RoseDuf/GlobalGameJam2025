@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://BubbleGame/Common/_Source/CSharp/SceneManagement/SceneCollection.cs" id="4_1qgw5"]
 [ext_resource type="PackedScene" uid="uid://boepbwv7lujx1" path="res://BubbleGame/2D/Resources/_Scenes/Bubble2D.tscn" id="4_03wy5"]
 [ext_resource type="PackedScene" uid="uid://cx38qckqgpcqa" path="res://BubbleGame/Common/Resources/_Scenes/Credits/Credits.tscn" id="5_qvlfj"]
-[ext_resource type="PackedScene" path="res://BubbleGame/Common/Resources/_Scenes/Results.tscn" id="6_cgcxy"]
+[ext_resource type="PackedScene" uid="uid://cn1piomk8m5po" path="res://BubbleGame/Common/Resources/_Scenes/Results.tscn" id="6_cgcxy"]
 
 [sub_resource type="Resource" id="Resource_ew42f"]
 script = ExtResource("2_63evy")
