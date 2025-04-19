@@ -20,7 +20,7 @@ namespace BubbleGame._3D
 
 				if (health <= 0)
 				{
-					SceneManager.Instance.LoadScene("WelcomeScene");
+					SceneManager.Instance.LoadScene("Results");
 				}
 			}
 		}

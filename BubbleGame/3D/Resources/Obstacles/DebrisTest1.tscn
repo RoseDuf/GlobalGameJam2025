@@ -27,4 +27,11 @@ shape = SubResource("BoxShape3D_87b83")
 transform = Transform3D(0.04, 0, 0, 0, 0.131956, -0.0310889, 0, 0.0601052, 0.0682531, 0, -0.292791, -0.0783832)
 shape = SubResource("BoxShape3D_87b83")
 
+[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/3D/Helicopter Loop"
+event_guid = "{21c0b7db-906c-4605-94cf-64b7760fd516}"
+autoplay = true
+auto_release = true
+volume = 20.0
+
 [connection signal="area_entered" from="ObstacleArea3D" to="." method="OnAreaEntered"]

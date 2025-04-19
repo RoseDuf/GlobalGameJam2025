@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwwfgn5dykn3h"
-path.s3tc="res://.godot/imported/iridescencyramp.png-6e75ea56fe34d553eb8dfeeefd823699.s3tc.ctex"
+path="res://.godot/imported/iridescencyramp.png-6e75ea56fe34d553eb8dfeeefd823699.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://BubbleGame/2D/Art/BubbleShader/iridescencyramp.png"
-dest_files=["res://.godot/imported/iridescencyramp.png-6e75ea56fe34d553eb8dfeeefd823699.s3tc.ctex"]
+dest_files=["res://.godot/imported/iridescencyramp.png-6e75ea56fe34d553eb8dfeeefd823699.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

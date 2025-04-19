@@ -29,10 +29,13 @@ DSP/dsp_buffer_count=4
 [application]
 
 config/name="Bugsie's Zoomies"
-config/version="0.1"
+config/description="Bugsie's Zoomies is about a cat running around with his bubble wand, trying to make the longest bubble while catching bugs and avoiding obtacles. When the bubble start bursting, Bugsie is thrown into his paper spaceship inside the bubble tunnel, and must try to escape it before the bubble completely burst, while shooting bugs trying to slow him down."
+config/version="1.0"
 run/main_scene="res://BubbleGame/Common/Resources/_Scenes/Bootstrap/Main.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
-boot_splash/bg_color=Color(0.0666667, 0.0666667, 0.0666667, 1)
+boot_splash/bg_color=Color(0.85098, 0.584314, 0.443137, 1)
+boot_splash/image="res://BubbleGame/Common/Art/BootImage.png"
+boot_splash/fullsize=false
 config/icon="res://BubbleGame/Common/Resources/icon.svg"
 
 [autoload]
@@ -125,3 +128,7 @@ escape={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true

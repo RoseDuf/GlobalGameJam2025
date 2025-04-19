@@ -5,7 +5,7 @@
 			<value>Shooting</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{3097b8a9-9c12-40d7-a1ce-e8517d5b7ba8}</destination>
@@ -86,6 +86,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{0f9eef9f-5679-46b8-bb39-141fd1a6ddc4}">
+		<property name="volume">
+			<value>-5</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{4fa3111d-36ad-4587-bc3e-48a6f98b3b3a}</destination>
 		</relationship>
@@ -110,7 +113,7 @@
 			<value>0.027433256253941551</value>
 		</property>
 		<property name="volume">
-			<value>-32</value>
+			<value>-22</value>
 		</property>
 		<relationship name="fadeOutCurve">
 			<destination>{5ff812af-25cf-4d53-b3f2-36c260dd9875}</destination>
@@ -184,7 +187,7 @@
 			<value>0.26999789225873499</value>
 		</property>
 		<property name="volume">
-			<value>-32</value>
+			<value>-30</value>
 		</property>
 		<property name="pitch">
 			<value>8.5</value>
@@ -203,6 +206,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{75cee8a8-f56f-4e3f-8623-48e27558905b}">
+		<property name="volume">
+			<value>3.5</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -233,6 +239,7 @@
 	<object class="MixerBusEffectChain" id="{4fa3111d-36ad-4587-bc3e-48a6f98b3b3a}">
 		<relationship name="effects">
 			<destination>{0006bc29-be28-4da1-a3e7-2f6187ff6480}</destination>
+			<destination>{7f0ce930-cb41-4f2a-869f-207a10a72f7b}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{158adf4c-3216-43f1-9314-6db581e18721}" />
@@ -333,6 +340,7 @@
 	<object class="MixerBusEffectChain" id="{0f76f036-8305-4409-99b8-a894913ed677}">
 		<relationship name="effects">
 			<destination>{066fcffc-f44f-4734-8f68-a486755b270b}</destination>
+			<destination>{49d5961d-8b84-4707-a3cc-fd4265a61677}</destination>
 			<destination>{c1b8e20c-8873-4370-822c-346d3c54c542}</destination>
 			<destination>{f5b917a2-878f-4a02-9790-4ca53589220d}</destination>
 		</relationship>
@@ -345,6 +353,14 @@
 	</object>
 	<object class="MixerBusPanner" id="{0981f75c-84ab-4a8d-9840-b6db52242d2a}" />
 	<object class="MixerBusFader" id="{0006bc29-be28-4da1-a3e7-2f6187ff6480}" />
+	<object class="SpatialiserEffect" id="{7f0ce930-cb41-4f2a-869f-207a10a72f7b}">
+		<property name="extentMode">
+			<value>1</value>
+		</property>
+		<property name="soundSize">
+			<value>20</value>
+		</property>
+	</object>
 	<object class="AutomationPoint" id="{da665a44-eace-47e8-9c20-61a49d393bb3}">
 		<property name="position">
 			<value>0.043514820264872828</value>
@@ -441,6 +457,14 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{066fcffc-f44f-4734-8f68-a486755b270b}" />
+	<object class="CompressorEffect" id="{49d5961d-8b84-4707-a3cc-fd4265a61677}">
+		<property name="threshold">
+			<value>-13</value>
+		</property>
+		<property name="gain">
+			<value>23.5</value>
+		</property>
+	</object>
 	<object class="MultibandEqEffect" id="{c1b8e20c-8873-4370-822c-346d3c54c542}">
 		<property name="filterTypeB">
 			<value>9</value>

@@ -182,7 +182,7 @@ color_ramp = SubResource("Gradient_ullyb")
 [node name="BubbleTrail" type="Line2D" parent="." node_paths=PackedStringArray("WandPosition", "TrailHitbox", "CharacterMovement")]
 material = ExtResource("10_rng4n")
 scale = Vector2(0.99654, 0.988506)
-width = 60.0
+width = 70.0
 gradient = SubResource("Gradient_owgmy")
 texture_mode = 1
 joint_mode = 2

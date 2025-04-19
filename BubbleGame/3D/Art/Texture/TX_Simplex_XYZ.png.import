@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://battaygeoxkwn"
 path.s3tc="res://.godot/imported/TX_Simplex_XYZ.png-e08ebea32f2baf7bc149a02f125cc2aa.s3tc.ctex"
+path.etc2="res://.godot/imported/TX_Simplex_XYZ.png-e08ebea32f2baf7bc149a02f125cc2aa.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://BubbleGame/3D/Art/Texture/TX_Simplex_XYZ.png"
-dest_files=["res://.godot/imported/TX_Simplex_XYZ.png-e08ebea32f2baf7bc149a02f125cc2aa.s3tc.ctex"]
+dest_files=["res://.godot/imported/TX_Simplex_XYZ.png-e08ebea32f2baf7bc149a02f125cc2aa.s3tc.ctex", "res://.godot/imported/TX_Simplex_XYZ.png-e08ebea32f2baf7bc149a02f125cc2aa.etc2.ctex"]
 
 [params]
 
